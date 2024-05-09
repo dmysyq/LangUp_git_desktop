@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Заголовок -->
+    <LinearLayout
+        android:id="@+id/settingsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFD"
+            android:padding="10dp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/SeriesSelection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="85dp"
+            android:fontFamily="@font/inter_bold"
+            android:foregroundGravity="center"
+            android:text="Настройки"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textColor="#B5B5B3"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:backgroundTint="#FFFFFD"
+            android:fontFamily="@font/inter_bold"
+            android:text="СОХРАНИТЬ"
+            android:textColor="#2CA6E5" />
+    </LinearLayout>
+
+    <!-- Звуковые эффекты -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/soundEffectsSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settingsTitle"
+        android:background="@drawable/edittext_background"
+        android:layout_marginTop="24dp"
+        android:checked="true"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Звуковые эффекты"
+        android:textSize="16dp"
+        app:thumbTint="#1BB1F7"
+        app:trackTint="#801BB1F7" />
+
+    <!-- Тёмная тема -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/darkModeSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/soundEffectsSwitch"
+        android:background="@drawable/edittext_background"
+        android:layout_marginTop="24dp"
+        android:checked="false"
+        android:enabled="false"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Тёмная тема"
+        android:textSize="16dp"
+        app:thumbTint="#1BB1F7"
+        app:trackTint="#801BB1F7" />
+
+    <!-- Вибрация -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/vibrationSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/darkModeSwitch"
+        android:background="@drawable/edittext_background"
+        android:layout_marginTop="24dp"
+        android:checked="true"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Вибрация"
+        android:textSize="16dp"
+        app:thumbTint="#1BB1F7"
+        app:trackTint="#801BB1F7" />
+
+</RelativeLayout>

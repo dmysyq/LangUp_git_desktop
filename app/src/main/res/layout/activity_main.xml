@@ -1,0 +1,251 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/green"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/flagImageView"
+            android:layout_width="36dp"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_flag_us" />
+
+        <ImageView
+            android:id="@+id/coinsIconView"
+            android:layout_width="32dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="259dp"
+            android:layout_toEndOf="@id/flagImageView"
+            android:src="@drawable/ic_coins" />
+
+        <TextView
+            android:id="@+id/coinsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/coinsIconView"
+            android:text="0"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:layout_marginStart="4dp"/>
+    </RelativeLayout>
+
+
+
+    <!-- Main content layout -->
+    <FrameLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Контейнер для фильма "Star Wars: Episode III - Revenge of the Sith" -->
+                <RelativeLayout
+                    android:id="@+id/containerStarWarsRevengeoftheSith"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rounded_container"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onMovieSelected">
+
+                    <ImageView
+                        android:id="@+id/StarWarsRevengeoftheSithImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="334dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/starwarsep3" />
+
+                    <TextView
+                        android:id="@+id/movieTitle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/StarWarsRevengeoftheSithImage"
+                        android:text="Star Wars: Episode III - Revenge of the Sith"
+                        android:fontFamily="@font/inter_medium"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:textSize="24sp"
+                        android:textColor="#51514F" />
+                </RelativeLayout>
+
+                <!-- Контейнер для сериала "House of the Dragons" -->
+                <RelativeLayout
+                    android:id="@+id/containerHouseOfTheDragons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rounded_container"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onMovieSelected">
+
+                    <ImageView
+                        android:id="@+id/HouseOfTheDragonsImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="334dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/houseofthedragons" />
+
+                    <TextView
+                        android:id="@+id/HouseOfTheDragonsTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/HouseOfTheDragonsImage"
+                        android:text="House of the dragons"
+                        android:fontFamily="@font/inter_medium"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:textSize="24sp"
+                        android:textColor="#51514F" />
+                </RelativeLayout>
+
+                <!-- Контейнер для сериала "What's Eating Gilbert Grape" -->
+                <RelativeLayout
+                    android:id="@+id/containerWhatsEatingGilbertGrape"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rounded_container"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onMovieSelected">
+
+                    <ImageView
+                        android:id="@+id/WhatsEatingGilbertGrapeImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="334dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/gilbertgrape" />
+
+                    <TextView
+                        android:id="@+id/WhatsEatingGilbertGrapeTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/WhatsEatingGilbertGrapeImage"
+                        android:text="What's Eating Gilbert Grape"
+                        android:fontFamily="@font/inter_medium"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:textSize="24sp"
+                        android:textColor="#51514F" />
+                </RelativeLayout>
+                <!-- Контейнер для сериала "Interstellar" -->
+                <RelativeLayout
+                    android:id="@+id/containerInterstellar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rounded_container"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onMovieSelected">
+
+                    <ImageView
+                        android:id="@+id/InterstellarImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="334dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/interstellar" />
+
+                    <TextView
+                        android:id="@+id/InterstellarTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/InterstellarImage"
+                        android:text="Interstellar"
+                        android:fontFamily="@font/inter_medium"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:textSize="24sp"
+                        android:textColor="#51514F" />
+                </RelativeLayout>
+                <!-- Контейнер для сериала "Dune" -->
+                <RelativeLayout
+                    android:id="@+id/containerDune"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rounded_container"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onMovieSelected">
+
+                    <ImageView
+                        android:id="@+id/DuneImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="334dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/dune" />
+
+                    <TextView
+                        android:id="@+id/DuneTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/DuneImage"
+                        android:text="Dune"
+                        android:fontFamily="@font/inter_medium"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:textSize="24sp"
+                        android:textColor="#51514F" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:background="@color/background_color"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_home" />
+
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_profile" />
+
+        <ImageButton
+            android:id="@+id/settingsButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_settings" />
+    </LinearLayout>
+</LinearLayout>

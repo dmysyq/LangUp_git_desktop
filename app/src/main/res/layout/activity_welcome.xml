@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background_color"
+    tools:context=".WelcomeActivity">
+
+    <!-- Заголовок экрана -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="128dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="Already have an account?"
+        android:textColor="@color/text_primary"
+        android:textSize="24sp" />
+
+    <!-- Текст для существующих пользователей -->
+    <TextView
+        android:id="@+id/existingUserTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="Pick up where you left off."
+        android:textColor="@color/text_secondary"
+        android:textSize="16sp" />
+
+    <!-- Кнопка входа -->
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/existingUserTextView"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#57CC02"
+        android:elevation="10px"
+        android:fontFamily="@font/inter_medium"
+        android:text="SIGN IN"
+        android:textColor="#E3FBC8" />
+
+    <TextView
+        android:id="@+id/TitleNewUserTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signInButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="New to LangUp?"
+        android:textColor="@color/text_primary"
+        android:textSize="24sp" />
+
+    <!-- Текст для новых пользователей -->
+    <TextView
+        android:id="@+id/newUserTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signInButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="84dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="Start learning a language now."
+        android:textColor="@color/text_secondary"
+        android:textSize="16sp" />
+
+    <!-- Кнопка регистрации -->
+    <Button
+        android:id="@+id/getStartedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/newUserTextView"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FCFCFA"
+        android:fontFamily="@font/inter_medium"
+        android:radius="22dp"
+        android:text="GET STARTED"
+        android:textColor="@color/buttongreen_text"
+        app:strokeColor="#EAEAE8"
+        app:strokeWidth="1px" />
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background_color">#FFFFFD</color>
+    <color name="text_primary">#131F22</color>
+    <color name="text_secondary">#858583</color>
+    <color name="button_text">#E3FBC8</color>
+    <color name="buttongreen_text">#72C035</color>
+    <color name="google">#d34836</color>
+    <color name="fb">#3b5998</color>
+    <color name="dark_text">#5A5A5A</color>
+    <color name="green">#57CC02</color>
+
+    <color name="colorPrimaryMainActivity">@color/green</color>
+    <color name="colorPrimaryDarkMainActivity">@color/green</color>
+    <color name="colorPrimaryWelcomeActivity">@color/background_color</color>
+    <color name="colorPrimaryDarkWelcomeActivity">@color/background_color</color>
+</resources>

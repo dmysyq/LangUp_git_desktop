@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFD">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFD"
+            android:padding="10dp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/HeaderHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="86dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Аккаунт"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textColor="#B5B5B3" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:backgroundTint="#FFFFFD"
+            android:fontFamily="@font/inter_bold"
+            android:text="СОХРАНИТЬ"
+            android:textColor="#2CA6E5" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/avatarImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/avatarImageView"
+        android:background="@drawable/lc_edittext_background"
+        android:fontFamily="@font/inter"
+        android:hint="Имя"
+        android:padding="16dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameEditText"
+        android:background="@drawable/lc_edittext_background"
+        android:fontFamily="@font/inter"
+        android:hint="Имя пользователя"
+        android:padding="16dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameEditText"
+        android:background="@drawable/lc_edittext_background"
+        android:fontFamily="@font/inter"
+        android:hint="Электронная почта"
+        android:padding="16dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailEditText"
+        android:background="@drawable/lc_edittext_background"
+        android:fontFamily="@font/inter"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordEditText"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FCFDFB"
+        android:fontFamily="@font/inter_bold"
+        android:onClick="logout"
+        android:padding="12dp"
+        android:text="Выйти"
+        android:textColor="#2CA6E5"
+        app:strokeColor="#E5E5E3"
+        app:strokeWidth="1dp" />
+
+</RelativeLayout>
