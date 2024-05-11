@@ -12,12 +12,10 @@ public class StartupActivity extends AppCompatActivity {
 
         AuthManager authManager = new AuthManager(this);
         if (authManager.isUserLoggedIn()) {
-            // Пользователь авторизован, переход на MainActivity
             startActivity(new Intent(this, MainActivity.class));
         } else {
-            // Пользователь не авторизован, переход на WelcomeActivity
             startActivity(new Intent(this, WelcomeActivity.class));
         }
-        finish(); // Закрыть StartupActivity после перехода
+        finish();
     }
 }

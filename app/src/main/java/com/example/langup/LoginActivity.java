@@ -20,18 +20,16 @@ public class LoginActivity extends AppCompatActivity {
     private Button logInButton;
     private FirebaseAuth mAuth;
 
-    private AuthManager authManager; // Добавление переменной для AuthManager
+    private AuthManager authManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Инициализация Firebase Auth и AuthManager
         mAuth = FirebaseAuth.getInstance();
-        authManager = new AuthManager(this); // Инициализация AuthManager
+        authManager = new AuthManager(this);
 
-        // Связывание элементов интерфейса
         ImageButton backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(this::onClick);
         usernameEditText = findViewById(R.id.usernameEditText);
@@ -55,19 +53,15 @@ public class LoginActivity extends AppCompatActivity {
                 String email = usernameEditText.getText().toString().trim();
                 String password = passwordEditText.getText().toString().trim();
 
-                // Авторизация пользователя
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(LoginActivity.this, task -> {
                             if (task.isSuccessful()) {
-                                // Сохранение состояния авторизации пользователя через AuthManager
                                 authManager.setUserLoggedIn(true);
 
-                                // Переход на MainActivity
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                 startActivity(intent);
                                 finish();
                             } else {
-                                // Если вход не удался, отображение сообщения пользователю
                                 Toast.makeText(LoginActivity.this, "Authentication failed.",
                                         Toast.LENGTH_SHORT).show();
                             }

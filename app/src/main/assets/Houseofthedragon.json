@@ -3,53 +3,278 @@
     "episodes": [
       {
         "episodeNumber": 1,
-        "episodeTitle": "The Heirs of the Dragon",
-        "content": "..."
-      },
+      "episodeTitle": "The Heirs of the Dragon",
+      "content": [
+        {
+          "original": "To sacrifice one or to lose them both.",
+          "translation": ["Пожертвовать", "одним", "или", "потерять", "обоих."]
+        },
+        {
+          "original": "It's a marvel that war didn't break out at first blood.",
+          "translation": ["Удивительно,", "что", "война", "не", "разразилась", "с", "первой", "же", "кровью."]
+        },{
+          "original": "They're to be married as soon as he wins his knighthood.",
+          "translation": ["Они", "поженятся,", "как", "только", "он", "получит", "рыцарское", "звание."]
+        },
+        {
+          "original": "The City Watch is not a sword to be wielded at your whim.",
+          "translation": ["Городская", "стража", "это", "не", "меч,", "которым", "можно", "орудовать", "по", "своей", "прихоти."]
+        },
+        {
+          "original": "Crime of every breed has been allowed to thrive.",
+          "translation": ["Преступность", "всех", "мастей", "получила", "возможность", "процветать."]
+        },
+        {
+          "original": "You're sated and honed for the hunt.",
+          "translation": ["Вы", "сыты", "и", "готовы", "к", "охоте."]
+        },
+        {
+          "original": "It was clearer than a memory.",
+          "translation": ["Это", "было", "яснее,", "чем", "воспоминание."]
+        },
+        {
+          "original": "You spend more time in that bath than I do on the throne.",
+          "translation": ["Ты", "проводишь", "в", "этой", "ванне", "больше", "времени,", "чем", "я", "на", "троне."]
+        },
+        {
+          "original": "Whatever it is, it needs to be kept quiet.",
+          "translation": ["Что бы это ни было, об этом нужно молчать."]
+        },
+        {
+          "original": "Now, you and I both own a small piece of our ancestry.",
+          "translation": ["Итак,", "мы", "с", "тобой", "оба", "владеем", "маленькой", "частичкой", "нашей", "родословной."]
+        },
+        {
+          "original": "The growing alliance among the Free Cities",
+          "translation": ["Растущий", "альянс", "между", "Вольными", "городами."]
+        },
+        {
+          "original": "You stink of dragon.",
+          "translation": ["От", "тебя", "несет", "драконом."]
+        },
+        {
+          "original": "Someone has to attend to you.",
+          "translation": ["Кто-то", "должен", "позаботиться", "о", "вас."]
+        },
+        {
+          "original": "Fourteen succession claims were heard, but only two were truly considered.",
+          "translation": ["Было", "заслушано", "14", "заявлений", "о", "наследовании,", "но", "только", "два", "были", "рассмотрены", "по-настоящему."]
+        }
+      ]
+    },
       {
         "episodeNumber": 2,
         "episodeTitle": "The Rogue Prince",
-        "content": "..."
+        "content": [
+          {
+            "original": "But ambition alone is not what drove him to conquest.",
+            "translation": ["Но", "не", "только", "амбиции", "побуждали", "его", "к", "завоеваниям."]
+          },
+          {
+            "original": "He was found to have passed gently in his sleep.",
+            "translation": ["Было", "установлено,", "что", "он", "скончался", "во", "сне."]
+          },
+          {
+            "original": "You saw combat in the Stormlands.",
+            "translation": ["Вы", "участвовали", "в", "боях", "в", "Штормовых", "землях."]
+          },
+          {
+            "original": "The stonemasons built the structures.",
+            "translation": ["Каменщики", "строили", "сооружения."]
+          },
+          {
+            "original": "At the moment, the Crown is perceived as being vulnerable.",
+            "translation": ["В", "данный", "момент", "корона", "кажется", "уязвимой."]
+          },
+          {
+            "original": "We should be free to speak our minds to one another.",
+            "translation": ["Мы", "должны", "свободно", "высказывать", "друг", "другу", "свои", "мысли."]
+          },
+          {
+            "original": "I imagine even dragons get lonely.",
+            "translation": ["Мне", "кажется,", "даже", "драконам", "бывает", "одиноко."]
+          },
+          {
+            "original": "It is his duty to take a new wife and strengthen his line.",
+            "translation": ["Его", "долг", "взять", "новую", "жену", "и", "укрепить", "свой", "род."]
+          },
+          {
+            "original": "A good and kind queen will give comfort to your subjects.",
+            "translation": ["Хорошая", "и", "добрая", "королева", "подарит", "комфорт", "вашим", "подданным."]
+          },
+          {
+            "original": "Your occupation of this island is at an end.",
+            "translation": ["Ваша", "оккупация", "острова", "окончена."]
+          },
+          {
+            "original": "She comes from unimpeachable Valyrian stock.",
+            "translation": ["Она", "происходит", "из", "безупречного", "валирийского", "рода."]
+          }
+        ]
       },
       {
         "episodeNumber": 3,
         "episodeTitle": "Second of His Name",
-        "content": "..."
+        "content": [
+          {
+            "original": "The seeds of dissent are sown amongst the rank and file.",
+            "translation": ["Семена", "несогласия", "прорастают", "среди", "рядовых", "сотрудников."]
+          },
+          {
+            "original": "The maester said that being out in nature would do me well.",
+            "translation": ["Мейстер", "сказал,", "что", "пребывание", "на", "природе", "пойдет", "мне", "на", "пользу."]
+          },
+          {
+            "original": "You should ride out with me today.",
+            "translation": ["Ты", "должен", "поехать", "со", "мной", "сегодня."]
+          },
+          {
+            "original": "As I am ceaselessly reminded.",
+            "translation": ["Как", "мне", "постоянно", "напоминают."]
+          },
+          {
+            "original": "Your twin serves on my father's council.",
+            "translation": ["Твой", "близнец", "служит", "в", "совете", "моего", "отца."]
+          },
+          {
+            "original": "How lucky you are to have a say in your own life.",
+            "translation": ["Как", "же", "вам", "повезло,", "что", "вы", "можете", "распоряжаться", "своей", "жизнью."]
+          },
+          {
+            "original": "Thank you for your generosity.",
+            "translation": ["Спасибо", "за", "вашу", "щедрость."]
+          },
+          {
+            "original": "There is another choice beyond Casterly Rock.",
+            "translation": ["Есть", "и", "другой", "выбор,", "помимо", "Утеса", "Кастерли."]
+          },
+          {
+            "original": "And he is the heir to the wealthiest house in the realm.",
+            "translation": ["И", "он", "наследник", "самого", "богатого", "дома", "в", "королевстве."]
+          },
+          {
+            "original": "I was hoping we might discuss something.",
+            "translation": ["Я", "надеялся,", "что", "мы", "сможем", "что-то", "обсудить."]
+          },
+          {
+            "original": "But his king does not mean to allow that.",
+            "translation": ["Но", "его", "король", "не", "намерен", "этого", "допускать."]
+          },
+          {
+            "original": "A mountain stronghold or a fleet of ships.",
+            "translation": ["Горная", "крепость", "или", "флот", "кораблей."]
+          },
+          {
+            "original": "Then I pose a simpler question.",
+            "translation": ["Тогда", "я", "задам", "более", "простой", "вопрос."]
+          }
+        ]
       },
       {
         "episodeNumber": 4,
         "episodeTitle": "King of the Narrow Sea",
-        "content": "..."
+        "content": [
+          {
+            "original": "What happiness it is to have been wrong.",
+            "translation": ["Какое", "это", "счастье", "ошибаться."]
+          },
+          {
+            "original": "Her neck and skull both crushed in the fall.",
+            "translation": ["При", "падении", "ей", "раздробило", "шею", "и", "череп."]
+          },
+          {
+            "original": "There are those who like goose very well.",
+            "translation": ["Есть", "и", "те,", "кто", "очень", "любит", "гуся."]
+          },
+          {
+            "original": "Viserys has taken to bed while his ship is readied.",
+            "translation": ["Визерис", "улегся", "спать,", "пока", "его", "корабль", "готовят."]
+          },
+          {
+            "original": "I fear I must question you on a delicate matter, Ser Criston.",
+            "translation": ["Боюсь,", "я", "должен", "задать", "вам", "один", "деликатный", "вопрос,", "сир", "Кристон."]
+          },
+          {
+            "original": "You have made a fine match for the Princess.",
+            "translation": ["Вы", "прекрасно", "подходите", "принцессе."]
+          },
+          {
+            "original": "What a blessing this is for you.",
+            "translation": ["Какое", "это", "счастье", "для", "вас."]
+          },
+          {
+            "original": "I wish to speak to you about my inheritance.",
+            "translation": ["Я", "хочу", "поговорить", "с", "вами", "о", "своем", "наследстве."]
+          },
+          {
+            "original": "My lady was never very kind to me.",
+            "translation": ["Моя", "леди", "никогда", "не", "была", "со", "мной", "очень", "добра."]
+          },
+          {
+            "original": "Ser Laenor is quite dear to me.",
+            "translation": ["Сир", "Лаэнор", "очень", "дорог", "мне."]
+          }
+        ]
       },
       {
         "episodeNumber": 5,
         "episodeTitle": "We Light the Way",
-        "content": "..."
+        "content": [
+          {
+            "original": "My deepest sympathies.",
+            "translation": ["Примите", "мои", "глубочайшие", "соболезнования."]
+          }
+        ]
       },
       {
         "episodeNumber": 6,
         "episodeTitle": "The Princess and the Queen",
-        "content": "..."
+        "content": [
+          {
+            "original": "My deepest sympathies.",
+            "translation": ["Примите", "мои", "глубочайшие", "соболезнования."]
+          }
+        ]
       },
       {
         "episodeNumber": 7,
         "episodeTitle": "Driftmark",
-        "content": "..."
+        "content": [
+          {
+            "original": "My deepest sympathies.",
+            "translation": ["Примите", "мои", "глубочайшие", "соболезнования."]
+          }
+        ]
       },
       {
         "episodeNumber": 8,
         "episodeTitle": "The Lord of the Tides",
-        "content": "..."
+        "content": [
+          {
+            "original": "My deepest sympathies.",
+            "translation": ["Примите", "мои", "глубочайшие", "соболезнования."]
+          }
+        ]
       },
       {
         "episodeNumber": 9,
         "episodeTitle": "The Green Council",
-        "content": "..."
+        "content": [
+          {
+            "original": "My deepest sympathies.",
+            "translation": ["Примите", "мои", "глубочайшие", "соболезнования."]
+          }
+        ]
       },
       {
         "episodeNumber": 10,
         "episodeTitle": "The Black Queen",
-        "content": "..."
+        "content": [
+          {
+            "original": "My deepest sympathies.",
+            "translation": ["Примите", "мои", "глубочайшие", "соболезнования."]
+          }
+        ]
       }
     ]
   }

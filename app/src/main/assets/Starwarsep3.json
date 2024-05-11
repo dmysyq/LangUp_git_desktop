@@ -4,7 +4,124 @@
       {
         "episodeNumber": 1,
         "episodeTitle": "Star Wars: Revenge of the Sith",
-        "content": "..."
+        "content": [
+          {
+            "original": "Move to the right so I can get a clear shot at them.",
+            "translation": ["Отойдите", "вправо,", "чтобы", "я", "мог", "сделать", "чистый", "выстрел", "в", "них."]
+          },
+          {
+            "original": "I hope right you are.",
+            "translation": ["Я", "надеюсь,", "ты", "прав."]
+          },
+          {
+            "original": "They want to know what he's up to.",
+            "translation": ["Они", "хотят", "знать,", "что", "он", "там", "делает."]
+          },
+          {
+            "original": "Yoda will take a battalion of clones to reinforce the Wookiees on Kashyyyk.",
+            "translation": ["Йода", "отправится", "с", "батальоном", "клонов", "для", "усиления", "вукиев", "на", "Кашyyyк."]
+          },
+          {
+            "original": "To be the eyes, ears and voice of the Republic.",
+            "translation": ["Быть", "глазами,", "ушами", "и", "голосом", "Республики."]
+          },
+          {
+            "original": "That can only mean less deliberating and more action.",
+            "translation": ["Это", "может", "означать", "только", "меньше", "обсуждений", "и", "больше", "действий."]
+          },
+          {
+            "original": "You've missed the report on the outer rim sieges.",
+            "translation": ["Вы", "пропустили", "отчёт", "о", "осадах", "на", "внешнем", "кольце."]
+          },
+          {
+            "original": "Death is a natural part of life.",
+            "translation": ["Смерть", "является", "естественной", "частью", "жизни."]
+          },
+          {
+            "original": "The fear of loss is a path to the dark side.",
+            "translation": ["Страх", "потери", "является", "путём", "к", "тёмной", "стороне."]
+          },
+          {
+            "original": "The happiest moment of my life.",
+            "translation": ["Самый", "счастливый", "момент", "моей", "жизни."]
+          },
+          {
+            "original": "Then the Jedi Council will make finding Grievous our highest priority.",
+            "translation": ["Тогда", "Совет", "джедаев", "сделает", "поиск", "Гривуса", "нашим", "главным", "приоритетом."]
+          },
+          {
+            "original": "General Grievous has escaped once again.",
+            "translation": ["Генерал", "Гривус", "снова", "сбежал."]
+          },
+          {
+            "original": "Your lightsabers will make a fine addition to my collection.",
+            "translation": ["Ваши", "световые", "мечи", "станут", "прекрасным", "дополнением", "к", "моей", "коллекции."]
+          },
+          {
+            "original": "He cut off your arm, and you wanted revenge.",
+            "translation": ["Он", "отрезал", "тебе", "руку,", "и", "ты", "хотел", "мести."]
+          },
+          {
+            "original": "Two Jedi have landed in the main hangar bay.",
+            "translation": ["Два", "джедая", "приземлились", "в", "главном", "аэродроме."]
+          },
+          {
+            "original": "This war represents a failure to listen.",
+            "translation": ["Эта", "война", "представляет", "собой", "неспособность", "прислушаться."]
+          },
+          {
+            "original": "Unfortunately, he taught his apprentice everything he knew.",
+            "translation": ["К", "сожалению,", "он", "научил", "своего", "ученика", "всему,", "что", "знал сам"]
+          },
+          {
+            "original": "The Sith rely on their passion for their strength.",
+            "translation": ["Ситхи", "полагаются", "на", "свою", "страсть", "в", "своей", "силе."]
+          },
+          {
+            "original": "I have to admit, my trust in them has been shaken.",
+            "translation": ["Я", "должен", "признать,", "что", "мое", "доверие", "к", "ним", "подорвано."]
+          },
+          {
+            "original": "Twisted by the dark side young Skywalker has become.",
+            "translation": ["Юный", "Скайуокер", "стал", "на", "темную", "сторону."]
+          },
+          {
+            "original": "It was said that you would destroy the Sith, not join them!",
+            "translation": ["Ты", "должен,", "был", "уничтожить", "ситхов,", "а", "не", "присоединиться", "к", "ним!"]
+          },
+          {
+            "original": "It requests all Jedi to return to the temple.",
+            "translation": ["Он", "просит", "всех", "джедаев", "вернуться", "в", "храм."]
+          },
+          {
+            "original": "Received a coded retreat message we have.",
+            "translation": ["Получили", "закодированное", "сообщение", "об", "отступлении."]
+          },
+          {
+            "original": "I will not betray the Republic.",
+            "translation": ["Я", "не", "предам", "Республику."]
+          },
+          {
+            "original": "My mentor taught me everything about the Force.",
+            "translation": ["Мой", "наставник", "научил", "меня", "всему,", "что", "касается", "Силы."]
+          },
+          {
+            "original": "We can only hope that Master Kenobi is up to the challenge.",
+            "translation": ["Остается", "надеяться,", "что", "мастер", "Кеноби", "справится", "с", "этой", "задачей."]
+          },
+          {
+            "original": "The dark side of the Force surrounds the chancellor.",
+            "translation": ["Темная", "сторона", "Силы", "окружает", "канцлера."]
+          },
+          {
+            "original": "Quickly and decisively we should proceed.",
+            "translation": ["Мы", "должны", "действовать", "быстро", "и", "решительно."]
+          },
+          {
+            "original": "Is it possible to learn this power?",
+            "translation": ["Можно", "ли", "научиться", "этой", "силе?"]
+          }
+        ]
       }
     ]
   }

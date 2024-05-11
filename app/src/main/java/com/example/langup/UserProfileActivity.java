@@ -29,7 +29,6 @@ public class UserProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
 
-        // Инициализация элементов интерфейса
         nameEditText = findViewById(R.id.nameEditText);
         usernameEditText = findViewById(R.id.usernameEditText);
         emailEditText = findViewById(R.id.emailEditText);
@@ -38,15 +37,12 @@ public class UserProfileActivity extends AppCompatActivity {
         Button saveButton = findViewById(R.id.saveButton);
         Button logoutButton = findViewById(R.id.logoutButton);
 
-        // Инициализация Firebase Auth и Database Reference
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("users");
 
-        // Инициализация AuthManager
         authManager = new AuthManager(this);
 
-        // Загрузка данных пользователя
         if (currentUser != null) {
             mDatabaseRef.child(currentUser.getUid()).get().addOnCompleteListener(task -> {
                 if (task.isSuccessful() && task.getResult().exists()) {
@@ -62,22 +58,18 @@ public class UserProfileActivity extends AppCompatActivity {
             });
         }
 
-        // Обработка нажатия на кнопку 'назад'
         backButton.setOnClickListener(v -> onBackPressed());
 
-        // Обработка нажатия на кнопку 'СОХРАНИТЬ'
         saveButton.setOnClickListener(v -> {
             String name = nameEditText.getText().toString().trim();
             String username = usernameEditText.getText().toString().trim();
             String email = emailEditText.getText().toString().trim();
 
-            // Проверка на пустые поля email
             if (email.isEmpty()) {
                 Toast.makeText(UserProfileActivity.this, "Электронная почта не может быть пустой.", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            // Обновление данных пользователя
             if (currentUser != null) {
                 mDatabaseRef.child(currentUser.getUid()).child("name").setValue(name.isEmpty() ? null : name);
                 mDatabaseRef.child(currentUser.getUid()).child("username").setValue(username.isEmpty() ? null : username);
@@ -86,7 +78,6 @@ public class UserProfileActivity extends AppCompatActivity {
             }
         });
 
-        // Обработка нажатия на кнопку 'Выйти'
         logoutButton.setOnClickListener(v -> {
             mAuth.signOut();
             authManager.setUserLoggedIn(false);

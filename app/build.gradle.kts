@@ -38,6 +38,7 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation("com.google.code.gson:gson:2.8.6")
+    implementation("com.google.android.flexbox:flexbox:3.0.0")
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
     implementation(libs.firebase.crashlytics.buildtools)

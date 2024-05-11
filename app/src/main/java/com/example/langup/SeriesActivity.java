@@ -1,5 +1,6 @@
 package com.example.langup;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.List;
 
 public class SeriesActivity extends AppCompatActivity {
 
@@ -22,10 +24,8 @@ public class SeriesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_series);
 
-        // json из Intent
         String jsonFileName = getIntent().getStringExtra("jsonFileName");
 
-        // загрузка json в кнопки
         loadJsonAndCreateButtons(jsonFileName);
     }
 
@@ -36,7 +36,7 @@ public class SeriesActivity extends AppCompatActivity {
         Series series = gson.fromJson(jsonString, seriesType);
 
         LinearLayout episodesContainer = findViewById(R.id.episodesContainer);
-        episodesContainer.removeAllViews(); // Очистка контейнера
+        episodesContainer.removeAllViews();
 
         for (Episode episode : series.getEpisodes()) {
             Button button = new Button(this, null, 0, R.style.SeriesButtonStyle);
@@ -48,7 +48,9 @@ public class SeriesActivity extends AppCompatActivity {
             button.setLayoutParams(layoutParams);
             button.setText(episode.getEpisodeTitle());
             button.setOnClickListener(view -> {
-                // TODO: Реализуйте логику перехода к активности с карточками для перевода
+                Intent intent = new Intent(SeriesActivity.this, TranslationActivity.class);
+                intent.putExtra("contentJson", gson.toJson(episode.getContent()));
+                startActivity(intent);
             });
             episodesContainer.addView(button);
         }
@@ -93,24 +95,61 @@ public class SeriesActivity extends AppCompatActivity {
             this.episodes = episodes;
         }
     }
+    class Content {
+        private String original;
+        private List<String> translation;
 
+        public Content() {
+            // Default constructor
+        }
+
+        public String getOriginal() {
+            return original;
+        }
+
+        public void setOriginal(String original) {
+            this.original = original;
+        }
+
+        public List<String> getTranslation() {
+            return translation;
+        }
+
+        public void setTranslation(List<String> translation) {
+            this.translation = translation;
+        }
+    }
     class Episode {
         private int episodeNumber;
         private String episodeTitle;
-        private String content;
+        private List<Content> content;
 
         public Episode() {
-
+            // Default constructor
         }
 
-        // Геттер для эпизода
+        public int getEpisodeNumber() {
+            return episodeNumber;
+        }
+
+        public void setEpisodeNumber(int episodeNumber) {
+            this.episodeNumber = episodeNumber;
+        }
+
         public String getEpisodeTitle() {
             return episodeTitle;
         }
 
-        // Сеттер для названия эпизода
         public void setEpisodeTitle(String episodeTitle) {
             this.episodeTitle = episodeTitle;
+        }
+
+        public List<Content> getContent() {
+            return content;
+        }
+
+        public void setContent(List<Content> content) {
+            this.content = content;
         }
     }
 

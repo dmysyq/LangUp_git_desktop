@@ -65,7 +65,7 @@ public class SigninActivity extends AppCompatActivity {
                                 startActivity(intent);
                                 finish(); // Закрыть текущую активность
                             } else {
-                                // Если регистрация не удалась, отображение сообщения пользователю
+                                // Если регистрация не удалась, отображение сообщения
                                 Toast.makeText(SigninActivity.this, "Authentication failed.",
                                         Toast.LENGTH_SHORT).show();
                             }

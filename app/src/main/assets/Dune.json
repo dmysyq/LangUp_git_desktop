@@ -4,12 +4,158 @@
       {
         "episodeNumber": 1,
         "episodeTitle": "Dune. Episode 1",
-        "content": "..."
+        "content": [
+          {
+            "original": "You'll travel in a few weeks to Arrakis, like the rest of us.",
+            "translation": ["Вы", "отправитесь", "на", "Арракис", "через", "несколько", "недель,", "как", "и", "все", "мы."]
+          },
+          {
+            "original": "The Emperor asks us to bring peace to Arrakis.",
+            "translation": ["Император", "просит", "нас", "принести", "мир", "на", "Арракис."]
+          },
+          {
+            "original": "To avoid the heat of the day.",
+            "translation": ["Чтобы", "избежать", "зноя", "дня."]
+          },
+          {
+            "original": "If you get a little higher, you'll have a better view.",
+            "translation": ["Если", "ты", "поднимешься", "немного", "выше,", "у", "тебя", "будет", "лучший", "вид."]
+          },
+          {
+            "original": "Worms travel deep but get closer to the surface when they attack.",
+            "translation": ["Черви", "путешествуют", "глубоко,", "но", "приближаются", "к", "поверхности,", "когда", "они", "атакуют."]
+          },
+          {
+            "original": "Your desert boots are fitted slip-fashion at the ankles.",
+            "translation": ["Ваши", "пустынные", "ботинки", "прилегают", "к", "лодыжкам", "в", "стиле", "скользящей", "подгонки."]
+          },
+          {
+            "original": "Takes a clever piece of clockwork to sort it out.",
+            "translation": ["Это", "требует", "умного", "механизма,", "чтобы", "разобраться", "в", "этом."]
+          },
+          {
+            "original": "We accept it in the spirit in which it was given.",
+            "translation": ["Мы", "принимаем", "это", "в", "том", "духе,", "в", "котором", "оно", "было", "подано."]
+          },
+          {
+            "original": "You shouldn't be out here at this hour of the day.",
+            "translation": ["Вам", "не", "следует", "быть", "здесь", "в", "этот", "час", "дня."]
+          },
+          {
+            "original": "Past and future.",
+            "translation": ["Прошлое", "и", "будущее."]
+          },
+          {
+            "original": "Nothing survives such a storm.",
+            "translation": ["Ничто", "не", "выживает", "после", "такой", "бури."]
+          },
+          {
+            "original": "Fear is the little death that brings obliteration.",
+            "translation": ["Страх", "это", "маленькая", "смерть,", "которая", "приводит", "к", "уничтожению."]
+          },
+          {
+            "original": "I never questioned you.",
+            "translation": ["Я", "никогда", "не", "подвергал", "тебя", "сомнению."]
+          },
+          {
+            "original": "Even when you walked in shadows.",
+            "translation": ["Даже", "когда", "ты", "шел", "в", "тени."]
+          },
+          {
+            "original": "It cools the body and recycles the water lost to sweat.",
+            "translation": ["Это", "охлаждает", "тело", "и", "перерабатывает", "потерянную", "воду", "из-за", "пота."]
+          },
+          {
+            "original": "Do not trespass in our lands.",
+            "translation": ["Не", "проникайте", "на", "наши", "земли."]
+          }
+        ]
       },
       {
         "episodeNumber": 2,
         "episodeTitle": "Dune. Episode 2",
-        "content": "..."
+        "content": [
+          {
+            "original": "This world is beyond cruelty.",
+            "translation": ["Этот", "мир", "вне", "жестокости."]
+          },
+          {
+            "original": "How many times do I have to tell you that, huh?",
+            "translation": ["Сколько", "раз", "я", "должен", "тебе", "это", "говорить,", "а?"]
+          },
+          {
+            "original": "They do not usually venture this deep.",
+            "translation": ["Они", "обычно", "не", "рискуют", "идти", "так", "глубоко."]
+          },
+          {
+            "original": "Never give your water away, not even for the dead.",
+            "translation": ["Никогда", "не", "отдавайте", "свою", "воду,", "даже", "для", "мертвых."]
+          },
+          {
+            "original": "These are old Southern beliefs.",
+            "translation": ["Это", "старые", "южные", "верования."]
+          },
+          {
+            "original": "We need all the Fremen to believe in the prophecy.",
+            "translation": ["Нам", "нужно,", "чтобы", "все", "Фримены", "верили", "в", "пророчество."]
+          },
+          {
+            "original": "My family's been fighting them for centuries.",
+            "translation": ["Моя", "семья", "сражается", "с", "ними", "веками."]
+          },
+          {
+            "original": "Our castle stands on cliffs high above the sea.",
+            "translation": ["Наш", "замок", "стоит", "на", "высоких", "скалах", "над", "морем."]
+          },
+          {
+            "original": "Billions of corpses scattered across the galaxy.",
+            "translation": ["Миллиарды", "трупов", "разбросаны", "по", "галактике."]
+          },
+          {
+            "original": "These are our own religious patterns, aren't they?",
+            "translation": ["Это", "наши", "собственные", "религиозные", "образцы,", "не", "так", "ли?"]
+          },
+          {
+            "original": "You underestimate the power of faith.",
+            "translation": ["Вы", "недооцениваете", "силу", "веры."]
+          },
+          {
+            "original": "What your people did to this world is heartbreaking.",
+            "translation": ["То,", "что", "ваши", "люди", "сделали", "этому", "миру,", "разбивает", "сердце."]
+          },
+          {
+            "original": "We're literally melting rock on their heads.",
+            "translation": ["Мы", "буквально", "плавим", "камень", "на", "их", "головах."]
+          },
+          {
+            "original": "But the heart is not meant to rule.",
+            "translation": ["Но", "сердце", "не", "предназначено", "для", "власти."]
+          },
+          {
+            "original": "I will love you as long as I breathe.",
+            "translation": ["Я", "буду", "любить", "тебя", "до", "тех", "пор,", "пока", "дышу."]
+          },
+          {
+            "original": "Their bloodline had to be terminated.",
+            "translation": ["Их", "род", "должен", "был", "быть", "уничтожен."]
+          },
+          {
+            "original": "You killed nine of my men with one single blade.",
+            "translation": ["Ты", "убил", "девять", "моих", "людей", "одним", "единственным", "клинком."]
+          },
+          {
+            "original": "He lent his own army to the cause.",
+            "translation": ["Он", "предоставил", "свою", "собственную", "армию", "на", "помощь", "делу."]
+          },
+          {
+            "original": "I was able to negotiate a trip back home for the survivors.",
+            "translation": ["Мне", "удалось", "договориться", "о", "поездке", "домой", "для", "выживших."]
+          },
+          {
+          "original": "You cannot see the future without seeing the past.",
+          "translation": ["Вы", "не", "можете", "увидеть", "будущее", "без", "видения", "прошлого."]
+          }
+        ]
       }
     ]
   }

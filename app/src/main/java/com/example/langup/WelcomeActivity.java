@@ -15,18 +15,14 @@ public class WelcomeActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_welcome);
 
-        // Настройка кнопки входа
         Button signInButton = findViewById(R.id.signInButton);
         signInButton.setOnClickListener(v -> {
-            // Переход к LoginActivity
             Intent loginIntent = new Intent(WelcomeActivity.this, LoginActivity.class);
             startActivity(loginIntent);
         });
 
-        // Настройка кнопки регистрации
         Button getStartedButton = findViewById(R.id.getStartedButton);
         getStartedButton.setOnClickListener(v -> {
-            // Переход к SigninActivity
             Intent signinIntent = new Intent(WelcomeActivity.this, SigninActivity.class);
             startActivity(signinIntent);
         });
