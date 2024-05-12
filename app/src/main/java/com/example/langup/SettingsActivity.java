@@ -38,4 +38,12 @@ public class SettingsActivity extends AppCompatActivity {
         editor.apply();
         Toast.makeText(this, "Настройки сохранены", Toast.LENGTH_SHORT).show();
     }
+
+    @Override
+    public void onBackPressed() {
+        // Возвращаемся на предыдущую активность
+        super.onBackPressed();
+        finish();
+    }
+
 }
