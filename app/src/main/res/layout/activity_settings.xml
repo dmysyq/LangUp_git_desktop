@@ -16,9 +16,10 @@
             android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#FFFFFD"
-            android:padding="10dp"
-            android:src="@drawable/ic_back_arrow" />
+            android:clickable="true"
+            android:src="@drawable/ic_back_arrow"
+            android:background="@color/background_color"
+            android:padding="10dp"/>
 
         <TextView
             android:id="@+id/SeriesSelection"

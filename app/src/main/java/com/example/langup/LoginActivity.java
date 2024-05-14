@@ -17,7 +17,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText usernameEditText;
     private EditText passwordEditText;
-    private Button logInButton;
     private FirebaseAuth mAuth;
 
     private AuthManager authManager;
@@ -34,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         backButton.setOnClickListener(this::onClick);
         usernameEditText = findViewById(R.id.usernameEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
-        logInButton = findViewById(R.id.logInButton);
+        Button logInButton = findViewById(R.id.logInButton);
 
         ImageButton togglePasswordVisibilityButton = findViewById(R.id.togglePasswordVisibilityButton);
         togglePasswordVisibilityButton.setOnClickListener(new View.OnClickListener() {

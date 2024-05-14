@@ -2,6 +2,8 @@ package com.example.langup;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +14,7 @@ public class SettingsActivity extends AppCompatActivity {
     private SwitchCompat soundEffectsSwitch;
     private SwitchCompat vibrationSwitch;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +22,9 @@ public class SettingsActivity extends AppCompatActivity {
 
         soundEffectsSwitch = findViewById(R.id.soundEffectsSwitch);
         vibrationSwitch = findViewById(R.id.vibrationSwitch);
+        ImageButton backButton = findViewById(R.id.backButton);
+
+        backButton.setOnClickListener(v -> onBackPressed());
 
         loadSettings();
 
@@ -39,11 +45,8 @@ public class SettingsActivity extends AppCompatActivity {
         Toast.makeText(this, "Настройки сохранены", Toast.LENGTH_SHORT).show();
     }
 
-    @Override
-    public void onBackPressed() {
-        // Возвращаемся на предыдущую активность
-        super.onBackPressed();
-        finish();
+    private void onClick(View v) {
+        onBackPressed();
     }
 
 }

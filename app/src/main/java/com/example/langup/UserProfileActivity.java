@@ -2,6 +2,7 @@ package com.example.langup;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -49,9 +50,8 @@ public class UserProfileActivity extends AppCompatActivity {
                     nameEditText.setText(task.getResult().child("name").getValue(String.class));
                     usernameEditText.setText(task.getResult().child("username").getValue(String.class));
                     emailEditText.setText(currentUser.getEmail());
-                    // Пароль не отображается и не может быть изменен
-                    passwordEditText.setText("********"); // Показать маскированный пароль
-                    passwordEditText.setEnabled(false); // Сделать поле пароля неизменяемым
+                    passwordEditText.setText("********");
+                    passwordEditText.setEnabled(false);
                 } else {
                     Toast.makeText(UserProfileActivity.this, "Не удалось загрузить данные пользователя.", Toast.LENGTH_SHORT).show();
                 }

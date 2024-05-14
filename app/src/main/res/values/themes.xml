@@ -7,15 +7,30 @@
     <style name="Theme.LangUp.MainActivity" parent="Base.Theme.LangUp">
         <item name="colorPrimary">@color/colorPrimaryMainActivity</item>
     </style>
+
     <style name="Theme.LangUp.WelcomeActivity" parent="Base.Theme.LangUp">
         <item name="colorPrimary">@color/colorPrimaryWelcomeActivity</item>
     </style>
+
+    <style name="Theme.LangUp.SettingsActivity" parent="Base.Theme.LangUp">
+        <item name="colorPrimary">@color/colorPrimaryWelcomeActivity</item>
+    </style>
+
+    <style name="Theme.LangUp.SeriesActivity" parent="Base.Theme.LangUp">
+        <item name="colorPrimary">@color/colorPrimaryWelcomeActivity</item>
+    </style>
+
+    <style name="Theme.LangUp.TranslationActivity" parent="Base.Theme.LangUp">
+        <item name="colorPrimary">@color/colorPrimaryWelcomeActivity</item>
+    </style>
+
     <style name="Theme.LangUp.LoginActivity" parent="Base.Theme.LangUp">
         <item name="colorPrimary">@color/colorPrimaryWelcomeActivity</item>
     </style>
     <style name="Theme.LangUp.SigninActivity" parent="Base.Theme.LangUp">
         <item name="colorPrimary">@color/colorPrimaryWelcomeActivity</item>
     </style>
+
     <style name="Theme.LangUp.UserProfileActivity" parent="Base.Theme.LangUp">
         <item name="colorPrimary">@color/colorPrimaryWelcomeActivity</item>
     </style>
@@ -32,7 +47,4 @@
         <item name="android:gravity">left</item>
         <item name="android:padding">12dp</item>
     </style>
-
-
-    <!-- Дополнительные стили для других активностей -->
 </resources>

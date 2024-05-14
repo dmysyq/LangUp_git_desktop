@@ -10,6 +10,7 @@ import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,12 +40,11 @@ public class TranslationActivity extends AppCompatActivity {
     private int currentLevelIndex = 0;
     private static final int MAX_LEVELS = 10;
     private List<Content> contents;
-
     private SoundPool soundPool;
     private int successSoundId;
     private int failureSoundId;
     private Vibrator vibrator;
-    private boolean isTranslationCorrect = false; // Флаг для отслеживания состояния проверки
+    private final boolean isTranslationCorrect = false; //
 
 
     @Override
@@ -57,6 +57,10 @@ public class TranslationActivity extends AppCompatActivity {
         translationField = findViewById(R.id.translationField);
         livesCounter = findViewById(R.id.livesCounter);
         checkButton = findViewById(R.id.checkButton);
+        ImageButton backButton = findViewById(R.id.backButton);
+
+        backButton.setOnClickListener(v -> onBackPressed());
+
 
         AudioAttributes audioAttributes = new AudioAttributes.Builder()
                 .setUsage(AudioAttributes.USAGE_GAME)
@@ -120,13 +124,12 @@ public class TranslationActivity extends AppCompatActivity {
                 vibrate();
                 currentLevelIndex++;
                 if (currentLevelIndex >= MAX_LEVELS || currentLevelIndex >= contents.size()) {
-                    // Если все уровни пройдены, возвращаемся на MainActivity
                     Intent intent = new Intent(TranslationActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
                 } else {
                     translationField.setText("");
-                    loadLevel(currentLevelIndex); // Загрузка следующего уровня
+                    loadLevel(currentLevelIndex);
                 }
             } else {
                 playFailureSound();
@@ -134,19 +137,16 @@ public class TranslationActivity extends AppCompatActivity {
                 lives--;
                 updateLivesCounter();
                 if (lives <= 0) {
-                    // Возвращаемся на MainActivity после потери всех жизней
                     Intent intent = new Intent(TranslationActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
                 } else {
-                    // Очищаем поле ввода и показываем сообщение об ошибке
                     translationField.setText("");
                     Toast.makeText(this, "Неправильно! Осталось жизней: " + lives, Toast.LENGTH_SHORT).show();
-                    currentLevelIndex++; // Переход к следующему уровню даже при ошибке
+                    currentLevelIndex++;
                     if (currentLevelIndex < contents.size()) {
                         loadLevel(currentLevelIndex);
                     } else {
-                        // Возвращаемся на MainActivity, если уровни закончились
                         Intent intent = new Intent(TranslationActivity.this, MainActivity.class);
                         startActivity(intent);
                         finish();
@@ -203,11 +203,7 @@ public class TranslationActivity extends AppCompatActivity {
 
     private void vibrate() {
         if (vibrator != null) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                vibrator.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE));
-            } else {
-                vibrator.vibrate(100);
-            }
+            vibrator.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE));
         }
     }
 
@@ -240,7 +236,6 @@ public class TranslationActivity extends AppCompatActivity {
     private void onClick(View v) {
         onBackPressed();
     }
-
     static class Content {
         private String original;
         private String[] translation;

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +28,10 @@ public class SeriesActivity extends AppCompatActivity {
         String jsonFileName = getIntent().getStringExtra("jsonFileName");
 
         loadJsonAndCreateButtons(jsonFileName);
+
+        ImageButton backButton = findViewById(R.id.backButton);
+
+        backButton.setOnClickListener(v -> onBackPressed());
     }
 
     private void loadJsonAndCreateButtons(String jsonFileName) {
@@ -80,17 +85,14 @@ public class SeriesActivity extends AppCompatActivity {
         private String seriesName;
         private ArrayList<Episode> episodes;
 
-        // Конструктор(на будущее)
         public Series() {
 
         }
 
-        // Геттер списка эпизодов
         public ArrayList<Episode> getEpisodes() {
             return episodes;
         }
 
-        // Сеттер списка эпидозов
         public void setEpisodes(ArrayList<Episode> episodes) {
             this.episodes = episodes;
         }
@@ -125,7 +127,6 @@ public class SeriesActivity extends AppCompatActivity {
         private List<Content> content;
 
         public Episode() {
-            // Default constructor
         }
 
         public int getEpisodeNumber() {
@@ -151,6 +152,9 @@ public class SeriesActivity extends AppCompatActivity {
         public void setContent(List<Content> content) {
             this.content = content;
         }
+    }
+    private void onClick(View v) {
+        onBackPressed();
     }
 
 }
