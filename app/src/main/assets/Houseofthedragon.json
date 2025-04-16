@@ -38,7 +38,7 @@
         },
         {
           "original": "Whatever it is, it needs to be kept quiet.",
-          "translation": ["Что", "бы", "это", "ни", "было,", "об", "этом", "нужно", "молчать."]
+          "translation": ["Что бы это ни было, об этом нужно молчать."]
         },
         {
           "original": "Now, you and I both own a small piece of our ancestry.",
@@ -223,6 +223,54 @@
           {
             "original": "My deepest sympathies.",
             "translation": ["Примите", "мои", "глубочайшие", "соболезнования."]
+          },
+          {
+            "original": "Or have you at last come to consummate our marriage?",
+            "translation": ["Или", "вы", "наконец-то", "пришли,", "чтобы", "заключить", "наш", "брак?"]
+          },
+          {
+            "original": "You're no fool, and yet you choose not to see it.",
+            "translation": ["Ты", "не", "дурак,", "но", "предпочитаешь", "этого", "не", "замечать."]
+          },
+          {
+            "original": "And yet it is a dark day for the realm.",
+            "translation": ["И", "все", "же", "это", "мрачный", "день", "для", "королевства."]
+          },
+          {
+            "original": "What happiness it is to have been wrong.",
+            "translation": ["Какое", "счастье,", "что", "мы", "ошиблись."]
+          },
+          {
+            "original": "Let us discover what might be had for breakfast.",
+            "translation": ["Давайте", "узнаем,", "что", "можно", "съесть", "на", "завтрак."]
+          },
+          {
+            "original": "Mayhaps we can turn toward happier pursuits.",
+            "translation": ["Может", "быть,", "мы", "обратимся", "к", "более", "счастливым", "занятиям."]
+          },
+          {
+            "original": "I prefer roast duck to goose.",
+            "translation": ["Я", "предпочитаю", "жареную", "утку", "гусю."]
+          },
+          {
+            "original": "We are placing our son in danger.",
+            "translation": ["Мы", "подвергаем", "нашего", "сына", "опасности."]
+          },
+          {
+            "original": "From the burdens and indignities of your inheritance.",
+            "translation": ["От", "тягот", "и", "обид", "вашего", "наследства."]
+          },
+          {
+            "original": "Tonight is only its beginning.",
+            "translation": ["Сегодняшний", "вечер", "это", "только", "начало."]
+          },
+          {
+            "original": "I shall hope for a different outcome.",
+            "translation": ["Я", "буду", "надеяться", "на", "другой", "исход."]
+          },
+          {
+            "original": "But we are both deeply invested in this union.",
+            "translation": ["Но", "мы", "оба", "глубоко", "заинтересованы", "в", "этом", "союзе."]
           }
         ]
       },
@@ -231,8 +279,56 @@
         "episodeTitle": "The Princess and the Queen",
         "content": [
           {
-            "original": "My deepest sympathies.",
-            "translation": ["Примите", "мои", "глубочайшие", "соболезнования."]
+            "original": "Not unless you wish to carry me down those fucking stairs.",
+            "translation": ["Только", "если", "ты", "не", "хочешь", "нести", "меня", "по", "этой", "гребаной", "лестнице."]
+          },
+          {
+            "original": "Before they send out a search party.",
+            "translation": ["Пока", "они", "не", "выслали", "поисковую", "группу."]
+          },
+          {
+            "original": "You will have a dragon one day.",
+            "translation": ["Когда-нибудь", "у", "тебя", "будет", "дракон."]
+          },
+          {
+            "original": "Not to mention decency itself.",
+            "translation": ["Не", "говоря", "уже", "о", "приличиях."]
+          },
+          {
+            "original": "Keep your feet light and your hands heavy.",
+            "translation": ["Держите", "ноги", "легкими,", "а", "руки", "тяжелыми."]
+          },
+          {
+            "original": "Give your enemies no quarter.",
+            "translation": ["Не", "давайте", "врагам", "покоя."]
+          },
+          {
+            "original": "I wish my father affected a similar blindness.",
+            "translation": ["Жаль,", "что", "мой", "отец", "не", "обладал", "такой", "же", "слепотой."]
+          },
+          {
+            "original": "Honest battle to enliven my blood again.",
+            "translation": ["Честная", "битва", "снова", "оживит", "мою", "кровь."]
+          },
+          {
+            "original": "Let us put aside these childish quarrels.",
+            "translation": ["Давайте", "оставим", "эти", "детские", "ссоры."]
+          },
+          {
+            "original": "I can no longer serve you with integrity.",
+            "translation": ["Я", "больше", "не", "могу", "служить", "вам", "честно."]
+          },
+          {
+            "original": "Its a sin to let such a pie grow cold.",
+            "translation": ["Это", "грех", "позволить", "такому", "пирогу", "остыть."]
+          },
+          {
+            "original": "We will exchange letters by raven.",
+            "translation": ["Мы", "будем", "обмениваться", "письмами", "с", "помощью", "ворона."]
+          },
+          {
+            "original": "The wise sailor flees the storm as it gathers.",
+            "translation": ["Мудрый", "моряк", "убегает", "от", "бури,", "когда", "она", "собирается."]
           }
         ]
       },
@@ -241,8 +337,48 @@
         "episodeTitle": "Driftmark",
         "content": [
           {
-            "original": "My deepest sympathies.",
-            "translation": ["Примите", "мои", "глубочайшие", "соболезнования."]
+            "original": "I have an equal claim to sympathy.",
+            "translation": ["Я", "в", "равной", "степени", "претендую", "на", "сочувствие."]
+          },
+          {
+            "original": "We both fancy creatures with very long legs.",
+            "translation": ["Мы", "оба", "любим", "существ", "с", "очень", "длинными", "ногами."]
+          },
+          {
+            "original": "The gods can be cruel.",
+            "translation": ["Боги", "могут", "быть", "жестокими."]
+          },
+          {
+            "original": "Daemon did what he thought best.",
+            "translation": ["Дэймон", "поступил", "так,", "как", "считал", "нужным."]
+          },
+          {
+            "original": "I gave up the idea of wearing a crown a generation ago.",
+            "translation": ["Я", "отказался", "от", "идеи", "носить", "корону", "уже", "несколько", "поколений", "назад."]
+          },
+          {
+            "original": "You have more to lose.",
+            "translation": ["Вам", "есть", "что", "терять."]
+          },
+          {
+            "original": "Perhaps he might have something to say in the matter.",
+            "translation": ["Возможно,", "ему", "есть", "что", "сказать", "по", "этому", "поводу."]
+          },
+          {
+            "original": "Now make your apologies and show good will to one another.",
+            "translation": ["А", "теперь", "принесите", "свои", "извинения", "и", "проявите", "добрую", "волю", "друг", "к", "другу."]
+          },
+          {
+            "original": "You will do no such thing.",
+            "translation": ["Вы", "не", "сделаете", "ничего", "подобного."]
+          },
+          {
+            "original": "But your devotion has not gone unnoticed.",
+            "translation": ["Но", "ваша", "преданность", "не", "осталась", "незамеченной."]
+          },
+          {
+            "original": "You have always looked down on me.",
+            "translation": ["Вы", "всегда", "смотрели", "на", "меня", "свысока."]
           }
         ]
       },
@@ -253,6 +389,62 @@
           {
             "original": "My deepest sympathies.",
             "translation": ["Примите", "мои", "глубочайшие", "соболезнования."]
+          },
+          {
+            "original": "A ship made to look as if it were abandoned.",
+            "translation": ["Корабль", "выглядит", "так,", "будто", "он", "заброшен."]
+          },
+          {
+            "original": "But the greater concern is the fever that followed.",
+            "translation": ["Но", "большее", "беспокойство", "вызывает", "последовавшая", "за", "этим", "лихорадка."]
+          },
+          {
+            "original": "My grandmother seems quite comfortable here.",
+            "translation": ["Моя", "бабушка", "чувствует", "себя", "здесь", "вполне", "комфортно."]
+          },
+          {
+            "original": "One could take your words for treason.",
+            "translation": ["Ваши", "слова", "можно", "принять", "за", "предательство."]
+          },
+          {
+            "original": "The winds have shifted.",
+            "translation": ["Ветер", "переменился."]
+          },
+          {
+            "original": "And you know what happens to girls like that.",
+            "translation": ["И", "вы", "знаете,", "что", "случается", "с", "такими", "девушками."]
+          },
+          {
+            "original": "He looks like a different person.",
+            "translation": ["Он", "выглядит", "как", "другой", "человек."]
+          },
+          {
+            "original": "It subjects him to considerable pain.",
+            "translation": ["Это", "причиняет", "ему", "сильную", "боль."]
+          },
+          {
+            "original": "I don't give a shit about tourneys.",
+            "translation": ["Мне", "плевать", "на", "турниры."]
+          },
+          {
+            "original": "This is no fair proceeding.",
+            "translation": ["Это", "нечестное", "разбирательство."]
+          },
+          {
+            "original": "You can bargain with me all you like.",
+            "translation": ["Вы", "можете", "торговаться", "со", "мной", "сколько", "угодно."]
+          },
+          {
+            "original": "Bring milk of the poppy.",
+            "translation": ["Принесите", "маковое", "молоко."]
+          },
+          {
+            "original": "House Velaryon has ruled the seas.",
+            "translation": ["Дом", "Велариона", "правит", "морями."]
+          },
+          {
+            "original": "But set aside your grievances.",
+            "translation": ["Но", "отбросьте", "свои", "обиды."]
           }
         ]
       },
@@ -263,6 +455,62 @@
           {
             "original": "My deepest sympathies.",
             "translation": ["Примите", "мои", "глубочайшие", "соболезнования."]
+          },
+          {
+            "original": "His firstborn son is hardly an imposter.",
+            "translation": ["Его", "первенца", "трудно", "назвать", "самозванцем."]
+          },
+          {
+            "original": "I will not suffer insults to Her Grace the Queen.",
+            "translation": ["Я", "не", "потерплю", "оскорблений", "в", "адрес", "Ее", "Светлости", "Королевы."]
+          },
+          {
+            "original": "We may not assume the loyalty of Lord Borros.",
+            "translation": ["Мы", "не", "можем", "полагаться", "на", "лояльность", "лорда", "Борроса."]
+          },
+          {
+            "original": "You must now pledge them to the future king.",
+            "translation": ["Теперь", "вы", "должны", "пообещать", "их", "будущему", "королю."]
+          },
+          {
+            "original": "Makes them more formidable.",
+            "translation": ["Это", "сделает", "их", "более", "грозными."]
+          },
+          {
+            "original": "We swore an oath of service until death.",
+            "translation": ["Мы", "дали", "клятву", "служить", "до", "самой", "смерти."]
+          },
+          {
+            "original": "I have no love for the Princess.",
+            "translation": ["Я", "не", "испытываю", "любви", "к", "принцессе."]
+          },
+          {
+            "original": "I came here to ask your support.",
+            "translation": ["Я", "пришел", "сюда,", "чтобы", "попросить", "вашей", "поддержки."]
+          },
+          {
+            "original": "I little thought to hear those words from you.",
+            "translation": ["Я", "не", "думал,", "что", "услышу", "эти", "слова", "от", "вас."]
+          },
+          {
+            "original": "The Iron Throne was yours by blood and by temperament.",
+            "translation": ["Железный", "трон", "принадлежит", "вам", "по", "крови", "и", "по", "характеру."]
+          },
+          {
+            "original": "My condolences on the passing of your king.",
+            "translation": ["Примите", "мои", "соболезнования", "в", "связи", "с", "кончиной", "вашего", "короля."]
+          },
+          {
+            "original": "And now it is the good of the family that we both desire.",
+            "translation": ["Теперь", "мы", "оба", "желаем", "блага", "семьи."]
+          },
+          {
+            "original": "We have relied on one another these many years.",
+            "translation": ["Мы", "полагались", "друг", "на", "друга", "все", "эти", "годы."]
+          },
+          {
+            "original": "A sacrifice made for the stability of the realm.",
+            "translation": ["Жертва,", "принесенная", "ради", "стабильности", "королевства."]
           }
         ]
       },
@@ -273,9 +521,62 @@
           {
             "original": "My deepest sympathies.",
             "translation": ["Примите", "мои", "глубочайшие", "соболезнования."]
+          },
+          {
+            "original": "Grandsire was the greatest sailor who ever lived.",
+            "translation": ["Грандсир", "был", "величайшим", "моряком,", "который", "когда-либо", "жил."]
+          },
+          {
+            "original": "Aegon has been crowned as his successor.",
+            "translation": ["Эйгон", "был", "коронован", "как", "его", "преемник."]
+          },
+          {
+            "original": "They crowned him before the masses.",
+            "translation": ["Его", "короновали", "перед", "народом."]
+          },
+          {
+            "original": "You should leave Dragonstone at once.",
+            "translation": ["Вам", "следует", "немедленно", "покинуть", "Драконий", "камень."]
+          },
+          {
+            "original": "Lady of the Seven Kingdoms and Protector of the Realm.",
+            "translation": ["Леди", "Семи", "Королевств", "и", "защитница", "королевства."]
+          },
+          {
+            "original": "Lord Grover is fickle and easily swayed.",
+            "translation": ["Лорд", "Гровер", "непостоянен", "и", "легко", "поддается", "влиянию."]
+          },
+          {
+            "original": "Every symbol of legitimacy belongs to him.",
+            "translation": ["Все", "символы", "легитимности", "принадлежат", "ему."]
+          },
+          {
+            "original": "That girl destroys everything she touches.",
+            "translation": ["Эта", "девчонка", "разрушает", "все,", "к", "чему", "прикасается."]
+          },
+          {
+            "original": "We must remind these lords of the oaths they swore.",
+            "translation": ["Мы", "должны", "напомнить", "этим", "лордам", "о", "клятвах,", "которые", "они", "давали."]
+          },
+          {
+            "original": "I expect you will receive a very warm welcome.",
+            "translation": ["Я", "ожидаю,", "что", "вас", "ждет", "очень", "теплый", "прием."]
+          },
+          {
+            "original": "Take Prince Lucerys back to his dragon.",
+            "translation": ["Отведите", "принца", "Люцериса", "к", "его", "дракону."]
+          },
+          {
+            "original": "Taking caution does not mean standing fast.",
+            "translation": ["Соблюдать", "осторожность", "это", "не", "значит", "стоять", "на", "месте."]
+          },
+          {
+            "original": "Heedless ambition has always been a Velaryon weakness.",
+            "translation": ["Безрассудные", "амбиции", "всегда", "были", "слабостью", "Велариона."]
           }
         ]
       }
+      
     ]
   }
   

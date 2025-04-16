@@ -1,19 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Base Colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="background_color">#FFFFFD</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Background Colors -->
+    <color name="background_primary">#FFFFFD</color>
+    <color name="background_secondary">#F6F6F6</color>
+    <color name="background_tertiary">#FCFCFA</color>
+    <color name="background_container">#FFFFFF</color>
+
+    <!-- Text Colors -->
     <color name="text_primary">#131F22</color>
     <color name="text_secondary">#858583</color>
-    <color name="button_text">#E3FBC8</color>
-    <color name="buttongreen_text">#72C035</color>
-    <color name="google">#d34836</color>
-    <color name="fb">#3b5998</color>
-    <color name="dark_text">#5A5A5A</color>
-    <color name="green">#57CC02</color>
+    <color name="text_tertiary">#51514F</color>
+    <color name="text_light">#B5B5B3</color>
+    <color name="text_dark">#5A5A5A</color>
+    <color name="text_blue">#2CA6E5</color>
+    <color name="text_twitter">#1DA5EF</color>
+    <color name="text_gray">#565654</color>
 
-    <color name="colorPrimaryMainActivity">@color/green</color>
-    <color name="colorPrimaryDarkMainActivity">@color/green</color>
-    <color name="colorPrimaryWelcomeActivity">@color/background_color</color>
-    <color name="colorPrimaryDarkWelcomeActivity">@color/background_color</color>
+    <!-- Button Colors -->
+    <color name="button_text">#E3FBC8</color>
+    <color name="button_green">#72C035</color>
+    <color name="button_primary">#57CC02</color>
+
+    <!-- Social Colors -->
+    <color name="google">#d34836</color>
+    <color name="facebook">#3b5998</color>
+
+    <!-- Border Colors -->
+    <color name="border_light">#EAEAE8</color>
+    <color name="border_gray">#E5E5E3</color>
+    <color name="border_default">#FFDDDDDD</color>
+
+    <!-- Switch Colors -->
+    <color name="switch_thumb">#1BB1F7</color>
+    <color name="switch_track">#801BB1F7</color>
+
+    <!-- Result Colors -->
+    <color name="result_success">#00FF00</color>
+    <color name="result_error">#FF0000</color>
+
+    <!-- Theme Colors -->
+    <color name="colorPrimaryMainActivity">@color/button_primary</color>
+    <color name="colorPrimaryDarkMainActivity">@color/button_primary</color>
+    <color name="colorPrimaryWelcomeActivity">@color/background_primary</color>
+    <color name="colorPrimaryDarkWelcomeActivity">@color/background_primary</color>
 </resources>

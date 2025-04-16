@@ -5,10 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="@color/background_color"
+    android:background="@color/background_primary"
     tools:context=".WelcomeActivity">
 
-    <!-- Заголовок экрана -->
     <TextView
         android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
@@ -20,7 +19,6 @@
         android:textColor="@color/text_primary"
         android:textSize="24sp" />
 
-    <!-- Текст для существующих пользователей -->
     <TextView
         android:id="@+id/existingUserTextView"
         android:layout_width="wrap_content"
@@ -33,18 +31,17 @@
         android:textColor="@color/text_secondary"
         android:textSize="16sp" />
 
-    <!-- Кнопка входа -->
     <Button
         android:id="@+id/signInButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/existingUserTextView"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#57CC02"
+        android:backgroundTint="@color/button_primary"
         android:elevation="10px"
         android:fontFamily="@font/inter_medium"
         android:text="SIGN IN"
-        android:textColor="#E3FBC8" />
+        android:textColor="@color/button_text" />
 
     <TextView
         android:id="@+id/TitleNewUserTextView"
@@ -58,7 +55,6 @@
         android:textColor="@color/text_primary"
         android:textSize="24sp" />
 
-    <!-- Текст для новых пользователей -->
     <TextView
         android:id="@+id/newUserTextView"
         android:layout_width="wrap_content"
@@ -71,19 +67,18 @@
         android:textColor="@color/text_secondary"
         android:textSize="16sp" />
 
-    <!-- Кнопка регистрации -->
     <Button
         android:id="@+id/getStartedButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/newUserTextView"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#FCFCFA"
+        android:backgroundTint="@color/background_tertiary"
         android:fontFamily="@font/inter_medium"
         android:radius="22dp"
         android:text="GET STARTED"
-        android:textColor="@color/buttongreen_text"
-        app:strokeColor="#EAEAE8"
+        android:textColor="@color/button_green"
+        app:strokeColor="@color/border_light"
         app:strokeWidth="1px" />
 
 </RelativeLayout>

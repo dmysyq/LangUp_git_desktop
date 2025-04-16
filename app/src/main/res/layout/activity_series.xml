@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/background_color">
+    android:background="@color/background_primary">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:src="@drawable/ic_back_arrow"
-            android:background="@color/background_color"
+            android:background="@color/background_primary"
             android:padding="10dp"/>
 
         <TextView
@@ -28,7 +28,7 @@
             android:fontFamily="@font/inter_bold"
             android:text="Series selection"
             android:textAppearance="?attr/textAppearanceHeadline6"
-            android:textColor="#B5B5B3" />
+            android:textColor="@color/text_light" />
     </RelativeLayout>
 
     <ScrollView
@@ -41,7 +41,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <!-- Динамически создаваемые кнопки для серий будут здесь -->
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

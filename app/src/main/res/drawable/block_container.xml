@@ -2,13 +2,9 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle">
-            <!-- Установите радиус скругления углов -->
             <corners android:radius="12dp"/>
-            <!-- Установите цвет фона -->
             <solid android:color="#FFFFFF"/>
-            <!-- Добавьте границу, если необходимо -->
             <stroke android:width="1dp" android:color="#FFDDDDDD"/>
-            <!-- Уменьшите отступы внутри контейнера -->
             <padding
                 android:left="8dp"
                 android:top="6dp"

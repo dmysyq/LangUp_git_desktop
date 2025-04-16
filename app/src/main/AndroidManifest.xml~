@@ -32,7 +32,7 @@
             android:exported="false"
             android:theme="@style/Theme.LangUp.UserProfileActivity" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".SigninActivity"
             android:exported="false"
             android:theme="@style/Theme.LangUp.SigninActivity" />
         <activity

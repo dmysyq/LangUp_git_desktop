@@ -80,7 +80,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
         logoutButton.setOnClickListener(v -> {
             mAuth.signOut();
-            authManager.setLoggedIn(false);
+            authManager.setUserLoggedIn(false);
             startActivity(new Intent(UserProfileActivity.this, WelcomeActivity.class));
             finish();
         });

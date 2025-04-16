@@ -2,13 +2,13 @@
     <item android:state_checked="true">
         <shape android:shape="rectangle">
             <corners android:radius="8dp"/>
-            <solid android:color="#00FF00"/> <!-- Зеленый цвет при правильном ответе -->
+            <solid android:color="#00FF00"/>
         </shape>
     </item>
     <item>
         <shape android:shape="rectangle">
             <corners android:radius="8dp"/>
-            <solid android:color="#FF0000"/> <!-- Красный цвет при неправильном ответе -->
+            <solid android:color="#FF0000"/>
         </shape>
     </item>
 </selector>

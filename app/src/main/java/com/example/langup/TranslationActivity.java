@@ -1,6 +1,7 @@
 package com.example.langup;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.AudioAttributes;
 import android.media.SoundPool;
 import android.os.Build;
@@ -44,7 +45,10 @@ public class TranslationActivity extends AppCompatActivity {
     private int successSoundId;
     private int failureSoundId;
     private Vibrator vibrator;
-    private final boolean isTranslationCorrect = false; //
+    private final boolean isTranslationCorrect = false;
+
+    private boolean soundEnabled;
+    private boolean vibrationEnabled;
 
 
     @Override
@@ -61,6 +65,7 @@ public class TranslationActivity extends AppCompatActivity {
 
         backButton.setOnClickListener(v -> onBackPressed());
 
+        loadSettings();
 
         AudioAttributes audioAttributes = new AudioAttributes.Builder()
                 .setUsage(AudioAttributes.USAGE_GAME)
@@ -89,6 +94,12 @@ public class TranslationActivity extends AppCompatActivity {
             soundPool.release();
             soundPool = null;
         }
+    }
+
+    private void loadSettings() {
+        SharedPreferences preferences = getSharedPreferences("Settings", MODE_PRIVATE);
+        soundEnabled = preferences.getBoolean("SoundEffects", true);
+        vibrationEnabled = preferences.getBoolean("Vibration", true);
     }
 
     private void parseJsonContent(String contentJson) {
@@ -123,6 +134,7 @@ public class TranslationActivity extends AppCompatActivity {
                 playSuccessSound();
                 vibrate();
                 currentLevelIndex++;
+                translationField.setText("");
                 if (currentLevelIndex >= MAX_LEVELS || currentLevelIndex >= contents.size()) {
                     Intent intent = new Intent(TranslationActivity.this, MainActivity.class);
                     startActivity(intent);
@@ -153,13 +165,6 @@ public class TranslationActivity extends AppCompatActivity {
                     }
                 }
             }
-        }
-    }
-
-
-    private void playSuccessSound() {
-        if (soundPool != null) {
-            soundPool.play(successSoundId, 1, 1, 1, 0, 1);
         }
     }
 
@@ -202,14 +207,20 @@ public class TranslationActivity extends AppCompatActivity {
     }
 
     private void vibrate() {
-        if (vibrator != null) {
+        if (vibrationEnabled && vibrator != null) {
             vibrator.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE));
         }
     }
 
     private void playFailureSound() {
-        if (soundPool != null) {
+        if (soundEnabled && soundPool != null) {
             soundPool.play(failureSoundId, 1, 1, 1, 0, 1);
+        }
+    }
+
+    private void playSuccessSound() {
+        if (soundEnabled && soundPool != null) {
+            soundPool.play(successSoundId, 1, 1, 1, 0, 1);
         }
     }
 

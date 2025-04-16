@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LangUp</string>
+    
+    <!-- Authentication -->
+    <string name="error_field_required">Это поле обязательно для заполнения</string>
+    <string name="error_invalid_email">Пожалуйста, введите корректный email адрес</string>
+    <string name="error_invalid_password">Пароль должен содержать минимум 6 символов</string>
+    <string name="error_incorrect_password">Неверный пароль</string>
+    <string name="error_user_not_found">Аккаунт с таким email не найден</string>
+    <string name="error_user_disabled">Этот аккаунт был отключен</string>
+    <string name="error_too_many_requests">Слишком много попыток. Пожалуйста, попробуйте позже</string>
+    <string name="error_unknown">Произошла ошибка. Пожалуйста, попробуйте снова</string>
+    <string name="error_passwords_dont_match">Пароли не совпадают</string>
+    <string name="error_email_already_in_use">Этот email уже зарегистрирован</string>
+    <string name="account_locked">Аккаунт заблокирован. Попробуйте снова через %1$d минут</string>
+    <string name="authentication_failed">Ошибка аутентификации</string>
+    <string name="google_sign_in_failed">Ошибка входа через Google</string>
+    <string name="password_reset_email_sent">Письмо для сброса пароля отправлено</string>
+    <string name="password_reset_failed">Не удалось отправить письмо для сброса пароля</string>
+    
+    <!-- Login Screen -->
+    <string name="login">Войти</string>
+    <string name="email">Email</string>
+    <string name="password">Пароль</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="or_sign_in_with">или войдите через</string>
+    <string name="google_sign_in">Войти через Google</string>
+    <string name="no_account">Нет аккаунта?</string>
+    <string name="sign_up">Зарегистрироваться</string>
+    
+    <!-- Sign Up Screen -->
+    <string name="create_account">Создать аккаунт</string>
+    <string name="full_name">Полное имя</string>
+    <string name="confirm_password">Подтвердите пароль</string>
+    <string name="or_sign_up_with">или зарегистрируйтесь через</string>
+    <string name="google_sign_up">Зарегистрироваться через Google</string>
+    <string name="already_have_account">Уже есть аккаунт?</string>
+    
+    <!-- Password Reset Screen -->
+    <string name="reset_password">Сбросить пароль</string>
+    <string name="enter_email_for_reset">Введите ваш email для сброса пароля</string>
+    <string name="send_reset_link">Отправить ссылку</string>
+    <string name="back_to_login">Вернуться к входу</string>
+    
+    <!-- Settings Screen -->
+    <string name="settings_title">Настройки</string>
+    <string name="dark_mode">Тёмная тема</string>
+    <string name="sound_effects">Звуковые эффекты</string>
+    <string name="vibration">Вибрация</string>
+    <string name="language">Язык</string>
+    <string name="english">Английский</string>
+    <string name="russian">Русский</string>
+    <string name="spanish">Испанский</string>
+    <string name="kazakh">Казахский</string>
+    <string name="french">Французский</string>
+    <string name="save">Сохранить</string>
+    <string name="settings_saved">Настройки сохранены</string>
+    <string name="back">Назад</string>
+    <string name="settings">Настройки</string>
+    <string name="appearance">Внешний вид</string>
+    <string name="notifications">Уведомления</string>
+</resources> 

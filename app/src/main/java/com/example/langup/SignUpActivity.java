@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -20,27 +19,32 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
-import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.firestore.FirebaseFirestore;
 
-public class LoginActivity extends BaseActivity implements AuthManager.TokenRefreshListener {
+import java.util.HashMap;
+import java.util.Map;
+
+public class SignUpActivity extends BaseActivity implements AuthManager.TokenRefreshListener {
     private static final int RC_SIGN_IN = 9001;
-    private EditText emailEditText, passwordEditText;
-    private ImageButton togglePasswordButton;
-    private Button loginButton, googleSignInButton, facebookLoginButton;
-    private TextView forgotPasswordTextView, signUpTextView;
+    private EditText nameEditText, emailEditText, passwordEditText, confirmPasswordEditText;
+    private ImageButton togglePasswordButton, toggleConfirmPasswordButton;
+    private Button signUpButton, googleSignUpButton, facebookSignUpButton;
+    private TextView loginTextView;
     private ImageButton backButton;
     private AuthManager authManager;
     private FirebaseAuth firebaseAuth;
+    private FirebaseFirestore firestore;
     private GoogleSignInClient googleSignInClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_sign_up);
 
         authManager = new AuthManager(this);
         authManager.setTokenRefreshListener(this);
         firebaseAuth = FirebaseAuth.getInstance();
+        firestore = FirebaseFirestore.getInstance();
 
         // Initialize Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -54,67 +58,69 @@ public class LoginActivity extends BaseActivity implements AuthManager.TokenRefr
     }
 
     private void initializeViews() {
+        nameEditText = findViewById(R.id.etName);
         emailEditText = findViewById(R.id.etEmail);
         passwordEditText = findViewById(R.id.etPassword);
+        confirmPasswordEditText = findViewById(R.id.etConfirmPassword);
         togglePasswordButton = findViewById(R.id.togglePasswordButton);
-        loginButton = findViewById(R.id.btnLogin);
-        googleSignInButton = findViewById(R.id.btnGoogleSignIn);
-        facebookLoginButton = findViewById(R.id.btnFacebookLogin);
-        forgotPasswordTextView = findViewById(R.id.tvForgotPassword);
-        signUpTextView = findViewById(R.id.tvSignUp);
+        toggleConfirmPasswordButton = findViewById(R.id.toggleConfirmPasswordButton);
+        signUpButton = findViewById(R.id.btnSignUp);
+        googleSignUpButton = findViewById(R.id.btnGoogleSignUp);
+        facebookSignUpButton = findViewById(R.id.btnFacebookSignUp);
+        loginTextView = findViewById(R.id.tvLogin);
         backButton = findViewById(R.id.backButton);
     }
 
     private void setupClickListeners() {
-        togglePasswordButton.setOnClickListener(v -> togglePasswordVisibility());
-        loginButton.setOnClickListener(v -> attemptLogin());
-        googleSignInButton.setOnClickListener(v -> signInWithGoogle());
-        facebookLoginButton.setOnClickListener(v -> signInWithFacebook());
-        forgotPasswordTextView.setOnClickListener(v -> startPasswordReset());
-        signUpTextView.setOnClickListener(v -> startSignUp());
+        togglePasswordButton.setOnClickListener(v -> togglePasswordVisibility(passwordEditText, togglePasswordButton));
+        toggleConfirmPasswordButton.setOnClickListener(v -> togglePasswordVisibility(confirmPasswordEditText, toggleConfirmPasswordButton));
+        signUpButton.setOnClickListener(v -> attemptSignUp());
+        googleSignUpButton.setOnClickListener(v -> signUpWithGoogle());
+        facebookSignUpButton.setOnClickListener(v -> signUpWithFacebook());
+        loginTextView.setOnClickListener(v -> finish());
         backButton.setOnClickListener(v -> finish());
     }
 
-    private void togglePasswordVisibility() {
-        if (passwordEditText.getTransformationMethod() == android.text.method.HideReturnsTransformationMethod.getInstance()) {
-            passwordEditText.setTransformationMethod(android.text.method.PasswordTransformationMethod.getInstance());
-            togglePasswordButton.setImageResource(R.drawable.ic_visibility_off);
+    private void togglePasswordVisibility(EditText passwordField, ImageButton toggleButton) {
+        if (passwordField.getTransformationMethod() == android.text.method.HideReturnsTransformationMethod.getInstance()) {
+            passwordField.setTransformationMethod(android.text.method.PasswordTransformationMethod.getInstance());
+            toggleButton.setImageResource(R.drawable.ic_visibility_off);
         } else {
-            passwordEditText.setTransformationMethod(android.text.method.HideReturnsTransformationMethod.getInstance());
-            togglePasswordButton.setImageResource(R.drawable.ic_visibility);
+            passwordField.setTransformationMethod(android.text.method.HideReturnsTransformationMethod.getInstance());
+            toggleButton.setImageResource(R.drawable.ic_visibility);
         }
     }
 
-    private void attemptLogin() {
+    private void attemptSignUp() {
+        String name = nameEditText.getText().toString().trim();
         String email = emailEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
+        String confirmPassword = confirmPasswordEditText.getText().toString().trim();
 
-        if (!validateInput(email, password)) {
+        if (!validateInput(name, email, password, confirmPassword)) {
             return;
         }
 
-        if (authManager.isAccountLocked()) {
-            long remainingTime = authManager.getRemainingLockoutTime() / 1000 / 60;
-            Toast.makeText(this, getString(R.string.account_locked, remainingTime), Toast.LENGTH_LONG).show();
-            return;
-        }
-
-        loginButton.setEnabled(false);
-        firebaseAuth.signInWithEmailAndPassword(email, password)
+        signUpButton.setEnabled(false);
+        firebaseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
-                    loginButton.setEnabled(true);
                     if (task.isSuccessful()) {
+                        saveUserData(name, email);
                         authManager.setLoggedIn(true);
                         startMainActivity();
                     } else {
-                        authManager.incrementLoginAttempts();
+                        signUpButton.setEnabled(true);
                         String errorMessage = getErrorMessage(task.getException());
-                        Toast.makeText(LoginActivity.this, errorMessage, Toast.LENGTH_LONG).show();
+                        Toast.makeText(SignUpActivity.this, errorMessage, Toast.LENGTH_LONG).show();
                     }
                 });
     }
 
-    private boolean validateInput(String email, String password) {
+    private boolean validateInput(String name, String email, String password, String confirmPassword) {
+        if (TextUtils.isEmpty(name)) {
+            nameEditText.setError(getString(R.string.error_field_required));
+            return false;
+        }
         if (TextUtils.isEmpty(email)) {
             emailEditText.setError(getString(R.string.error_field_required));
             return false;
@@ -131,7 +137,24 @@ public class LoginActivity extends BaseActivity implements AuthManager.TokenRefr
             passwordEditText.setError(getString(R.string.error_invalid_password));
             return false;
         }
+        if (!password.equals(confirmPassword)) {
+            confirmPasswordEditText.setError(getString(R.string.error_passwords_dont_match));
+            return false;
+        }
         return true;
+    }
+
+    private void saveUserData(String name, String email) {
+        String userId = firebaseAuth.getCurrentUser().getUid();
+        Map<String, Object> user = new HashMap<>();
+        user.put("name", name);
+        user.put("email", email);
+        user.put("createdAt", System.currentTimeMillis());
+
+        firestore.collection("users").document(userId)
+                .set(user)
+                .addOnFailureListener(e -> Toast.makeText(SignUpActivity.this,
+                        "Error saving user data", Toast.LENGTH_SHORT).show());
     }
 
     private String getErrorMessage(Exception exception) {
@@ -141,20 +164,16 @@ public class LoginActivity extends BaseActivity implements AuthManager.TokenRefr
         switch (errorCode) {
             case "ERROR_INVALID_EMAIL":
                 return getString(R.string.error_invalid_email);
-            case "ERROR_WRONG_PASSWORD":
-                return getString(R.string.error_incorrect_password);
-            case "ERROR_USER_NOT_FOUND":
-                return getString(R.string.error_user_not_found);
-            case "ERROR_USER_DISABLED":
-                return getString(R.string.error_user_disabled);
-            case "ERROR_TOO_MANY_REQUESTS":
-                return getString(R.string.error_too_many_requests);
+            case "ERROR_WEAK_PASSWORD":
+                return getString(R.string.error_invalid_password);
+            case "ERROR_EMAIL_ALREADY_IN_USE":
+                return getString(R.string.error_email_already_in_use);
             default:
                 return getString(R.string.error_unknown);
         }
     }
 
-    private void signInWithGoogle() {
+    private void signUpWithGoogle() {
         Intent signInIntent = googleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
@@ -179,37 +198,18 @@ public class LoginActivity extends BaseActivity implements AuthManager.TokenRefr
         firebaseAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
+                        String name = task.getResult().getUser().getDisplayName();
+                        String email = task.getResult().getUser().getEmail();
+                        if (name != null && email != null) {
+                            saveUserData(name, email);
+                        }
                         authManager.setLoggedIn(true);
                         startMainActivity();
                     } else {
-                        Toast.makeText(LoginActivity.this, getString(R.string.authentication_failed),
+                        Toast.makeText(SignUpActivity.this, getString(R.string.authentication_failed),
                                 Toast.LENGTH_SHORT).show();
                     }
                 });
-    }
-
-    private void startPasswordReset() {
-        String email = emailEditText.getText().toString().trim();
-        if (TextUtils.isEmpty(email) || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            emailEditText.setError(getString(R.string.error_invalid_email));
-            return;
-        }
-
-        firebaseAuth.sendPasswordResetEmail(email)
-                .addOnCompleteListener(task -> {
-                    if (task.isSuccessful()) {
-                        Toast.makeText(LoginActivity.this, getString(R.string.password_reset_email_sent),
-                                Toast.LENGTH_LONG).show();
-                    } else {
-                        Toast.makeText(LoginActivity.this, getString(R.string.password_reset_failed),
-                                Toast.LENGTH_SHORT).show();
-                    }
-                });
-    }
-
-    private void startSignUp() {
-        Intent intent = new Intent(this, SignUpActivity.class);
-        startActivity(intent);
     }
 
     private void startMainActivity() {
@@ -219,9 +219,9 @@ public class LoginActivity extends BaseActivity implements AuthManager.TokenRefr
         finish();
     }
 
-    private void signInWithFacebook() {
-        // Implement Facebook sign-in
-        Toast.makeText(this, "Facebook sign-in not implemented yet", Toast.LENGTH_SHORT).show();
+    private void signUpWithFacebook() {
+        // Implement Facebook sign-up
+        Toast.makeText(this, "Facebook sign-up not implemented yet", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -231,4 +231,4 @@ public class LoginActivity extends BaseActivity implements AuthManager.TokenRefr
             startMainActivity();
         }
     }
-}
+} 
