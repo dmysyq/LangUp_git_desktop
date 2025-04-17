@@ -1,8 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Base application theme -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here -->
+    <!-- Базовые стили -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowBackground">@color/background_primary</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Стиль для чипов -->
+    <style name="PreferenceChip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="android:textColor">@color/chip_text</item>
+        <item name="chipBackgroundColor">@color/chip_background</item>
+        <item name="chipStrokeColor">@color/chip_stroke</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="rippleColor">@color/chip_background_selected</item>
+    </style>
+
+    <!-- Стиль для выбранных чипов -->
+    <style name="PreferenceChip.Selected" parent="PreferenceChip">
+        <item name="android:textColor">@color/chip_text_selected</item>
+        <item name="chipBackgroundColor">@color/chip_background_selected</item>
+        <item name="chipStrokeColor">@color/chip_stroke_selected</item>
+    </style>
+
+    <!-- Стиль для групп чипов -->
+    <style name="PreferenceChipGroup" parent="Widget.MaterialComponents.ChipGroup">
+        <item name="chipSpacingHorizontal">8dp</item>
+        <item name="chipSpacingVertical">8dp</item>
+        <item name="singleLine">false</item>
+    </style>
+
+    <!-- Стиль для заголовков секций -->
+    <style name="SectionTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif-bold</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <!-- Стиль для подзаголовков -->
+    <style name="SubsectionTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <!-- Стиль для кнопок -->
+    <style name="DuolingoButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/button_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-bold</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <!-- Стиль для основной кнопки -->
+    <style name="DuolingoButton.Primary" parent="DuolingoButton">
+        <item name="backgroundTint">@color/button_primary</item>
+        <item name="rippleColor">@color/button_primary_pressed</item>
+    </style>
+
+    <!-- Стиль для вторичной кнопки -->
+    <style name="DuolingoButton.Secondary" parent="DuolingoButton">
+        <item name="backgroundTint">@color/button_secondary</item>
+        <item name="rippleColor">@color/button_secondary_pressed</item>
+    </style>
+
+    <!-- Стиль для карточек -->
+    <style name="DuolingoCard" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/background_primary</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="contentPadding">16dp</item>
+    </style>
+
+    <!-- Стиль для диалогов -->
+    <style name="DialogTheme" parent="Theme.MaterialComponents.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@color/background_primary</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
     <!-- Custom Spinner Style -->
@@ -38,13 +130,5 @@
     <style name="CircleImageView">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
-    </style>
-
-    <style name="DialogTheme" parent="Theme.MaterialComponents.Dialog">
-        <item name="android:windowIsFloating">true</item>
-        <item name="android:windowBackground">@color/background_primary</item>
-        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
     </style>
 </resources> 

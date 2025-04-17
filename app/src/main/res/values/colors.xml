@@ -4,27 +4,34 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#00000000</color>
+    <color name="primary">#58CC02</color>
 
     <!-- Background Colors -->
-    <color name="background_primary">#FFFFFD</color>
-    <color name="background_secondary">#F6F6F6</color>
-    <color name="background_tertiary">#FCFCFA</color>
+    <color name="background_primary">#FFFFFF</color>
+    <color name="background_secondary">#F7F7F7</color>
+    <color name="background_tertiary">#EFEFEF</color>
+    <color name="background_dark">#1F1F1F</color>
     <color name="background_container">#FFFFFF</color>
 
     <!-- Text Colors -->
-    <color name="text_primary">#131F22</color>
-    <color name="text_secondary">#858583</color>
+    <color name="text_primary">#3C3C3C</color>
+    <color name="text_secondary">#6B6B6B</color>
     <color name="text_tertiary">#51514F</color>
-    <color name="text_light">#B5B5B3</color>
+    <color name="text_light">#9E9E9E</color>
+    <color name="text_light_50">#F5F5F5</color>
     <color name="text_dark">#5A5A5A</color>
-    <color name="text_blue">#2CA6E5</color>
+    <color name="text_blue">#1CB0F6</color>
+    <color name="text_blue_dark">#0D8ED9</color>
     <color name="text_twitter">#1DA5EF</color>
     <color name="text_gray">#565654</color>
 
     <!-- Button Colors -->
-    <color name="button_text">#E3FBC8</color>
+    <color name="button_text">#FFFFFF</color>
     <color name="button_green">#72C035</color>
-    <color name="button_primary">#57CC02</color>
+    <color name="button_primary">#58CC02</color>
+    <color name="button_primary_pressed">#4CAF00</color>
+    <color name="button_secondary">#1CB0F6</color>
+    <color name="button_secondary_pressed">#0D8ED9</color>
 
     <!-- Social Colors -->
     <color name="google">#d34836</color>
@@ -48,4 +55,38 @@
     <color name="colorPrimaryDarkMainActivity">@color/button_primary</color>
     <color name="colorPrimaryWelcomeActivity">@color/background_primary</color>
     <color name="colorPrimaryDarkWelcomeActivity">@color/background_primary</color>
+
+    <!-- Duolingo Colors -->
+    <color name="primary_dark">#4CAF00</color>
+    <color name="primary_light">#7ED321</color>
+    <color name="accent">#FF4B4B</color>
+    <color name="accent_dark">#E53935</color>
+    <color name="accent_light">#FF6B6B</color>
+
+    <!-- Chip Colors -->
+    <color name="chip_background">#F7F7F7</color>
+    <color name="chip_background_selected">#E5F2FF</color>
+    <color name="chip_text">#3C3C3C</color>
+    <color name="chip_text_selected">#1CB0F6</color>
+    <color name="chip_stroke">#E0E0E0</color>
+    <color name="chip_stroke_selected">#1CB0F6</color>
+
+    <!-- Progress Colors -->
+    <color name="progress_background">#EFEFEF</color>
+    <color name="progress_fill">#58CC02</color>
+
+    <!-- Avatar Colors -->
+    <color name="avatar_background">#F7F7F7</color>
+    <color name="avatar_border">#E0E0E0</color>
+
+    <!-- Error and Warning Colors -->
+    <color name="error">#FF4B4B</color>
+    <color name="warning">#FFB800</color>
+    <color name="success">#58CC02</color>
+
+    <!-- Divider Colors -->
+    <color name="divider">#E0E0E0</color>
+
+    <!-- Shadow Colors -->
+    <color name="shadow">#1A000000</color>
 </resources>

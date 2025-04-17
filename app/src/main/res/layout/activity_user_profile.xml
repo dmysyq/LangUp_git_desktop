@@ -52,42 +52,43 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-    <!-- Avatar Section -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="16dp">
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/avatarImageView"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginBottom="8dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/default_avatar"
-            app:shapeAppearanceOverlay="@style/CircleImageView" />
-
-        <TextView
-            android:id="@+id/changeAvatarButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/change_avatar"
-            android:textColor="@color/text_blue"
-            android:textSize="16sp"
-            android:fontFamily="@font/inter_semibold"
-            android:background="?attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            android:padding="8dp" />
-    </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
+
+            <!-- Avatar Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/avatarImageView"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_avatar"
+                    app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+                <TextView
+                    android:id="@+id/changeAvatarButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/change_avatar"
+                    android:textColor="@color/text_blue"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp" />
+            </LinearLayout>
 
             <!-- Name Field -->
             <TextView
@@ -160,58 +161,53 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/preferences_title"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="16dp"/>
+                style="@style/SectionTitle"/>
 
             <!-- Genres -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/genres_title"
-                android:textSize="16sp"
-                android:layout_marginBottom="8dp"/>
+                style="@style/SubsectionTitle"/>
 
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/genresChipGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"/>
+                style="@style/PreferenceChipGroup"/>
 
             <!-- Countries -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/countries_title"
-                android:textSize="16sp"
-                android:layout_marginBottom="8dp"/>
+                style="@style/SubsectionTitle"/>
 
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/countriesChipGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"/>
+                style="@style/PreferenceChipGroup"/>
 
             <!-- Franchises -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/franchises_title"
-                android:textSize="16sp"
-                android:layout_marginBottom="8dp"/>
+                style="@style/SubsectionTitle"/>
 
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/franchisesChipGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"/>
+                style="@style/PreferenceChipGroup"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/savePreferencesButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/save_preferences"
+                style="@style/DuolingoButton.Primary"
                 android:layout_marginTop="16dp"/>
 
             <!-- Logout Button -->

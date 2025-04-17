@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Chip dimensions -->
+    <dimen name="chip_min_height">36dp</dimen>
+    <dimen name="chip_padding_horizontal">12dp</dimen>
+    <dimen name="chip_stroke_width">1dp</dimen>
+    <dimen name="chip_spacing_horizontal">8dp</dimen>
+    <dimen name="chip_spacing_vertical">8dp</dimen>
+    <dimen name="chip_text_size">14sp</dimen>
+    
+    <!-- Button dimensions -->
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="button_padding_horizontal">16dp</dimen>
+    <dimen name="button_corner_radius">12dp</dimen>
+    <dimen name="button_text_size">16sp</dimen>
+    
+    <!-- Card dimensions -->
+    <dimen name="card_corner_radius">12dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+    
+    <!-- Text dimensions -->
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="text_size_large">16sp</dimen>
+    <dimen name="text_size_xlarge">20sp</dimen>
+    <dimen name="text_size_xxlarge">24sp</dimen>
+    
+    <!-- Spacing dimensions -->
+    <dimen name="spacing_xsmall">4dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_xlarge">32dp</dimen>
+    
+    <!-- Avatar dimensions -->
+    <dimen name="avatar_size_small">40dp</dimen>
+    <dimen name="avatar_size_medium">80dp</dimen>
+    <dimen name="avatar_size_large">120dp</dimen>
+    <dimen name="avatar_border_width">2dp</dimen>
+</resources> 

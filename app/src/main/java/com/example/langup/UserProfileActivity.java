@@ -111,8 +111,34 @@ public class UserProfileActivity extends AppCompatActivity {
         Chip chip = new Chip(this);
         chip.setText(text);
         chip.setCheckable(true);
-        chip.setChecked(false); // По умолчанию не выбраны
+        chip.setChecked(false);
+        chip.setChipBackgroundColorResource(R.color.chip_background);
+        chip.setTextColor(getResources().getColor(R.color.chip_text));
+        chip.setChipStrokeColorResource(R.color.chip_stroke);
+        chip.setChipStrokeWidth(getResources().getDimensionPixelSize(R.dimen.chip_stroke_width));
+        chip.setTextSize(14);
+        chip.setPadding(
+            getResources().getDimensionPixelSize(R.dimen.chip_padding_horizontal),
+            0,
+            getResources().getDimensionPixelSize(R.dimen.chip_padding_horizontal),
+            0
+        );
+        chip.setMinHeight(getResources().getDimensionPixelSize(R.dimen.chip_min_height));
+        chip.setClickable(true);
+        chip.setFocusable(true);
         chipGroup.addView(chip);
+    }
+
+    private void updateChipState(Chip chip, boolean isSelected) {
+        if (isSelected) {
+            chip.setChipBackgroundColorResource(R.color.chip_background_selected);
+            chip.setTextColor(getResources().getColor(R.color.chip_text_selected));
+            chip.setChipStrokeColorResource(R.color.chip_stroke_selected);
+        } else {
+            chip.setChipBackgroundColorResource(R.color.chip_background);
+            chip.setTextColor(getResources().getColor(R.color.chip_text));
+            chip.setChipStrokeColorResource(R.color.chip_stroke);
+        }
     }
 
     private void setupClickListeners() {

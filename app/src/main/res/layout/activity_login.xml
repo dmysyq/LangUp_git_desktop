@@ -154,16 +154,6 @@
                 android:textAlignment="center"
                 android:textColor="@color/text_secondary" />
 
-            <TextView
-                android:id="@+id/termsTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/inter_semibold"
-                android:paddingTop="8dp"
-                android:text="@string/by_signing_in_langup_you_agree_to_our_terms_and_privacy_policy"
-                android:textAlignment="center"
-                android:textColor="@color/text_secondary" />
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

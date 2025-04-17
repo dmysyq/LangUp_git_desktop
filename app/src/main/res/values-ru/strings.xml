@@ -20,9 +20,11 @@
     <string name="password_reset_failed">Не удалось отправить письмо для сброса пароля</string>
     
     <!-- Login Screen -->
+    <string name="welcome">Добро пожаловать</string>
     <string name="login">Войти</string>
     <string name="email">Email</string>
     <string name="password">Пароль</string>
+    <string name="name">Имя</string>
     <string name="forgot_password">Забыли пароль?</string>
     <string name="or_sign_in_with">или войдите через</string>
     <string name="google_sign_in">Войти через Google</string>
@@ -30,11 +32,13 @@
     <string name="sign_up">Зарегистрироваться</string>
     
     <!-- Sign Up Screen -->
+    <string name="session_expired">Ваш сеанс истек. Пожалуйста, войдите снова</string>
     <string name="create_account">Создать аккаунт</string>
     <string name="full_name">Полное имя</string>
     <string name="confirm_password">Подтвердите пароль</string>
     <string name="or_sign_up_with">или зарегистрируйтесь через</string>
     <string name="google_sign_up">Зарегистрироваться через Google</string>
+    <string name="dont_have_account">Нет аккаунта?</string>
     <string name="already_have_account">Уже есть аккаунт?</string>
     
     <!-- Password Reset Screen -->
@@ -57,7 +61,30 @@
     <string name="save">Сохранить</string>
     <string name="settings_saved">Настройки сохранены</string>
     <string name="back">Назад</string>
+    <string name="default_web_client_id">YOUR_WEB_CLIENT_ID</string>
     <string name="settings">Настройки</string>
     <string name="appearance">Внешний вид</string>
     <string name="notifications">Уведомления</string>
+    <string name="account">Аккаунт</string>
+    <string name="change_avatar">ИЗМЕНИТЬ АВАТАР</string>
+    <string name="logout">ВЫЙТИ</string>
+    <string name="select_avatar">Выберите аватар</string>
+    <string name="close">Закрыть</string>
+    <string name="preferences_title">Предпочтения</string>
+    <string name="genres_title">Любимые жанры</string>
+    <string name="countries_title">Страны</string>
+    <string name="franchises_title">Франшизы</string>
+    <string name="save_preferences">Сохранить предпочтения</string>
+    <string name="preferences_saved">Предпочтения сохранены</string>
+    <string name="preferences_error">Ошибка при сохранении предпочтений</string>
+    <string name="or">или</string>
+    <string name="continue_with_google">Продолжить с Google</string>
+    <string name="continue_with_facebook">Продолжить с Facebook</string>
+    <string name="by_signing_up_langup_you_agree_to_our_terms_and_privacy_policy">Регистрируясь на LangUp, вы соглашаетесь с нашими Условиями и Политикой конфиденциальности.</string>
+    <string name="profile">Профиль</string>
+    <string name="preferences">Предпочтения</string>
+    <string name="favorite_genres">Любимые жанры</string>
+    <string name="favorite_countries">Любимые страны</string>
+    <string name="favorite_franchises">Любимые франшизы</string>
+    <string name="username">Имя пользователя</string>
 </resources> 
