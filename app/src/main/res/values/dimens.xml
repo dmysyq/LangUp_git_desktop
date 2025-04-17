@@ -3,14 +3,14 @@
     <!-- Chip dimensions -->
     <dimen name="chip_min_height">36dp</dimen>
     <dimen name="chip_padding_horizontal">12dp</dimen>
+    <dimen name="chip_padding_vertical">8dp</dimen>
     <dimen name="chip_stroke_width">1dp</dimen>
-    <dimen name="chip_spacing_horizontal">8dp</dimen>
-    <dimen name="chip_spacing_vertical">8dp</dimen>
+    <dimen name="chip_spacing">8dp</dimen>
     <dimen name="chip_text_size">14sp</dimen>
     
     <!-- Button dimensions -->
     <dimen name="button_height">48dp</dimen>
-    <dimen name="button_padding_horizontal">16dp</dimen>
+    <dimen name="button_padding">16dp</dimen>
     <dimen name="button_corner_radius">12dp</dimen>
     <dimen name="button_text_size">16sp</dimen>
     
@@ -20,11 +20,11 @@
     <dimen name="card_padding">16dp</dimen>
     
     <!-- Text dimensions -->
-    <dimen name="text_size_small">12sp</dimen>
-    <dimen name="text_size_medium">14sp</dimen>
-    <dimen name="text_size_large">16sp</dimen>
-    <dimen name="text_size_xlarge">20sp</dimen>
-    <dimen name="text_size_xxlarge">24sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_medium">14sp</dimen>
+    <dimen name="text_large">16sp</dimen>
+    <dimen name="text_xlarge">18sp</dimen>
+    <dimen name="text_xxlarge">20sp</dimen>
     
     <!-- Spacing dimensions -->
     <dimen name="spacing_xsmall">4dp</dimen>

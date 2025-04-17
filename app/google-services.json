@@ -1,8 +1,9 @@
 {
   "project_info": {
     "project_number": "350062158843",
+    "firebase_url": "https://langup-dev-default-rtdb.firebaseio.com",
     "project_id": "langup-dev",
-    "storage_bucket": "langup-dev.appspot.com"
+    "storage_bucket": "langup-dev.firebasestorage.app"
   },
   "client": [
     {
@@ -12,7 +13,20 @@
           "package_name": "com.example.langup"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "350062158843-a86va41rs9aun6ri72b6jfih2fkbuoaa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.langup",
+            "certificate_hash": "1d209378b6f91e5e7584e6fc57cb94e50e4658ff"
+          }
+        },
+        {
+          "client_id": "350062158843-5tkibsnqdetvb4fn8re0uj4607rb80sr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyD2gAWeU3hCXkapM_sQuAJCCQFst7suqy8"
@@ -20,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "350062158843-5tkibsnqdetvb4fn8re0uj4607rb80sr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.example.langup.base.BaseActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -6,7 +6,6 @@ import android.util.Log;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
@@ -22,8 +21,11 @@ import com.google.android.material.chip.ChipGroup;
 import com.google.android.material.chip.Chip;
 import java.util.List;
 import java.util.ArrayList;
+import android.util.TypedValue;
+import com.example.langup.base.BaseActivity;
+import com.example.langup.utils.LocaleManager;
 
-public class UserProfileActivity extends AppCompatActivity {
+public class UserProfileActivity extends BaseActivity {
     private static final String TAG = "UserProfileActivity";
 
     private FirebaseAuth mAuth;
@@ -78,30 +80,39 @@ public class UserProfileActivity extends AppCompatActivity {
         genresChipGroup = findViewById(R.id.genresChipGroup);
         countriesChipGroup = findViewById(R.id.countriesChipGroup);
         franchisesChipGroup = findViewById(R.id.franchisesChipGroup);
-        savePreferencesButton = findViewById(R.id.savePreferencesButton);
 
         // Set email field as non-editable
         emailEditText.setEnabled(false);
 
         // Initialize predefined values
-        initializePredefinedValues();
+        initializePreferences();
     }
 
-    private void initializePredefinedValues() {
+    private void initializePreferences() {
+        LocaleManager localeManager = LocaleManager.getInstance(this);
+        String currentLanguage = localeManager.getCurrentLanguage();
+        String languageSuffix = currentLanguage.equals("ru") ? "_ru" : "_en";
+
         // Initialize genres
-        String[] genres = getResources().getStringArray(R.array.genres);
+        String[] genres = getResources().getStringArray(
+            getResources().getIdentifier("genres" + languageSuffix, "array", getPackageName())
+        );
         for (String genre : genres) {
             addChip(genresChipGroup, genre);
         }
 
         // Initialize countries
-        String[] countries = getResources().getStringArray(R.array.countries);
+        String[] countries = getResources().getStringArray(
+            getResources().getIdentifier("countries" + languageSuffix, "array", getPackageName())
+        );
         for (String country : countries) {
             addChip(countriesChipGroup, country);
         }
 
         // Initialize franchises
-        String[] franchises = getResources().getStringArray(R.array.franchises);
+        String[] franchises = getResources().getStringArray(
+            getResources().getIdentifier("franchises" + languageSuffix, "array", getPackageName())
+        );
         for (String franchise : franchises) {
             addChip(franchisesChipGroup, franchise);
         }
@@ -111,21 +122,30 @@ public class UserProfileActivity extends AppCompatActivity {
         Chip chip = new Chip(this);
         chip.setText(text);
         chip.setCheckable(true);
-        chip.setChecked(false);
+        chip.setClickable(true);
+        chip.setFocusable(true);
+        
+        // Применяем базовый стиль
         chip.setChipBackgroundColorResource(R.color.chip_background);
         chip.setTextColor(getResources().getColor(R.color.chip_text));
         chip.setChipStrokeColorResource(R.color.chip_stroke);
         chip.setChipStrokeWidth(getResources().getDimensionPixelSize(R.dimen.chip_stroke_width));
-        chip.setTextSize(14);
+        
+        // Устанавливаем размеры и отступы
+        chip.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
         chip.setPadding(
             getResources().getDimensionPixelSize(R.dimen.chip_padding_horizontal),
-            0,
+            getResources().getDimensionPixelSize(R.dimen.chip_padding_vertical),
             getResources().getDimensionPixelSize(R.dimen.chip_padding_horizontal),
-            0
+            getResources().getDimensionPixelSize(R.dimen.chip_padding_vertical)
         );
         chip.setMinHeight(getResources().getDimensionPixelSize(R.dimen.chip_min_height));
-        chip.setClickable(true);
-        chip.setFocusable(true);
+        
+        // Добавляем слушатель для обработки выбора
+        chip.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            updateChipState(chip, isChecked);
+        });
+        
         chipGroup.addView(chip);
     }
 
@@ -146,7 +166,6 @@ public class UserProfileActivity extends AppCompatActivity {
         backButton.setOnClickListener(v -> finish());
         logoutButton.setOnClickListener(v -> logout());
         changeAvatarButton.setOnClickListener(v -> showAvatarPicker());
-        savePreferencesButton.setOnClickListener(v -> saveUserPreferences());
     }
 
     private void showAvatarPicker() {
@@ -254,7 +273,7 @@ public class UserProfileActivity extends AppCompatActivity {
         userRef.update(updates)
             .addOnSuccessListener(aVoid -> {
                 Log.d(TAG, "Profile updated successfully");
-                Toast.makeText(this, "Profile saved successfully", Toast.LENGTH_SHORT).show();
+                saveUserPreferences(); // Save preferences after profile update
             })
             .addOnFailureListener(e -> {
                 Log.e(TAG, "Error updating profile", e);
@@ -284,35 +303,61 @@ public class UserProfileActivity extends AppCompatActivity {
 
             @Override
             public void onPreferencesLoaded(Map<String, List<String>> preferences) {
-                updatePreferencesUI(preferences);
+                if (preferences != null) {
+                    LocaleManager localeManager = LocaleManager.getInstance(UserProfileActivity.this);
+                    String currentLanguage = localeManager.getCurrentLanguage();
+                    String languageSuffix = currentLanguage.equals("ru") ? "_ru" : "_en";
+
+                    // Устанавливаем выбранные жанры
+                    List<String> genres = preferences.get("genres");
+                    if (genres != null) {
+                        String[] availableGenres = getResources().getStringArray(
+                            getResources().getIdentifier("genres" + languageSuffix, "array", getPackageName())
+                        );
+                        for (int i = 0; i < genresChipGroup.getChildCount(); i++) {
+                            Chip chip = (Chip) genresChipGroup.getChildAt(i);
+                            String chipText = chip.getText().toString();
+                            if (genres.contains(chipText)) {
+                                chip.setChecked(true);
+                                updateChipState(chip, true);
+                            }
+                        }
+                    }
+
+                    // Устанавливаем выбранные страны
+                    List<String> countries = preferences.get("countries");
+                    if (countries != null) {
+                        String[] availableCountries = getResources().getStringArray(
+                            getResources().getIdentifier("countries" + languageSuffix, "array", getPackageName())
+                        );
+                        for (int i = 0; i < countriesChipGroup.getChildCount(); i++) {
+                            Chip chip = (Chip) countriesChipGroup.getChildAt(i);
+                            String chipText = chip.getText().toString();
+                            if (countries.contains(chipText)) {
+                                chip.setChecked(true);
+                                updateChipState(chip, true);
+                            }
+                        }
+                    }
+
+                    // Устанавливаем выбранные франшизы
+                    List<String> franchises = preferences.get("franchises");
+                    if (franchises != null) {
+                        String[] availableFranchises = getResources().getStringArray(
+                            getResources().getIdentifier("franchises" + languageSuffix, "array", getPackageName())
+                        );
+                        for (int i = 0; i < franchisesChipGroup.getChildCount(); i++) {
+                            Chip chip = (Chip) franchisesChipGroup.getChildAt(i);
+                            String chipText = chip.getText().toString();
+                            if (franchises.contains(chipText)) {
+                                chip.setChecked(true);
+                                updateChipState(chip, true);
+                            }
+                        }
+                    }
+                }
             }
         });
-    }
-
-    private void updatePreferencesUI(Map<String, List<String>> preferences) {
-        // Обновляем UI для жанров
-        List<String> genres = preferences.get("genres");
-        if (genres != null) {
-            for (String genre : genres) {
-                addChip(genresChipGroup, genre);
-            }
-        }
-
-        // Обновляем UI для стран
-        List<String> countries = preferences.get("countries");
-        if (countries != null) {
-            for (String country : countries) {
-                addChip(countriesChipGroup, country);
-            }
-        }
-
-        // Обновляем UI для франшиз
-        List<String> franchises = preferences.get("franchises");
-        if (franchises != null) {
-            for (String franchise : franchises) {
-                addChip(franchisesChipGroup, franchise);
-            }
-        }
     }
 
     private void saveUserPreferences() {
@@ -320,9 +365,15 @@ public class UserProfileActivity extends AppCompatActivity {
         if (user == null) return;
 
         Map<String, List<String>> preferences = new HashMap<>();
-        preferences.put("genres", getSelectedChips(genresChipGroup));
-        preferences.put("countries", getSelectedChips(countriesChipGroup));
-        preferences.put("franchises", getSelectedChips(franchisesChipGroup));
+        
+        // Сохраняем предпочтения в текущем языке
+        List<String> selectedGenres = getSelectedChips(genresChipGroup);
+        List<String> selectedCountries = getSelectedChips(countriesChipGroup);
+        List<String> selectedFranchises = getSelectedChips(franchisesChipGroup);
+
+        preferences.put("genres", selectedGenres);
+        preferences.put("countries", selectedCountries);
+        preferences.put("franchises", selectedFranchises);
 
         preferencesManager.savePreferences(user.getUid(), preferences, new PreferencesManager.PreferencesCallback() {
             @Override

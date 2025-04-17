@@ -2,9 +2,9 @@ package com.example.langup;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
+import com.example.langup.base.BaseActivity;
 
-public class StartupActivity extends AppCompatActivity {
+public class StartupActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

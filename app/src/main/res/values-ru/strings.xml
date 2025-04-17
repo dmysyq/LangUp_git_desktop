@@ -87,4 +87,10 @@
     <string name="favorite_countries">Любимые страны</string>
     <string name="favorite_franchises">Любимые франшизы</string>
     <string name="username">Имя пользователя</string>
+    <string name="already_have_an_account">У вас уже есть учетная запись?</string>
+    <string name="pick_up_where_you_left_off">Продолжайте с того места, где остановились.</string>
+    <string name="SIGN_IN">ВОЙТИ</string>
+    <string name="New_to_LangUp">Вы новичок в LangUp?</string>
+    <string name="start_learning_a_language_now">Начните изучать язык прямо сейчас.</string>
+    <string name="get_started">НАЧАТЬ</string>
 </resources> 

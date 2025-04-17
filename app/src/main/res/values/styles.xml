@@ -23,6 +23,8 @@
         <item name="android:paddingEnd">12dp</item>
         <item name="android:minHeight">36dp</item>
         <item name="rippleColor">@color/chip_background_selected</item>
+        <item name="checkedIcon">@null</item>
+        <item name="android:checkable">true</item>
     </style>
 
     <!-- Стиль для выбранных чипов -->
@@ -30,6 +32,7 @@
         <item name="android:textColor">@color/chip_text_selected</item>
         <item name="chipBackgroundColor">@color/chip_background_selected</item>
         <item name="chipStrokeColor">@color/chip_stroke_selected</item>
+        <item name="chipStrokeWidth">1dp</item>
     </style>
 
     <!-- Стиль для групп чипов -->

@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="128dp"
         android:fontFamily="@font/inter_medium"
-        android:text="Already have an account?"
+        android:text="@string/already_have_an_account"
         android:textColor="@color/text_primary"
         android:textSize="24sp" />
 
@@ -27,7 +27,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/inter_medium"
-        android:text="Pick up where you left off."
+        android:text="@string/pick_up_where_you_left_off"
         android:textColor="@color/text_secondary"
         android:textSize="16sp" />
 
@@ -40,7 +40,7 @@
         android:backgroundTint="@color/button_primary"
         android:elevation="10px"
         android:fontFamily="@font/inter_medium"
-        android:text="SIGN IN"
+        android:text="@string/SIGN_IN"
         android:textColor="@color/button_text" />
 
     <TextView
@@ -51,7 +51,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/inter_medium"
-        android:text="New to LangUp?"
+        android:text="@string/New_to_LangUp"
         android:textColor="@color/text_primary"
         android:textSize="24sp" />
 
@@ -63,7 +63,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="84dp"
         android:fontFamily="@font/inter_medium"
-        android:text="Start learning a language now."
+        android:text="@string/start_learning_a_language_now"
         android:textColor="@color/text_secondary"
         android:textSize="16sp" />
 
@@ -76,7 +76,7 @@
         android:backgroundTint="@color/background_tertiary"
         android:fontFamily="@font/inter_medium"
         android:radius="22dp"
-        android:text="GET STARTED"
+        android:text="@string/get_started"
         android:textColor="@color/button_green"
         app:strokeColor="@color/border_light"
         app:strokeWidth="1px" />
