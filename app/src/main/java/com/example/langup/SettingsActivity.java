@@ -4,9 +4,10 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +19,7 @@ public class SettingsActivity extends AppCompatActivity {
     private SharedPreferences preferences;
     private SwitchCompat soundEffectsSwitch;
     private SwitchCompat vibrationSwitch;
-    private RadioGroup languageRadioGroup;
+    private Spinner languageSpinner;
     private ImageButton backButton;
     private Button saveButton;
 
@@ -36,7 +37,7 @@ public class SettingsActivity extends AppCompatActivity {
     private void initializeViews() {
         soundEffectsSwitch = findViewById(R.id.soundEffectsSwitch);
         vibrationSwitch = findViewById(R.id.vibrationSwitch);
-        languageRadioGroup = findViewById(R.id.languageRadioGroup);
+        languageSpinner = findViewById(R.id.languageSpinner);
         backButton = findViewById(R.id.backButton);
         saveButton = findViewById(R.id.saveButton);
     }
@@ -52,23 +53,8 @@ public class SettingsActivity extends AppCompatActivity {
 
         // Load language setting
         String currentLanguage = preferences.getString("language", "en");
-        switch (currentLanguage) {
-            case "en":
-                languageRadioGroup.check(R.id.englishRadio);
-                break;
-            case "ru":
-                languageRadioGroup.check(R.id.russianRadio);
-                break;
-            case "es":
-                languageRadioGroup.check(R.id.spanishRadio);
-                break;
-            case "kk":
-                languageRadioGroup.check(R.id.kazakhRadio);
-                break;
-            case "fr":
-                languageRadioGroup.check(R.id.frenchRadio);
-                break;
-        }
+        int position = currentLanguage.equals("ru") ? 1 : 0; // 0 for English, 1 for Russian
+        languageSpinner.setSelection(position);
     }
 
     private void setupListeners() {
@@ -91,17 +77,7 @@ public class SettingsActivity extends AppCompatActivity {
         editor.putBoolean("vibration", vibrationSwitch.isChecked());
 
         // Save language setting
-        int selectedLanguageId = languageRadioGroup.getCheckedRadioButtonId();
-        String languageCode = "en"; // Default to English
-        if (selectedLanguageId == R.id.russianRadio) {
-            languageCode = "ru";
-        } else if (selectedLanguageId == R.id.spanishRadio) {
-            languageCode = "es";
-        } else if (selectedLanguageId == R.id.kazakhRadio) {
-            languageCode = "kk";
-        } else if (selectedLanguageId == R.id.frenchRadio) {
-            languageCode = "fr";
-        }
+        String languageCode = languageSpinner.getSelectedItemPosition() == 1 ? "ru" : "en";
         editor.putString("language", languageCode);
         updateLanguage(languageCode);
 

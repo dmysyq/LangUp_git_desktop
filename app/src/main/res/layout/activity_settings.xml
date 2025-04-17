@@ -1,52 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp"
     android:background="@color/background_primary">
 
     <!-- Заголовок -->
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/settingsTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:orientation="horizontal">
+        android:layout_marginBottom="16dp">
 
         <ImageButton
             android:id="@+id/backButton"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:clickable="true"
-            android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_back_arrow"
+            android:background="@color/background_primary"
             android:padding="10dp"
-            android:contentDescription="@string/back"/>
+            android:layout_alignParentStart="true"/>
 
         <TextView
             android:id="@+id/SeriesSelection"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="85dp"
+            android:layout_centerInParent="true"
             android:fontFamily="@font/inter_bold"
-            android:gravity="center"
+            android:foregroundGravity="center"
             android:text="@string/settings"
             android:textAppearance="?attr/textAppearanceHeadline6"
-            android:textColor="#B5B5B3"
+            android:textColor="@color/text_light"
             android:textSize="20sp" />
 
         <Button
             android:id="@+id/saveButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="22dp"
-            android:backgroundTint="#FFFFFD"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/white"
             android:fontFamily="@font/inter_bold"
             android:text="@string/save"
-            android:textColor="#2CA6E5" />
-    </LinearLayout>
+            android:textColor="@color/text_blue" />
+
+    </RelativeLayout>
 
     <!-- Звуковые эффекты -->
     <androidx.appcompat.widget.SwitchCompat
@@ -64,12 +63,29 @@
         app:thumbTint="#1BB1F7"
         app:trackTint="#801BB1F7" />
 
+    <!-- Тёмная тема -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/darkModeSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/soundEffectsSwitch"
+        android:background="@drawable/edittext_background"
+        android:layout_marginTop="24dp"
+        android:checked="false"
+        android:enabled="false"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/dark_mode"
+        android:textSize="16dp"
+        android:padding="16dp"
+        app:thumbTint="#1BB1F7"
+        app:trackTint="#801BB1F7" />
+
     <!-- Вибрация -->
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/vibrationSwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/soundEffectsSwitch"
+        android:layout_below="@id/darkModeSwitch"
         android:background="@drawable/edittext_background"
         android:layout_marginTop="24dp"
         android:checked="true"
@@ -90,60 +106,17 @@
         android:fontFamily="@font/inter_semibold"
         android:text="@string/language"
         android:textSize="16dp"
-        android:textColor="#B5B5B3" />
+        android:textColor="@color/text_light" />
 
-    <RadioGroup
-        android:id="@+id/languageRadioGroup"
+    <Spinner
+        android:id="@+id/languageSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/languageTitle"
         android:layout_marginTop="8dp"
         android:background="@drawable/edittext_background"
-        android:orientation="vertical">
+        android:padding="16dp"
+        android:spinnerMode="dropdown"
+        android:entries="@array/languages" />
 
-        <RadioButton
-            android:id="@+id/englishRadio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/english"
-            android:padding="16dp"
-            android:fontFamily="@font/inter"
-            android:textColor="#B5B5B3" />
-
-        <RadioButton
-            android:id="@+id/russianRadio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/russian"
-            android:padding="16dp"
-            android:fontFamily="@font/inter"
-            android:textColor="#B5B5B3" />
-
-        <RadioButton
-            android:id="@+id/spanishRadio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/spanish"
-            android:padding="16dp"
-            android:fontFamily="@font/inter"
-            android:textColor="#B5B5B3" />
-
-        <RadioButton
-            android:id="@+id/kazakhRadio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/kazakh"
-            android:padding="16dp"
-            android:fontFamily="@font/inter"
-            android:textColor="#B5B5B3" />
-
-        <RadioButton
-            android:id="@+id/frenchRadio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/french"
-            android:padding="16dp"
-            android:fontFamily="@font/inter"
-            android:textColor="#B5B5B3" />
-    </RadioGroup>
 </RelativeLayout>
