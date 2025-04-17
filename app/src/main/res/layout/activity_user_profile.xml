@@ -1,118 +1,234 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:orientation="vertical"
     android:background="@color/background_primary">
 
-    <LinearLayout
+    <!-- Header -->
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp">
+        android:padding="16dp">
 
         <ImageButton
             android:id="@+id/backButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
             android:src="@drawable/ic_back_arrow"
-            android:background="@color/background_primary"
-            android:padding="10dp"/>
+            android:contentDescription="@string/back" />
 
         <TextView
-            android:id="@+id/HeaderHolder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="86dp"
-            android:fontFamily="@font/inter_bold"
-            android:text="Аккаунт"
-            android:textAppearance="?attr/textAppearanceHeadline6"
-            android:textColor="@color/text_light" />
+            android:layout_centerInParent="true"
+            android:text="@string/account"
+            android:textColor="@color/text_light"
+            android:textSize="18sp"
+            android:fontFamily="@font/inter_semibold" />
 
-        <Button
+        <TextView
             android:id="@+id/saveButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="22dp"
-            android:backgroundTint="@color/background_primary"
-            android:fontFamily="@font/inter_bold"
-            android:text="СОХРАНИТЬ"
-            android:textColor="@color/text_blue" />
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="@string/save"
+            android:textColor="@color/text_blue"
+            android:textSize="16sp"
+            android:fontFamily="@font/inter_semibold"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp" />
+    </RelativeLayout>
+
+    <!-- Profile Fields -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    <!-- Avatar Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/avatarImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_avatar"
+            app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+        <TextView
+            android:id="@+id/changeAvatarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/change_avatar"
+            android:textColor="@color/text_blue"
+            android:textSize="16sp"
+            android:fontFamily="@font/inter_semibold"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp" />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/avatarImageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-    <EditText
-        android:id="@+id/nameEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/avatarImageView"
-        android:background="@drawable/lc_edittext_background"
-        android:fontFamily="@font/inter"
-        android:hint="Имя"
-        android:padding="16dp"
-        android:layout_marginBottom="5dp"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
+            <!-- Name Field -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textColor="@color/text_light"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_semibold"
+                android:layout_marginBottom="4dp" />
 
-    <EditText
-        android:id="@+id/usernameEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/nameEditText"
-        android:background="@drawable/lc_edittext_background"
-        android:fontFamily="@font/inter"
-        android:hint="Имя пользователя"
-        android:padding="16dp"
-        android:layout_marginBottom="5dp"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
+            <EditText
+                android:id="@+id/nameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:textColor="@color/text_light"
+                android:textSize="16sp"
+                android:fontFamily="@font/inter_semibold"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="16dp" />
 
-    <EditText
-        android:id="@+id/emailEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/usernameEditText"
-        android:background="@drawable/lc_edittext_background"
-        android:fontFamily="@font/inter"
-        android:hint="Электронная почта"
-        android:padding="16dp"
-        android:layout_marginBottom="5dp"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
+            <!-- Username Field -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                android:textColor="@color/text_light"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_semibold"
+                android:layout_marginBottom="4dp" />
 
-    <EditText
-        android:id="@+id/passwordEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/emailEditText"
-        android:background="@drawable/lc_edittext_background"
-        android:fontFamily="@font/inter"
-        android:hint="Пароль"
-        android:inputType="textPassword"
-        android:padding="16dp"
-        android:layout_marginBottom="5dp"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
+            <EditText
+                android:id="@+id/usernameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:textColor="@color/text_light"
+                android:textSize="16sp"
+                android:fontFamily="@font/inter_semibold"
+                android:inputType="text"
+                android:layout_marginBottom="16dp" />
 
-    <Button
-        android:id="@+id/logoutButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/passwordEditText"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@color/background_tertiary"
-        android:fontFamily="@font/inter_bold"
-        android:onClick="logout"
-        android:padding="12dp"
-        android:text="Выйти"
-        android:textColor="@color/text_blue"
-        app:strokeColor="@color/border_gray"
-        app:strokeWidth="1dp" />
+            <!-- Email Field -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textColor="@color/text_light"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_semibold"
+                android:layout_marginBottom="4dp" />
 
-</RelativeLayout>
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:textColor="@color/text_light"
+                android:textSize="16sp"
+                android:fontFamily="@font/inter_semibold"
+                android:inputType="textEmailAddress"
+                android:enabled="false" />
+
+            <!-- Preferences Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/preferences_title"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Genres -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/genres_title"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/genresChipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Countries -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/countries_title"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/countriesChipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Franchises -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/franchises_title"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/franchisesChipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/savePreferencesButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/save_preferences"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Logout Button -->
+            <TextView
+                android:id="@+id/logoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/logout"
+                android:textColor="@color/text_light"
+                android:textSize="16sp"
+                android:fontFamily="@font/inter_semibold"
+                android:gravity="center"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="32dp"
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

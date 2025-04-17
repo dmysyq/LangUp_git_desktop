@@ -117,6 +117,7 @@
         android:background="@drawable/edittext_background"
         android:padding="16dp"
         android:spinnerMode="dropdown"
+        android:overlapAnchor="true"
         android:entries="@array/languages" />
 
 </RelativeLayout>

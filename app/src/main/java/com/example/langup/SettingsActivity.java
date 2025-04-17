@@ -13,6 +13,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
 
 public class SettingsActivity extends AppCompatActivity {
@@ -30,6 +32,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         preferences = getSharedPreferences("LangUpSettings", MODE_PRIVATE);
         initializeViews();
+        setupSpinner();
         loadSettings();
         setupListeners();
     }
@@ -40,6 +43,19 @@ public class SettingsActivity extends AppCompatActivity {
         languageSpinner = findViewById(R.id.languageSpinner);
         backButton = findViewById(R.id.backButton);
         saveButton = findViewById(R.id.saveButton);
+    }
+
+    private void setupSpinner() {
+        List<String> languages = Arrays.asList(getResources().getStringArray(R.array.languages));
+        LanguageSpinnerAdapter adapter = new LanguageSpinnerAdapter(this, languages);
+        languageSpinner.setAdapter(adapter);
+        
+        // Apply custom style to spinner
+        languageSpinner.setBackgroundResource(R.drawable.spinner_background);
+        languageSpinner.setPopupBackgroundResource(R.drawable.spinner_dropdown_background);
+        
+        // Set custom dropdown style
+        languageSpinner.setDropDownVerticalOffset(0);
     }
 
     private void loadSettings() {

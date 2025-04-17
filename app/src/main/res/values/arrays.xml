@@ -4,4 +4,43 @@
         <item>English</item>
         <item>Русский</item>
     </string-array>
+
+    <string-array name="genres">
+        <item>Фантастика</item>
+        <item>Приключения</item>
+        <item>Комедия</item>
+        <item>Драма</item>
+        <item>Боевик</item>
+        <item>Триллер</item>
+        <item>Ужасы</item>
+        <item>Анимация</item>
+        <item>Документальный</item>
+        <item>Семейный</item>
+    </string-array>
+
+    <string-array name="countries">
+        <item>США</item>
+        <item>Япония</item>
+        <item>Великобритания</item>
+        <item>Франция</item>
+        <item>Германия</item>
+        <item>Италия</item>
+        <item>Южная Корея</item>
+        <item>Индия</item>
+        <item>Россия</item>
+        <item>Австралия</item>
+    </string-array>
+
+    <string-array name="franchises">
+        <item>Star Wars</item>
+        <item>Marvel</item>
+        <item>DC Comics</item>
+        <item>Harry Potter</item>
+        <item>Lord of the Rings</item>
+        <item>Fast &amp; Furious</item>
+        <item>Mission: Impossible</item>
+        <item>James Bond</item>
+        <item>Transformers</item>
+        <item>Pirates of the Caribbean</item>
+    </string-array>
 </resources> 
