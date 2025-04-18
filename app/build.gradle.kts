@@ -53,8 +53,10 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore")
     implementation("com.google.firebase:firebase-crashlytics")
     
-    // Google Sign-In
+    // Google Play Services
     implementation("com.google.android.gms:play-services-auth:20.7.0")
+    implementation("com.google.android.gms:play-services-base:18.3.0")
+    implementation("com.google.android.gms:play-services-tasks:18.1.0")
     
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

@@ -170,13 +170,76 @@ public class UserProfileActivity extends AppCompatActivity {
             chip.setTextColor(getResources().getColor(R.color.chip_text));
             chip.setChipStrokeColorResource(R.color.chip_stroke);
         }
+        
+        // Update preferences when chip state changes
+        updatePreferencesFromChips();
+    }
+    
+    private void updatePreferencesFromChips() {
+        List<String> selectedGenres = getSelectedChips(genresChipGroup);
+        List<String> selectedCountries = getSelectedChips(countriesChipGroup);
+        List<String> selectedFranchises = getSelectedChips(franchisesChipGroup);
+        
+        preferencesManager.setGenres(selectedGenres);
+        preferencesManager.setCountries(selectedCountries);
+        preferencesManager.setFranchises(selectedFranchises);
+        
+        Log.d(TAG, "Updated preferences - Genres: " + selectedGenres + 
+                    ", Countries: " + selectedCountries + 
+                    ", Franchises: " + selectedFranchises);
+    }
+    
+    private List<String> getSelectedChips(ChipGroup chipGroup) {
+        List<String> selected = new ArrayList<>();
+        for (int i = 0; i < chipGroup.getChildCount(); i++) {
+            Chip chip = (Chip) chipGroup.getChildAt(i);
+            if (chip.isChecked()) {
+                selected.add(chip.getText().toString());
+            }
+        }
+        return selected;
+    }
+    
+    private void updateUI(Map<String, List<String>> preferences) {
+        List<String> genres = preferences.get("genres");
+        List<String> countries = preferences.get("countries");
+        List<String> franchises = preferences.get("franchises");
+        
+        if (genres != null) {
+            preferencesManager.setGenres(genres);
+            updateChipGroupSelection(genresChipGroup, genres);
+        }
+        if (countries != null) {
+            preferencesManager.setCountries(countries);
+            updateChipGroupSelection(countriesChipGroup, countries);
+        }
+        if (franchises != null) {
+            preferencesManager.setFranchises(franchises);
+            updateChipGroupSelection(franchisesChipGroup, franchises);
+        }
+    }
+    
+    private void updateChipGroupSelection(ChipGroup chipGroup, List<String> selectedItems) {
+        for (int i = 0; i < chipGroup.getChildCount(); i++) {
+            Chip chip = (Chip) chipGroup.getChildAt(i);
+            chip.setChecked(selectedItems.contains(chip.getText().toString()));
+        }
     }
 
     private void setupClickListeners() {
-        saveButton.setOnClickListener(v -> saveUserData());
+        saveButton.setOnClickListener(v -> {
+            saveUserData();
+            saveUserPreferences();
+        });
+        
         backButton.setOnClickListener(v -> finish());
         logoutButton.setOnClickListener(v -> logout());
         changeAvatarButton.setOnClickListener(v -> showAvatarPicker());
+        
+        // Add click listener for save preferences button if it exists
+        if (savePreferencesButton != null) {
+            savePreferencesButton.setOnClickListener(v -> saveUserPreferences());
+        }
     }
 
     private void showAvatarPicker() {
@@ -318,27 +381,18 @@ public class UserProfileActivity extends AppCompatActivity {
         });
     }
 
-    private void updateUI(Map<String, List<String>> preferences) {
-        List<String> genres = preferences.get("genres");
-        List<String> countries = preferences.get("countries");
-        List<String> franchises = preferences.get("franchises");
-        
-        if (genres != null) preferencesManager.setGenres(genres);
-        if (countries != null) preferencesManager.setCountries(countries);
-        if (franchises != null) preferencesManager.setFranchises(franchises);
-        
-        // Update UI elements here
-    }
-
     private void saveUserPreferences() {
+        Log.d(TAG, "Saving user preferences...");
         preferencesManager.savePreferences(new PreferencesManager.PreferencesCallback() {
             @Override
             public void onSuccess() {
+                Log.d(TAG, "Preferences saved successfully");
                 Toast.makeText(UserProfileActivity.this, R.string.preferences_saved, Toast.LENGTH_SHORT).show();
             }
             
             @Override
             public void onError(String error) {
+                Log.e(TAG, "Error saving preferences: " + error);
                 Toast.makeText(UserProfileActivity.this, error, Toast.LENGTH_SHORT).show();
             }
             

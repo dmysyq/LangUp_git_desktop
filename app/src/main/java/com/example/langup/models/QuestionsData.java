@@ -3,71 +3,63 @@ package com.example.langup.models;
 import java.util.List;
 
 public class QuestionsData {
-    private Metadata metadata;
     private List<Question> questions;
 
-    public Metadata getMetadata() {
-        return metadata;
+    public QuestionsData(List<Question> questions) {
+        this.questions = questions;
     }
 
     public List<Question> getQuestions() {
         return questions;
     }
 
-    public static class Metadata {
-        private String title;
-        private String series;
-        private int season;
-        private int episode;
-        private int level;
-        private String duration;
-        private String accent;
-        private String description;
-        private String youtubeUrl;
-
-        public String getTitle() { return title; }
-        public String getSeries() { return series; }
-        public int getSeason() { return season; }
-        public int getEpisode() { return episode; }
-        public int getLevel() { return level; }
-        public String getDuration() { return duration; }
-        public String getAccent() { return accent; }
-        public String getDescription() { return description; }
-        public String getYoutubeUrl() { return youtubeUrl; }
+    public void setQuestions(List<Question> questions) {
+        this.questions = questions;
     }
 
     public static class Question {
-        private String id;
-        private String type;
         private String question;
         private List<String> options;
-        private int correctAnswer; // для single_choice
-        private List<Integer> correctAnswers; // для multiple_choice
+        private List<String> correctAnswers;
+        private boolean isSingleChoice;
 
-        public Question() {}
-
-        public Question(ContentData.Question contentQuestion) {
-            this.id = contentQuestion.getId();
-            this.type = contentQuestion.getType();
-            this.question = contentQuestion.getQuestion();
-            this.options = contentQuestion.getOptions();
-            this.correctAnswer = contentQuestion.getCorrectAnswer();
-            this.correctAnswers = contentQuestion.getCorrectAnswers();
+        public Question(String question, List<String> options, List<String> correctAnswers, boolean isSingleChoice) {
+            this.question = question;
+            this.options = options;
+            this.correctAnswers = correctAnswers;
+            this.isSingleChoice = isSingleChoice;
         }
 
-        public String getId() { return id; }
-        public String getType() { return type; }
-        public String getQuestion() { return question; }
-        public List<String> getOptions() { return options; }
-        public int getCorrectAnswer() { return correctAnswer; }
-        public List<Integer> getCorrectAnswers() { return correctAnswers; }
+        public String getQuestion() {
+            return question;
+        }
+
+        public List<String> getOptions() {
+            return options;
+        }
+
+        public List<String> getCorrectAnswers() {
+            return correctAnswers;
+        }
 
         public boolean isSingleChoice() {
-            return "single_choice".equals(type);
+            return isSingleChoice;
         }
 
-        public boolean isMultipleChoice() {
-            return "multiple_choice".equals(type);
+        public boolean isCorrect(List<String> selectedAnswers) {
+            if (selectedAnswers == null || selectedAnswers.isEmpty()) {
+                return false;
+            }
+
+            if (isSingleChoice) {
+                return selectedAnswers.size() == 1 && 
+                       correctAnswers.contains(selectedAnswers.get(0));
+            } else {
+                if (selectedAnswers.size() != correctAnswers.size()) {
+                    return false;
+                }
+                return selectedAnswers.containsAll(correctAnswers);
+            }
         }
     }
 } 

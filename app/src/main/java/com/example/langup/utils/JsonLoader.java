@@ -3,8 +3,12 @@ package com.example.langup.utils;
 import android.content.Context;
 import android.util.Log;
 
+import com.example.langup.models.Episode;
 import com.example.langup.models.Lesson;
+import com.example.langup.models.Question;
 import com.example.langup.models.Series;
+import com.example.langup.models.VocabularyItem;
+import com.example.langup.models.ContentData;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -12,12 +16,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
 public class JsonLoader {
     private static final String TAG = "JsonLoader";
-    private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    private static final Gson gson = new Gson();
     private final Context context;
 
     public JsonLoader(Context context) {
@@ -129,6 +134,28 @@ public class JsonLoader {
             return gson.fromJson(sb.toString(), Series.class);
         } catch (IOException e) {
             Log.e(TAG, "Error loading series from assets: " + e.getMessage());
+            return null;
+        }
+    }
+
+    public static ContentData loadContent(Context context, String filename) {
+        try {
+            InputStream is = context.getAssets().open(filename);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+            StringBuilder sb = new StringBuilder();
+            String line;
+            
+            while ((line = reader.readLine()) != null) {
+                sb.append(line);
+            }
+            
+            reader.close();
+            is.close();
+            
+            String json = sb.toString();
+            return gson.fromJson(json, ContentData.class);
+        } catch (IOException e) {
+            Log.e(TAG, "Error loading JSON file: " + filename, e);
             return null;
         }
     }

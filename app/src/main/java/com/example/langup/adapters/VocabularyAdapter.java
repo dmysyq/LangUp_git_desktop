@@ -1,5 +1,6 @@
 package com.example.langup.adapters;
 
+import android.animation.ValueAnimator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,22 +10,19 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.langup.R;
-import com.example.langup.models.VocabularyWord;
+import com.example.langup.models.VocabularyItem;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class VocabularyAdapter extends RecyclerView.Adapter<VocabularyAdapter.ViewHolder> {
-    private final List<VocabularyWord> words;
-    private boolean showTranslations;
+    private List<VocabularyItem> vocabularyItems;
+    private boolean showTranslations = false;
+    private static final Pattern WORD_PATTERN = Pattern.compile("(\\w+)\\s*\\[(\\w+)\\]\\s*-\\s*(.+)");
 
-    public VocabularyAdapter(List<VocabularyWord> words, boolean showTranslations) {
-        this.words = words;
-        this.showTranslations = showTranslations;
-    }
-
-    public void setShowTranslations(boolean showTranslations) {
-        this.showTranslations = showTranslations;
-        notifyDataSetChanged();
+    public VocabularyAdapter(List<VocabularyItem> vocabularyItems) {
+        this.vocabularyItems = vocabularyItems;
     }
 
     @NonNull
@@ -37,28 +35,56 @@ public class VocabularyAdapter extends RecyclerView.Adapter<VocabularyAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        VocabularyWord word = words.get(position);
-        holder.wordTextView.setText(word.getWord());
-        holder.definitionTextView.setText(word.getDefinition());
-        holder.translationTextView.setText(word.getTranslation());
-        holder.translationTextView.setVisibility(showTranslations ? View.VISIBLE : View.GONE);
+        VocabularyItem item = vocabularyItems.get(position);
+        
+        // Парсим слово, часть речи и определение
+        Matcher matcher = WORD_PATTERN.matcher(item.getExample());
+        if (matcher.find()) {
+            holder.wordTextView.setText(matcher.group(1));
+            holder.partOfSpeechTextView.setText("[" + matcher.group(2) + "]");
+            holder.definitionTextView.setText("- " + matcher.group(3));
+        } else {
+            holder.wordTextView.setText(item.getWord());
+            holder.definitionTextView.setText(item.getExample());
+        }
+        
+        holder.translationTextView.setText(item.getTranslation());
+        
+        // Устанавливаем видимость перевода
+        if (showTranslations) {
+            holder.translationTextView.setAlpha(1f);
+        } else {
+            holder.translationTextView.setAlpha(0f);
+        }
     }
 
     @Override
     public int getItemCount() {
-        return words.size();
+        return vocabularyItems.size();
+    }
+
+    public void setShowTranslations(boolean show) {
+        this.showTranslations = show;
+        notifyDataSetChanged();
+    }
+
+    public void animateTranslations(boolean show) {
+        this.showTranslations = show;
+        notifyDataSetChanged();
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        final TextView wordTextView;
-        final TextView definitionTextView;
-        final TextView translationTextView;
+        TextView wordTextView;
+        TextView partOfSpeechTextView;
+        TextView definitionTextView;
+        TextView translationTextView;
 
-        ViewHolder(View view) {
-            super(view);
-            wordTextView = view.findViewById(R.id.wordTextView);
-            definitionTextView = view.findViewById(R.id.definitionTextView);
-            translationTextView = view.findViewById(R.id.translationTextView);
+        ViewHolder(View itemView) {
+            super(itemView);
+            wordTextView = itemView.findViewById(R.id.wordTextView);
+            partOfSpeechTextView = itemView.findViewById(R.id.partOfSpeechTextView);
+            definitionTextView = itemView.findViewById(R.id.definitionTextView);
+            translationTextView = itemView.findViewById(R.id.translationTextView);
         }
     }
 } 

@@ -87,7 +87,7 @@ public class RecommendationEngine {
             }
             
             if (preferredFranchises != null && !preferredFranchises.isEmpty()) {
-                matchesPreferences &= preferredFranchises.contains(metadata.getFranchise());
+                matchesPreferences &= preferredFranchises.contains(metadata.getFranchises());
             }
             
             if (matchesPreferences) {

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="#4CAF50" android:state_checked="true" android:state_enabled="true"/> <!-- Green for correct -->
+    <item android:color="#F44336" android:state_checked="true" android:state_enabled="false"/> <!-- Red for incorrect -->
+    <item android:color="#FFC107" android:state_checked="false" android:state_enabled="false"/> <!-- Yellow for missed correct -->
+    <item android:color="@android:color/black"/> <!-- Default color -->
+</selector> 

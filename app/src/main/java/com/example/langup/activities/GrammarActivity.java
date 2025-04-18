@@ -1,10 +1,12 @@
 package com.example.langup.activities;
 
 import android.animation.ObjectAnimator;
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
+import android.widget.Button;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -12,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.langup.R;
 import com.example.langup.adapters.GrammarSentenceAdapter;
+import com.example.langup.models.GrammarExercise;
 import com.example.langup.models.GrammarSentence;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.chip.Chip;
@@ -25,17 +28,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
+import android.widget.TextView;
+import org.json.JSONException;
 
-public class GrammarActivity extends AppCompatActivity implements GrammarSentenceAdapter.OnAnswerChangedListener {
-    private RecyclerView sentencesRecyclerView;
+public class GrammarActivity extends AppCompatActivity {
+    private RecyclerView recyclerView;
     private ChipGroup availableWordsChipGroup;
-    private MaterialButton checkAnswersButton;
+    private MaterialButton checkButton;
     private MaterialButton resetButton;
     private GrammarSentenceAdapter adapter;
-    private List<GrammarSentence> sentences;
-    private Map<Integer, String> userAnswers;
+    private GrammarExercise exercise;
     private String episodeId;
     private Toolbar toolbar;
+    private TextView descriptionTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +55,7 @@ public class GrammarActivity extends AppCompatActivity implements GrammarSentenc
         }
 
         initializeViews();
-        loadGrammarExercise();
+        loadExercise();
     }
 
     private void initializeViews() {
@@ -59,129 +64,103 @@ public class GrammarActivity extends AppCompatActivity implements GrammarSentenc
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.grammar_exercise);
 
-        sentencesRecyclerView = findViewById(R.id.sentencesRecyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
         availableWordsChipGroup = findViewById(R.id.availableWordsChipGroup);
-        checkAnswersButton = findViewById(R.id.checkAnswersButton);
+        checkButton = findViewById(R.id.checkButton);
         resetButton = findViewById(R.id.resetButton);
+        descriptionTextView = findViewById(R.id.descriptionText);
 
-        sentencesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        userAnswers = new HashMap<>();
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new GrammarSentenceAdapter(new ArrayList<>());
+        recyclerView.setAdapter(adapter);
 
-        checkAnswersButton.setOnClickListener(v -> checkAnswers());
+        checkButton.setOnClickListener(v -> checkAnswers());
         resetButton.setOnClickListener(v -> resetExercise());
     }
 
-    private void loadGrammarExercise() {
+    private void loadExercise() {
         try {
-            InputStream is = getAssets().open("content.json");
+            InputStream is = getAssets().open("grammar_exercises.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
             String json = new String(buffer, StandardCharsets.UTF_8);
 
-            JSONObject obj = new JSONObject(json);
-            JSONArray seriesArray = obj.getJSONArray("series");
-            
-            for (int i = 0; i < seriesArray.length(); i++) {
-                JSONObject series = seriesArray.getJSONObject(i);
-                JSONArray episodes = series.getJSONArray("episodes");
-                
-                for (int j = 0; j < episodes.length(); j++) {
-                    JSONObject episode = episodes.getJSONObject(j);
-                    if (episode.getString("id").equals(episodeId)) {
-                        JSONObject grammar = episode.getJSONObject("grammar");
-                        setupGrammarExercise(grammar);
-                        return;
-                    }
-                }
+            JSONObject jsonObject = new JSONObject(json);
+            JSONObject exerciseObj = jsonObject.getJSONObject("exercise");
+            String description = exerciseObj.getString("description");
+
+            exercise = new GrammarExercise(exerciseObj.getString("id"), description);
+
+            JSONArray sentencesArray = exerciseObj.getJSONArray("sentences");
+            for (int i = 0; i < sentencesArray.length(); i++) {
+                JSONObject sentenceObj = sentencesArray.getJSONObject(i);
+                GrammarSentence sentence = new GrammarSentence(
+                    sentenceObj.getString("id"),
+                    sentenceObj.getString("sentence"),
+                    sentenceObj.getString("correctAnswer"),
+                    sentenceObj.getString("explanation")
+                );
+                exercise.addSentence(sentence);
             }
+
+            adapter.setSentences(exercise.getSentences());
+
+            JSONArray wordsArray = exerciseObj.getJSONArray("availableWords");
+            List<String> availableWords = new ArrayList<>();
+            for (int i = 0; i < wordsArray.length(); i++) {
+                availableWords.add(wordsArray.getString(i));
+            }
+            setupAvailableWords(availableWords);
+
         } catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(this, R.string.error_loading_episode, Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void setupGrammarExercise(JSONObject grammar) throws Exception {
-        // Setup description
-        String description = grammar.optString("description", getString(R.string.fill_in_the_blanks));
-        findViewById(R.id.descriptionText).setVisibility(View.VISIBLE);
-        ((android.widget.TextView) findViewById(R.id.descriptionText)).setText(description);
-
-        // Setup available words
+    private void setupAvailableWords(List<String> words) {
         availableWordsChipGroup.removeAllViews();
-        JSONArray words = grammar.getJSONArray("availableWords");
-        for (int i = 0; i < words.length(); i++) {
+        for (String word : words) {
             Chip chip = new Chip(this);
-            chip.setText(words.getString(i));
+            chip.setText(word);
             chip.setClickable(true);
-            chip.setCheckable(false);
+            chip.setCheckable(true);
             chip.setOnClickListener(v -> {
-                String word = ((Chip) v).getText().toString();
-                // Find the first empty answer field
-                for (int j = 0; j < sentences.size(); j++) {
-                    if (!userAnswers.containsKey(j) || userAnswers.get(j).isEmpty()) {
-                        userAnswers.put(j, word);
-                        adapter.notifyItemChanged(j);
-                        break;
-                    }
-                }
+                String selectedWord = ((Chip) v).getText().toString();
+                adapter.setSelectedWord(selectedWord);
             });
             availableWordsChipGroup.addView(chip);
         }
-
-        // Setup sentences
-        sentences = new ArrayList<>();
-        JSONArray sentencesArray = grammar.getJSONArray("sentences");
-        for (int i = 0; i < sentencesArray.length(); i++) {
-            JSONObject sentenceObj = sentencesArray.getJSONObject(i);
-            List<String> parts = new ArrayList<>();
-            JSONArray partsArray = sentenceObj.getJSONArray("parts");
-            for (int j = 0; j < partsArray.length(); j++) {
-                parts.add(partsArray.getString(j));
-            }
-            
-            List<String> answers = new ArrayList<>();
-            JSONArray answersArray = sentenceObj.getJSONArray("answers");
-            for (int j = 0; j < answersArray.length(); j++) {
-                answers.add(answersArray.getString(j));
-            }
-            
-            sentences.add(new GrammarSentence(sentenceObj.getString("id"), parts, answers));
-        }
-
-        adapter = new GrammarSentenceAdapter(sentences, this);
-        sentencesRecyclerView.setAdapter(adapter);
-    }
-
-    @Override
-    public void onAnswerChanged(int position, String answer) {
-        userAnswers.put(position, answer);
     }
 
     private void checkAnswers() {
-        int correctCount = 0;
-        for (int i = 0; i < sentences.size(); i++) {
-            String userAnswer = userAnswers.get(i);
-            List<String> correctAnswers = sentences.get(i).getAnswers();
-            boolean isCorrect = userAnswer != null && correctAnswers.contains(userAnswer);
-            if (isCorrect) {
-                correctCount++;
-            }
-            adapter.showFeedback(i, isCorrect);
-        }
-
-        String message = getString(R.string.correct_answers_count, correctCount, sentences.size());
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
-        checkAnswersButton.setEnabled(false);
-        resetButton.setVisibility(View.VISIBLE);
+        int correctAnswers = exercise.getCorrectAnswers();
+        int totalQuestions = exercise.getTotalQuestions();
+        showResultsDialog(correctAnswers, totalQuestions);
     }
 
     private void resetExercise() {
-        userAnswers.clear();
         adapter.resetFeedback();
-        checkAnswersButton.setEnabled(true);
-        resetButton.setVisibility(View.GONE);
+    }
+
+    private void showResultsDialog(int correctAnswers, int totalQuestions) {
+        double percentage = (double) correctAnswers / totalQuestions * 100;
+        String message;
+        if (percentage >= 80) {
+            message = getString(R.string.excellent_job);
+        } else if (percentage >= 60) {
+            message = getString(R.string.good_job);
+        } else {
+            message = getString(R.string.keep_practicing);
+        }
+
+        new androidx.appcompat.app.AlertDialog.Builder(this)
+            .setTitle(getString(R.string.results))
+            .setMessage(String.format("%s\n%d/%d", message, correctAnswers, totalQuestions))
+            .setPositiveButton(getString(R.string.ok), (dialog, which) -> finish())
+            .show();
     }
 
     @Override

@@ -1,27 +1,35 @@
 package com.example.langup.models;
 
-import java.util.List;
-
 public class GrammarSentence {
     private String id;
-    private List<String> parts;
-    private List<String> answers;
+    private String sentence;
+    private String correctAnswer;
+    private String userAnswer;
+    private String explanation;
 
-    public GrammarSentence(String id, List<String> parts, List<String> answers) {
+    public GrammarSentence(String id, String sentence, String correctAnswer, String explanation) {
         this.id = id;
-        this.parts = parts;
-        this.answers = answers;
+        this.sentence = sentence;
+        this.correctAnswer = correctAnswer;
+        this.explanation = explanation;
+        this.userAnswer = "";
     }
 
-    public String getId() {
-        return id;
-    }
+    // Getters
+    public String getId() { return id; }
+    public String getSentence() { return sentence; }
+    public String getCorrectAnswer() { return correctAnswer; }
+    public String getUserAnswer() { return userAnswer; }
+    public String getExplanation() { return explanation; }
 
-    public List<String> getParts() {
-        return parts;
-    }
+    // Setters
+    public void setId(String id) { this.id = id; }
+    public void setSentence(String sentence) { this.sentence = sentence; }
+    public void setCorrectAnswer(String correctAnswer) { this.correctAnswer = correctAnswer; }
+    public void setUserAnswer(String userAnswer) { this.userAnswer = userAnswer; }
+    public void setExplanation(String explanation) { this.explanation = explanation; }
 
-    public List<String> getAnswers() {
-        return answers;
+    public boolean isCorrect() {
+        return userAnswer != null && userAnswer.equalsIgnoreCase(correctAnswer);
     }
 } 

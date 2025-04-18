@@ -33,21 +33,17 @@ public class QuestionsManager {
         }
     }
 
-    public boolean checkAnswer(QuestionsData.Question question, int selectedAnswer) {
-        if (question.isSingleChoice()) {
-            return question.getCorrectAnswer() == selectedAnswer;
+    public static boolean checkAnswer(QuestionsData.Question question, String selectedAnswer) {
+        if (question == null || selectedAnswer == null) {
+            return false;
         }
-        return false;
+        return question.isCorrect(List.of(selectedAnswer));
     }
 
-    public boolean checkAnswers(QuestionsData.Question question, List<Integer> selectedAnswers) {
-        if (question.isMultipleChoice()) {
-            List<Integer> correctAnswers = question.getCorrectAnswers();
-            if (selectedAnswers.size() != correctAnswers.size()) {
-                return false;
-            }
-            return selectedAnswers.containsAll(correctAnswers);
+    public static boolean checkMultipleAnswers(QuestionsData.Question question, List<String> selectedAnswers) {
+        if (question == null || selectedAnswers == null) {
+            return false;
         }
-        return false;
+        return question.isCorrect(selectedAnswers);
     }
 } 

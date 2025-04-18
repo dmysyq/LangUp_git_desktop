@@ -9,6 +9,8 @@ import android.widget.LinearLayout;
 import androidx.activity.EdgeToEdge;
 
 import com.example.langup.base.BaseActivity;
+import com.example.langup.models.Series;
+import com.example.langup.models.Episode;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -31,7 +33,6 @@ public class SeriesActivity extends BaseActivity {
         loadJsonAndCreateButtons(jsonFileName);
 
         ImageButton backButton = findViewById(R.id.backButton);
-
         backButton.setOnClickListener(v -> onBackPressed());
     }
 
@@ -52,7 +53,7 @@ public class SeriesActivity extends BaseActivity {
             );
             layoutParams.setMargins(24, 0, 24, 24);
             button.setLayoutParams(layoutParams);
-            button.setText(episode.getEpisodeTitle());
+            button.setText(episode.getTitle());
             button.setOnClickListener(view -> {
                 Intent intent = new Intent(SeriesActivity.this, TranslationActivity.class);
                 intent.putExtra("contentJson", gson.toJson(episode.getContent()));
@@ -82,80 +83,7 @@ public class SeriesActivity extends BaseActivity {
         super.onBackPressed();
     }
 
-    class Series {
-        private String seriesName;
-        private ArrayList<Episode> episodes;
-
-        public Series() {
-
-        }
-
-        public ArrayList<Episode> getEpisodes() {
-            return episodes;
-        }
-
-        public void setEpisodes(ArrayList<Episode> episodes) {
-            this.episodes = episodes;
-        }
-    }
-    class Content {
-        private String original;
-        private List<String> translation;
-
-        public Content() {
-            // Default constructor
-        }
-
-        public String getOriginal() {
-            return original;
-        }
-
-        public void setOriginal(String original) {
-            this.original = original;
-        }
-
-        public List<String> getTranslation() {
-            return translation;
-        }
-
-        public void setTranslation(List<String> translation) {
-            this.translation = translation;
-        }
-    }
-    class Episode {
-        private int episodeNumber;
-        private String episodeTitle;
-        private List<Content> content;
-
-        public Episode() {
-        }
-
-        public int getEpisodeNumber() {
-            return episodeNumber;
-        }
-
-        public void setEpisodeNumber(int episodeNumber) {
-            this.episodeNumber = episodeNumber;
-        }
-
-        public String getEpisodeTitle() {
-            return episodeTitle;
-        }
-
-        public void setEpisodeTitle(String episodeTitle) {
-            this.episodeTitle = episodeTitle;
-        }
-
-        public List<Content> getContent() {
-            return content;
-        }
-
-        public void setContent(List<Content> content) {
-            this.content = content;
-        }
-    }
     private void onClick(View v) {
         onBackPressed();
     }
-
 }

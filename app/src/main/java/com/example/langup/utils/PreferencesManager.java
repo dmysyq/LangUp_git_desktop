@@ -32,39 +32,60 @@ public class PreferencesManager {
     }
     
     public PreferencesManager(Context context, String userId) {
+        if (userId == null || userId.isEmpty()) {
+            throw new IllegalArgumentException("UserId cannot be null or empty");
+        }
         this.sharedPreferences = context.getSharedPreferences(PREFERENCES_FILE, Context.MODE_PRIVATE);
         this.firestore = FirebaseFirestore.getInstance();
         this.userId = userId;
     }
     
     public void savePreferences(PreferencesCallback callback) {
+        if (userId == null || userId.isEmpty()) {
+            callback.onError("User not authenticated");
+            return;
+        }
+        
         Map<String, List<String>> preferences = new HashMap<>();
         preferences.put(KEY_GENRES, getGenres());
         preferences.put(KEY_COUNTRIES, getCountries());
         preferences.put(KEY_FRANCHISES, getFranchises());
         
+        Log.d(TAG, "Saving preferences for user " + userId + ": " + preferences);
+        
+        // Save directly to user document
         firestore.collection("users").document(userId)
-            .collection("preferences").document("content")
-            .set(preferences, SetOptions.merge())
+            .update("preferences", preferences)
             .addOnSuccessListener(aVoid -> {
+                // Also update local SharedPreferences
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putStringSet(KEY_GENRES, new HashSet<>(getGenres()));
+                editor.putStringSet(KEY_COUNTRIES, new HashSet<>(getCountries()));
+                editor.putStringSet(KEY_FRANCHISES, new HashSet<>(getFranchises()));
+                editor.apply();
+                
+                Log.d(TAG, "Preferences saved successfully for user " + userId);
                 callback.onSuccess();
             })
             .addOnFailureListener(e -> {
-                Log.e(TAG, "Error saving preferences", e);
+                Log.e(TAG, "Error saving preferences for user " + userId, e);
                 callback.onError(e.getMessage());
             });
     }
     
     public void loadPreferences(PreferencesCallback callback) {
         firestore.collection("users").document(userId)
-            .collection("preferences").document("content")
             .get()
             .addOnSuccessListener(document -> {
-                if (document.exists()) {
+                if (document.exists() && document.contains("preferences")) {
+                    Map<String, Object> data = document.getData();
+                    Map<String, Object> preferencesData = (Map<String, Object>) data.get("preferences");
+                    
                     Map<String, List<String>> preferences = new HashMap<>();
-                    preferences.put(KEY_GENRES, getListFromDocument(document, KEY_GENRES));
-                    preferences.put(KEY_COUNTRIES, getListFromDocument(document, KEY_COUNTRIES));
-                    preferences.put(KEY_FRANCHISES, getListFromDocument(document, KEY_FRANCHISES));
+                    preferences.put(KEY_GENRES, getListFromMap(preferencesData, KEY_GENRES));
+                    preferences.put(KEY_COUNTRIES, getListFromMap(preferencesData, KEY_COUNTRIES));
+                    preferences.put(KEY_FRANCHISES, getListFromMap(preferencesData, KEY_FRANCHISES));
+                    
                     callback.onPreferencesLoaded(preferences);
                 } else {
                     callback.onPreferencesLoaded(new HashMap<>());
@@ -76,10 +97,10 @@ public class PreferencesManager {
             });
     }
     
-    private List<String> getListFromDocument(DocumentSnapshot document, String key) {
+    private List<String> getListFromMap(Map<String, Object> map, String key) {
         List<String> list = new ArrayList<>();
-        if (document.contains(key)) {
-            Object value = document.get(key);
+        if (map != null && map.containsKey(key)) {
+            Object value = map.get(key);
             if (value instanceof List) {
                 list.addAll((List<String>) value);
             }
