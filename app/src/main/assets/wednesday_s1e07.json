@@ -1,0 +1,224 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2024-03-19",
+  "series": [
+    {
+      "id": "wednesday_s1",
+      "title": "Wednesday",
+      "description": "A series based on Wednesday Addams' adventures at Nevermore Academy",
+      "level": "intermediate",
+      "language": "en",
+      "accent": "American",
+      "episodes": [
+        {
+          "id": "wednesday_s1e07",
+          "title": "Annoying Roommate Habits",
+          "description": "After Enid moves out of her dorm room with Wednesday, she pops in to get a few things.",
+          "duration": "3:06",
+          "youtubeUrl": "https://www.youtube.com/watch?v=example",
+          "difficulty": 5,
+          "vocabulary": [
+            {
+              "word": "solitude",
+              "translation": "уединение",
+              "example": "Wednesday is using the solitude to work on her novel."
+            },
+            {
+              "word": "annoying",
+              "translation": "раздражающий",
+              "example": "Wednesday says that Enid's annoying habits include typing too loudly."
+            },
+            {
+              "word": "habits",
+              "translation": "привычки",
+              "example": "Everyone has some annoying habits."
+            },
+            {
+              "word": "roommate",
+              "translation": "сосед по комнате",
+              "example": "Enid is Wednesday's roommate at Nevermore Academy."
+            },
+            {
+              "word": "permanently",
+              "translation": "постоянно, навсегда",
+              "example": "Enid has requested to room with Yoko permanently."
+            }
+          ],
+          "questions": [
+            {
+              "id": "q1",
+              "type": "single_choice",
+              "question": "Enid comes to the room in order ______.",
+              "options": [
+                "to apologize to Wednesday",
+                "to meet Ms. Thornhill",
+                "to get something"
+              ],
+              "correctAnswer": 2
+            },
+            {
+              "id": "q2",
+              "type": "single_choice",
+              "question": "Enid has visited the room ______ in the last 24 hours.",
+              "options": [
+                "once",
+                "twice",
+                "three times"
+              ],
+              "correctAnswer": 1
+            },
+            {
+              "id": "q3",
+              "type": "single_choice",
+              "question": "Wednesday is using the solitude to ______.",
+              "options": [
+                "text with her friends",
+                "work on her novel",
+                "play her cello",
+                "study"
+              ],
+              "correctAnswer": 1
+            },
+            {
+              "id": "q4",
+              "type": "multiple_choice",
+              "question": "Wednesday says that Enid's annoying habits include ______, ______, ______, ______, and ______.",
+              "options": [
+                "putting her friends in danger",
+                "playing her cello too late",
+                "committing to too many clubs",
+                "wearing too much perfume",
+                "giggling while she texts",
+                "grinding her teeth",
+                "typing too loudly",
+                "texting too much",
+                "talking too much",
+                "snoring"
+              ],
+              "correctAnswers": [2, 3, 4, 6, 8]
+            },
+            {
+              "id": "q5",
+              "type": "multiple_choice",
+              "question": "Enid complains that Wednesday ______, ______, and ______.",
+              "options": [
+                "puts her friends in danger",
+                "plays her cello too late",
+                "commits to too many clubs",
+                "wears too much perfume",
+                "giggles while she texts",
+                "grinds her teeth",
+                "types too loudly",
+                "texts too much",
+                "talks too much",
+                "snores"
+              ],
+              "correctAnswers": [1, 6, 7]
+            },
+            {
+              "id": "q6",
+              "type": "single_choice",
+              "question": "Enid has requested to room with Yoko ______.",
+              "options": [
+                "permanently",
+                "temporarily"
+              ],
+              "correctAnswer": 0
+            },
+            {
+              "id": "q7",
+              "type": "single_choice",
+              "question": "Ms. Thornhill thinks that Enid ______.",
+              "options": [
+                "has helped Wednesday focus on her studies",
+                "has made Wednesday a little more social",
+                "is distracting Wednesday from her novel",
+                "has too many annoying habits"
+              ],
+              "correctAnswer": 2
+            },
+            {
+              "id": "q8",
+              "type": "single_choice",
+              "question": "To allow Enid to change rooms, Ms. Thornhill has to ______.",
+              "options": [
+                "submit some forms to the principal",
+                "write a letter to their parents",
+                "find a new roommate for Wednesday",
+                "find a new roommate for Enid"
+              ],
+              "correctAnswer": 0
+            }
+          ],
+          "grammar": [
+            {
+              "topic": "Present Continuous",
+              "explanation": "Used to describe actions happening at the moment of speaking",
+              "examples": [
+                "Wednesday is using the solitude to work.",
+                "Enid is moving out."
+              ]
+            },
+            {
+              "topic": "Infinitive of Purpose",
+              "explanation": "Used to explain why someone does something",
+              "examples": [
+                "Enid comes to the room to get something.",
+                "Ms. Thornhill has to submit forms to change rooms."
+              ]
+            }
+          ],
+          "transcript": {
+            "full": "Wednesday: [typing on her laptop]\nEnid: [enters the room] Hey, I just need to grab a few things.\nWednesday: That's the second time today.\nEnid: Well, it's not easy moving all at once.\nWednesday: Especially with all those clubs you're in.\nEnid: At least I'm social. Unlike someone who just sits here typing all day.\nMs. Thornhill: [knocks and enters] Everything okay in here?\nWednesday: Perfect. The solitude is helping with my novel.\nMs. Thornhill: About the room change request...",
+            "timestamps": [
+              {
+                "time": "0:00",
+                "text": "Wednesday typing on her laptop"
+              },
+              {
+                "time": "0:15",
+                "text": "Enid enters the room"
+              },
+              {
+                "time": "1:30",
+                "text": "Ms. Thornhill arrives"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "levels": [
+    {
+      "id": "beginner",
+      "name": "Beginner",
+      "description": "Suitable for those just starting to learn English",
+      "requiredScore": 0
+    },
+    {
+      "id": "intermediate",
+      "name": "Intermediate",
+      "description": "For learners with good basic knowledge",
+      "requiredScore": 1000
+    },
+    {
+      "id": "advanced",
+      "name": "Advanced",
+      "description": "For experienced English learners",
+      "requiredScore": 2000
+    }
+  ],
+  "categories": [
+    {
+      "id": "tv_shows",
+      "name": "TV Shows",
+      "description": "Learn English through popular TV series"
+    },
+    {
+      "id": "movies",
+      "name": "Movies",
+      "description": "Practice with movie scenes"
+    }
+  ]
+} 

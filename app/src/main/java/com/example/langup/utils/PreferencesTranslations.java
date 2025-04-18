@@ -4,56 +4,64 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PreferencesTranslations {
-    private static final Map<String, String> TRANSLATIONS = new HashMap<>();
-
+    private static final Map<String, String> translations = new HashMap<>();
+    
     static {
         // Genres
-        TRANSLATIONS.put("Fantasy", "Фантастика");
-        TRANSLATIONS.put("Adventure", "Приключения");
-        TRANSLATIONS.put("Comedy", "Комедия");
-        TRANSLATIONS.put("Drama", "Драма");
-        TRANSLATIONS.put("Action", "Боевик");
-        TRANSLATIONS.put("Thriller", "Триллер");
-        TRANSLATIONS.put("Horror", "Ужасы");
-        TRANSLATIONS.put("Animation", "Анимация");
-        TRANSLATIONS.put("Documentary", "Документальный");
-        TRANSLATIONS.put("Family", "Семейный");
-
+        translations.put("Action", "Экшен");
+        translations.put("Adventure", "Приключения");
+        translations.put("Comedy", "Комедия");
+        translations.put("Drama", "Драма");
+        translations.put("Fantasy", "Фэнтези");
+        translations.put("Horror", "Ужасы");
+        translations.put("Mystery", "Мистика");
+        translations.put("Romance", "Романтика");
+        translations.put("Sci-Fi", "Научная фантастика");
+        translations.put("Thriller", "Триллер");
+        
         // Countries
-        TRANSLATIONS.put("USA", "США");
-        TRANSLATIONS.put("Japan", "Япония");
-        TRANSLATIONS.put("UK", "Великобритания");
-        TRANSLATIONS.put("France", "Франция");
-        TRANSLATIONS.put("Germany", "Германия");
-        TRANSLATIONS.put("Italy", "Италия");
-        TRANSLATIONS.put("South Korea", "Южная Корея");
-        TRANSLATIONS.put("India", "Индия");
-        TRANSLATIONS.put("Russia", "Россия");
-        TRANSLATIONS.put("Australia", "Австралия");
-
+        translations.put("USA", "США");
+        translations.put("UK", "Великобритания");
+        translations.put("Japan", "Япония");
+        translations.put("South Korea", "Южная Корея");
+        translations.put("China", "Китай");
+        translations.put("France", "Франция");
+        translations.put("Germany", "Германия");
+        translations.put("Italy", "Италия");
+        translations.put("Spain", "Испания");
+        translations.put("Russia", "Россия");
+        
         // Franchises
-        TRANSLATIONS.put("Star Wars", "Звёздные войны");
-        TRANSLATIONS.put("Marvel", "Марвел");
-        TRANSLATIONS.put("DC Comics", "DC Comics");
-        TRANSLATIONS.put("Harry Potter", "Гарри Поттер");
-        TRANSLATIONS.put("Lord of the Rings", "Властелин колец");
-        TRANSLATIONS.put("Fast &amp; Furious", "Форсаж");
-        TRANSLATIONS.put("Mission: Impossible", "Миссия невыполнима");
-        TRANSLATIONS.put("James Bond", "Джеймс Бонд");
-        TRANSLATIONS.put("Transformers", "Трансформеры");
-        TRANSLATIONS.put("Pirates of the Caribbean", "Пираты Карибского моря");
+        translations.put("Marvel", "Марвел");
+        translations.put("DC", "DC");
+        translations.put("Star Wars", "Звёздные войны");
+        translations.put("Star Trek", "Звёздный путь");
+        translations.put("Harry Potter", "Гарри Поттер");
+        translations.put("Lord of the Rings", "Властелин колец");
+        translations.put("Game of Thrones", "Игра престолов");
+        translations.put("The Witcher", "Ведьмак");
+        translations.put("The Matrix", "Матрица");
+        translations.put("Fast & Furious", "Форсаж");
     }
-
-    public static String getRussianTranslation(String englishText) {
-        return TRANSLATIONS.getOrDefault(englishText, englishText);
+    
+    public static String getRussianTranslation(String english) {
+        return translations.getOrDefault(english, english);
     }
-
-    public static String getEnglishTranslation(String russianText) {
-        for (Map.Entry<String, String> entry : TRANSLATIONS.entrySet()) {
-            if (entry.getValue().equals(russianText)) {
+    
+    public static String getEnglishTranslation(String russian) {
+        for (Map.Entry<String, String> entry : translations.entrySet()) {
+            if (entry.getValue().equals(russian)) {
                 return entry.getKey();
             }
         }
-        return russianText;
+        return russian;
+    }
+    
+    public static boolean isEnglish(String text) {
+        return translations.containsKey(text);
+    }
+    
+    public static boolean isRussian(String text) {
+        return translations.containsValue(text);
     }
 } 

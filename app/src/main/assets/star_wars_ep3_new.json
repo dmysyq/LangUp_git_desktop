@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "id": "star_wars_ep3",
+    "title": {
+      "en": "Star Wars: Revenge of the Sith",
+      "ru": "Звёздные войны: Месть ситхов"
+    },
+    "description": {
+      "en": "The final chapter of the Star Wars prequel trilogy.",
+      "ru": "Заключительная часть приквела к Звёздным войнам."
+    },
+    "genres": ["Fantasy", "Action", "Sci-Fi"],
+    "countries": ["USA"],
+    "franchise": "Star Wars",
+    "difficulty": 3,
+    "rating": 4.8,
+    "completions": 1250,
+    "releaseYear": 2005,
+    "duration": 140,
+    "thumbnailUrl": "star_wars_ep3_thumb.jpg",
+    "tags": ["space", "war", "jedi", "sith", "force"]
+  },
+  "scoring": {
+    "basePoints": 100,
+    "timeBonus": {
+      "threshold": 300,
+      "points": 50
+    },
+    "accuracyBonus": {
+      "threshold": 95,
+      "points": 30
+    }
+  },
+  "episodes": [
+    {
+      "episodeNumber": 1,
+      "episodeTitle": {
+        "en": "Star Wars: Revenge of the Sith",
+        "ru": "Звёздные войны: Месть ситхов"
+      },
+      "content": [
+        {
+          "id": "sw_ep3_1",
+          "original": "Move to the right so I can get a clear shot at them.",
+          "translation": ["Отойдите", "вправо,", "чтобы", "я", "мог", "сделать", "чистый", "выстрел", "в", "них."],
+          "difficulty": 2,
+          "points": 10,
+          "hints": [
+            {
+              "en": "Direction instruction",
+              "ru": "Указание направления"
+            }
+          ]
+        },
+        {
+          "id": "sw_ep3_2",
+          "original": "I hope right you are.",
+          "translation": ["Я", "надеюсь,", "ты", "прав."],
+          "difficulty": 1,
+          "points": 5,
+          "hints": [
+            {
+              "en": "Expression of hope",
+              "ru": "Выражение надежды"
+            }
+          ]
+        },
+        {
+          "id": "sw_ep3_3",
+          "original": "They want to know what he's up to.",
+          "translation": ["Они", "хотят", "знать,", "что", "он", "там", "делает."],
+          "difficulty": 2,
+          "points": 8,
+          "hints": [
+            {
+              "en": "Expression of curiosity",
+              "ru": "Выражение любопытства"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+} 

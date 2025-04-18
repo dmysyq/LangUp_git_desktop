@@ -91,12 +91,12 @@
     <string name="cancel">Cancel</string>
     <string name="error_loading_vocabulary">Error loading vocabulary</string>
     <string name="error_saving_word">Error saving word</string>
-    <string name="show_answers">Show answers</string>
-    <string name="hide_answers">Hide answers</string>
-    <string name="check_answers">Check answers</string>
-    <string name="watch_video">Watch video</string>
-    <string name="correct_answers_count">Correct answers: %1$d out of %2$d</string>
-    <string name="error_loading_episode">Error loading episode</string>
+    <string name="show_answers">Показать ответы</string>
+    <string name="hide_answers">Скрыть ответы</string>
+    <string name="check_answers">Проверить ответы</string>
+    <string name="watch_video">Смотреть видео</string>
+    <string name="correct_answers_count">Правильных ответов: %1$d из %2$d</string>
+    <string name="error_loading_episode">Ошибка загрузки эпизода</string>
     <string name="first_connector">First connector</string>
     <string name="second_connector">Second connector</string>
     <string name="grammar_exercise">Grammar Exercise</string>
@@ -104,7 +104,5 @@
     <string name="enter_answer">Enter Answer</string>
     <string name="correct_answer">Correct!</string>
     <string name="incorrect_answer">Incorrect. Try again!</string>
-    <string name="available_words">Available words</string>
-    <string name="fill_in_the_blanks">Fill in the blanks with the correct words</string>
-    <string name="reset">Reset</string>
+    <string name="error_loading_episode">Error loading episode</string>
 </resources>

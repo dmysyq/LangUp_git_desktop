@@ -93,25 +93,5 @@
     <string name="New_to_LangUp">Вы новичок в LangUp?</string>
     <string name="start_learning_a_language_now">Начните изучать язык прямо сейчас.</string>
     <string name="get_started">НАЧАТЬ</string>
-    <string name="correct_answers_grammar">Правильные ответы: %1$d из %2$d</string>
-    <string name="enter_answer">Введите ответ</string>
-    <string name="vocabulary">Словарный запас</string>
-    <string name="add_word">Добавить слово</string>
-    <string name="word">Слово</string>
-    <string name="definition">Определение</string>
-    <string name="translation">Перевод</string>
-    <string name="cancel">Отмена</string>
-    <string name="error_loading_vocabulary">Ошибка загрузки словаря.</string>
-    <string name="error_saving_word">Ошибка сохранения слова</string>
-    <string name="show_answers">Показать ответы</string>
-    <string name="hide_answers">Скрыть ответы</string>
-    <string name="check_answers">ответы</string>
-    <string name="watch_video">Смотреть видео</string>
-    <string name="correct_answers_count">Правильных ответов: %1$d из %2$d</string>
-    <string name="error_loading_episode">Ошибка загрузки эпизода.</string>
-    <string name="first_connector">Первый разъем</string>
-    <string name="second_connector">Второй разъем</string>
-    <string name="grammar_exercise">Грамматическое упражнение</string>
-    <string name="correct_answer">Правильный!</string>
-    <string name="incorrect_answer">Неверно. Попробуйте еще раз!</string>
+    <string name="enter_answer">Enter Answer</string>
 </resources> 

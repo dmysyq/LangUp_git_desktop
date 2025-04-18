@@ -1,0 +1,102 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2024-03-19",
+  "series": [
+    {
+      "id": "wednesday_s1",
+      "title": "Wednesday",
+      "description": "A series based on Wednesday Addams' adventures at Nevermore Academy",
+      "level": "intermediate",
+      "language": "en",
+      "accent": "American",
+      "episodes": [
+        {
+          "id": "wednesday_s1e07",
+          "title": "Annoying Roommate Habits",
+          "description": "After Enid moves out of her dorm room with Wednesday, she pops in to get a few things.",
+          "duration": "3:06",
+          "youtubeUrl": "https://www.youtube.com/watch?v=example",
+          "difficulty": 5,
+          "grammar": {
+            "title": "Connectors",
+            "description": "Choose the word and place in the sentence that most logically connects the ideas in the sentence.",
+            "availableWords": ["but", "now that", "and then", "if", "when", "which", "that", "with"],
+            "note": "Some boxes will be empty.",
+            "sentences": [
+              {
+                "id": "g1",
+                "parts": ["Do you mind", "", "I look around?"],
+                "answers": ["if", ""]
+              },
+              {
+                "id": "g2",
+                "parts": ["This is the third time in 24 hours", "", "you've forgotten something."],
+                "answers": ["that", ""]
+              },
+              {
+                "id": "g3",
+                "parts": ["No annoying distractions", "", "I'm almost finished with my novel."],
+                "answers": ["now that", ""]
+              },
+              {
+                "id": "g4",
+                "parts": ["You giggle", "", "you text", "", "is a 24/7 addiction."],
+                "answers": ["when", "which"]
+              },
+              {
+                "id": "g5",
+                "parts": ["You are not grinding your canines", "", "you growl in your sleep."],
+                "answers": ["but", ""]
+              },
+              {
+                "id": "g6",
+                "parts": ["You over-commit to clubs and activities", "", "complain about them nonstop."],
+                "answers": ["and then", ""]
+              },
+              {
+                "id": "g7",
+                "parts": ["Yoko and I are so in sync", "", "she's begging me to be her new roomie."],
+                "answers": ["that", ""]
+              },
+              {
+                "id": "g8",
+                "parts": ["It's not solitude", "", "you're still here."],
+                "answers": ["if", ""]
+              },
+              {
+                "id": "g9",
+                "parts": ["There's a falling-out", "", "I like to get both girls' perspectives on what happened."],
+                "answers": ["when", ""]
+              },
+              {
+                "id": "g10",
+                "parts": ["Deflect all you want", "", "you and I both know", "", "you care about Enid."],
+                "answers": ["but", "that"]
+              },
+              {
+                "id": "g11",
+                "parts": ["It was barely perceptible to the average eye", "", "I noticed."],
+                "answers": ["but", ""]
+              },
+              {
+                "id": "g12",
+                "parts": ["Is it really so difficult for you to admit", "", "you made a friend..."],
+                "answers": ["that", ""]
+              },
+              {
+                "id": "g13",
+                "parts": ["...and", "", "she's gone", "", "you might actually miss her?"],
+                "answers": ["now that", ""]
+              },
+              {
+                "id": "g14",
+                "parts": ["That's your decision", "", "I'll submit the forms to Principal Weems."],
+                "answers": ["and then", ""]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+} 

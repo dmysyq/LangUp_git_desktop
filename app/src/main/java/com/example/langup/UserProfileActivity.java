@@ -24,8 +24,11 @@ import java.util.ArrayList;
 import android.util.TypedValue;
 import com.example.langup.base.BaseActivity;
 import com.example.langup.utils.LocaleManager;
+import android.view.MenuItem;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
-public class UserProfileActivity extends BaseActivity {
+public class UserProfileActivity extends AppCompatActivity {
     private static final String TAG = "UserProfileActivity";
 
     private FirebaseAuth mAuth;
@@ -55,7 +58,13 @@ public class UserProfileActivity extends BaseActivity {
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
         avatarManager = new AvatarManager(this);
-        preferencesManager = new PreferencesManager();
+        String userId = mAuth.getCurrentUser() != null ? mAuth.getCurrentUser().getUid() : null;
+        if (userId == null) {
+            Toast.makeText(this, "User not logged in", Toast.LENGTH_SHORT).show();
+            finish();
+            return;
+        }
+        preferencesManager = new PreferencesManager(this, userId);
 
         // Initialize views
         initializeViews();
@@ -66,6 +75,8 @@ public class UserProfileActivity extends BaseActivity {
 
         // Set up click listeners
         setupClickListeners();
+
+        setupToolbar();
     }
 
     private void initializeViews() {
@@ -259,8 +270,8 @@ public class UserProfileActivity extends BaseActivity {
             return;
         }
 
-        String name = nameEditText.getText().toString().trim();
-        String username = usernameEditText.getText().toString().trim();
+            String name = nameEditText.getText().toString().trim();
+            String username = usernameEditText.getText().toString().trim();
 
         Map<String, Object> updates = new HashMap<>();
         updates.put("name", name);
@@ -289,116 +300,70 @@ public class UserProfileActivity extends BaseActivity {
     }
 
     private void loadUserPreferences() {
-        FirebaseUser user = mAuth.getCurrentUser();
-        if (user == null) return;
-
-        preferencesManager.loadPreferences(user.getUid(), new PreferencesManager.PreferencesCallback() {
+        preferencesManager.loadPreferences(new PreferencesManager.PreferencesCallback() {
             @Override
-            public void onSuccess() {}
-
+            public void onSuccess() {
+                // Not used for loading
+            }
+            
             @Override
             public void onError(String error) {
                 Toast.makeText(UserProfileActivity.this, error, Toast.LENGTH_SHORT).show();
             }
-
+            
             @Override
             public void onPreferencesLoaded(Map<String, List<String>> preferences) {
-                if (preferences != null) {
-                    LocaleManager localeManager = LocaleManager.getInstance(UserProfileActivity.this);
-                    String currentLanguage = localeManager.getCurrentLanguage();
-                    String languageSuffix = currentLanguage.equals("ru") ? "_ru" : "_en";
-
-                    // Устанавливаем выбранные жанры
-                    List<String> genres = preferences.get("genres");
-                    if (genres != null) {
-                        String[] availableGenres = getResources().getStringArray(
-                            getResources().getIdentifier("genres" + languageSuffix, "array", getPackageName())
-                        );
-                        for (int i = 0; i < genresChipGroup.getChildCount(); i++) {
-                            Chip chip = (Chip) genresChipGroup.getChildAt(i);
-                            String chipText = chip.getText().toString();
-                            if (genres.contains(chipText)) {
-                                chip.setChecked(true);
-                                updateChipState(chip, true);
-                            }
-                        }
-                    }
-
-                    // Устанавливаем выбранные страны
-                    List<String> countries = preferences.get("countries");
-                    if (countries != null) {
-                        String[] availableCountries = getResources().getStringArray(
-                            getResources().getIdentifier("countries" + languageSuffix, "array", getPackageName())
-                        );
-                        for (int i = 0; i < countriesChipGroup.getChildCount(); i++) {
-                            Chip chip = (Chip) countriesChipGroup.getChildAt(i);
-                            String chipText = chip.getText().toString();
-                            if (countries.contains(chipText)) {
-                                chip.setChecked(true);
-                                updateChipState(chip, true);
-                            }
-                        }
-                    }
-
-                    // Устанавливаем выбранные франшизы
-                    List<String> franchises = preferences.get("franchises");
-                    if (franchises != null) {
-                        String[] availableFranchises = getResources().getStringArray(
-                            getResources().getIdentifier("franchises" + languageSuffix, "array", getPackageName())
-                        );
-                        for (int i = 0; i < franchisesChipGroup.getChildCount(); i++) {
-                            Chip chip = (Chip) franchisesChipGroup.getChildAt(i);
-                            String chipText = chip.getText().toString();
-                            if (franchises.contains(chipText)) {
-                                chip.setChecked(true);
-                                updateChipState(chip, true);
-                            }
-                        }
-                    }
-                }
+                updateUI(preferences);
             }
         });
     }
 
-    private void saveUserPreferences() {
-        FirebaseUser user = mAuth.getCurrentUser();
-        if (user == null) return;
-
-        Map<String, List<String>> preferences = new HashMap<>();
+    private void updateUI(Map<String, List<String>> preferences) {
+        List<String> genres = preferences.get("genres");
+        List<String> countries = preferences.get("countries");
+        List<String> franchises = preferences.get("franchises");
         
-        // Сохраняем предпочтения в текущем языке
-        List<String> selectedGenres = getSelectedChips(genresChipGroup);
-        List<String> selectedCountries = getSelectedChips(countriesChipGroup);
-        List<String> selectedFranchises = getSelectedChips(franchisesChipGroup);
+        if (genres != null) preferencesManager.setGenres(genres);
+        if (countries != null) preferencesManager.setCountries(countries);
+        if (franchises != null) preferencesManager.setFranchises(franchises);
+        
+        // Update UI elements here
+    }
 
-        preferences.put("genres", selectedGenres);
-        preferences.put("countries", selectedCountries);
-        preferences.put("franchises", selectedFranchises);
-
-        preferencesManager.savePreferences(user.getUid(), preferences, new PreferencesManager.PreferencesCallback() {
+    private void saveUserPreferences() {
+        preferencesManager.savePreferences(new PreferencesManager.PreferencesCallback() {
             @Override
             public void onSuccess() {
                 Toast.makeText(UserProfileActivity.this, R.string.preferences_saved, Toast.LENGTH_SHORT).show();
             }
-
+            
             @Override
             public void onError(String error) {
-                Toast.makeText(UserProfileActivity.this, R.string.preferences_error, Toast.LENGTH_SHORT).show();
+                Toast.makeText(UserProfileActivity.this, error, Toast.LENGTH_SHORT).show();
             }
-
+            
             @Override
-            public void onPreferencesLoaded(Map<String, List<String>> preferences) {}
+            public void onPreferencesLoaded(Map<String, List<String>> preferences) {
+                // Not used for saving
+            }
         });
     }
 
-    private List<String> getSelectedChips(ChipGroup chipGroup) {
-        List<String> selected = new ArrayList<>();
-        for (int i = 0; i < chipGroup.getChildCount(); i++) {
-            Chip chip = (Chip) chipGroup.getChildAt(i);
-            if (chip.isChecked()) {
-                selected.add(chip.getText().toString());
-            }
+    private void setupToolbar() {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle(R.string.profile);
         }
-        return selected;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.langup"
-        minSdk = 30
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -30,17 +30,22 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
+        isCoreLibraryDesugaringEnabled = true
     }
 }
 
 dependencies {
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
+    
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
-    implementation("com.google.code.gson:gson:2.8.6")
+    implementation(libs.annotation)
+    implementation("com.google.code.gson:gson:2.10.1")
     implementation("com.google.android.flexbox:flexbox:3.0.0")
-    
+    implementation("org.jsoup:jsoup:1.15.3")
+
     // Firebase
     implementation(platform("com.google.firebase:firebase-bom:32.7.2"))
     implementation("com.google.firebase:firebase-auth")
