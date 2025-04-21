@@ -22,6 +22,8 @@ import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidUserException;
+import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -57,7 +59,7 @@ public class SignUpActivity extends BaseActivity implements AuthManager.TokenRef
 
         // Initialize Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestIdToken("350062158843-5tkibsnqdetvb4fn8re0uj4607rb80sr.apps.googleusercontent.com")
                 .requestEmail()
                 .build();
         googleSignInClient = GoogleSignIn.getClient(this, gso);
@@ -183,6 +185,7 @@ public class SignUpActivity extends BaseActivity implements AuthManager.TokenRef
     }
 
     private void signUpWithGoogle() {
+        android.util.Log.d("SignUpActivity", "Starting Google Sign-In process");
         Intent signInIntent = googleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
@@ -190,33 +193,61 @@ public class SignUpActivity extends BaseActivity implements AuthManager.TokenRef
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        android.util.Log.d("SignUpActivity", "onActivityResult called with requestCode: " + requestCode + ", resultCode: " + resultCode);
 
         if (requestCode == RC_SIGN_IN) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
+                android.util.Log.d("SignUpActivity", "Getting Google Sign-In account");
                 GoogleSignInAccount account = task.getResult(ApiException.class);
+                android.util.Log.d("SignUpActivity", "Google Sign-In successful, getting token");
                 firebaseAuthWithGoogle(account.getIdToken());
             } catch (ApiException e) {
+                android.util.Log.e("SignUpActivity", "Google Sign-In failed with error code: " + e.getStatusCode());
+                android.util.Log.e("SignUpActivity", "Error message: " + e.getMessage());
+                android.util.Log.e("SignUpActivity", "Status code: " + e.getStatus().getStatusCode());
                 Toast.makeText(this, getString(R.string.google_sign_in_failed), Toast.LENGTH_SHORT).show();
             }
         }
     }
 
     private void firebaseAuthWithGoogle(String idToken) {
+        android.util.Log.d("SignUpActivity", "Starting Firebase authentication with Google token");
         AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
+        
         firebaseAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
+                        android.util.Log.d("SignUpActivity", "Firebase authentication successful");
                         String name = task.getResult().getUser().getDisplayName();
                         String email = task.getResult().getUser().getEmail();
-                        if (name != null && email != null) {
-                            saveUserData(name, email);
-                        }
-                        authManager.setLoggedIn(true);
-                        startMainActivity();
+                        
+                        // Check if this is a new user by checking if the user document exists
+                        String userId = firebaseAuth.getCurrentUser().getUid();
+                        firestore.collection("users").document(userId)
+                                .get()
+                                .addOnCompleteListener(documentTask -> {
+                                    if (documentTask.isSuccessful() && !documentTask.getResult().exists()) {
+                                        // This is a new user, save their data
+                                        android.util.Log.d("SignUpActivity", "New user detected, saving user data");
+                                        if (name != null && email != null) {
+                                            saveUserData(name, email);
+                                        }
+                                    } else {
+                                        android.util.Log.d("SignUpActivity", "Existing user, skipping data save");
+                                    }
+                                    authManager.setLoggedIn(true);
+                                    startMainActivity();
+                                });
                     } else {
-                        Toast.makeText(SignUpActivity.this, getString(R.string.authentication_failed),
-                                Toast.LENGTH_SHORT).show();
+                        android.util.Log.e("SignUpActivity", "Firebase authentication failed", task.getException());
+                        if (task.getException() != null) {
+                            android.util.Log.e("SignUpActivity", "Error code: " + ((FirebaseAuthException) task.getException()).getErrorCode());
+                            android.util.Log.e("SignUpActivity", "Error message: " + task.getException().getMessage());
+                        }
+                        Toast.makeText(SignUpActivity.this, "Authentication failed: " + 
+                            (task.getException() != null ? task.getException().getMessage() : "Unknown error"),
+                            Toast.LENGTH_SHORT).show();
                     }
                 });
     }

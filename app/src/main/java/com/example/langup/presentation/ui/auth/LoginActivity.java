@@ -22,7 +22,9 @@ import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 
 public class LoginActivity extends BaseActivity implements AuthManager.TokenRefreshListener {
     private static final int RC_SIGN_IN = 9001;
@@ -48,9 +50,9 @@ public class LoginActivity extends BaseActivity implements AuthManager.TokenRefr
         authManager.setTokenRefreshListener(this);
         firebaseAuth = FirebaseAuth.getInstance();
 
-        // Initialize Google Sign In
+        // Initialize Google Sign In with default configuration
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestIdToken("350062158843-5tkibsnqdetvb4fn8re0uj4607rb80sr.apps.googleusercontent.com")
                 .requestEmail()
                 .build();
         googleSignInClient = GoogleSignIn.getClient(this, gso);
@@ -161,6 +163,7 @@ public class LoginActivity extends BaseActivity implements AuthManager.TokenRefr
     }
 
     private void signInWithGoogle() {
+        android.util.Log.d("LoginActivity", "Starting Google Sign-In process");
         Intent signInIntent = googleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
@@ -170,26 +173,43 @@ public class LoginActivity extends BaseActivity implements AuthManager.TokenRefr
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == RC_SIGN_IN) {
+            android.util.Log.d("LoginActivity", "Received Google Sign-In result");
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
+                android.util.Log.d("LoginActivity", "Getting Google Sign-In account");
                 GoogleSignInAccount account = task.getResult(ApiException.class);
-                firebaseAuthWithGoogle(account.getIdToken());
+                android.util.Log.d("LoginActivity", "Google Sign-In successful, account email: " + account.getEmail());
+                android.util.Log.d("LoginActivity", "Getting ID token");
+                String idToken = account.getIdToken();
+                if (idToken != null) {
+                    android.util.Log.d("LoginActivity", "ID token received, length: " + idToken.length());
+                    firebaseAuthWithGoogle(idToken);
+                } else {
+                    android.util.Log.e("LoginActivity", "ID token is null");
+                    Toast.makeText(this, "Authentication failed: ID token is null", Toast.LENGTH_SHORT).show();
+                }
             } catch (ApiException e) {
-                Toast.makeText(this, getString(R.string.google_sign_in_failed), Toast.LENGTH_SHORT).show();
+                android.util.Log.e("LoginActivity", "Google Sign-In failed with error code: " + e.getStatusCode());
+                android.util.Log.e("LoginActivity", "Error message: " + e.getMessage());
+                android.util.Log.e("LoginActivity", "Error status: " + e.getStatus());
+                Toast.makeText(this, "Google Sign-In failed: " + e.getStatus(), Toast.LENGTH_SHORT).show();
             }
         }
     }
 
     private void firebaseAuthWithGoogle(String idToken) {
+        android.util.Log.d("LoginActivity", "Starting Firebase authentication with Google token");
         AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
+        
+        // First try to sign in
         firebaseAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
+                        android.util.Log.d("LoginActivity", "Firebase authentication successful - User exists");
+                        android.util.Log.d("LoginActivity", "User UID: " + firebaseAuth.getCurrentUser().getUid());
+                        android.util.Log.d("LoginActivity", "User email: " + firebaseAuth.getCurrentUser().getEmail());
                         authManager.setLoggedIn(true);
                         startMainActivity();
-                    } else {
-                        Toast.makeText(LoginActivity.this, getString(R.string.authentication_failed),
-                                Toast.LENGTH_SHORT).show();
                     }
                 });
     }

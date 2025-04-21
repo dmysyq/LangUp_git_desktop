@@ -22,8 +22,11 @@ public class RecommendationEngine {
 
     public RecommendationEngine(Context context) {
         this.context = context;
-        String userId = FirebaseAuth.getInstance().getCurrentUser() != null ? 
-                       FirebaseAuth.getInstance().getCurrentUser().getUid() : null;
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        if (auth.getCurrentUser() == null) {
+            throw new IllegalStateException("User must be authenticated to use RecommendationEngine");
+        }
+        String userId = auth.getCurrentUser().getUid();
         this.preferencesManager = new PreferencesManager(context, userId);
         this.jsonLoader = new JsonLoader(context);
         loadSeries();

@@ -22,9 +22,11 @@ import com.example.langup.domain.model.Series;
 import com.example.langup.presentation.adapter.SeriesAdapter;
 import com.example.langup.presentation.ui.profile.UserProfileActivity;
 import com.example.langup.presentation.ui.profile.SettingsActivity;
+import com.example.langup.presentation.ui.auth.WelcomeActivity;
 import com.example.langup.R;
 import com.example.langup.presentation.ui.dialogs.SearchFilterDialog;
 import com.example.langup.domain.utils.RecommendationEngine;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,8 +48,16 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        // Check if user is authenticated
+        if (FirebaseAuth.getInstance().getCurrentUser() == null) {
+            // User is not authenticated, redirect to WelcomeActivity
+            startActivity(new Intent(this, WelcomeActivity.class));
+            finish(); // Close MainActivity
+            return;
+        }
+        
         setContentView(R.layout.activity_main);
-
         initializeViews();
         setupToolbar();
         setupNavigation();

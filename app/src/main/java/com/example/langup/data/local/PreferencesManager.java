@@ -30,8 +30,8 @@ public class PreferencesManager {
     }
     
     public PreferencesManager(Context context, String userId) {
-        if (userId == null || userId.isEmpty()) {
-            throw new IllegalArgumentException("UserId cannot be null or empty");
+        if (userId == null) {
+            throw new IllegalArgumentException("UserId cannot be null");
         }
         this.sharedPreferences = context.getSharedPreferences(PREFERENCES_FILE, Context.MODE_PRIVATE);
         this.firestore = FirebaseFirestore.getInstance();
