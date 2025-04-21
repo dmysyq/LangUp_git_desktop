@@ -198,21 +198,20 @@
                 android:layout_height="wrap_content"
                 style="@style/PreferenceChipGroup"/>
 
-            <!-- Franchises -->
+            <!-- Sources -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/franchises_title"
-                android:textColor="@color/text_light"
-                android:textSize="14sp"
-                android:fontFamily="@font/inter_semibold"
-                style="@style/SubsectionTitle"/>
+                android:text="@string/sources_title"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:layout_marginTop="16dp"/>
 
             <com.google.android.material.chip.ChipGroup
-                android:id="@+id/franchisesChipGroup"
+                android:id="@+id/sourcesChipGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/PreferenceChipGroup"/>
+                app:chipSpacingHorizontal="8dp"
+                app:chipSpacingVertical="8dp"/>
 
             <!-- Logout Button -->
             <TextView

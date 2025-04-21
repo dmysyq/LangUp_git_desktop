@@ -1,363 +1,367 @@
 {
-  "version": "1.0",
-  "lastUpdated": "2024-03-19",
   "series": [
     {
-      "id": "wednesday",
-      "title": "Wednesday",
-      "description": "Wednesday Addams is sent to Nevermore Academy, a school for outcasts, where she attempts to master her emerging psychic ability, thwart a monstrous killing spree of the town citizens, and solve the supernatural mystery that affected her family 25 years ago.",
-      "country": "USA",
-      "accent": "American",
-      "imageUrl": "assets/banner/wednesday-banner.png",
-      "source": "Netflix",
-      "difficulty": 5,
-          "vocabulary": [
-        {
-          "word": "unreliable",
-          "translation": "ненадежный",
-          "example": "unreliable [adj] - not able to be depended on"
-        },
-        {
-          "word": "nail polish",
-          "translation": "лак для ногтей",
-          "example": "nail polish [n] - paint (makeup) that your put on your finger nails"
-        },
-        {
-          "word": "look around",
-          "translation": "осмотреться",
-          "example": "look around [phv] - search, try to find"
-        },
-        {
-          "word": "a mani-pedi",
-          "translation": "маникюр и педикюр",
-          "example": "a mani-pedi [n] - a manicure (a beauty treatment for the hands and fingernails) and a pedicure (a beauty treatment for the feet and toenails)"
-        },
-        {
-          "word": "a crew",
-          "translation": "компания друзей",
-          "example": "a crew [n] - a group of friends"
-        },
-            {
-              "word": "solitude",
-              "translation": "уединение",
-          "example": "solitude [n] - being alone"
-        },
-        {
-          "word": "giggle",
-          "translation": "хихикать",
-          "example": "giggle [v] - a small cute way of laughing"
-        },
-        {
-          "word": "a 24/7 addiction",
-          "translation": "постоянная зависимость",
-          "example": "a 24/7 addiction [exp] - must do something 24 hours per day, 7 days per week"
-        },
-        {
-          "word": "migraine-inducing",
-          "translation": "вызывающий мигрень",
-          "example": "migraine-inducing [exp] - causing a strong headache"
-        },
-        {
-          "word": "grind",
-          "translation": "скрежетать",
-          "example": "grind [v] - rub two hard things together"
-        },
-        {
-          "word": "canines",
-          "translation": "клыки",
-          "example": "canines [n] - back teeth"
-        },
-        {
-          "word": "growl",
-          "translation": "рычать",
-          "example": "growl [v] - the sound an angry dog makes"
-        },
-        {
-          "word": "cello solos",
-          "translation": "сольная игра на виолончели",
-          "example": "cello solos [n] - playing the cello alone"
-        },
-        {
-          "word": "over-commit",
-          "translation": "взять на себя слишком много обязательств",
-          "example": "over-commit [v] - promise to do too many things"
-        },
-        {
-          "word": "gas",
-          "translation": "травить газом",
-          "example": "gas [v] - kill with poisonous gas"
-        },
-        {
-          "word": "spritz",
-          "translation": "брызгать",
-          "example": "spritz [v] - spray a light mist"
-        },
-        {
-          "word": "off the top of my head",
-          "translation": "навскидку",
-          "example": "off the top of my head [exp] - give some ideas without thinking deeply or preparing"
-        },
-        {
-          "word": "a bestie",
-          "translation": "лучший друг",
-          "example": "a bestie [n] - a best friend"
-        },
-        {
-          "word": "startle",
-          "translation": "испугать",
-          "example": "startle [v] - surprise"
-        },
-        {
-          "word": "in sync",
-          "translation": "в гармонии",
-          "example": "in sync [exp] - working or living together well"
-        },
-        {
-          "word": "a falling-out",
-          "translation": "ссора",
-          "example": "a falling-out [n] - an agrument, the end of a friendship"
-        },
-        {
-          "word": "thick as thieves",
-          "translation": "не разлей вода",
-          "example": "thick as thieves [exp] - very close, having a strong friendship"
-        },
-        {
-          "word": "turn on each other",
-          "translation": "предать друг друга",
-          "example": "turn on each other [exp] - start to hate and fight with each other"
-        },
-        {
-          "word": "deflect",
-          "translation": "уклоняться",
-          "example": "deflect [v] - pretend not to care, make excuses"
-        },
-        {
-          "word": "a spark of warmth",
-          "translation": "проблеск теплоты",
-          "example": "a spark of warmth [exp] - a small amount of love or kindness"
-        },
-        {
-          "word": "barely perceptible",
-          "translation": "едва заметный",
-          "example": "barely perceptible [exp] - almost can't be noticed or seen"
-        },
-        {
-          "word": "lifelong bonds",
-          "translation": "связи на всю жизнь",
-          "example": "lifelong bonds [exp] - forever friendships"
-        },
-        {
-          "word": "bonds",
-          "translation": "узы, оковы",
-          "example": "bonds [exp] - being trapped or prevented from leaving (often by rope)"
-        },
-        {
-          "word": "submit the forms",
-          "translation": "подать документы",
-          "example": "submit the forms [exp] - give the documents"
-            }
-          ],
-          "questions": [
-            {
-              "id": "q1",
-              "type": "single_choice",
-              "question": "Enid comes to the room in order ______.",
-              "options": [
-                "to apologize to Wednesday",
-                "to meet Ms. Thornhill",
-                "to get something"
-              ],
-              "correctAnswer": 2
-            },
-            {
-              "id": "q2",
-              "type": "single_choice",
-              "question": "Enid has visited the room ______ in the last 24 hours.",
-              "options": [
-                "once",
-                "twice",
-                "three times"
-              ],
-              "correctAnswer": 1
-            },
-            {
-              "id": "q3",
-              "type": "single_choice",
-              "question": "Wednesday is using the solitude to ______.",
-              "options": [
-                "text with her friends",
-                "work on her novel",
-                "play her cello",
-                "study"
-              ],
-              "correctAnswer": 1
-            },
-            {
-              "id": "q4",
-              "type": "multiple_choice",
-              "question": "Wednesday says that Enid's annoying habits include ______, ______, ______, ______, and ______.",
-              "options": [
-                "putting her friends in danger",
-                "playing her cello too late",
-                "committing to too many clubs",
-                "wearing too much perfume",
-                "giggling while she texts",
-                "grinding her teeth",
-                "typing too loudly",
-                "texting too much",
-                "talking too much",
-                "snoring"
-              ],
-              "correctAnswers": [2, 3, 4, 6, 8]
-            },
-            {
-              "id": "q5",
-              "type": "multiple_choice",
-              "question": "Enid complains that Wednesday ______, ______, and ______.",
-              "options": [
-                "puts her friends in danger",
-                "plays her cello too late",
-                "commits to too many clubs",
-                "wears too much perfume",
-                "giggles while she texts",
-                "grinds her teeth",
-                "types too loudly",
-                "texts too much",
-                "talks too much",
-                "snores"
-              ],
-              "correctAnswers": [1, 6, 7]
-            },
-            {
-              "id": "q6",
-              "type": "single_choice",
-              "question": "Enid has requested to room with Yoko ______.",
-              "options": [
-                "permanently",
-                "temporarily"
-              ],
-              "correctAnswer": 0
-            },
-            {
-              "id": "q7",
-              "type": "single_choice",
-              "question": "Ms. Thornhill thinks that Enid ______.",
-              "options": [
-                "has helped Wednesday focus on her studies",
-                "has made Wednesday a little more social",
-                "is distracting Wednesday from her novel",
-                "has too many annoying habits"
-              ],
-              "correctAnswer": 2
-            },
-            {
-              "id": "q8",
-              "type": "single_choice",
-              "question": "To allow Enid to change rooms, Ms. Thornhill has to ______.",
-              "options": [
-                "submit some forms to the principal",
-                "write a letter to their parents",
-                "find a new roommate for Wednesday",
-                "find a new roommate for Enid"
-              ],
-              "correctAnswer": 0
-            }
-          ],
-          "grammar": [
-            {
-          "topic": "Connectors and Conjunctions",
-          "explanation": "Choose the word and place in the sentence that most logically connects the ideas in the sentence. Use words like: but, now that, and then, if, when, which, that, with. Some boxes will be empty.",
-          "exercises": [
-            {
-              "id": "g1",
-              "sentence": "Do you mind ___ I look around?",
-              "options": ["if", "that", "when", "which"],
-              "correctAnswer": "if"
-            },
-            {
-              "id": "g2",
-              "sentence": "This is the third time in 24 hours ___ you've forgotten something.",
-              "options": ["that", "when", "which", ""],
-              "correctAnswer": "that"
-            },
-            {
-              "id": "g3",
-              "sentence": "No annoying distractions ___ I'm almost finished with my novel.",
-              "options": ["and", "but", "if", ""],
-              "correctAnswer": "and"
-            },
-            {
-              "id": "g4",
-              "sentence": "You giggle ___ you text ___ is a 24/7 addiction.",
-              "options": ["when", "that", "which", "and"],
-              "correctAnswers": ["when", "which"]
-            },
-            {
-              "id": "g5",
-              "sentence": "You are not grinding your canines ___ you growl in your sleep.",
-              "options": ["when", "if", "that", ""],
-              "correctAnswer": "when"
-            },
-            {
-              "id": "g6",
-              "sentence": "You over-commit to clubs and activities ___ complain about them nonstop.",
-              "options": ["and", "but", "then", ""],
-              "correctAnswer": "and"
-            },
-            {
-              "id": "g7",
-              "sentence": "Yoko and I are so in sync ___ she's begging me to be her new roomie.",
-              "options": ["that", "which", "when", ""],
-              "correctAnswer": "that"
-            },
-            {
-              "id": "g8",
-              "sentence": "It's not solitude ___ you're still here.",
-              "options": ["if", "when", "that", ""],
-              "correctAnswer": "if"
-            },
-            {
-              "id": "g9",
-              "sentence": "There's a falling-out ___ I like to get both girls' perspectives on what happened.",
-              "options": ["when", "if", "that", ""],
-              "correctAnswer": "when"
-            },
-            {
-              "id": "g10",
-              "sentence": "Deflect all you want ___ you and I both know ___ you care about Enid.",
-              "options": ["but", "that", "and", ""],
-              "correctAnswers": ["but", "that"]
-            },
-            {
-              "id": "g11",
-              "sentence": "It was barely perceptible to the average eye ___ I noticed.",
-              "options": ["but", "and", "that", ""],
-              "correctAnswer": "but"
-            },
-            {
-              "id": "g12",
-              "sentence": "Is it really so difficult for you to admit ___ you made a friend...",
-              "options": ["that", "which", "when", ""],
-              "correctAnswer": "that"
-            },
-            {
-              "id": "g13",
-              "sentence": "...and ___ she's gone ___ you might actually miss her?",
-              "options": ["now that", "if", "when", ""],
-              "correctAnswers": ["now that", "that"]
-            },
-            {
-              "id": "g14",
-              "sentence": "That's your decision ___ I'll submit the forms to Principal Weems.",
-              "options": ["and", "but", "if", ""],
-              "correctAnswer": "and"
-            }
-          ]
+      "metadata": {
+        "id": 1,
+        "title": "Wednesday",
+        "description": "Wednesday Addams is sent to Nevermore Academy, a school for outcasts, where she attempts to master her emerging psychic ability, thwart a monstrous killing spree of the town citizens, and solve the supernatural mystery that affected her family 25 years ago.",
+        "country": "USA",
+        "accent": "American",
+        "imageUrl": "assets/banner/wednesday-banner.png",
+        "source": "Netflix",
+        "difficulty": 5,
+        "genres": ["Fantasy", "Drama", "Horror"],
+        "countries": ["USA", "UK"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "unreliable",
+            "translation": "ненадежный",
+            "example": "unreliable [adj] - not able to be depended on"
+          },
+          {
+            "word": "nail polish",
+            "translation": "лак для ногтей",
+            "example": "nail polish [n] - paint (makeup) that your put on your finger nails"
+          },
+          {
+            "word": "look around",
+            "translation": "осмотреться",
+            "example": "look around [phv] - search, try to find"
+          },
+          {
+            "word": "a mani-pedi",
+            "translation": "маникюр и педикюр",
+            "example": "a mani-pedi [n] - a manicure (a beauty treatment for the hands and fingernails) and a pedicure (a beauty treatment for the feet and toenails)"
+          },
+          {
+            "word": "a crew",
+            "translation": "компания друзей",
+            "example": "a crew [n] - a group of friends"
+          },
+          {
+            "word": "solitude",
+            "translation": "уединение",
+            "example": "solitude [n] - being alone"
+          },
+          {
+            "word": "giggle",
+            "translation": "хихикать",
+            "example": "giggle [v] - a small cute way of laughing"
+          },
+          {
+            "word": "a 24/7 addiction",
+            "translation": "постоянная зависимость",
+            "example": "a 24/7 addiction [exp] - must do something 24 hours per day, 7 days per week"
+          },
+          {
+            "word": "migraine-inducing",
+            "translation": "вызывающий мигрень",
+            "example": "migraine-inducing [exp] - causing a strong headache"
+          },
+          {
+            "word": "grind",
+            "translation": "скрежетать",
+            "example": "grind [v] - rub two hard things together"
+          },
+          {
+            "word": "canines",
+            "translation": "клыки",
+            "example": "canines [n] - back teeth"
+          },
+          {
+            "word": "growl",
+            "translation": "рычать",
+            "example": "growl [v] - the sound an angry dog makes"
+          },
+          {
+            "word": "cello solos",
+            "translation": "сольная игра на виолончели",
+            "example": "cello solos [n] - playing the cello alone"
+          },
+          {
+            "word": "over-commit",
+            "translation": "взять на себя слишком много обязательств",
+            "example": "over-commit [v] - promise to do too many things"
+          },
+          {
+            "word": "gas",
+            "translation": "травить газом",
+            "example": "gas [v] - kill with poisonous gas"
+          },
+          {
+            "word": "spritz",
+            "translation": "брызгать",
+            "example": "spritz [v] - spray a light mist"
+          },
+          {
+            "word": "off the top of my head",
+            "translation": "навскидку",
+            "example": "off the top of my head [exp] - give some ideas without thinking deeply or preparing"
+          },
+          {
+            "word": "a bestie",
+            "translation": "лучший друг",
+            "example": "a bestie [n] - a best friend"
+          },
+          {
+            "word": "startle",
+            "translation": "испугать",
+            "example": "startle [v] - surprise"
+          },
+          {
+            "word": "in sync",
+            "translation": "в гармонии",
+            "example": "in sync [exp] - working or living together well"
+          },
+          {
+            "word": "a falling-out",
+            "translation": "ссора",
+            "example": "a falling-out [n] - an agrument, the end of a friendship"
+          },
+          {
+            "word": "thick as thieves",
+            "translation": "не разлей вода",
+            "example": "thick as thieves [exp] - very close, having a strong friendship"
+          },
+          {
+            "word": "turn on each other",
+            "translation": "предать друг друга",
+            "example": "turn on each other [exp] - start to hate and fight with each other"
+          },
+          {
+            "word": "deflect",
+            "translation": "уклоняться",
+            "example": "deflect [v] - pretend not to care, make excuses"
+          },
+          {
+            "word": "a spark of warmth",
+            "translation": "проблеск теплоты",
+            "example": "a spark of warmth [exp] - a small amount of love or kindness"
+          },
+          {
+            "word": "barely perceptible",
+            "translation": "едва заметный",
+            "example": "barely perceptible [exp] - almost can't be noticed or seen"
+          },
+          {
+            "word": "lifelong bonds",
+            "translation": "связи на всю жизнь",
+            "example": "lifelong bonds [exp] - forever friendships"
+          },
+          {
+            "word": "bonds",
+            "translation": "узы, оковы",
+            "example": "bonds [exp] - being trapped or prevented from leaving (often by rope)"
+          },
+          {
+            "word": "submit the forms",
+            "translation": "подать документы",
+            "example": "submit the forms [exp] - give the documents"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Enid comes to the room in order ______.",
+            "options": [
+              "to apologize to Wednesday",
+              "to meet Ms. Thornhill",
+              "to get something"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "Enid has visited the room ______ in the last 24 hours.",
+            "options": [
+              "once",
+              "twice",
+              "three times"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "Wednesday is using the solitude to ______.",
+            "options": [
+              "text with her friends",
+              "work on her novel",
+              "play her cello",
+              "study"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Wednesday says that Enid's annoying habits include ______, ______, ______, ______, and ______.",
+            "options": [
+              "putting her friends in danger",
+              "playing her cello too late",
+              "committing to too many clubs",
+              "wearing too much perfume",
+              "giggling while she texts",
+              "grinding her teeth",
+              "typing too loudly",
+              "texting too much",
+              "talking too much",
+              "snoring"
+            ],
+            "correctAnswers": [2, 3, 4, 6, 8]
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Enid complains that Wednesday ______, ______, and ______.",
+            "options": [
+              "puts her friends in danger",
+              "plays her cello too late",
+              "commits to too many clubs",
+              "wears too much perfume",
+              "giggles while she texts",
+              "grinds her teeth",
+              "types too loudly",
+              "texts too much",
+              "talks too much",
+              "snores"
+            ],
+            "correctAnswers": [1, 6, 7]
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "Enid has requested to room with Yoko ______.",
+            "options": [
+              "permanently",
+              "temporarily"
+            ],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "Ms. Thornhill thinks that Enid ______.",
+            "options": [
+              "has helped Wednesday focus on her studies",
+              "has made Wednesday a little more social",
+              "is distracting Wednesday from her novel",
+              "has too many annoying habits"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "To allow Enid to change rooms, Ms. Thornhill has to ______.",
+            "options": [
+              "submit some forms to the principal",
+              "write a letter to their parents",
+              "find a new roommate for Wednesday",
+              "find a new roommate for Enid"
+            ],
+            "correctAnswer": 0
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Connectors and Conjunctions",
+            "explanation": "Choose the word and place in the sentence that most logically connects the ideas in the sentence. Use words like: but, now that, and then, if, when, which, that, with. Some boxes will be empty.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "Do you mind ___ I look around?",
+                "options": ["if", "that", "when", "which"],
+                "correctAnswer": "if"
+              },
+              {
+                "id": "g2",
+                "sentence": "This is the third time in 24 hours ___ you've forgotten something.",
+                "options": ["that", "when", "which", ""],
+                "correctAnswer": "that"
+              },
+              {
+                "id": "g3",
+                "sentence": "No annoying distractions ___ I'm almost finished with my novel.",
+                "options": ["and", "but", "if", ""],
+                "correctAnswer": "and"
+              },
+              {
+                "id": "g4",
+                "sentence": "You giggle ___ you text ___ is a 24/7 addiction.",
+                "options": ["when", "that", "which", "and"],
+                "correctAnswers": ["when", "which"]
+              },
+              {
+                "id": "g5",
+                "sentence": "You are not grinding your canines ___ you growl in your sleep.",
+                "options": ["when", "if", "that", ""],
+                "correctAnswer": "when"
+              },
+              {
+                "id": "g6",
+                "sentence": "You over-commit to clubs and activities ___ complain about them nonstop.",
+                "options": ["and", "but", "then", ""],
+                "correctAnswer": "and"
+              },
+              {
+                "id": "g7",
+                "sentence": "Yoko and I are so in sync ___ she's begging me to be her new roomie.",
+                "options": ["that", "which", "when", ""],
+                "correctAnswer": "that"
+              },
+              {
+                "id": "g8",
+                "sentence": "It's not solitude ___ you're still here.",
+                "options": ["if", "when", "that", ""],
+                "correctAnswer": "if"
+              },
+              {
+                "id": "g9",
+                "sentence": "There's a falling-out ___ I like to get both girls' perspectives on what happened.",
+                "options": ["when", "if", "that", ""],
+                "correctAnswer": "when"
+              },
+              {
+                "id": "g10",
+                "sentence": "Deflect all you want ___ you and I both know ___ you care about Enid.",
+                "options": ["but", "that", "and", ""],
+                "correctAnswers": ["but", "that"]
+              },
+              {
+                "id": "g11",
+                "sentence": "It was barely perceptible to the average eye ___ I noticed.",
+                "options": ["but", "and", "that", ""],
+                "correctAnswer": "but"
+              },
+              {
+                "id": "g12",
+                "sentence": "Is it really so difficult for you to admit ___ you made a friend...",
+                "options": ["that", "which", "when", ""],
+                "correctAnswer": "that"
+              },
+              {
+                "id": "g13",
+                "sentence": "...and ___ she's gone ___ you might actually miss her?",
+                "options": ["now that", "if", "when", ""],
+                "correctAnswers": ["now that", "that"]
+              },
+              {
+                "id": "g14",
+                "sentence": "That's your decision ___ I'll submit the forms to Principal Weems.",
+                "options": ["and", "but", "if", ""],
+                "correctAnswer": "and"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Wednesday: The dead can be just as annoying and unreliable as the living.\n\nEnid: Hi. I can't seem to find my bottle of silver moon nail polish. Do you mind if I look around? Yoko's hosting a mani-pedi party for her crew.\n\nWednesday: This is the third time in 24 hours you've forgotten something.\n\nEnid: So, how is everything going?\n\nWednesday: Solitude suits me. With no annoying distractions, I'm almost finished with my novel.\n\nEnid: Was I an annoying distraction?\n\nWednesday: You definitely had some annoying habits.\n\nEnid: Such as?\n\nWednesday: You giggle when you text, which is a 24/7 addiction.\n\nEnid: Well, at least it's not a migraine-inducing typewriter hammering into my head.\n\nWednesday: When not grinding your canines, you growl in your sleep.\n\nEnid: As opposed to late night cello solos?\n\nWednesday: You over-commit to clubs and activities and then complain about them nonstop.\n\nEnid: I'd take that over your obsession with all things creepy and dead.\n\nWednesday: You could gas an entire small village with the amount of perfume you spritz. And that's just off the top of my head.\n\nEnid: Guess I'm lucky with the new bestie that doesn't try to find ways to endanger literally everybody she comes into contact with. In fact, Yoko and I are so in sync that she's begging me to be her new roomie. Permanently.\n\nWednesday: Don't let me hold you back.\n\nEnid: Enjoy your solitude, Wednesday.\n\nWednesday: It's not solitude if you're still here.\n\n\nMs. Thornhill: I didn't mean to startle you.\n\nWednesday: I was just working on my novel.\n\nMs. Thornhill: Enid has requested to room with Yoko for the rest of the school year.\n\nWednesday: She did?\n\nMs. Thornhill: When there's a falling-out, I like to get both girls' perspectives on what happened. You two seemed as thick as thieves.\n\nWednesday: Ultimately, thieves turn on each other. I've seen it with my own eyes.\n\nMs. Thornhill: Deflect all you want, but you and I both know that you care about Enid. And you have to admit she managed to bring out a spark of warmth in you. Oh, don't worry. Just a tiny spark. Barely perceptible to the average eye, but I noticed. Part of the dorm experience is making friends with people that you wouldn't normally connect with. And those friendships often turn into lifelong bonds.\n\nWednesday: I would rather buy a rope.\n\nMs. Thornhill: Is it really so difficult for you to admit that you made a friend, and now that she's gone you might actually miss her?\n\nWednesday: I'll survive alone. I always have.\n\nMs. Thornhill: Well, if that's your decision, I'll submit the forms to Principal Weems."
         }
-      ],
-      "transcript": {
-        "full": "Wednesday: The dead can be just as annoying and unreliable as the living.\n\nEnid: Hi. I can't seem to find my bottle of silver moon nail polish. Do you mind if I look around? Yoko's hosting a mani-pedi party for her crew.\n\nWednesday: This is the third time in 24 hours you've forgotten something.\n\nEnid: So, how is everything going?\n\nWednesday: Solitude suits me. With no annoying distractions, I'm almost finished with my novel.\n\nEnid: Was I an annoying distraction?\n\nWednesday: You definitely had some annoying habits.\n\nEnid: Such as?\n\nWednesday: You giggle when you text, which is a 24/7 addiction.\n\nEnid: Well, at least it's not a migraine-inducing typewriter hammering into my head.\n\nWednesday: When not grinding your canines, you growl in your sleep.\n\nEnid: As opposed to late night cello solos?\n\nWednesday: You over-commit to clubs and activities and then complain about them nonstop.\n\nEnid: I'd take that over your obsession with all things creepy and dead.\n\nWednesday: You could gas an entire small village with the amount of perfume you spritz. And that's just off the top of my head.\n\nEnid: Guess I'm lucky with the new bestie that doesn't try to find ways to endanger literally everybody she comes into contact with. In fact, Yoko and I are so in sync that she's begging me to be her new roomie. Permanently.\n\nWednesday: Don't let me hold you back.\n\nEnid: Enjoy your solitude, Wednesday.\n\nWednesday: It's not solitude if you're still here.\n\n\nMs. Thornhill: I didn't mean to startle you.\n\nWednesday: I was just working on my novel.\n\nMs. Thornhill: Enid has requested to room with Yoko for the rest of the school year.\n\nWednesday: She did?\n\nMs. Thornhill: When there's a falling-out, I like to get both girls' perspectives on what happened. You two seemed as thick as thieves.\n\nWednesday: Ultimately, thieves turn on each other. I've seen it with my own eyes.\n\nMs. Thornhill: Deflect all you want, but you and I both know that you care about Enid. And you have to admit she managed to bring out a spark of warmth in you. Oh, don't worry. Just a tiny spark. Barely perceptible to the average eye, but I noticed. Part of the dorm experience is making friends with people that you wouldn't normally connect with. And those friendships often turn into lifelong bonds.\n\nWednesday: I would rather buy a rope.\n\nMs. Thornhill: Is it really so difficult for you to admit that you made a friend, and now that she's gone you might actually miss her?\n\nWednesday: I'll survive alone. I always have.\n\nMs. Thornhill: Well, if that's your decision, I'll submit the forms to Principal Weems."
       }
     }
   ]

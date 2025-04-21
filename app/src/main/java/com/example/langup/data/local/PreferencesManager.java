@@ -17,7 +17,7 @@ public class PreferencesManager {
     private static final String PREFERENCES_FILE = "user_preferences";
     private static final String KEY_GENRES = "genres";
     private static final String KEY_COUNTRIES = "countries";
-    private static final String KEY_FRANCHISES = "franchises";
+    private static final String KEY_SOURCES = "sources";
     
     private final SharedPreferences sharedPreferences;
     private final FirebaseFirestore firestore;
@@ -47,7 +47,7 @@ public class PreferencesManager {
         Map<String, List<String>> preferences = new HashMap<>();
         preferences.put(KEY_GENRES, getGenres());
         preferences.put(KEY_COUNTRIES, getCountries());
-        preferences.put(KEY_FRANCHISES, getFranchises());
+        preferences.put(KEY_SOURCES, getSources());
         
         Log.d(TAG, "Saving preferences for user " + userId + ": " + preferences);
         
@@ -59,7 +59,7 @@ public class PreferencesManager {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putStringSet(KEY_GENRES, new HashSet<>(getGenres()));
                 editor.putStringSet(KEY_COUNTRIES, new HashSet<>(getCountries()));
-                editor.putStringSet(KEY_FRANCHISES, new HashSet<>(getFranchises()));
+                editor.putStringSet(KEY_SOURCES, new HashSet<>(getSources()));
                 editor.apply();
                 
                 Log.d(TAG, "Preferences saved successfully for user " + userId);
@@ -82,7 +82,7 @@ public class PreferencesManager {
                     Map<String, List<String>> preferences = new HashMap<>();
                     preferences.put(KEY_GENRES, getListFromMap(preferencesData, KEY_GENRES));
                     preferences.put(KEY_COUNTRIES, getListFromMap(preferencesData, KEY_COUNTRIES));
-                    preferences.put(KEY_FRANCHISES, getListFromMap(preferencesData, KEY_FRANCHISES));
+                    preferences.put(KEY_SOURCES, getListFromMap(preferencesData, KEY_SOURCES));
                     
                     callback.onPreferencesLoaded(preferences);
                 } else {
@@ -114,8 +114,8 @@ public class PreferencesManager {
         return getStringList(KEY_COUNTRIES);
     }
     
-    public List<String> getFranchises() {
-        return getStringList(KEY_FRANCHISES);
+    public List<String> getSources() {
+        return getStringList(KEY_SOURCES);
     }
     
     private List<String> getStringList(String key) {
@@ -130,8 +130,8 @@ public class PreferencesManager {
         setStringList(KEY_COUNTRIES, countries);
     }
     
-    public void setFranchises(List<String> franchises) {
-        setStringList(KEY_FRANCHISES, franchises);
+    public void setSources(List<String> sources) {
+        setStringList(KEY_SOURCES, sources);
     }
     
     private void setStringList(String key, List<String> list) {

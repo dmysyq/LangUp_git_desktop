@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.util.Log;
 
 import com.example.langup.data.local.JsonLoader;
-import com.example.langup.domain.model.Episode;
 import com.example.langup.domain.model.Series;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,28 +42,6 @@ public class ContentManager {
 
     public List<Series> getAllSeries() {
         return seriesList;
-    }
-
-    public List<Series> getSeriesByLevel(String level) {
-        List<Series> filteredSeries = new ArrayList<>();
-        for (Series series : seriesList) {
-            if (series.getLevel() != null && series.getLevel().equals(level)) {
-                filteredSeries.add(series);
-            }
-        }
-        return filteredSeries;
-    }
-
-    public Optional<Episode> getEpisodeById(String seriesId, String episodeId) {
-        Series series = getSeriesById(seriesId);
-        if (series != null && series.getEpisodes() != null) {
-            for (Episode episode : series.getEpisodes()) {
-                if (episode.getId().equals(episodeId)) {
-                    return Optional.of(episode);
-                }
-            }
-        }
-        return Optional.empty();
     }
 
     public Series getSeriesById(String id) {

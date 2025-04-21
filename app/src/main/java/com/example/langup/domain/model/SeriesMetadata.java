@@ -1,36 +1,47 @@
 package com.example.langup.domain.model;
 
 import java.io.Serializable;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 public class SeriesMetadata implements Serializable {
-    private List<String> genres;
+    private String id;
+    private String title;
+    private String description;
     private String country;
-    private List<String> franchises;
-    private String releaseYear;
-    private String rating;
-    private List<String> languages;
+    private String accent;
+    private String imageUrl;
+    private String source;
+    private int difficulty;
+    private List<String> genres;
+    private List<String> countries;
 
     public SeriesMetadata() {
-        this.genres = new ArrayList<>();
-        this.franchises = new ArrayList<>();
-        this.languages = new ArrayList<>();
+        genres = new ArrayList<>();
+        countries = new ArrayList<>();
     }
 
     // Getters
-    public List<String> getGenres() { return genres; }
+    public String getId() { return id; }
+    public String getTitle() { return title; }
+    public String getDescription() { return description; }
     public String getCountry() { return country; }
-    public List<String> getFranchises() { return franchises; }
-    public String getReleaseYear() { return releaseYear; }
-    public String getRating() { return rating; }
-    public List<String> getLanguages() { return languages; }
+    public String getAccent() { return accent; }
+    public String getImageUrl() { return imageUrl; }
+    public String getSource() { return source; }
+    public int getDifficulty() { return difficulty; }
+    public List<String> getGenres() { return genres; }
+    public List<String> getCountries() { return countries; }
 
     // Setters
-    public void setGenres(List<String> genres) { this.genres = genres; }
+    public void setId(String id) { this.id = id; }
+    public void setTitle(String title) { this.title = title; }
+    public void setDescription(String description) { this.description = description; }
     public void setCountry(String country) { this.country = country; }
-    public void setFranchises(List<String> franchises) { this.franchises = franchises; }
-    public void setReleaseYear(String releaseYear) { this.releaseYear = releaseYear; }
-    public void setRating(String rating) { this.rating = rating; }
-    public void setLanguages(List<String> languages) { this.languages = languages; }
+    public void setAccent(String accent) { this.accent = accent; }
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
+    public void setSource(String source) { this.source = source; }
+    public void setDifficulty(int difficulty) { this.difficulty = difficulty; }
+    public void setGenres(List<String> genres) { this.genres = genres; }
+    public void setCountries(List<String> countries) { this.countries = countries; }
 } 

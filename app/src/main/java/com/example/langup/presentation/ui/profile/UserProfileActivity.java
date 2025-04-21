@@ -49,7 +49,7 @@ public class UserProfileActivity extends AppCompatActivity {
     private PreferencesManager preferencesManager;
     private ChipGroup genresChipGroup;
     private ChipGroup countriesChipGroup;
-    private ChipGroup franchisesChipGroup;
+    private ChipGroup sourcesChipGroup;
     private TextView savePreferencesButton;
 
     @Override
@@ -93,7 +93,7 @@ public class UserProfileActivity extends AppCompatActivity {
         backButton = findViewById(R.id.backButton);
         genresChipGroup = findViewById(R.id.genresChipGroup);
         countriesChipGroup = findViewById(R.id.countriesChipGroup);
-        franchisesChipGroup = findViewById(R.id.franchisesChipGroup);
+        sourcesChipGroup = findViewById(R.id.sourcesChipGroup);
 
         // Set email field as non-editable
         emailEditText.setEnabled(false);
@@ -123,12 +123,12 @@ public class UserProfileActivity extends AppCompatActivity {
             addChip(countriesChipGroup, country);
         }
 
-        // Initialize franchises
-        String[] franchises = getResources().getStringArray(
-            getResources().getIdentifier("franchises" + languageSuffix, "array", getPackageName())
+        // Initialize sources
+        String[] sources = getResources().getStringArray(
+            getResources().getIdentifier("sources" + languageSuffix, "array", getPackageName())
         );
-        for (String franchise : franchises) {
-            addChip(franchisesChipGroup, franchise);
+        for (String source : sources) {
+            addChip(sourcesChipGroup, source);
         }
     }
 
@@ -181,15 +181,15 @@ public class UserProfileActivity extends AppCompatActivity {
     private void updatePreferencesFromChips() {
         List<String> selectedGenres = getSelectedChips(genresChipGroup);
         List<String> selectedCountries = getSelectedChips(countriesChipGroup);
-        List<String> selectedFranchises = getSelectedChips(franchisesChipGroup);
+        List<String> selectedSources = getSelectedChips(sourcesChipGroup);
         
         preferencesManager.setGenres(selectedGenres);
         preferencesManager.setCountries(selectedCountries);
-        preferencesManager.setFranchises(selectedFranchises);
+        preferencesManager.setSources(selectedSources);
         
         Log.d(TAG, "Updated preferences - Genres: " + selectedGenres + 
                     ", Countries: " + selectedCountries + 
-                    ", Franchises: " + selectedFranchises);
+                    ", Sources: " + selectedSources);
     }
     
     private List<String> getSelectedChips(ChipGroup chipGroup) {
@@ -206,7 +206,7 @@ public class UserProfileActivity extends AppCompatActivity {
     private void updateUI(Map<String, List<String>> preferences) {
         List<String> genres = preferences.get("genres");
         List<String> countries = preferences.get("countries");
-        List<String> franchises = preferences.get("franchises");
+        List<String> sources = preferences.get("sources");
         
         if (genres != null) {
             preferencesManager.setGenres(genres);
@@ -216,9 +216,9 @@ public class UserProfileActivity extends AppCompatActivity {
             preferencesManager.setCountries(countries);
             updateChipGroupSelection(countriesChipGroup, countries);
         }
-        if (franchises != null) {
-            preferencesManager.setFranchises(franchises);
-            updateChipGroupSelection(franchisesChipGroup, franchises);
+        if (sources != null) {
+            preferencesManager.setSources(sources);
+            updateChipGroupSelection(sourcesChipGroup, sources);
         }
     }
     

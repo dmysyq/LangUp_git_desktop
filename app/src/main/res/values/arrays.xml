@@ -31,17 +31,15 @@
         <item>Australia</item>
     </string-array>
 
-    <string-array name="franchises_en">
-        <item>Star Wars</item>
-        <item>Marvel</item>
-        <item>DC Comics</item>
-        <item>Harry Potter</item>
-        <item>Lord of the Rings</item>
-        <item>Fast &amp; Furious</item>
-        <item>Mission: Impossible</item>
-        <item>James Bond</item>
-        <item>Transformers</item>
-        <item>Pirates of the Caribbean</item>
+    <string-array name="sources_en">
+        <item>Netflix</item>
+        <item>YouTube</item>
+        <item>BBC</item>
+        <item>TED</item>
+        <item>Disney+</item>
+        <item>Amazon Prime</item>
+        <item>HBO</item>
+        <item>Apple TV+</item>
     </string-array>
 
     <string-array name="genres_ru">
@@ -70,16 +68,14 @@
         <item>Австралия</item>
     </string-array>
 
-    <string-array name="franchises_ru">
-        <item>Звёздные войны</item>
-        <item>Марвел</item>
-        <item>DC Comics</item>
-        <item>Гарри Поттер</item>
-        <item>Властелин колец</item>
-        <item>Форсаж</item>
-        <item>Миссия невыполнима</item>
-        <item>Джеймс Бонд</item>
-        <item>Трансформеры</item>
-        <item>Пираты Карибского моря</item>
+    <string-array name="sources_ru">
+        <item>Netflix</item>
+        <item>YouTube</item>
+        <item>BBC</item>
+        <item>TED</item>
+        <item>Disney+</item>
+        <item>Amazon Prime</item>
+        <item>HBO</item>
+        <item>Apple TV+</item>
     </string-array>
 </resources> 

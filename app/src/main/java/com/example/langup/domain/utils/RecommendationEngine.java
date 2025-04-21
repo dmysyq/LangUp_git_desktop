@@ -72,7 +72,7 @@ public class RecommendationEngine {
         List<Series> filteredSeries = new ArrayList<>();
         List<String> preferredGenres = preferences.get("genres");
         List<String> preferredCountries = preferences.get("countries");
-        List<String> preferredFranchises = preferences.get("franchises");
+        List<String> preferredSources = preferences.get("sources");
         
         for (Series series : allSeries) {
             boolean matchesPreferences = true;
@@ -88,8 +88,8 @@ public class RecommendationEngine {
                     .anyMatch(preferredCountries::contains);
             }
             
-            if (preferredFranchises != null && !preferredFranchises.isEmpty()) {
-                matchesPreferences &= preferredFranchises.contains(metadata.getFranchises());
+            if (preferredSources != null && !preferredSources.isEmpty()) {
+                matchesPreferences &= preferredSources.contains(metadata.getSource());
             }
             
             if (matchesPreferences) {

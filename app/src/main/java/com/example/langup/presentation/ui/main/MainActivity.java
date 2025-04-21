@@ -7,26 +7,27 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.langup.domain.model.Series;
+import com.example.langup.presentation.adapter.SeriesAdapter;
 import com.example.langup.presentation.ui.profile.UserProfileActivity;
 import com.example.langup.presentation.ui.profile.SettingsActivity;
-import com.example.langup.presentation.ui.series.LevelSelectionActivity;
 import com.example.langup.R;
-import com.example.langup.presentation.adapter.SeriesAdapter;
 import com.example.langup.presentation.ui.dialogs.SearchFilterDialog;
-import com.example.langup.domain.model.Series;
-import com.example.langup.data.repository.ContentManager;
-import com.example.langup.data.local.PreferencesManager;
-import com.example.langup.domain.utils.SeriesFilter;
-import com.google.firebase.auth.FirebaseAuth;
+import com.example.langup.domain.utils.RecommendationEngine;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnSeriesClickListener, SearchFilterDialog.OnSearchFilterListener {
     private RecyclerView recyclerView;
@@ -36,12 +37,11 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
     private ImageButton navHome;
     private ImageButton navProfile;
     private ImageButton navSettings;
-    private ContentManager contentManager;
-    private PreferencesManager preferencesManager;
-    private List<Series> allSeries;
-    private List<Series> filteredSeries;
-    private SeriesFilter currentFilter;
+    private RecommendationEngine recommendationEngine;
+    private List<Series> allSeries = new ArrayList<>();
     private String searchQuery = "";
+    private int selectedDifficulty = 0;
+    private String selectedAccent = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
         initializeViews();
         setupToolbar();
         setupNavigation();
-        loadUserPreferences();
+        setupRecommendationEngine();
     }
 
     private void initializeViews() {
@@ -61,16 +61,6 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
         navHome = findViewById(R.id.nav_home);
         navProfile = findViewById(R.id.nav_profile);
         navSettings = findViewById(R.id.nav_settings);
-
-        contentManager = new ContentManager(this);
-        
-        // Check if user is logged in
-        if (FirebaseAuth.getInstance().getCurrentUser() != null) {
-            preferencesManager = new PreferencesManager(this, FirebaseAuth.getInstance().getCurrentUser().getUid());
-        } else {
-            // Use a default user ID for testing
-            preferencesManager = new PreferencesManager(this, "test_user");
-        }
 
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         adapter = new SeriesAdapter(new ArrayList<>(), this);
@@ -96,96 +86,49 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
         });
     }
 
-    private void loadUserPreferences() {
-        progressBar.setVisibility(View.VISIBLE);
-        preferencesManager.loadPreferences(new PreferencesManager.PreferencesCallback() {
-            @Override
-            public void onSuccess() {
-                loadSeriesData();
-            }
+    private void setupRecommendationEngine() {
+        recommendationEngine = new RecommendationEngine(this);
+        loadRecommendations();
+    }
 
+    private void loadRecommendations() {
+        progressBar.setVisibility(View.VISIBLE);
+        recommendationEngine.getRecommendations(new RecommendationEngine.RecommendationCallback() {
             @Override
-            public void onError(String error) {
+            public void onSuccess(List<Series> recommendations) {
+                allSeries = recommendations;
+                applyFilters();
                 progressBar.setVisibility(View.GONE);
-                loadSeriesData(); // Load series even if preferences fail
             }
             
             @Override
-            public void onPreferencesLoaded(Map<String, List<String>> preferences) {
-                // Process loaded preferences
-                if (preferences != null) {
-                    List<String> genres = preferences.get("genres");
-                    List<String> countries = preferences.get("countries");
-                    List<String> franchises = preferences.get("franchises");
-                    
-                    if (genres != null) preferencesManager.setGenres(genres);
-                    if (countries != null) preferencesManager.setCountries(countries);
-                    if (franchises != null) preferencesManager.setFranchises(franchises);
-                }
-                loadSeriesData();
+            public void onError(String error) {
+                Toast.makeText(MainActivity.this, "Error loading recommendations: " + error, Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.GONE);
             }
         });
     }
 
-    private void loadSeriesData() {
-        allSeries = contentManager.getAllSeries();
-        filteredSeries = new ArrayList<>(allSeries);
+    private void applyFilters() {
+        List<Series> filteredSeries = new ArrayList<>();
         
-        // Apply recommendations based on user preferences
-        applyRecommendations();
+        for (Series series : allSeries) {
+            boolean matchesSearch = searchQuery.isEmpty() || 
+                                   series.getMetadata().getTitle().toLowerCase().contains(searchQuery.toLowerCase());
+            
+            boolean matchesDifficulty = selectedDifficulty == 0 || 
+                                       series.getDifficulty() == selectedDifficulty;
+            
+            boolean matchesAccent = selectedAccent.isEmpty() || 
+                                   (series.getMetadata().getAccent() != null && 
+                                    series.getMetadata().getAccent().equals(selectedAccent));
+            
+            if (matchesSearch && matchesDifficulty && matchesAccent) {
+                filteredSeries.add(series);
+            }
+        }
         
         adapter.updateSeries(filteredSeries);
-        progressBar.setVisibility(View.GONE);
-    }
-
-    private void applyRecommendations() {
-        // Get user preferences
-        List<String> preferredGenres = preferencesManager.getGenres();
-        List<String> preferredCountries = preferencesManager.getCountries();
-        List<String> preferredFranchises = preferencesManager.getFranchises();
-
-        // If user has preferences, sort series based on them
-        if (!preferredGenres.isEmpty() || !preferredCountries.isEmpty() || !preferredFranchises.isEmpty()) {
-            // Sort series based on preferences
-            // This is a simple implementation - you might want to use a more sophisticated algorithm
-            filteredSeries.sort((s1, s2) -> {
-                int score1 = calculatePreferenceScore(s1, preferredGenres, preferredCountries, preferredFranchises);
-                int score2 = calculatePreferenceScore(s2, preferredGenres, preferredCountries, preferredFranchises);
-                return score2 - score1; // Higher score first
-            });
-        }
-    }
-
-    private int calculatePreferenceScore(Series series, List<String> preferredGenres, 
-                                        List<String> preferredCountries, List<String> preferredFranchises) {
-        int score = 0;
-        
-        // Check genres
-        if (series.getMetadata() != null && series.getMetadata().getGenres() != null) {
-            for (String genre : series.getMetadata().getGenres()) {
-                if (preferredGenres.contains(genre)) {
-                    score += 2;
-                }
-            }
-        }
-        
-        // Check country
-        if (series.getMetadata() != null && series.getMetadata().getCountry() != null) {
-            if (preferredCountries.contains(series.getMetadata().getCountry())) {
-                score += 3;
-            }
-        }
-        
-        // Check franchises
-        if (series.getMetadata() != null && series.getMetadata().getFranchises() != null) {
-            for (String franchise : series.getMetadata().getFranchises()) {
-                if (preferredFranchises.contains(franchise)) {
-                    score += 1;
-                }
-            }
-        }
-        
-        return score;
     }
 
     @Override
@@ -198,14 +141,14 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
             @Override
             public boolean onQueryTextSubmit(String query) {
                 searchQuery = query;
-                filterSeries();
+                applyFilters();
                 return true;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
                 searchQuery = newText;
-                filterSeries();
+                applyFilters();
                 return true;
             }
         });
@@ -222,26 +165,6 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
         return super.onOptionsItemSelected(item);
     }
 
-    private void filterSeries() {
-        if (allSeries == null) return;
-        
-        if (searchQuery.isEmpty() && currentFilter == null) {
-            // No filters applied, show all series
-            filteredSeries = new ArrayList<>(allSeries);
-        } else {
-            // Apply search filter
-            SeriesFilter searchFilter = new SeriesFilter(searchQuery, 0, "");
-            filteredSeries = searchFilter.filter(allSeries);
-            
-            // Apply additional filters if they exist
-            if (currentFilter != null) {
-                filteredSeries = currentFilter.filter(filteredSeries);
-            }
-        }
-        
-        adapter.updateSeries(filteredSeries);
-    }
-
     private void showSearchFilterDialog() {
         SearchFilterDialog dialog = new SearchFilterDialog(this, this);
         dialog.show();
@@ -249,14 +172,19 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
 
     @Override
     public void onSeriesClick(Series series) {
-        Intent intent = new Intent(this, LevelSelectionActivity.class);
-        intent.putExtra("seriesId", series.getId());
-        startActivity(intent);
+        // Здесь будет переход к выбору уровня серии
+        // Intent intent = new Intent(this, LevelSelectionActivity.class);
+        // intent.putExtra("seriesId", series.getId());
+        // startActivity(intent);
+        
+        Toast.makeText(this, "Selected: " + series.getMetadata().getTitle(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onSearchFilter(String searchQuery, int difficultyLevel, String accent) {
-        currentFilter = new SeriesFilter(searchQuery, difficultyLevel, accent);
-        filterSeries();
+        this.searchQuery = searchQuery;
+        this.selectedDifficulty = difficultyLevel;
+        this.selectedAccent = accent;
+        applyFilters();
     }
 }

@@ -5,25 +5,25 @@ import java.util.List;
 public class Preferences {
     private List<String> genres;
     private List<String> countries;
-    private List<String> franchises;
+    private List<String> sources;
 
     public Preferences() {
         // Required empty constructor for Firestore
     }
 
-    public Preferences(List<String> genres, List<String> countries, List<String> franchises) {
+    public Preferences(List<String> genres, List<String> countries, List<String> sources) {
         this.genres = genres;
         this.countries = countries;
-        this.franchises = franchises;
+        this.sources = sources;
     }
 
-    // Getters and Setters
+    // Getters
     public List<String> getGenres() { return genres; }
-    public void setGenres(List<String> genres) { this.genres = genres; }
-
     public List<String> getCountries() { return countries; }
-    public void setCountries(List<String> countries) { this.countries = countries; }
+    public List<String> getSources() { return sources; }
 
-    public List<String> getFranchises() { return franchises; }
-    public void setFranchises(List<String> franchises) { this.franchises = franchises; }
+    // Setters
+    public void setGenres(List<String> genres) { this.genres = genres; }
+    public void setCountries(List<String> countries) { this.countries = countries; }
+    public void setSources(List<String> sources) { this.sources = sources; }
 } 

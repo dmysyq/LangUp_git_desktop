@@ -1,137 +1,17 @@
 {
-  "version": "1.0",
-  "lastUpdated": "2023-06-15",
   "series": [
     {
-      "id": "wednesday",
-      "title": "Wednesday",
-      "description": "Wednesday Addams is sent to Nevermore Academy, a school for outcasts, where she attempts to master her emerging psychic ability, thwart a monstrous killing spree of the town citizens, and solve the supernatural mystery that affected her family 25 years ago.",
-      "level": "Intermediate",
-      "language": "English",
-      "accent": "American",
-      "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDM4NTBkN2YtZTRiZC00ODI0LTk2OTUtZDdkNzM5NmZkOTJiXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
-      "source": "Netflix",
-      "episodes": [
-        {
-          "id": "wednesday_s01e01",
-          "title": "Wednesday's Child is Full of Woe",
-          "youtubeUrl": "https://www.youtube.com/watch?v=Di310WS8zLk",
-          "questions": [
-            {
-              "id": "q1",
-              "type": "single_choice",
-              "question": "What does Wednesday say about her new school?",
-              "options": [
-                "It's perfect for her",
-                "It's a prison",
-                "It's boring",
-                "It's too easy"
-              ],
-              "correctAnswers": ["It's a prison"]
-            },
-            {
-              "id": "q2",
-              "type": "multiple_choice",
-              "question": "Which characters are introduced in this episode?",
-              "options": [
-                "Wednesday Addams",
-                "Morticia Addams",
-                "Gomez Addams",
-                "Enid Sinclair",
-                "Principal Weems"
-              ],
-              "correctAnswers": [
-                "Wednesday Addams",
-                "Morticia Addams",
-                "Gomez Addams",
-                "Enid Sinclair",
-                "Principal Weems"
-              ]
-            }
-          ],
-          "content": [
-            {
-              "original": "I'm not like other girls. I'm a homicidal maniac.",
-              "translation": ["Я не такая, как другие девушки. Я маньяк-убийца."]
-            },
-            {
-              "original": "I find social interaction exhausting and pointless.",
-              "translation": ["Я считаю социальное взаимодействие утомительным и бессмысленным."]
-            }
-          ]
-        },
-        {
-          "id": "wednesday_s01e02",
-          "title": "Woe is the Loneliest Number",
-          "youtubeUrl": "https://www.youtube.com/watch?v=Di310WS8zLk",
-          "questions": [
-            {
-              "id": "q1",
-              "type": "single_choice",
-              "question": "What does Wednesday discover about the monster?",
-              "options": [
-                "It's a werewolf",
-                "It's a vampire",
-                "It's a shapeshifter",
-                "It's a ghost"
-              ],
-              "correctAnswers": ["It's a shapeshifter"]
-            }
-          ],
-          "content": [
-            {
-              "original": "I'm not a hero. I'm a high-functioning psychopath with a taste for vengeance.",
-              "translation": ["Я не герой. Я высокофункциональный психопат со вкусом к мести."]
-            }
-          ]
-        }
-      ],
       "metadata": {
+        "id": "1",
+        "title": "Wednesday",
+        "description": "Wednesday Addams is sent to Nevermore Academy, a school for outcasts, where she attempts to master her emerging psychic ability, thwart a monstrous killing spree of the town citizens, and solve the supernatural mystery that affected her family 25 years ago.",
         "country": "USA",
-        "genres": ["Fantasy", "Horror", "Mystery", "Supernatural"],
-        "franchises": ["The Addams Family"]
-      }
-    },
-    {
-      "id": "stranger_things",
-      "title": "Stranger Things",
-      "description": "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.",
-      "level": "Advanced",
-      "language": "English",
-      "accent": "American",
-      "imageUrl": "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
-      "source": "Netflix",
-      "episodes": [
-        {
-          "id": "stranger_things_s01e01",
-          "title": "Chapter One: The Vanishing of Will Byers",
-          "youtubeUrl": "https://www.youtube.com/watch?v=b9EkMc79ZSU",
-          "questions": [
-            {
-              "id": "q1",
-              "type": "single_choice",
-              "question": "What happens to Will Byers?",
-              "options": [
-                "He gets lost in the woods",
-                "He is kidnapped",
-                "He disappears into another dimension",
-                "He runs away from home"
-              ],
-              "correctAnswers": ["He disappears into another dimension"]
-            }
-          ],
-          "content": [
-            {
-              "original": "Friends don't lie.",
-              "translation": ["Друзья не лгут."]
-            }
-          ]
-        }
-      ],
-      "metadata": {
-        "country": "USA",
-        "genres": ["Drama", "Fantasy", "Horror", "Mystery", "Sci-Fi"],
-        "franchises": []
+        "accent": "American",
+        "imageUrl": "assets/banner/wednesday-banner.png",
+        "source": "Netflix",
+        "difficulty": 5,
+        "genres": ["Fantasy", "Drama", "Horror"],
+        "countries": ["USA", "UK"]
       }
     }
   ]

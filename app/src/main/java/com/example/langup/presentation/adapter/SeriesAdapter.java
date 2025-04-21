@@ -1,21 +1,23 @@
 package com.example.langup.presentation.adapter;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.bumptech.glide.Glide;
+
 import com.example.langup.R;
 import com.example.langup.domain.model.Series;
+import com.example.langup.domain.model.SeriesMetadata;
+
 import java.util.List;
 
 public class SeriesAdapter extends RecyclerView.Adapter<SeriesAdapter.SeriesViewHolder> {
     private List<Series> seriesList;
-    private OnSeriesClickListener listener;
+    private final OnSeriesClickListener listener;
 
     public interface OnSeriesClickListener {
         void onSeriesClick(Series series);
@@ -29,48 +31,20 @@ public class SeriesAdapter extends RecyclerView.Adapter<SeriesAdapter.SeriesView
     @NonNull
     @Override
     public SeriesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_series, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_series, parent, false);
         return new SeriesViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull SeriesViewHolder holder, int position) {
         Series series = seriesList.get(position);
-        Context context = holder.itemView.getContext();
+        SeriesMetadata metadata = series.getMetadata();
         
-        holder.titleTextView.setText(series.getTitle());
-        holder.accentTextView.setText(series.getAccent());
-        holder.sourceTextView.setText(series.getSource());
+        holder.titleTextView.setText(metadata.getTitle());
+        holder.descriptionTextView.setText(metadata.getDescription());
         
-        // Convert difficulty level to text
-        String difficultyText;
-        switch (series.getDifficulty()) {
-            case 1:
-                difficultyText = context.getString(R.string.beginner);
-                break;
-            case 2:
-                difficultyText = context.getString(R.string.intermediate);
-                break;
-            case 3:
-                difficultyText = context.getString(R.string.advanced);
-                break;
-            default:
-                difficultyText = context.getString(R.string.unknown_level);
-                break;
-        }
-        holder.levelTextView.setText(difficultyText);
-        
-        // Load image using Glide
-        if (series.getImageUrl() != null && !series.getImageUrl().isEmpty()) {
-            Glide.with(context)
-                    .load(series.getImageUrl())
-                    .placeholder(R.drawable.ic_image_placeholder)
-                    .error(R.drawable.ic_image_error)
-                    .into(holder.imageView);
-        } else {
-            holder.imageView.setImageResource(R.drawable.ic_image_placeholder);
-        }
+        // Здесь можно добавить загрузку изображения с помощью Glide или Picasso
+        // Glide.with(holder.itemView.getContext()).load(metadata.getImageUrl()).into(holder.imageView);
         
         holder.itemView.setOnClickListener(v -> {
             if (listener != null) {
@@ -81,7 +55,7 @@ public class SeriesAdapter extends RecyclerView.Adapter<SeriesAdapter.SeriesView
 
     @Override
     public int getItemCount() {
-        return seriesList.size();
+        return seriesList != null ? seriesList.size() : 0;
     }
 
     public void updateSeries(List<Series> newSeriesList) {
@@ -92,17 +66,13 @@ public class SeriesAdapter extends RecyclerView.Adapter<SeriesAdapter.SeriesView
     static class SeriesViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
         TextView titleTextView;
-        TextView accentTextView;
-        TextView sourceTextView;
-        TextView levelTextView;
+        TextView descriptionTextView;
 
         SeriesViewHolder(View itemView) {
             super(itemView);
-            imageView = itemView.findViewById(R.id.seriesImageView);
-            titleTextView = itemView.findViewById(R.id.seriesTitleTextView);
-            accentTextView = itemView.findViewById(R.id.seriesAccentTextView);
-            sourceTextView = itemView.findViewById(R.id.seriesSourceTextView);
-            levelTextView = itemView.findViewById(R.id.seriesLevelTextView);
+            imageView = itemView.findViewById(R.id.series_image);
+            titleTextView = itemView.findViewById(R.id.series_title);
+            descriptionTextView = itemView.findViewById(R.id.series_description);
         }
     }
 } 
