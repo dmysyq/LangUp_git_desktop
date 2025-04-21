@@ -1,0 +1,426 @@
+package com.example.langup.presentation.ui.profile;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.Toast;
+
+import com.example.langup.R;
+import com.example.langup.presentation.ui.auth.LoginActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.android.material.imageview.ShapeableImageView;
+import android.widget.TextView;
+import com.example.langup.presentation.ui.dialogs.AvatarPickerDialog;
+import com.example.langup.domain.utils.AvatarManager;
+import java.util.HashMap;
+import java.util.Map;
+import com.example.langup.data.local.PreferencesManager;
+import com.google.android.material.chip.ChipGroup;
+import com.google.android.material.chip.Chip;
+import java.util.List;
+import java.util.ArrayList;
+import android.util.TypedValue;
+
+import com.example.langup.domain.utils.LocaleManager;
+import android.view.MenuItem;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+public class UserProfileActivity extends AppCompatActivity {
+    private static final String TAG = "UserProfileActivity";
+
+    private FirebaseAuth mAuth;
+    private FirebaseFirestore db;
+    private AvatarManager avatarManager;
+    private EditText nameEditText;
+    private EditText usernameEditText;
+    private EditText emailEditText;
+    private ShapeableImageView avatarImageView;
+    private TextView changeAvatarButton;
+    private TextView saveButton;
+    private TextView logoutButton;
+    private ImageButton backButton;
+    private String currentAvatarPath;
+    private PreferencesManager preferencesManager;
+    private ChipGroup genresChipGroup;
+    private ChipGroup countriesChipGroup;
+    private ChipGroup franchisesChipGroup;
+    private TextView savePreferencesButton;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_user_profile);
+
+        // Initialize Firebase and managers
+        mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
+        avatarManager = new AvatarManager(this);
+        String userId = mAuth.getCurrentUser() != null ? mAuth.getCurrentUser().getUid() : null;
+        if (userId == null) {
+            Toast.makeText(this, "User not logged in", Toast.LENGTH_SHORT).show();
+            finish();
+            return;
+        }
+        preferencesManager = new PreferencesManager(this, userId);
+
+        // Initialize views
+        initializeViews();
+        
+        // Load user data and preferences
+        loadUserData();
+        loadUserPreferences();
+
+        // Set up click listeners
+        setupClickListeners();
+
+        setupToolbar();
+    }
+
+    private void initializeViews() {
+        nameEditText = findViewById(R.id.nameEditText);
+        usernameEditText = findViewById(R.id.usernameEditText);
+        emailEditText = findViewById(R.id.emailEditText);
+        avatarImageView = findViewById(R.id.avatarImageView);
+        changeAvatarButton = findViewById(R.id.changeAvatarButton);
+        saveButton = findViewById(R.id.saveButton);
+        logoutButton = findViewById(R.id.logoutButton);
+        backButton = findViewById(R.id.backButton);
+        genresChipGroup = findViewById(R.id.genresChipGroup);
+        countriesChipGroup = findViewById(R.id.countriesChipGroup);
+        franchisesChipGroup = findViewById(R.id.franchisesChipGroup);
+
+        // Set email field as non-editable
+        emailEditText.setEnabled(false);
+
+        // Initialize predefined values
+        initializePreferences();
+    }
+
+    private void initializePreferences() {
+        LocaleManager localeManager = LocaleManager.getInstance(this);
+        String currentLanguage = localeManager.getCurrentLanguage();
+        String languageSuffix = currentLanguage.equals("ru") ? "_ru" : "_en";
+
+        // Initialize genres
+        String[] genres = getResources().getStringArray(
+            getResources().getIdentifier("genres" + languageSuffix, "array", getPackageName())
+        );
+        for (String genre : genres) {
+            addChip(genresChipGroup, genre);
+        }
+
+        // Initialize countries
+        String[] countries = getResources().getStringArray(
+            getResources().getIdentifier("countries" + languageSuffix, "array", getPackageName())
+        );
+        for (String country : countries) {
+            addChip(countriesChipGroup, country);
+        }
+
+        // Initialize franchises
+        String[] franchises = getResources().getStringArray(
+            getResources().getIdentifier("franchises" + languageSuffix, "array", getPackageName())
+        );
+        for (String franchise : franchises) {
+            addChip(franchisesChipGroup, franchise);
+        }
+    }
+
+    private void addChip(ChipGroup chipGroup, String text) {
+        Chip chip = new Chip(this);
+        chip.setText(text);
+        chip.setCheckable(true);
+        chip.setClickable(true);
+        chip.setFocusable(true);
+        
+        // Применяем базовый стиль
+        chip.setChipBackgroundColorResource(R.color.chip_background);
+        chip.setTextColor(getResources().getColor(R.color.chip_text));
+        chip.setChipStrokeColorResource(R.color.chip_stroke);
+        chip.setChipStrokeWidth(getResources().getDimensionPixelSize(R.dimen.chip_stroke_width));
+        
+        // Устанавливаем размеры и отступы
+        chip.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+        chip.setPadding(
+            getResources().getDimensionPixelSize(R.dimen.chip_padding_horizontal),
+            getResources().getDimensionPixelSize(R.dimen.chip_padding_vertical),
+            getResources().getDimensionPixelSize(R.dimen.chip_padding_horizontal),
+            getResources().getDimensionPixelSize(R.dimen.chip_padding_vertical)
+        );
+        chip.setMinHeight(getResources().getDimensionPixelSize(R.dimen.chip_min_height));
+        
+        // Добавляем слушатель для обработки выбора
+        chip.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            updateChipState(chip, isChecked);
+        });
+        
+        chipGroup.addView(chip);
+    }
+
+    private void updateChipState(Chip chip, boolean isSelected) {
+        if (isSelected) {
+            chip.setChipBackgroundColorResource(R.color.chip_background_selected);
+            chip.setTextColor(getResources().getColor(R.color.chip_text_selected));
+            chip.setChipStrokeColorResource(R.color.chip_stroke_selected);
+        } else {
+            chip.setChipBackgroundColorResource(R.color.chip_background);
+            chip.setTextColor(getResources().getColor(R.color.chip_text));
+            chip.setChipStrokeColorResource(R.color.chip_stroke);
+        }
+        
+        // Update preferences when chip state changes
+        updatePreferencesFromChips();
+    }
+    
+    private void updatePreferencesFromChips() {
+        List<String> selectedGenres = getSelectedChips(genresChipGroup);
+        List<String> selectedCountries = getSelectedChips(countriesChipGroup);
+        List<String> selectedFranchises = getSelectedChips(franchisesChipGroup);
+        
+        preferencesManager.setGenres(selectedGenres);
+        preferencesManager.setCountries(selectedCountries);
+        preferencesManager.setFranchises(selectedFranchises);
+        
+        Log.d(TAG, "Updated preferences - Genres: " + selectedGenres + 
+                    ", Countries: " + selectedCountries + 
+                    ", Franchises: " + selectedFranchises);
+    }
+    
+    private List<String> getSelectedChips(ChipGroup chipGroup) {
+        List<String> selected = new ArrayList<>();
+        for (int i = 0; i < chipGroup.getChildCount(); i++) {
+            Chip chip = (Chip) chipGroup.getChildAt(i);
+            if (chip.isChecked()) {
+                selected.add(chip.getText().toString());
+            }
+        }
+        return selected;
+    }
+    
+    private void updateUI(Map<String, List<String>> preferences) {
+        List<String> genres = preferences.get("genres");
+        List<String> countries = preferences.get("countries");
+        List<String> franchises = preferences.get("franchises");
+        
+        if (genres != null) {
+            preferencesManager.setGenres(genres);
+            updateChipGroupSelection(genresChipGroup, genres);
+        }
+        if (countries != null) {
+            preferencesManager.setCountries(countries);
+            updateChipGroupSelection(countriesChipGroup, countries);
+        }
+        if (franchises != null) {
+            preferencesManager.setFranchises(franchises);
+            updateChipGroupSelection(franchisesChipGroup, franchises);
+        }
+    }
+    
+    private void updateChipGroupSelection(ChipGroup chipGroup, List<String> selectedItems) {
+        for (int i = 0; i < chipGroup.getChildCount(); i++) {
+            Chip chip = (Chip) chipGroup.getChildAt(i);
+            chip.setChecked(selectedItems.contains(chip.getText().toString()));
+        }
+    }
+
+    private void setupClickListeners() {
+        saveButton.setOnClickListener(v -> {
+            saveUserData();
+            saveUserPreferences();
+        });
+        
+        backButton.setOnClickListener(v -> finish());
+        logoutButton.setOnClickListener(v -> logout());
+        changeAvatarButton.setOnClickListener(v -> showAvatarPicker());
+        
+        // Add click listener for save preferences button if it exists
+        if (savePreferencesButton != null) {
+            savePreferencesButton.setOnClickListener(v -> saveUserPreferences());
+        }
+    }
+
+    private void showAvatarPicker() {
+        AvatarPickerDialog dialog = new AvatarPickerDialog(this, avatarPath -> {
+            currentAvatarPath = avatarPath;
+            avatarImageView.setImageDrawable(avatarManager.getAvatarDrawable(avatarPath));
+        });
+        dialog.show();
+    }
+
+    private void loadUserData() {
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user == null) {
+            Log.e(TAG, "No user signed in");
+            Toast.makeText(this, "No user signed in", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+            return;
+        }
+
+        Log.d(TAG, "Loading data for user: " + user.getUid());
+        
+        DocumentReference userRef = db.collection("users").document(user.getUid());
+        userRef.get()
+            .addOnSuccessListener(document -> {
+                if (document.exists()) {
+                    Log.d(TAG, "Document data: " + document.getData());
+                    
+                    // Get user data with null checks
+                    String name = document.getString("name");
+                    String username = document.getString("username");
+                    String email = document.getString("email");
+                    currentAvatarPath = document.getString("avatarPath");
+
+                    // Update UI
+                    if (name != null) nameEditText.setText(name);
+                    if (username != null) usernameEditText.setText(username);
+                    if (email != null) {
+                        emailEditText.setText(email);
+                    } else {
+                        emailEditText.setText(user.getEmail());
+                    }
+
+                    // Load avatar
+                    if (currentAvatarPath != null) {
+                        avatarImageView.setImageDrawable(avatarManager.getAvatarDrawable(currentAvatarPath));
+                    } else {
+                        // Set default avatar
+                        currentAvatarPath = avatarManager.getDefaultAvatarPath();
+                        if (currentAvatarPath != null) {
+                            avatarImageView.setImageDrawable(avatarManager.getAvatarDrawable(currentAvatarPath));
+                        }
+                    }
+                } else {
+                    Log.d(TAG, "No such document, creating new user profile");
+                    createNewUserProfile(user);
+                }
+            })
+            .addOnFailureListener(e -> {
+                Log.e(TAG, "Error loading profile", e);
+                Toast.makeText(this, "Error loading profile: " + e.getMessage(), 
+                             Toast.LENGTH_SHORT).show();
+            });
+    }
+
+    private void createNewUserProfile(FirebaseUser user) {
+        Map<String, Object> userData = new HashMap<>();
+        userData.put("uid", user.getUid());
+        userData.put("email", user.getEmail());
+        userData.put("name", "");
+        userData.put("username", "");
+        userData.put("avatarPath", avatarManager.getDefaultAvatarPath());
+
+        db.collection("users").document(user.getUid())
+            .set(userData)
+            .addOnSuccessListener(aVoid -> {
+                Log.d(TAG, "User profile created successfully");
+                loadUserData(); // Reload data after creation
+            })
+            .addOnFailureListener(e -> {
+                Log.e(TAG, "Error creating user profile", e);
+                Toast.makeText(this, "Error creating profile: " + e.getMessage(),
+                             Toast.LENGTH_SHORT).show();
+            });
+    }
+
+    private void saveUserData() {
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user == null) {
+            Log.e(TAG, "No user signed in during save");
+            return;
+        }
+
+            String name = nameEditText.getText().toString().trim();
+            String username = usernameEditText.getText().toString().trim();
+
+        Map<String, Object> updates = new HashMap<>();
+        updates.put("name", name);
+        updates.put("username", username);
+        updates.put("avatarPath", currentAvatarPath);
+
+        Log.d(TAG, "Saving user data: " + updates);
+
+        DocumentReference userRef = db.collection("users").document(user.getUid());
+        userRef.update(updates)
+            .addOnSuccessListener(aVoid -> {
+                Log.d(TAG, "Profile updated successfully");
+                saveUserPreferences(); // Save preferences after profile update
+            })
+            .addOnFailureListener(e -> {
+                Log.e(TAG, "Error updating profile", e);
+                Toast.makeText(this, "Error saving profile: " + e.getMessage(),
+                             Toast.LENGTH_SHORT).show();
+            });
+    }
+
+    private void logout() {
+        mAuth.signOut();
+        startActivity(new Intent(this, LoginActivity.class));
+        finish();
+    }
+
+    private void loadUserPreferences() {
+        preferencesManager.loadPreferences(new PreferencesManager.PreferencesCallback() {
+            @Override
+            public void onSuccess() {
+                // Not used for loading
+            }
+            
+            @Override
+            public void onError(String error) {
+                Toast.makeText(UserProfileActivity.this, error, Toast.LENGTH_SHORT).show();
+            }
+            
+            @Override
+            public void onPreferencesLoaded(Map<String, List<String>> preferences) {
+                updateUI(preferences);
+            }
+        });
+    }
+
+    private void saveUserPreferences() {
+        Log.d(TAG, "Saving user preferences...");
+        preferencesManager.savePreferences(new PreferencesManager.PreferencesCallback() {
+            @Override
+            public void onSuccess() {
+                Log.d(TAG, "Preferences saved successfully");
+                Toast.makeText(UserProfileActivity.this, R.string.preferences_saved, Toast.LENGTH_SHORT).show();
+            }
+            
+            @Override
+            public void onError(String error) {
+                Log.e(TAG, "Error saving preferences: " + error);
+                Toast.makeText(UserProfileActivity.this, error, Toast.LENGTH_SHORT).show();
+            }
+            
+            @Override
+            public void onPreferencesLoaded(Map<String, List<String>> preferences) {
+                // Not used for saving
+            }
+        });
+    }
+
+    private void setupToolbar() {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle(R.string.profile);
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+}

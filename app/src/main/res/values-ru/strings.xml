@@ -113,6 +113,7 @@
     <string name="first_connector">Первый разъем</string>
     <string name="second_connector">Второй разъем</string>
     <string name="grammar_exercise">Грамматическое упражнение</string>
+    <string name="your_answer">Ваш ответ</string>
     <string name="correct_answer">Правильный!</string>
     <string name="incorrect_answer">Неверно. Попробуйте еще раз!</string>
     <string name="available_words">Доступные слова</string>
@@ -138,4 +139,17 @@
     <string name="results">Результаты</string>
     <string name="ok">ОК</string>
     <string name="correct">Верно!</string>
+    <string name="watch_on_youtube">Смотреть на YouTube</string>
+    <string name="select_level">Выбрать уровень</string>
+    <string name="questions">Вопросы</string>
+    <string name="grammar">Грамматика</string>
+    <string name="building">Строительство</string>
+    <string name="select_one_answer">Выберите один ответ</string>
+    <string name="select_multiple_answers">Выберите несколько ответов</string>
+    <string name="check_answer">Проверить</string>
+    <string name="next">Далее</string>
+    <string name="show_results">Показать результаты</string>
+    <string name="correct_answers">Правильные ответы: %1$d/%2$d</string>
+    <string name="question_number">Вопрос %1$d</string>
+    <string name="error_loading_script">Ошибка загрузки содержимого скрипта</string>
 </resources> 

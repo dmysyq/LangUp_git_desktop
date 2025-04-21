@@ -11,60 +11,41 @@
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-
-            <TextView
-                android:id="@+id/titleTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"/>
-
-            <Button
-                android:id="@+id/toggleTranslationButton"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_marginEnd="16dp"
-                android:text="Show Translation"
-                android:textColor="@android:color/white"
-                android:background="@drawable/toggle_button_background"/>
-
-        </LinearLayout>
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
     </androidx.appcompat.widget.Toolbar>
 
-    <FrameLayout
+    <Button
+        android:id="@+id/toggleTranslationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/show_translation"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vocabulary_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:padding="8dp"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/vocabularyRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:padding="8dp"/>
-
-        <TextView
-            android:id="@+id/partsOfSpeechTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="@android:color/white"
-            android:elevation="4dp"
-            android:padding="16dp"
-            android:text="[n] - noun,  [v] - verb, [phv] - phrasal verb,  [adj] - adjective,  [exp] - expression"
-            android:textColor="@android:color/black"
-            android:textSize="14sp"/>
-
-    </FrameLayout>
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:visibility="gone"/>
 
 </LinearLayout> 

@@ -11,50 +11,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:textStyle="bold"
-        tools:text="Fill in the blank: I ___ to school." />
+        android:textStyle="bold" />
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/userAnswerText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:orientation="horizontal">
+        android:textSize="14sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your answer: "
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/userAnswerText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            tools:text="go" />
-
-    </LinearLayout>
-
-    <LinearLayout
+    <TextView
+        android:id="@+id/correctAnswerText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Correct answer: "
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/correctAnswerText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            tools:text="went" />
-
-    </LinearLayout>
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/explanationText"
@@ -63,8 +34,6 @@
         android:layout_marginTop="8dp"
         android:textSize="14sp"
         android:textStyle="italic"
-        android:visibility="gone"
-        tools:text="We use 'went' as the past tense of 'go'"
-        tools:visibility="visible" />
+        android:visibility="gone" />
 
 </LinearLayout> 

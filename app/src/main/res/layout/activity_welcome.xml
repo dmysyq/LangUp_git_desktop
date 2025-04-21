@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:background="@color/background_primary"
-    tools:context=".WelcomeActivity">
+    tools:context=".presentation.ui.auth.WelcomeActivity">
 
     <TextView
         android:id="@+id/titleTextView"

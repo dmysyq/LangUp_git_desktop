@@ -45,6 +45,8 @@ dependencies {
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("com.google.android.flexbox:flexbox:3.0.0")
     implementation("org.jsoup:jsoup:1.15.3")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
 
     // Firebase
     implementation(platform("com.google.firebase:firebase-bom:32.7.2"))
