@@ -1,5 +1,10 @@
 [versions]
 agp = "8.4.0"
+compiler = "4.16.0"
+flexbox = "3.0.0"
+glide = "4.16.0"
+gson = "2.10.1"
+jsoup = "1.15.3"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
@@ -15,8 +20,18 @@ playServicesTasks = "18.3.0"
 firebaseAuthVersion = "23.2.0"
 annotation = "1.7.1"
 firebaseFirestore = "25.1.3"
+playServicesTasksVersion = "18.1.0"
 
 [libraries]
+com-google-firebase-firebase-auth = { module = "com.google.firebase:firebase-auth" }
+compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "compiler" }
+firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
+flexbox = { module = "com.google.android.flexbox:flexbox", version.ref = "flexbox" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+google-firebase-database = { module = "com.google.firebase:firebase-database" }
+google-firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+jsoup = { module = "org.jsoup:jsoup", version.ref = "jsoup" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -27,10 +42,12 @@ constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayo
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 firebase-crashlytics-buildtools = { group = "com.google.firebase", name = "firebase-crashlytics-buildtools", version.ref = "firebaseCrashlyticsBuildtools" }
+play-services-base = { module = "com.google.android.gms:play-services-base", version.ref = "playServicesTasks" }
 play-services-tasks = { group = "com.google.android.gms", name = "play-services-tasks", version.ref = "playServicesTasks" }
 google-firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuthVersion" }
 annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
 firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
+play-services-tasks-v1810 = { module = "com.google.android.gms:play-services-tasks", version.ref = "playServicesTasksVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

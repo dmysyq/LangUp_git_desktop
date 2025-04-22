@@ -8,7 +8,6 @@ import com.example.langup.data.local.JsonLoader;
 import com.example.langup.domain.model.Series;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class ContentManager {
     private static final String TAG = "ContentManager";
@@ -32,7 +31,7 @@ public class ContentManager {
 
     private void loadContent() {
         try {
-            seriesList = jsonLoader.loadSeriesFromFile("wednesday.json");
+            seriesList = jsonLoader.loadSeriesFromFile("series/wednesday.json");
             Log.d(TAG, "Loaded " + seriesList.size() + " series");
         } catch (Exception e) {
             Log.e(TAG, "Error loading content", e);

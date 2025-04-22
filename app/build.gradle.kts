@@ -35,30 +35,30 @@ android {
 }
 
 dependencies {
-    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
     
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.annotation)
-    implementation("com.google.code.gson:gson:2.10.1")
-    implementation("com.google.android.flexbox:flexbox:3.0.0")
-    implementation("org.jsoup:jsoup:1.15.3")
-    implementation("com.github.bumptech.glide:glide:4.16.0")
-    annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
+    implementation(libs.gson)
+    implementation(libs.flexbox)
+    implementation(libs.jsoup)
+    implementation(libs.glide)
+    annotationProcessor(libs.compiler)
 
     // Firebase
-    implementation(platform("com.google.firebase:firebase-bom:32.7.2"))
-    implementation("com.google.firebase:firebase-auth")
-    implementation("com.google.firebase:firebase-database")
-    implementation("com.google.firebase:firebase-firestore")
-    implementation("com.google.firebase:firebase-crashlytics")
+    implementation(platform("com.google.firebase:firebase-bom:33.12.0"))
+    implementation(libs.com.google.firebase.firebase.auth)
+    implementation(libs.google.firebase.database)
+    implementation(libs.google.firebase.firestore)
+    implementation(libs.firebase.crashlytics)
     
     // Google Play Services
-    implementation("com.google.android.gms:play-services-auth:20.7.0")
-    implementation("com.google.android.gms:play-services-base:18.3.0")
-    implementation("com.google.android.gms:play-services-tasks:18.1.0")
+    implementation("com.google.android.gms:play-services-auth:21.3.0")
+    implementation(libs.play.services.base)
+    implementation(libs.play.services.tasks.v1810)
     
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
