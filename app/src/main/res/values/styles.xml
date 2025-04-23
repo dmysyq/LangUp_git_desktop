@@ -167,4 +167,13 @@
         <item name="thumbRadius">6dp</item>
         <item name="haloColor">@color/primary</item>
     </style>
+
+    <style name="GrammarOptionButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
 </resources> 

@@ -162,4 +162,7 @@
     <string name="correct_answers">Правильные ответы: %1$d/%2$d</string>
     <string name="question_number">Вопрос %1$d</string>
     <string name="error_loading_script">Ошибка загрузки содержимого скрипта</string>
-</resources> 
+    <string name="watch_video_first">Посмотрите это видео</string>
+    <string name="complete_levels_after">После просмотра видео пройдите уровни ниже</string>
+    <string name="level_selection">Выбор уровня</string>
+</resources>

@@ -47,6 +47,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
         int difficulty = getIntent().getIntExtra("difficulty", 0);
         String accent = getIntent().getStringExtra("accent");
         videoUrl = getIntent().getStringExtra("video_url");
+        String grammarJson = getIntent().getStringExtra("grammar");
         
         Log.d(TAG, "onCreate: Received data - seriesId: " + seriesId + 
               ", title: " + title + 
@@ -54,6 +55,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
               ", difficulty: " + difficulty + 
               ", accent: " + accent + 
               ", videoUrl: " + videoUrl);
+        Log.d(TAG, "onCreate: Received grammar JSON: " + grammarJson);
 
         initializeViews();
         setupToolbar();
@@ -121,8 +123,12 @@ public class LevelSelectionActivity extends AppCompatActivity {
 
         grammarButton.setOnClickListener(v -> {
             Log.d(TAG, "Grammar button clicked");
+            String grammarJson = getIntent().getStringExtra("grammar");
+            Log.d(TAG, "Grammar data being passed: " + grammarJson);
             Intent intent = new Intent(this, GrammarActivity.class);
             intent.putExtra("series_id", seriesId);
+            intent.putExtra("title", titleTextView.getText().toString());
+            intent.putExtra("grammar", grammarJson);
             startActivity(intent);
         });
 

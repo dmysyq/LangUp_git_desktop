@@ -112,4 +112,5 @@
 
     <color name="character_name">#3F51B5</color>
     <color name="stage_direction">#757575</color>
+    <color name="default_option">#36B2F4</color>
 </resources>
