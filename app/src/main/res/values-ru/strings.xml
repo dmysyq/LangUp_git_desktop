@@ -61,7 +61,6 @@
     <string name="save">Сохранить</string>
     <string name="settings_saved">Настройки сохранены</string>
     <string name="back">Назад</string>
-    <string name="default_web_client_id">YOUR_WEB_CLIENT_ID</string>
     <string name="settings">Настройки</string>
     <string name="appearance">Внешний вид</string>
     <string name="notifications">Уведомления</string>
@@ -137,6 +136,7 @@
     <string name="new_zealand">Новозеландский</string>
     <string name="australian">Австралийский</string>
     <string name="other_accent">Другой</string>
+    <string name="apply">Применить</string>
     <string name="score_format">Оценка: %1$d/%2$d</string>
     <string name="excellent_score">Превосходно! Продолжайте в том же духе!</string>
     <string name="good_score">Хорошая работа! Продолжайте практиковаться, чтобы улучшить свои навыки.</string>
@@ -165,4 +165,18 @@
     <string name="watch_video_first">Посмотрите это видео</string>
     <string name="complete_levels_after">После просмотра видео пройдите уровни ниже</string>
     <string name="level_selection">Выбор уровня</string>
+    <string name="title_home">главная</string>
+    <string name="title_profile">профиль</string>
+    <string name="title_settings">настройки</string>
+    <string name="next_question">следующий вопрос</string>
+    <string name="show_translation">показать перевод</string>
+    <string name="filter_series">Фильтр серий</string>
+    <string name="search_hint">поиск</string>
+    <string name="filter">фильтр</string>
+    <string name="series_image">Изображение серии</string>
+    <string name="source">Источник</string>
+    <string name="all_sources">Все источники</string>
+    <string name="accent_label">Акцент: %1$s</string>
+    <string name="transcript">транскрипт</string>
+    <string name="error_loading_questions">Ошибка загрузки вопросов</string>
 </resources>
