@@ -16,9 +16,6 @@ public class Episode {
     @SerializedName("videoUrl")
     private String videoUrl;
 
-    @SerializedName("subtitles")
-    private List<Subtitle> subtitles;
-
     @SerializedName("transcript")
     private String transcript;
 

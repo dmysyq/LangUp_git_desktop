@@ -16,9 +16,9 @@ public class SeriesFilter {
 
     public List<Series> filter(List<Series> series) {
         return series.stream()
-                .filter(s -> matchesSearchQuery(s))
-                .filter(s -> matchesDifficulty(s))
-                .filter(s -> matchesAccent(s))
+                .filter(this::matchesSearchQuery)
+                .filter(this::matchesDifficulty)
+                .filter(this::matchesAccent)
                 .collect(Collectors.toList());
     }
 

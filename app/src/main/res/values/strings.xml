@@ -50,11 +50,8 @@
     <string name="welcome">Welcome</string>
     
     <!-- Social Authentication -->
-    <string name="continue_with_facebook">Continue with Facebook</string>
     <string name="continue_with_google">Continue with Google</string>
     <string name="or">or</string>
-    <string name="or_sign_in_with">or sign in with</string>
-    <string name="or_sign_up_with">or sign up with</string>
     
     <!-- Settings -->
     <string name="appearance">Appearance</string>
@@ -106,7 +103,7 @@
     <string name="grammar_exercise">Grammar Exercise</string>
     <string name="questions">Questions</string>
     <string name="questions_title">Questions</string>
-    <string name="transcript">transript</string>
+    <string name="transcript">transcript</string>
     <string name="translation">Translation</string>
     <string name="vocabulary">Vocabulary</string>
     <string name="word">Word</string>
@@ -162,7 +159,7 @@
     <string name="continue_button">Continue</string>
     <string name="enter_answer">Enter your answer</string>
     <string name="error_loading_episode">Error loading episode</string>
-    <string name="error_loading_questions">error loading questions\n</string>
+    <string name="error_loading_questions">error loading questions</string>
     <string name="error_loading_script">Error loading script content</string>
     <string name="error_loading_series">Error loading series data</string>
     <string name="error_loading_vocabulary">Error loading vocabulary</string>
@@ -170,7 +167,6 @@
     <string name="excellent_job">Excellent! Keep up the great work!</string>
     <string name="excellent_score">Excellent! Keep up the great work!</string>
     <string name="fill_in_the_blanks">Fill in the blanks with the correct words</string>
-    <string name="first_connector">First connector</string>
     <string name="good_job">Good job! Keep practicing to improve.</string>
     <string name="good_score">Good job! Keep practicing to improve.</string>
     <string name="hide_answers">Hide answers</string>
@@ -182,12 +178,11 @@
     <string name="reset">Reset</string>
     <string name="results">Results</string>
     <string name="score_format">Score: %1$d/%2$d</string>
-    <string name="second_connector">Second connector</string>
     <string name="select_multiple_answers">Select multiple answers</string>
     <string name="select_one_answer">Select one answer</string>
     <string name="show_answers">Show answers</string>
     <string name="show_results">Show Results</string>
-    <string name="show_translation">show-translation</string>
+    <string name="show_translation">show translation</string>
     <string name="your_answer">Your answer</string>
     <string name="apply">Apply</string>
     <string name="cancel">Cancel</string>

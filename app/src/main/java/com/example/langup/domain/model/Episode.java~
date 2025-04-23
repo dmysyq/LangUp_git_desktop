@@ -3,7 +3,7 @@ package com.example.langup.domain.model;
 import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
-public class Video {
+public class Episode {
     @SerializedName("id")
     private String id;
 
@@ -13,20 +13,20 @@ public class Video {
     @SerializedName("description")
     private String description;
 
-    @SerializedName("thumbnail_url")
-    private String thumbnailUrl;
-
-    @SerializedName("video_url")
+    @SerializedName("videoUrl")
     private String videoUrl;
-
-    @SerializedName("duration")
-    private int duration;
 
     @SerializedName("subtitles")
     private List<Subtitle> subtitles;
 
     @SerializedName("transcript")
-    private Transcript transcript;
+    private String transcript;
+
+    @SerializedName("duration")
+    private int duration;
+
+    @SerializedName("order")
+    private int order;
 
     // ... existing code ...
 } 
