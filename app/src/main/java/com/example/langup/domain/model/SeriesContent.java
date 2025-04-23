@@ -60,6 +60,7 @@ public class SeriesContent implements Serializable {
         private String question;
         private List<String> options;
         private List<Integer> correctAnswers;
+        private Integer correctAnswer;
 
         public Question() {
             options = new ArrayList<>();
@@ -80,6 +81,17 @@ public class SeriesContent implements Serializable {
 
         public List<Integer> getCorrectAnswers() { return correctAnswers; }
         public void setCorrectAnswers(List<Integer> correctAnswers) { this.correctAnswers = correctAnswers; }
+
+        public Integer getCorrectAnswer() { return correctAnswer; }
+        public void setCorrectAnswer(Integer correctAnswer) { this.correctAnswer = correctAnswer; }
+
+        public boolean isSingleChoice() {
+            return "single_choice".equals(type);
+        }
+
+        public boolean isMultipleChoice() {
+            return "multiple_choice".equals(type);
+        }
     }
 
     public static class Grammar implements Serializable {

@@ -113,14 +113,16 @@ public class LevelSelectionActivity extends AppCompatActivity {
         questionsButton.setOnClickListener(v -> {
             Log.d(TAG, "Questions button clicked");
             Intent intent = new Intent(this, QuestionsActivity.class);
-            intent.putExtra("seriesId", seriesId);
+            intent.putExtra("series_id", seriesId);
+            intent.putExtra("title", titleTextView.getText().toString());
+            intent.putExtra("questions", getIntent().getStringExtra("questions"));
             startActivity(intent);
         });
 
         grammarButton.setOnClickListener(v -> {
             Log.d(TAG, "Grammar button clicked");
             Intent intent = new Intent(this, GrammarActivity.class);
-            intent.putExtra("seriesId", seriesId);
+            intent.putExtra("series_id", seriesId);
             startActivity(intent);
         });
 

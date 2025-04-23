@@ -134,112 +134,112 @@
         "questions": [
           {
             "id": "q1",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Today is Joel's birthday.",
             "options": ["True", "False"],
             "correctAnswer": 0
           },
           {
             "id": "q2",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Sarah made pancakes for Joel.",
             "options": ["True", "False"],
             "correctAnswer": 1
           },
           {
             "id": "q3",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Joel loves pancakes.",
             "options": ["True", "False"],
             "correctAnswer": 1
           },
           {
             "id": "q4",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "There is some eggshell in Joel's eggs.",
             "options": ["True", "False"],
             "correctAnswer": 0
           },
           {
             "id": "q5",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Joel is 36 years old.",
             "options": ["True", "False"],
             "correctAnswer": 0
           },
           {
             "id": "q6",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "There is enough food for Tommy.",
             "options": ["True", "False"],
             "correctAnswer": 1
           },
           {
             "id": "q7",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Joel thinks that 'love' and 'dependent' are the same.",
             "options": ["True", "False"],
             "correctAnswer": 1
           },
           {
             "id": "q8",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Joel wants to hire another worker so that they can finish earlier.",
             "options": ["True", "False"],
             "correctAnswer": 1
           },
           {
             "id": "q9",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Joel is going to have to work late today.",
             "options": ["True", "False"],
             "correctAnswer": 0
           },
           {
             "id": "q10",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Sarah promises to get a cake for Joel.",
             "options": ["True", "False"],
             "correctAnswer": 1
           },
           {
             "id": "q11",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Jakarta is in the Middle East.",
             "options": ["True", "False"],
             "correctAnswer": 1
           },
           {
             "id": "q12",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Joel and Tommy are good at geography.",
             "options": ["True", "False"],
             "correctAnswer": 1
           },
           {
             "id": "q13",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Joel's t-shirt is inside out.",
             "options": ["True", "False"],
             "correctAnswer": 0
           },
           {
             "id": "q14",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Joel eats some of the neighbor's biscuits.",
-            "Responsive": ["True", "False"],
+            "options": ["True", "False"],
             "correctAnswer": 1
           },
           {
             "id": "q15",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Sarah says she will visit the neighbors later.",
             "options": ["True", "False"],
             "correctAnswer": 0
           },
           {
             "id": "q16",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Joel doesn't want Tommy to smoke in the truck.",
             "options": ["True", "False"],
             "correctAnswer": 0

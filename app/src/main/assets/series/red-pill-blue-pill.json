@@ -84,63 +84,63 @@
         "questions": [
           {
             "id": "q1",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Neo believes in fate.",
             "options": ["True", "False"],
             "correctAnswer": 1
           },
           {
             "id": "q2",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Morpheus says Neo looks like he is expecting to wake up from a dream.",
             "options": ["True", "False"],
             "correctAnswer": 0
           },
           {
             "id": "q3",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Neo says that he has always felt that something is wrong with the world.",
             "options": ["True", "False"],
             "correctAnswer": 1
           },
           {
             "id": "q4",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Neo has never heard of the Matrix before.",
             "options": ["True", "False"],
             "correctAnswer": 1
           },
           {
             "id": "q5",
-            "type": "true_false",
-            "question": "Morpheus says the Matrix is only in people’s minds.",
+            "type": "single_choice",
+            "question": "Morpheus says the Matrix is only in people's minds.",
             "options": ["True", "False"],
             "correctAnswer": 1
           },
           {
             "id": "q6",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Morpheus compares the Matrix to slavery.",
             "options": ["True", "False"],
             "correctAnswer": 0
           },
           {
             "id": "q7",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Morpheus gives Neo a chance to return to his old life.",
             "options": ["True", "False"],
             "correctAnswer": 0
           },
           {
             "id": "q8",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "Morpheus offers Neo two choices: the truth or his old life.",
             "options": ["True", "False"],
             "correctAnswer": 0
           },
           {
             "id": "q9",
-            "type": "true_false",
+            "type": "single_choice",
             "question": "If Neo takes the blue pill, he will see the truth.",
             "options": ["True", "False"],
             "correctAnswer": 1

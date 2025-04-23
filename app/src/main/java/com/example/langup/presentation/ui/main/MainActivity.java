@@ -166,6 +166,7 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
         intent.putExtra("video_url", series.getVideoUrl());
         intent.putExtra("transcript", series.getContent().getTranscript().getFull());
         intent.putExtra("vocabulary", new Gson().toJson(series.getContent().getVocabulary()));
+        intent.putExtra("questions", new Gson().toJson(series.getContent().getQuestions()));
         Log.d(TAG, "Starting LevelSelectionActivity with series ID: " + series.getId());
         startActivity(intent);
     }
