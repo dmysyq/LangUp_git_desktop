@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.Log;
 
 import com.example.langup.domain.model.Series;
+import com.example.langup.domain.model.SeriesWrapper;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -11,10 +12,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class JsonLoader {
     private static final String TAG = "JsonLoader";
+    private static final String SERIES_DIR = "series";
     private static final Gson gson = new Gson();
     private final Context context;
 
@@ -47,19 +50,25 @@ public class JsonLoader {
      */
     public void loadSeries(SeriesCallback callback) {
         try {
-            List<Series> series = new ArrayList<>();
-            String[] files = context.getAssets().list("");
+            List<Series> allSeries = new ArrayList<>();
+            String[] files = context.getAssets().list(SERIES_DIR);
+            
             if (files != null) {
+                Log.d(TAG, "Found files in series directory: " + Arrays.toString(files));
                 for (String file : files) {
-                    if (file.endsWith(".json") && !file.equals("series.json") && !file.equals("content.json")) {
-                        Series seriesItem = loadSeriesFromAssets(file);
-                        if (seriesItem != null) {
-                            series.add(seriesItem);
+                    if (file.endsWith(".json")) {
+                        Log.d(TAG, "Loading file: " + file);
+                        Series series = loadSeriesFromAssets(file);
+                        if (series != null) {
+                            allSeries.add(series);
+                            Log.d(TAG, "Added series: " + series.getMetadata().getTitle());
                         }
                     }
                 }
             }
-            callback.onSuccess(series);
+            
+            Log.d(TAG, "Total series loaded: " + allSeries.size());
+            callback.onSuccess(allSeries);
         } catch (IOException e) {
             Log.e(TAG, "Error listing series from assets: " + e.getMessage());
             callback.onError("Error loading series: " + e.getMessage());
@@ -73,7 +82,10 @@ public class JsonLoader {
      */
     private Series loadSeriesFromAssets(String filename) {
         try {
-            InputStream is = context.getAssets().open(filename);
+            String fullPath = SERIES_DIR + "/" + filename;
+            Log.d(TAG, "Loading series from: " + fullPath);
+            
+            InputStream is = context.getAssets().open(fullPath);
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
             StringBuilder sb = new StringBuilder();
             String line;
@@ -82,11 +94,35 @@ public class JsonLoader {
             }
             reader.close();
 
-            Series series = gson.fromJson(sb.toString(), Series.class);
+            String jsonContent = sb.toString();
+            Log.d(TAG, "JSON content for " + filename + ": " + jsonContent);
 
-            return series;
+            try {
+                SeriesWrapper wrapper = gson.fromJson(jsonContent, SeriesWrapper.class);
+                if (wrapper != null && wrapper.getSeries() != null && !wrapper.getSeries().isEmpty()) {
+                    Series series = wrapper.getSeries().get(0);
+                    if (series != null) {
+                        if (series.getMetadata() != null) {
+                            Log.d(TAG, "Successfully parsed series: " + series.getMetadata().getTitle());
+                        } else {
+                            Log.e(TAG, "Series metadata is null for file: " + filename);
+                        }
+                    } else {
+                        Log.e(TAG, "Failed to parse series from JSON for file: " + filename);
+                    }
+                    return series;
+                } else {
+                    Log.e(TAG, "No series found in wrapper for file: " + filename);
+                    return null;
+                }
+            } catch (Exception e) {
+                Log.e(TAG, "Error parsing JSON for file " + filename + ": " + e.getMessage());
+                e.printStackTrace();
+                return null;
+            }
         } catch (IOException e) {
             Log.e(TAG, "Error loading series from assets: " + e.getMessage());
+            e.printStackTrace();
             return null;
         }
     }

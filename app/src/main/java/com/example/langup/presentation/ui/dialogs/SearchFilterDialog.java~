@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -38,7 +37,7 @@ public class SearchFilterDialog extends Dialog {
     }
 
     public SearchFilterDialog(@NonNull Context context, OnSearchFilterListener listener) {
-        super(context, R.style.DialogTheme);
+        super(context, R.style.Theme_MaterialComponents_Light_Dialog_Alert);
         this.listener = listener;
         this.preferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
     }
@@ -47,12 +46,6 @@ public class SearchFilterDialog extends Dialog {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog_search_filter);
-
-        // Настройка размеров диалога
-        if (getWindow() != null) {
-            getWindow().setBackgroundDrawableResource(R.drawable.dialog_background);
-            getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        }
 
         initializeViews();
         setupSpinners();
@@ -74,19 +67,8 @@ public class SearchFilterDialog extends Dialog {
     private void setupSlider() {
         difficultySlider.addOnChangeListener((slider, value, fromUser) -> {
             int intValue = (int) value;
-            if (intValue == 0) {
-                difficultyValue.setText(R.string.all_levels);
-            } else {
-                difficultyValue.setText(String.valueOf(intValue));
-            }
+            difficultyValue.setText(String.valueOf(intValue));
         });
-
-        // Установка начального значения
-        if (difficultySlider.getValue() == 0) {
-            difficultyValue.setText(R.string.all_levels);
-        } else {
-            difficultyValue.setText(String.valueOf((int) difficultySlider.getValue()));
-        }
     }
 
     private void setupSpinners() {
@@ -148,16 +130,12 @@ public class SearchFilterDialog extends Dialog {
     }
 
     private void loadSavedState() {
-        int savedDifficulty = preferences.getInt(KEY_DIFFICULTY, 0);
+        int savedDifficulty = preferences.getInt(KEY_DIFFICULTY, 1);
         String savedAccent = preferences.getString(KEY_ACCENT, "");
         String savedSource = preferences.getString(KEY_SOURCE, "");
 
         difficultySlider.setValue(savedDifficulty);
-        if (savedDifficulty == 0) {
-            difficultyValue.setText(R.string.all_levels);
-        } else {
-            difficultyValue.setText(String.valueOf(savedDifficulty));
-        }
+        difficultyValue.setText(String.valueOf(savedDifficulty));
 
         // Установка сохраненного акцента
         if (!savedAccent.isEmpty()) {
@@ -190,8 +168,8 @@ public class SearchFilterDialog extends Dialog {
 
     private void resetToDefaults() {
         preferences.edit().clear().apply();
-        difficultySlider.setValue(0);
-        difficultyValue.setText(R.string.all_levels);
+        difficultySlider.setValue(1);
+        difficultyValue.setText("1");
         accentSpinner.setSelection(0);
         sourceSpinner.setSelection(0);
     }

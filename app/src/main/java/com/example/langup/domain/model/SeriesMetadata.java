@@ -3,17 +3,37 @@ package com.example.langup.domain.model;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import com.google.gson.annotations.SerializedName;
 
 public class SeriesMetadata implements Serializable {
+    @SerializedName("id")
     private String id;
+
+    @SerializedName("title")
     private String title;
+
+    @SerializedName("description")
     private String description;
+
+    @SerializedName("country")
     private String country;
+
+    @SerializedName("accent")
     private String accent;
+
+    @SerializedName("imageUrl")
     private String imageUrl;
+
+    @SerializedName("source")
     private String source;
+
+    @SerializedName("difficulty")
     private int difficulty;
+
+    @SerializedName("genres")
     private List<String> genres;
+
+    @SerializedName("countries")
     private List<String> countries;
 
     public SeriesMetadata() {

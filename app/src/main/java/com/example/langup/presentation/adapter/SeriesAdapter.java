@@ -9,11 +9,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.langup.R;
 import com.example.langup.domain.model.Series;
 import com.example.langup.domain.model.SeriesMetadata;
 
 import java.util.List;
+import android.util.Log;
 
 public class SeriesAdapter extends RecyclerView.Adapter<SeriesAdapter.SeriesViewHolder> {
     private List<Series> seriesList;
@@ -40,11 +42,51 @@ public class SeriesAdapter extends RecyclerView.Adapter<SeriesAdapter.SeriesView
         Series series = seriesList.get(position);
         SeriesMetadata metadata = series.getMetadata();
         
-        holder.titleTextView.setText(metadata.getTitle());
-        holder.descriptionTextView.setText(metadata.getDescription());
+        Log.d("SeriesAdapter", "Binding series: " + metadata.getTitle());
         
-        // Здесь можно добавить загрузку изображения с помощью Glide или Picasso
-        // Glide.with(holder.itemView.getContext()).load(metadata.getImageUrl()).into(holder.imageView);
+        // Set title
+        holder.titleTextView.setText(metadata.getTitle());
+        
+        // Set accent and difficulty
+        holder.accentTextView.setText(metadata.getAccent());
+        holder.difficultyTextView.setText(String.format("Level %d", metadata.getDifficulty()));
+        
+        // Set country and source
+        holder.countryTextView.setText(metadata.getCountry());
+        holder.sourceTextView.setText(metadata.getSource());
+        
+        // Load image using Glide
+        String imageUrl = metadata.getImageUrl();
+        Log.d("SeriesAdapter", "Loading image from URL: " + imageUrl);
+        
+        if (imageUrl != null) {
+            // Extract resource name from path (e.g., "banner/wednesday-banner.png" -> "wednesday_banner")
+            String resourceName = imageUrl.substring(imageUrl.lastIndexOf('/') + 1)
+                    .replace(".png", "")
+                    .replace("-", "_");
+            
+            Log.d("SeriesAdapter", "Loading from drawable: " + resourceName);
+            
+            // Get resource ID
+            int resourceId = holder.itemView.getContext().getResources()
+                    .getIdentifier(resourceName, "drawable", 
+                            holder.itemView.getContext().getPackageName());
+            
+            if (resourceId != 0) {
+                // Load from drawable
+                Glide.with(holder.itemView.getContext())
+                    .load(resourceId)
+                    .placeholder(R.drawable.ic_image_placeholder)
+                    .error(R.drawable.ic_image_placeholder)
+                    .centerCrop()
+                    .into(holder.imageView);
+            } else {
+                Log.e("SeriesAdapter", "Resource not found: " + resourceName);
+                holder.imageView.setImageResource(R.drawable.ic_image_placeholder);
+            }
+        } else {
+            holder.imageView.setImageResource(R.drawable.ic_image_placeholder);
+        }
         
         holder.itemView.setOnClickListener(v -> {
             if (listener != null) {
@@ -60,19 +102,26 @@ public class SeriesAdapter extends RecyclerView.Adapter<SeriesAdapter.SeriesView
 
     public void updateSeries(List<Series> newSeriesList) {
         this.seriesList = newSeriesList;
+        Log.d("SeriesAdapter", "Updated series count: " + (newSeriesList != null ? newSeriesList.size() : 0));
         notifyDataSetChanged();
     }
 
     static class SeriesViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
         TextView titleTextView;
-        TextView descriptionTextView;
+        TextView accentTextView;
+        TextView difficultyTextView;
+        TextView countryTextView;
+        TextView sourceTextView;
 
         SeriesViewHolder(View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.series_image);
             titleTextView = itemView.findViewById(R.id.series_title);
-            descriptionTextView = itemView.findViewById(R.id.series_description);
+            accentTextView = itemView.findViewById(R.id.series_accent);
+            difficultyTextView = itemView.findViewById(R.id.series_difficulty);
+            countryTextView = itemView.findViewById(R.id.series_country);
+            sourceTextView = itemView.findViewById(R.id.series_source);
         }
     }
 } 

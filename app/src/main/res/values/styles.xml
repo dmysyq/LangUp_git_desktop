@@ -98,12 +98,14 @@
     </style>
 
     <!-- Стиль для диалогов -->
-    <style name="DialogTheme" parent="Theme.MaterialComponents.Dialog">
+    <style name="DialogTheme" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="android:windowBackground">@drawable/dialog_background</item>
         <item name="android:windowIsFloating">true</item>
-        <item name="android:windowBackground">@color/background_primary</item>
-        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorAccent">@color/accent</item>
     </style>
 
     <!-- Custom Spinner Style -->
@@ -151,5 +153,18 @@
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+    </style>
+
+    <!-- Стиль для Slider уровней сложности -->
+    <style name="DifficultySlider" parent="Widget.MaterialComponents.Slider">
+        <item name="tickVisible">true</item>
+        <item name="tickColor">@color/text_light</item>
+        <item name="tickColorActive">@color/primary</item>
+        <item name="trackHeight">4dp</item>
+        <item name="trackColor">@color/text_light</item>
+        <item name="trackColorActive">@color/primary</item>
+        <item name="thumbColor">@color/primary</item>
+        <item name="thumbRadius">6dp</item>
+        <item name="haloColor">@color/primary</item>
     </style>
 </resources> 

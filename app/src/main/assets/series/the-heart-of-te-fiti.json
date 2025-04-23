@@ -1,0 +1,330 @@
+{
+  "series": [
+    {
+  "metadata": {
+    "id": 2,
+    "title": "The Heart of Te Fiti",
+    "videoUrl": "https://youtu.be/rKROIpEZO_8?list=TLGGoB41aLSJrNYyMzA0MjAyNQ",
+    "country": "Polynesia",
+    "accent": "Polynesian",
+    "imageUrl": "moana_banner",
+    "source": "Disney",
+    "difficulty": 4,
+    "genres": ["Animation", "Adventure", "Fantasy"],
+    "countries": ["Polynesia"]
+  },
+  "content": {
+    "vocabulary": [
+      {
+        "word": "emerge",
+        "translation": "появляться",
+        "example": "emerge [v] - appear"
+      },
+      {
+        "word": "in time",
+        "translation": "со временем",
+        "example": "in time [exp] - eventually, one day"
+      },
+      {
+        "word": "seek",
+        "translation": "искать",
+        "example": "seek [v] - look for (pp = sought)"
+      },
+      {
+        "word": "possess",
+        "translation": "владеть",
+        "example": "possess [v] - own, have"
+      },
+      {
+        "word": "daring",
+        "translation": "смелый",
+        "example": "daring [adj] - brave"
+      },
+      {
+        "word": "voyage",
+        "translation": "путешествовать по морю",
+        "example": "voyage [v] - travel by sea"
+      },
+      {
+        "word": "vast",
+        "translation": "огромный",
+        "example": "vast [adj] - very large (in area)"
+      },
+      {
+        "word": "demigod",
+        "translation": "полубог",
+        "example": "demigod [n] - a half-god, half-human"
+      },
+      {
+        "word": "trickster",
+        "translation": "обманщик",
+        "example": "trickster [n] - someone who lies and plays tricks"
+      },
+      {
+        "word": "shapeshifter",
+        "translation": "оборотень",
+        "example": "shapeshifter [n] - someone who can change form"
+      },
+      {
+        "word": "crumble",
+        "translation": "разрушаться",
+        "example": "crumble [v] - break into pieces, fall apart"
+      },
+      {
+        "word": "confront",
+        "translation": "противостоять",
+        "example": "confront [v] - meet, face, challenge"
+      },
+      {
+        "word": "struck from the sky",
+        "translation": "сбитый с неба",
+        "example": "struck from the sky [exp] - hit and fell from the sky"
+      },
+      {
+        "word": "deep",
+        "translation": "глубина",
+        "example": "deep [n] - the deep ocean"
+      },
+      {
+        "word": "devour",
+        "translation": "поглощать",
+        "example": "devour [v] - eat up completely"
+      },
+      {
+        "word": "bloodthirsty",
+        "translation": "кровожадный",
+        "example": "bloodthirsty [adj] - wanting to kill, violent"
+      },
+      {
+        "word": "reef",
+        "translation": "риф",
+        "example": "reef [n] - a rocky underwater area"
+      },
+      {
+        "word": "restore",
+        "translation": "восстанавливать",
+        "example": "restore [v] - bring back"
+      },
+      {
+        "word": "fish hook",
+        "translation": "рыболовный крючок",
+        "example": "fish hook [n] - a curved tool used to catch fish"
+      },
+      {
+        "word": "journey",
+        "translation": "путешествовать",
+        "example": "journey [v] - travel"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multiple_choice",
+        "question": "Te Fiti is ______ and ______.",
+        "options": [
+          "a shapeshifter",
+          "a goddess",
+          "an island",
+          "a demon"
+        ],
+        "correctAnswers": [1, 2]
+      },
+      {
+        "id": "q2",
+        "type": "single_choice",
+        "question": "Te Fiti's ______ could create life.",
+        "options": [
+          "fish hook",
+          "heart",
+          "love"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": "q3",
+        "type": "single_choice",
+        "question": "Maui ______ Te Fiti's heart.",
+        "options": [
+          "was given",
+          "stole"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": "q4",
+        "type": "multiple_choice",
+        "question": "Maui was a demigod of ______ and ______.",
+        "options": [
+          "the earth",
+          "the wind",
+          "the fire",
+          "the sea"
+        ],
+        "correctAnswers": [1, 3]
+      },
+      {
+        "id": "q5",
+        "type": "single_choice",
+        "question": "______ created a terrible darkness.",
+        "options": [
+          "Te Fiti",
+          "Te Kā",
+          "Maui"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": "q6",
+        "type": "multiple_choice",
+        "question": "Te Kā was a demon of ______ and ______.",
+        "options": [
+          "earth",
+          "wind",
+          "fire",
+          "sea"
+        ],
+        "correctAnswers": [0, 2]
+      },
+      {
+        "id": "q7",
+        "type": "single_choice",
+        "question": "Te Kā ______ Maui.",
+        "options": [
+          "defeated",
+          "was defeated by"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "id": "q8",
+        "type": "single_choice",
+        "question": "______ is still searching for Te Fiti's heart.",
+        "options": [
+          "Te Fiti",
+          "Te Kā",
+          "Maui"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": "q9",
+        "type": "single_choice",
+        "question": "______ is causing fish to disappear.",
+        "options": [
+          "Te Fiti's heart",
+          "The darkness",
+          "Te Kā"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": "q10",
+        "type": "single_choice",
+        "question": "This story happened ______ years ago.",
+        "options": [
+          "2000",
+          "1000",
+          "200",
+          "100"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": "q11",
+        "type": "single_choice",
+        "question": "Gramma Tala believes someone will one day ______.",
+        "options": [
+          "restore Te Fiti's heart",
+          "travel past the reef",
+          "save everyone",
+          "find Maui"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "id": "q12",
+        "type": "single_choice",
+        "question": "Chief Tui doesn't want ______.",
+        "options": [
+          "anyone to go outside the reef",
+          "Maui to come to their island",
+          "Moana to cry"
+        ],
+        "correctAnswer": 0
+      }
+    ],
+    "grammar": [
+      {
+        "topic": "The Story of Te Fiti",
+        "explanation": "Fill in the blanks with the correct words to complete the story about Te Fiti.",
+        "exercises": [
+          {
+            "id": "g1",
+            "sentence": "In the beginning, there ___ only ocean until the mother island emerged: Te Fiti.",
+            "options": ["was", "were", "is", "are"],
+            "correctAnswer": "was"
+          },
+          {
+            "id": "g2",
+            "sentence": "And Te Fiti shared it ___ the world.",
+            "options": ["with", "to", "for", "by"],
+            "correctAnswer": "with"
+          },
+          {
+            "id": "g3",
+            "sentence": "He was a shapeshifter ___ could change form with the power of his magical fish hook.",
+            "options": ["who", "which", "that", "whom"],
+            "correctAnswer": "who"
+          },
+          {
+            "id": "g4",
+            "sentence": "But without ___ Heart, Te Fiti began ___ crumble.",
+            "options": ["her", "his", "their", "its"],
+            "correctAnswers": ["her", "to"]
+          },
+          {
+            "id": "g5",
+            "sentence": "Maui tried to escape, but he was confronted ___ another ___ sought the heart.",
+            "options": ["by", "who", "that", "which"],
+            "correctAnswers": ["by", "who"]
+          },
+          {
+            "id": "g6",
+            "sentence": "Maui ___ struck from the sky, never to ___ seen again.",
+            "options": ["was", "be", "is", "being"],
+            "correctAnswers": ["was", "be"]
+          },
+          {
+            "id": "g7",
+            "sentence": "They are hiding in the darkness ___ will continue ___ spread.",
+            "options": ["that", "to", "which", "and"],
+            "correctAnswers": ["that", "to"]
+          },
+          {
+            "id": "g8",
+            "sentence": "They ___ draining the life from island after island until every one of us ___ devoured.",
+            "options": ["are", "is", "was", "were"],
+            "correctAnswers": ["are", "is"]
+          },
+          {
+            "id": "g9",
+            "sentence": "But one day, the Heart ___ be found ___ someone ___ would journey beyond the reef.",
+            "options": ["will", "by", "who", "that"],
+            "correctAnswers": ["will", "by", "who"]
+          },
+          {
+            "id": "g10",
+            "sentence": "We're safe here. There ___ no darkness. There ___ no monsters.",
+            "options": ["is", "are", "was", "were"],
+            "correctAnswers": ["is", "are"]
+          }
+        ]
+      }
+    ],
+    "transcript": {
+      "full": "Gramma Tala: In the beginning, there was only ocean until the mother island emerged: Te Fiti.\n\nHer heart held the greatest power ever known. It could create life itself. And Te Fiti shared it with the world.\n\nBut in time, some began to seek Te Fiti's heart. They believed that they could possess it, the great power of creation would be theirs.\n\nAnd one day, the most daring of them all voyaged across the vast ocean to take it.\n\nHe was a Demigod of the wind and sea. He was a warrior. A trickster. A shapeshifter who could change form with the power of his magical fish hook. And his name was Maui.\n\nBut without her heart, Te Fiti began to crumble, giving birth to a terrible darkness.\n\nMaui tried to escape, but was confronted by another who sought the heart: Te Kā, a demon of earth and fire.\n\nMaui was struck from the sky, never to be seen again. And his magical fish hook and the heart of Te Fiti, were lost to the sea.\n\nWhere even now, 1000 years later, Te Kā and the demons of the deep still hunt for the heart, hiding in the darkness that will continue to spread, chasing away our fish, draining the life from island after island until every one of us is devoured by the bloodthirsty jaws of inescapable death!\n\nBut one day, the heart will be found by someone who would journey beyond the reef, find Maui, deliver him across the great ocean to restore Te Fiti's heart and save us all.\n\nChief Tui: Thank you, Mother, that's enough.\n\nMoana: Papa!\n\nChief Tui: No one goes outside the reef. We're safe here. There is no darkness. There are no monsters."
+    }
+      }
+    }
+  ]
+}

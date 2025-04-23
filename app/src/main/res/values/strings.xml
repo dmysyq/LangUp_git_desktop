@@ -158,7 +158,10 @@
     <string name="title_settings">settings</string>
     <string name="next_question">next question</string>
     <string name="show_translation">show-translation</string>
-    <string name="filter_series">filter series</string>
+    <string name="filter_series">Filter Series</string>
     <string name="search_hint">search hint</string>
     <string name="filter">filter</string>
+    <string name="series_image">Series image</string>
+    <string name="source">Source</string>
+    <string name="all_sources">All Sources</string>
 </resources>

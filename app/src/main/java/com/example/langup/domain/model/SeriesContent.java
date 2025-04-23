@@ -3,8 +3,11 @@ package com.example.langup.domain.model;
 import java.io.Serializable;
 import java.util.List;
 import java.util.ArrayList;
+import com.google.gson.annotations.SerializedName;
 
 public class SeriesContent implements Serializable {
+    @SerializedName("episodes")
+    private List<Episode> episodes;
     private List<VocabularyItem> vocabulary;
     private List<Question> questions;
     private List<Grammar> grammar;

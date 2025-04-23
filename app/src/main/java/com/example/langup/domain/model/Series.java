@@ -2,9 +2,13 @@ package com.example.langup.domain.model;
 
 import java.io.Serializable;
 import java.util.List;
+import com.google.gson.annotations.SerializedName;
 
 public class Series implements Serializable {
+    @SerializedName("metadata")
     private SeriesMetadata metadata;
+
+    @SerializedName("content")
     private SeriesContent content;
 
     public Series() {

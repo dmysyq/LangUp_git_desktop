@@ -8,13 +8,11 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
-import androidx.lifecycle.ViewModel;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -25,11 +23,13 @@ import com.example.langup.presentation.ui.profile.SettingsActivity;
 import com.example.langup.presentation.ui.auth.WelcomeActivity;
 import com.example.langup.R;
 import com.example.langup.presentation.ui.dialogs.SearchFilterDialog;
-import com.example.langup.domain.utils.RecommendationEngine;
 import com.google.firebase.auth.FirebaseAuth;
+import com.example.langup.data.local.JsonLoader;
 
 import java.util.ArrayList;
 import java.util.List;
+import android.util.Log;
+import java.util.stream.Collectors;
 
 public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnSeriesClickListener, SearchFilterDialog.OnSearchFilterListener {
     private RecyclerView recyclerView;
@@ -39,11 +39,10 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
     private ImageButton navHome;
     private ImageButton navProfile;
     private ImageButton navSettings;
-    private RecommendationEngine recommendationEngine;
     private List<Series> allSeries = new ArrayList<>();
-    private String searchQuery = "";
     private int selectedDifficulty = 0;
     private String selectedAccent = "";
+    private String selectedSource = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
         initializeViews();
         setupToolbar();
         setupNavigation();
-        setupRecommendationEngine();
+        loadSeries();
     }
 
     private void initializeViews() {
@@ -84,85 +83,57 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
 
     private void setupNavigation() {
         navHome.setOnClickListener(v -> {
-            // Already on home, do nothing
+            // Already on home
         });
-        
+
         navProfile.setOnClickListener(v -> {
             startActivity(new Intent(this, UserProfileActivity.class));
         });
-        
+
         navSettings.setOnClickListener(v -> {
             startActivity(new Intent(this, SettingsActivity.class));
         });
     }
 
-    private void setupRecommendationEngine() {
-        recommendationEngine = new RecommendationEngine(this);
-        loadRecommendations();
-    }
-
-    private void loadRecommendations() {
+    private void loadSeries() {
         progressBar.setVisibility(View.VISIBLE);
-        recommendationEngine.getRecommendations(new RecommendationEngine.RecommendationCallback() {
+        
+        JsonLoader jsonLoader = new JsonLoader(this);
+        jsonLoader.loadSeries(new JsonLoader.SeriesCallback() {
             @Override
-            public void onSuccess(List<Series> recommendations) {
-                allSeries = recommendations;
+            public void onSuccess(List<Series> series) {
+                allSeries = series;
+                Log.d("MainActivity", "Loaded " + series.size() + " series");
                 applyFilters();
                 progressBar.setVisibility(View.GONE);
             }
-            
+
             @Override
             public void onError(String error) {
-                Toast.makeText(MainActivity.this, "Error loading recommendations: " + error, Toast.LENGTH_SHORT).show();
+                Log.e("MainActivity", "Error loading series: " + error);
+                Toast.makeText(MainActivity.this, R.string.error_loading_series, Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);
             }
         });
     }
 
     private void applyFilters() {
-        List<Series> filteredSeries = new ArrayList<>();
+        Log.d("MainActivity", "Applying filters: difficulty=" + selectedDifficulty + 
+              ", accent='" + selectedAccent + "', source='" + selectedSource + "'");
         
-        for (Series series : allSeries) {
-            boolean matchesSearch = searchQuery.isEmpty() || 
-                                   series.getMetadata().getTitle().toLowerCase().contains(searchQuery.toLowerCase());
-            
-            boolean matchesDifficulty = selectedDifficulty == 0 || 
-                                       series.getDifficulty() == selectedDifficulty;
-            
-            boolean matchesAccent = selectedAccent.isEmpty() || 
-                                   (series.getMetadata().getAccent() != null && 
-                                    series.getMetadata().getAccent().equals(selectedAccent));
-            
-            if (matchesSearch && matchesDifficulty && matchesAccent) {
-                filteredSeries.add(series);
-            }
-        }
+        List<Series> filteredSeries = allSeries.stream()
+            .filter(series -> selectedDifficulty == 0 || series.getMetadata().getDifficulty() == selectedDifficulty)
+            .filter(series -> selectedAccent.isEmpty() || series.getMetadata().getAccent().equals(selectedAccent))
+            .filter(series -> selectedSource.isEmpty() || series.getMetadata().getSource().equals(selectedSource))
+            .collect(Collectors.toList());
         
+        Log.d("MainActivity", "Filtered series count: " + filteredSeries.size());
         adapter.updateSeries(filteredSeries);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
-        
-        MenuItem searchItem = menu.findItem(R.id.action_search);
-        SearchView searchView = (SearchView) searchItem.getActionView();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                searchQuery = query;
-                applyFilters();
-                return true;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                searchQuery = newText;
-                applyFilters();
-                return true;
-            }
-        });
-        
         return true;
     }
 
@@ -177,24 +148,28 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
 
     private void showSearchFilterDialog() {
         SearchFilterDialog dialog = new SearchFilterDialog(this, this);
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.show();
     }
 
     @Override
     public void onSeriesClick(Series series) {
-        // Здесь будет переход к выбору уровня серии
-        // Intent intent = new Intent(this, LevelSelectionActivity.class);
-        // intent.putExtra("seriesId", series.getId());
-        // startActivity(intent);
-        
-        Toast.makeText(this, "Selected: " + series.getMetadata().getTitle(), Toast.LENGTH_SHORT).show();
+        // Handle series click
     }
 
     @Override
-    public void onSearchFilter(String searchQuery, int difficultyLevel, String accent) {
-        this.searchQuery = searchQuery;
-        this.selectedDifficulty = difficultyLevel;
-        this.selectedAccent = accent;
+    public void onSearchFilter(int difficultyLevel, String accent, String source) {
+        selectedDifficulty = difficultyLevel;
+        selectedAccent = accent;
+        selectedSource = source;
+        applyFilters();
+    }
+
+    @Override
+    public void onResetFilters() {
+        selectedDifficulty = 0;
+        selectedAccent = "";
+        selectedSource = "";
         applyFilters();
     }
 }
