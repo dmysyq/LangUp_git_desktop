@@ -74,7 +74,7 @@ public class AvatarPickerDialog extends Dialog {
             return avatarPaths.size();
         }
 
-        class AvatarViewHolder extends RecyclerView.ViewHolder {
+        static class AvatarViewHolder extends RecyclerView.ViewHolder {
             final ImageView imageView;
 
             AvatarViewHolder(@NonNull View itemView) {

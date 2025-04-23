@@ -7,6 +7,7 @@ import android.content.res.Configuration;
 import com.example.langup.domain.utils.LocaleManager;
 
 public class LangUpApplication extends Application {
+    private LocaleManager localeManager;
 
     @Override
     protected void attachBaseContext(Context base) {
@@ -20,7 +21,7 @@ public class LangUpApplication extends Application {
         super.onCreate();
         
         // Initialize the LocaleManager with the application context
-        LocaleManager localeManager = LocaleManager.getInstance(this);
+        localeManager = LocaleManager.getInstance(this);
         
         // Apply the current locale
         Configuration configuration = getResources().getConfiguration();
@@ -28,4 +29,7 @@ public class LangUpApplication extends Application {
         getResources().updateConfiguration(configuration, getResources().getDisplayMetrics());
     }
 
-}
+    public LocaleManager getLocaleManager() {
+        return localeManager;
+    }
+} 

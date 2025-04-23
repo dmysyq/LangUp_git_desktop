@@ -11,10 +11,6 @@ public class VocabularyItem {
         this.translation = translation;
     }
 
-    // Default constructor for Gson
-    public VocabularyItem() {
-    }
-
     public String getExample() {
         return example;
     }

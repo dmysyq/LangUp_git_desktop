@@ -2,7 +2,6 @@ package com.example.langup.presentation.ui.main;
 
 import com.example.langup.domain.model.SeriesMetadata;
 import java.util.List;
-import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public class FilterManager {

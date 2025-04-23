@@ -3,7 +3,6 @@ package com.example.langup.domain.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.os.Build;
 
 import java.util.Locale;
 
@@ -63,8 +62,6 @@ public class LocaleManager {
     }
 
     private Context setLocale(Context context, String language) {
-        if (context == null) return context;
-
         try {
             Locale locale = new Locale(language);
             Locale.setDefault(locale);
@@ -97,11 +94,7 @@ public class LocaleManager {
 
         try {
             Locale systemLocale;
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                systemLocale = context.getResources().getConfiguration().getLocales().get(0);
-            } else {
-                systemLocale = context.getResources().getConfiguration().locale;
-            }
+            systemLocale = context.getResources().getConfiguration().getLocales().get(0);
             String language = systemLocale.getLanguage();
             return language.equals(LANGUAGE_RU) ? LANGUAGE_RU : LANGUAGE_EN;
         } catch (Exception e) {
@@ -130,22 +123,6 @@ public class LocaleManager {
         if (context == null) return;
         String currentLanguage = getCurrentLanguage();
         updateConfiguration(currentLanguage);
-    }
-
-    public String translateToEnglish(String russianText) {
-        return PreferencesTranslations.getEnglishTranslation(russianText);
-    }
-
-    public String translateToRussian(String englishText) {
-        return PreferencesTranslations.getRussianTranslation(englishText);
-    }
-
-    public void setSystemLocale() {
-        if (preferences != null) {
-            preferences.edit().putString(LANGUAGE_KEY, LANGUAGE_SYSTEM).apply();
-            String systemLanguage = getSystemLanguage();
-            updateConfiguration(systemLanguage);
-        }
     }
 
     public Locale getCurrentLocale() {

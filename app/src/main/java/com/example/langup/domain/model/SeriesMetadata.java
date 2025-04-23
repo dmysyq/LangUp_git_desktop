@@ -60,7 +60,7 @@ public class SeriesMetadata implements Serializable {
     // Setters
     public void setId(String id) { this.id = id; }
     public void setTitle(String title) { this.title = title; }
-    public void setDescription(String description) { this.description = description; }
+
     public void setCountry(String country) { this.country = country; }
     public void setAccent(String accent) { this.accent = accent; }
     public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }

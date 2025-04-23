@@ -22,13 +22,13 @@ import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class SignUpActivity extends BaseActivity implements AuthManager.TokenRefreshListener {
     private static final int RC_SIGN_IN = 9001;
@@ -156,7 +156,7 @@ public class SignUpActivity extends BaseActivity implements AuthManager.TokenRef
     }
 
     private void saveUserData(String name, String email) {
-        String userId = firebaseAuth.getCurrentUser().getUid();
+        String userId = Objects.requireNonNull(firebaseAuth.getCurrentUser()).getUid();
         Map<String, Object> user = new HashMap<>();
         user.put("name", name);
         user.put("email", email);
@@ -172,16 +172,12 @@ public class SignUpActivity extends BaseActivity implements AuthManager.TokenRef
         if (exception == null) return getString(R.string.error_unknown);
         
         String errorCode = ((com.google.firebase.auth.FirebaseAuthException) exception).getErrorCode();
-        switch (errorCode) {
-            case "ERROR_INVALID_EMAIL":
-                return getString(R.string.error_invalid_email);
-            case "ERROR_WEAK_PASSWORD":
-                return getString(R.string.error_invalid_password);
-            case "ERROR_EMAIL_ALREADY_IN_USE":
-                return getString(R.string.error_email_already_in_use);
-            default:
-                return getString(R.string.error_unknown);
-        }
+        return switch (errorCode) {
+            case "ERROR_INVALID_EMAIL" -> getString(R.string.error_invalid_email);
+            case "ERROR_WEAK_PASSWORD" -> getString(R.string.error_invalid_password);
+            case "ERROR_EMAIL_ALREADY_IN_USE" -> getString(R.string.error_email_already_in_use);
+            default -> getString(R.string.error_unknown);
+        };
     }
 
     private void signUpWithGoogle() {
@@ -219,11 +215,11 @@ public class SignUpActivity extends BaseActivity implements AuthManager.TokenRef
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         android.util.Log.d("SignUpActivity", "Firebase authentication successful");
-                        String name = task.getResult().getUser().getDisplayName();
+                        String name = Objects.requireNonNull(task.getResult().getUser()).getDisplayName();
                         String email = task.getResult().getUser().getEmail();
                         
                         // Check if this is a new user by checking if the user document exists
-                        String userId = firebaseAuth.getCurrentUser().getUid();
+                        String userId = Objects.requireNonNull(firebaseAuth.getCurrentUser()).getUid();
                         firestore.collection("users").document(userId)
                                 .get()
                                 .addOnCompleteListener(documentTask -> {

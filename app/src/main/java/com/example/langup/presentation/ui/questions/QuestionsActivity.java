@@ -22,7 +22,6 @@ public class QuestionsActivity extends AppCompatActivity {
     
     private TextView titleTextView;
     private RecyclerView questionsRecyclerView;
-    private QuestionsAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,13 +74,14 @@ public class QuestionsActivity extends AppCompatActivity {
                 
                 // Log each question details
                 for (Question question : questions) {
-                    Log.d(TAG, String.format("Question details:\n" +
-                        "  id: %s\n" +
-                        "  type: %s\n" +
-                        "  question: %s\n" +
-                        "  options: %s\n" +
-                        "  correctAnswer: %s\n" +
-                        "  correctAnswers: %s",
+                    Log.d(TAG, String.format("""
+                                    Question details:
+                                      id: %s
+                                      type: %s
+                                      question: %s
+                                      options: %s
+                                      correctAnswer: %s
+                                      correctAnswers: %s""",
                         question.getId(),
                         question.getType(),
                         question.getQuestion(),
@@ -89,8 +89,8 @@ public class QuestionsActivity extends AppCompatActivity {
                         question.getCorrectAnswer(),
                         question.getCorrectAnswers()));
                 }
-                
-                adapter = new QuestionsAdapter(questions);
+
+                QuestionsAdapter adapter = new QuestionsAdapter(questions);
                 questionsRecyclerView.setAdapter(adapter);
             } catch (Exception e) {
                 Log.e(TAG, "Error parsing questions JSON: " + e.getMessage(), e);

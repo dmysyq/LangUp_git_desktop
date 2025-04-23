@@ -22,9 +22,9 @@ import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.GoogleAuthProvider;
-import com.google.firebase.auth.FirebaseAuthInvalidUserException;
+
+import java.util.Objects;
 
 public class LoginActivity extends BaseActivity implements AuthManager.TokenRefreshListener {
     private static final int RC_SIGN_IN = 9001;
@@ -146,20 +146,14 @@ public class LoginActivity extends BaseActivity implements AuthManager.TokenRefr
         if (exception == null) return getString(R.string.error_unknown);
         
         String errorCode = ((com.google.firebase.auth.FirebaseAuthException) exception).getErrorCode();
-        switch (errorCode) {
-            case "ERROR_INVALID_EMAIL":
-                return getString(R.string.error_invalid_email);
-            case "ERROR_WRONG_PASSWORD":
-                return getString(R.string.error_incorrect_password);
-            case "ERROR_USER_NOT_FOUND":
-                return getString(R.string.error_user_not_found);
-            case "ERROR_USER_DISABLED":
-                return getString(R.string.error_user_disabled);
-            case "ERROR_TOO_MANY_REQUESTS":
-                return getString(R.string.error_too_many_requests);
-            default:
-                return getString(R.string.error_unknown);
-        }
+        return switch (errorCode) {
+            case "ERROR_INVALID_EMAIL" -> getString(R.string.error_invalid_email);
+            case "ERROR_WRONG_PASSWORD" -> getString(R.string.error_incorrect_password);
+            case "ERROR_USER_NOT_FOUND" -> getString(R.string.error_user_not_found);
+            case "ERROR_USER_DISABLED" -> getString(R.string.error_user_disabled);
+            case "ERROR_TOO_MANY_REQUESTS" -> getString(R.string.error_too_many_requests);
+            default -> getString(R.string.error_unknown);
+        };
     }
 
     private void signInWithGoogle() {
@@ -206,7 +200,7 @@ public class LoginActivity extends BaseActivity implements AuthManager.TokenRefr
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         android.util.Log.d("LoginActivity", "Firebase authentication successful - User exists");
-                        android.util.Log.d("LoginActivity", "User UID: " + firebaseAuth.getCurrentUser().getUid());
+                        android.util.Log.d("LoginActivity", "User UID: " + Objects.requireNonNull(firebaseAuth.getCurrentUser()).getUid());
                         android.util.Log.d("LoginActivity", "User email: " + firebaseAuth.getCurrentUser().getEmail());
                         authManager.setLoggedIn(true);
                         startMainActivity();

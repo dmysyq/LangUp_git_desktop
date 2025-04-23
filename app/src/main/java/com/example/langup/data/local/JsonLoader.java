@@ -117,12 +117,12 @@ public class JsonLoader {
                 }
             } catch (Exception e) {
                 Log.e(TAG, "Error parsing JSON for file " + filename + ": " + e.getMessage());
-                e.printStackTrace();
+                Log.e(TAG, "Error parsing JSON for file " + filename + ": " + Log.getStackTraceString(e));
                 return null;
             }
         } catch (IOException e) {
             Log.e(TAG, "Error loading series from assets: " + e.getMessage());
-            e.printStackTrace();
+            Log.e(TAG, "Error loading series from assets: " + Log.getStackTraceString(e));
             return null;
         }
     }

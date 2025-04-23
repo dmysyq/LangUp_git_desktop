@@ -24,8 +24,6 @@ public class LevelSelectionActivity extends AppCompatActivity {
     private TextView descriptionTextView;
     private TextView difficultyTextView;
     private TextView accentTextView;
-    private TextView videoUrlTextView;
-    private MaterialCardView videoInfoCard;
     private MaterialButton vocabularyButton;
     private MaterialButton questionsButton;
     private MaterialButton grammarButton;
@@ -34,6 +32,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
     private String seriesId;
     private String videoUrl;
 
+    @SuppressLint("StringFormatInvalid")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,14 +67,15 @@ public class LevelSelectionActivity extends AppCompatActivity {
         accentTextView.setText(getString(R.string.accent_label, accent));
     }
 
+    @SuppressLint("WrongViewCast")
     private void initializeViews() {
         Log.d(TAG, "initializeViews: Setting up views");
         titleTextView = findViewById(R.id.titleTextView);
         descriptionTextView = findViewById(R.id.descriptionTextView);
         difficultyTextView = findViewById(R.id.difficultyTextView);
         accentTextView = findViewById(R.id.accentTextView);
-        videoUrlTextView = findViewById(R.id.videoUrlTextView);
-        videoInfoCard = findViewById(R.id.videoInfoCard);
+        TextView videoUrlTextView = findViewById(R.id.videoUrlTextView);
+        MaterialCardView videoInfoCard = findViewById(R.id.videoInfoCard);
         vocabularyButton = findViewById(R.id.vocabularyButton);
         questionsButton = findViewById(R.id.questionsButton);
         grammarButton = findViewById(R.id.grammarButton);

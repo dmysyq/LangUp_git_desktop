@@ -53,21 +53,18 @@ public class AuthManager {
 
     private void refreshToken(FirebaseUser user) {
         user.getIdToken(true)
-            .addOnCompleteListener(new OnCompleteListener<com.google.firebase.auth.GetTokenResult>() {
-                @Override
-                public void onComplete(@NonNull Task<com.google.firebase.auth.GetTokenResult> task) {
-                    if (task.isSuccessful()) {
-                        SharedPreferences.Editor editor = sharedPreferences.edit();
-                        editor.putLong(KEY_TOKEN_REFRESH_TIME, System.currentTimeMillis());
-                        editor.apply();
-                        if (tokenRefreshListener != null) {
-                            tokenRefreshListener.onTokenRefreshed(true);
-                        }
-                    } else {
-                        setLoggedIn(false);
-                        if (tokenRefreshListener != null) {
-                            tokenRefreshListener.onTokenRefreshed(false);
-                        }
+            .addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putLong(KEY_TOKEN_REFRESH_TIME, System.currentTimeMillis());
+                    editor.apply();
+                    if (tokenRefreshListener != null) {
+                        tokenRefreshListener.onTokenRefreshed(true);
+                    }
+                } else {
+                    setLoggedIn(false);
+                    if (tokenRefreshListener != null) {
+                        tokenRefreshListener.onTokenRefreshed(false);
                     }
                 }
             });
@@ -120,15 +117,4 @@ public class AuthManager {
         return Math.max(0, LOCKOUT_DURATION - timeSinceLastAttempt);
     }
 
-    public FirebaseUser getCurrentUser() {
-        return firebaseAuth.getCurrentUser();
-    }
-
-    public void signOut() {
-        firebaseAuth.signOut();
-        setLoggedIn(false);
-        if (tokenRefreshListener != null) {
-            tokenRefreshListener.onTokenRefreshed(false);
-        }
-    }
 }

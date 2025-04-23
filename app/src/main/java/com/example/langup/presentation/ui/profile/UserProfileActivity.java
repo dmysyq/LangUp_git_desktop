@@ -50,7 +50,11 @@ public class UserProfileActivity extends AppCompatActivity {
     private ChipGroup genresChipGroup;
     private ChipGroup countriesChipGroup;
     private ChipGroup sourcesChipGroup;
-    private TextView savePreferencesButton;
+    private final TextView savePreferencesButton;
+
+    public UserProfileActivity(TextView savePreferencesButton) {
+        this.savePreferencesButton = savePreferencesButton;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -156,9 +160,7 @@ public class UserProfileActivity extends AppCompatActivity {
         chip.setMinHeight(getResources().getDimensionPixelSize(R.dimen.chip_min_height));
         
         // Добавляем слушатель для обработки выбора
-        chip.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            updateChipState(chip, isChecked);
-        });
+        chip.setOnCheckedChangeListener((buttonView, isChecked) -> updateChipState(chip, isChecked));
         
         chipGroup.addView(chip);
     }

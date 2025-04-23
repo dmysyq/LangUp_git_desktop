@@ -20,7 +20,7 @@ import android.util.Log;
 
 public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.QuestionViewHolder> {
     private static final String TAG = "QuestionsAdapter";
-    private List<Question> questions;
+    private final List<Question> questions;
 
     public QuestionsAdapter(List<Question> questions) {
         this.questions = questions;
@@ -151,9 +151,9 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
                 
                 if (isSelected && isCorrectAnswer) {
                     updateOptionColor(checkBox, true);
-                } else if (isSelected && !isCorrectAnswer) {
+                } else if (isSelected) {
                     updateOptionColor(checkBox, false);
-                } else if (!isSelected && isCorrectAnswer) {
+                } else if (isCorrectAnswer) {
                     updateOptionColor(checkBox, true);
                 }
                 

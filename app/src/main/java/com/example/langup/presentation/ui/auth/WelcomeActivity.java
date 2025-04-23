@@ -2,7 +2,6 @@ package com.example.langup.presentation.ui.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import androidx.activity.EdgeToEdge;
 
@@ -34,7 +33,4 @@ public class WelcomeActivity extends BaseActivity {
         });
     }
 
-    private void onClick(View v) {
-        onBackPressed();
-    }
 }

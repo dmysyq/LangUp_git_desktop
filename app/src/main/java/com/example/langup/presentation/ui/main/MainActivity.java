@@ -10,7 +10,6 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 import android.view.ViewGroup;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -31,11 +30,12 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
 import android.util.Log;
+
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnSeriesClickListener, SearchFilterDialog.OnSearchFilterListener {
     private static final String TAG = "MainActivity";
-    private RecyclerView recyclerView;
     private SeriesAdapter adapter;
     private ProgressBar progressBar;
     private Toolbar toolbar;
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
 
     private void initializeViews() {
         toolbar = findViewById(R.id.toolbar);
-        recyclerView = findViewById(R.id.recyclerView);
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
         progressBar = findViewById(R.id.progressBar);
         navHome = findViewById(R.id.nav_home);
         navProfile = findViewById(R.id.nav_profile);
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
 
     private void setupToolbar() {
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(R.string.app_name);
+        Objects.requireNonNull(getSupportActionBar()).setTitle(R.string.app_name);
     }
 
     private void setupNavigation() {
@@ -89,13 +89,9 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
             // Already on home
         });
 
-        navProfile.setOnClickListener(v -> {
-            startActivity(new Intent(this, UserProfileActivity.class));
-        });
+        navProfile.setOnClickListener(v -> startActivity(new Intent(this, UserProfileActivity.class)));
 
-        navSettings.setOnClickListener(v -> {
-            startActivity(new Intent(this, SettingsActivity.class));
-        });
+        navSettings.setOnClickListener(v -> startActivity(new Intent(this, SettingsActivity.class)));
     }
 
     private void loadSeries() {
@@ -151,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
 
     private void showSearchFilterDialog() {
         SearchFilterDialog dialog = new SearchFilterDialog(this, this);
-        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        Objects.requireNonNull(dialog.getWindow()).setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.show();
     }
 

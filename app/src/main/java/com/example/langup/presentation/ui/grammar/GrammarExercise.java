@@ -3,9 +3,9 @@ package com.example.langup.presentation.ui.grammar;
 import java.util.List;
 
 public class GrammarExercise {
-    private String sentence;
-    private List<String> options;
-    private String correctAnswer;
+    private final String sentence;
+    private final List<String> options;
+    private final String correctAnswer;
     private String selectedAnswer;
 
     public GrammarExercise(String sentence, List<String> options, String correctAnswer) {

@@ -77,14 +77,13 @@ public class PreferencesManager {
             .addOnSuccessListener(document -> {
                 if (document.exists() && document.contains("preferences")) {
                     Map<String, Object> data = document.getData();
-                    assert data != null;
                     Map<String, Object> preferencesData = (Map<String, Object>) data.get("preferences");
-
+                    
                     Map<String, List<String>> preferences = new HashMap<>();
                     preferences.put(KEY_GENRES, getListFromMap(preferencesData, KEY_GENRES));
                     preferences.put(KEY_COUNTRIES, getListFromMap(preferencesData, KEY_COUNTRIES));
                     preferences.put(KEY_SOURCES, getListFromMap(preferencesData, KEY_SOURCES));
-
+                    
                     callback.onPreferencesLoaded(preferences);
                 } else {
                     callback.onPreferencesLoaded(new HashMap<>());

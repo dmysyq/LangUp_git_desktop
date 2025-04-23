@@ -44,7 +44,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(localeManager.onAttach(newBase));
+        super.attachBaseContext(LocaleManager.onAttach(newBase));
     }
 
     protected void updateLocale(String language) {

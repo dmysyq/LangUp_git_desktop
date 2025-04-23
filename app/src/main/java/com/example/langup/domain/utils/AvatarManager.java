@@ -3,6 +3,8 @@ package com.example.langup.domain.utils;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -24,7 +26,7 @@ public class AvatarManager {
             String[] files = context.getAssets().list(AVATARS_FOLDER);
             avatarPaths = new ArrayList<>(Arrays.asList(files));
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(AvatarManager.class.getSimpleName(), "Failed to list avatar files", e);
             avatarPaths = new ArrayList<>();
         }
     }
@@ -39,7 +41,7 @@ public class AvatarManager {
             InputStream inputStream = assetManager.open(AVATARS_FOLDER + "/" + avatarPath);
             return Drawable.createFromStream(inputStream, null);
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(AvatarManager.class.getSimpleName(), "Failed to read avatar file", e);
             return null;
         }
     }

@@ -4,7 +4,6 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -30,7 +29,7 @@ public class SearchFilterDialog extends Dialog {
     private Button applyButton;
     private Button cancelButton;
     private Button resetButton;
-    private SharedPreferences preferences;
+    private final SharedPreferences preferences;
 
     public interface OnSearchFilterListener {
         void onSearchFilter(int difficultyLevel, String accent, String source);

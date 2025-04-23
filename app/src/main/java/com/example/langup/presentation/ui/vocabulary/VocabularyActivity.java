@@ -27,7 +27,6 @@ public class VocabularyActivity extends AppCompatActivity {
     private TextView titleTextView;
     private RecyclerView vocabularyRecyclerView;
     private VocabularyAdapter adapter;
-    private ImageButton translateButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +49,7 @@ public class VocabularyActivity extends AppCompatActivity {
     private void initializeViews() {
         titleTextView = findViewById(R.id.titleTextView);
         vocabularyRecyclerView = findViewById(R.id.vocabularyRecyclerView);
-        translateButton = findViewById(R.id.translateButton);
+        ImageButton translateButton = findViewById(R.id.translateButton);
 
         translateButton.setOnClickListener(v -> toggleTranslation());
     }

@@ -12,7 +12,7 @@ import com.example.langup.domain.model.VocabularyItem;
 import java.util.List;
 
 public class VocabularyAdapter extends RecyclerView.Adapter<VocabularyAdapter.VocabularyViewHolder> {
-    private final List<VocabularyItem> vocabularyItems;
+    private List<VocabularyItem> vocabularyItems;
     private boolean isTranslationVisible = false;
 
     public VocabularyAdapter(List<VocabularyItem> vocabularyItems) {

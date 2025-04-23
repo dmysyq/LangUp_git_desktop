@@ -9,20 +9,17 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.langup.R;
-import com.example.langup.presentation.ui.grammar.GrammarExercise;
 import com.example.langup.presentation.adapter.GrammarAdapter;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import java.util.ArrayList;
+
 import java.util.List;
 
 public class GrammarActivity extends AppCompatActivity {
     private static final String TAG = "GrammarActivity";
     private TextView titleTextView;
     private RecyclerView grammarRecyclerView;
-    private GrammarAdapter adapter;
-    private List<GrammarExercise> exercises;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,10 +60,10 @@ public class GrammarActivity extends AppCompatActivity {
                 List<Grammar> grammarList = gson.fromJson(grammarJson, new TypeToken<List<Grammar>>(){}.getType());
                 if (grammarList != null && !grammarList.isEmpty()) {
                     Grammar grammar = grammarList.get(0); // Берем первый элемент, так как у нас массив из одного объекта
-                    exercises = grammar.getExercises();
+                    List<GrammarExercise> exercises = grammar.exercises();
                     Log.d(TAG, "Loaded " + exercises.size() + " grammar exercises");
-                    
-                    adapter = new GrammarAdapter(exercises);
+
+                    GrammarAdapter adapter = new GrammarAdapter(exercises);
                     grammarRecyclerView.setAdapter(adapter);
                 } else {
                     Log.e(TAG, "Grammar list is empty");
@@ -82,14 +79,7 @@ public class GrammarActivity extends AppCompatActivity {
         }
     }
 
-    private static class Grammar {
-        private List<GrammarExercise> exercises;
-        private String explanation;
-        private String topic;
-
-        public List<GrammarExercise> getExercises() {
-            return exercises;
-        }
+    private record Grammar(List<GrammarExercise> exercises) {
     }
 
     private void showError(String message) {
