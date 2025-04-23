@@ -1,0 +1,264 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 3,
+        "title": "Maui's Tattoos",
+        "videoUrl": "https://youtu.be/4q25X9e4RYI?list=TLGGDvJsqJxFBlYyMzA0MjAyNQ",
+        "country": "Polynesia",
+        "accent": "Polynesian",
+        "imageUrl": "moana_banner",
+        "source": "Disney",
+        "difficulty": 4,
+        "genres": ["Animation", "Musical", "Adventure"],
+        "countries": ["USA"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "appreciate",
+            "translation": "ценить",
+            "example": "appreciate [v] - be thankful"
+          },
+          {
+            "word": "guts",
+            "translation": "смелость",
+            "example": "guts [n] - courage, bravery"
+          },
+          {
+            "word": "sincere",
+            "translation": "искренний",
+            "example": "sincere [adj] - being honest and real"
+          },
+          {
+            "word": "have no business -ing",
+            "translation": "не иметь права -ать",
+            "example": "have no business -ing [exp] - not supposed to be -ing"
+          },
+          {
+            "word": "do (s/o) a solid",
+            "translation": "сделать услугу (кому-либо)",
+            "example": "do (s/o) a solid [exp] - do a favor for (someone), help (someone)"
+          },
+          {
+            "word": "beat",
+            "translation": "победить",
+            "example": "beat [v] - defeat"
+          },
+          {
+            "word": "bupkis",
+            "translation": "ничего",
+            "example": "bupkis [exp] - nothing"
+          },
+          {
+            "word": "make it to",
+            "translation": "добраться до",
+            "example": "make it to [exp] - arrive, reach"
+          },
+          {
+            "word": "cursed",
+            "translation": "проклятый",
+            "example": "cursed [adj] - having bad luck"
+          },
+          {
+            "word": "Take a hike!",
+            "translation": "Убирайся!",
+            "example": "Take a hike! [exp] - Go away!"
+          },
+          {
+            "word": "tattoos",
+            "translation": "татуировки",
+            "example": "tattoos [n] - designs on skin made with ink"
+          },
+          {
+            "word": "show up",
+            "translation": "появляться",
+            "example": "show up [phv] - appear"
+          },
+          {
+            "word": "earn",
+            "translation": "заработать",
+            "example": "earn [v] - get something by working for it"
+          },
+          {
+            "word": "a demigod",
+            "translation": "полубог",
+            "example": "a demigod [n] - part human, part god"
+          },
+          {
+            "word": "the Heart",
+            " transmissio": "Сердце",
+            "example": "the Heart [n] - the Heart of Te Fiti"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "true_false",
+            "question": "Maui makes fun of Moana for helping him escape from Tamatoa.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q2",
+            "type": "true_false",
+            "question": "Maui is worried that Moana could die if they face Te Kā.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "true_false",
+            "question": "Maui cannot control his magic fishhook anymore.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q4",
+            "type": "true_false",
+            "question": "Moana thinks that their mission is cursed.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q5",
+            "type": "true_false",
+            "question": "Maui's tattoos represent the things he has accomplished.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q6",
+            "type": "true_false",
+            "question": "Maui's parents were gods.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q7",
+            "type": "true_false",
+            "question": "Maui's parents were killed by Te Kā.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q8",
+            "type": "true_false",
+            "question": "Maui's parents gave him his magic fishhook.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q9",
+            "type": "true_false",
+            "question": "Maui gave fire and coconuts to the humans.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q10",
+            "type": "true_false",
+            "question": "Maui's tattoo is angry at him.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Connectors and Conjunctions",
+            "explanation": "Choose the word and place in the sentence that most logically connects the ideas in the sentence. Use words like: took, be, like, being, it, at, give, up, wasn't, by, went, would, who, are. Some boxes will be empty.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "It ___ guts.",
+                "options": ["took", "be", "like", ""],
+                "correctAnswer": "took"
+              },
+              {
+                "id": "g2",
+                "sentence": "I’m trying to ___ sincere for once, and it feels like you’re distracted.",
+                "options": ["be", "being", "to be", "been"],
+                "correctAnswers": "be"
+              },
+              {
+                "id": "g3",
+                "sentence": "Because you’re looking at me ___ I have a shark head.",
+                "options": ["like", "took", "be", ""],
+                "correctAnswer": "like"
+              },
+              {
+                "id": "g4",
+                "sentence": "For a little girl who had no business ___ down there, you did me a solid.",
+                "options": ["being", "like", "took", ""],
+                "correctAnswer": "being"
+              },
+              {
+                "id": "g5",
+                "sentence": "We’re never making ___ to Te Fiti.",
+                "options": ["it", "like", "took", ""],
+                "correctAnswer": "it"
+              },
+              {
+                "id": "g6",
+                "sentence": "Can you ___ least try?",
+                "options": ["at", "on", "to", "in"],
+                "correctAnswer": "at"
+              },
+              {
+                "id": "g7",
+                "sentence": "Are you going to ___ me a speech?",
+                "options": ["give", "like", "took", ""],
+                "correctAnswer": "give"
+              },
+              {
+                "id": "g8",
+                "sentence": "They show ___ when I earn them.",
+                "options": ["up", "when", "to", "in"],
+                "correctAnswer": "up"
+              },
+              {
+                "id": "g9",
+                "sentence": "I ___ born a demigod.",
+                "options": ["wasn't", "like", "took", ""],
+                "correctAnswer": "wasn't"
+              },
+              {
+                "id": "g10",
+                "sentence": "They ___ one look and decided they did not want me.",
+                "options": ["took", "like", "wasn't", ""],
+                "correctAnswer": "took"
+              },
+              {
+                "id": "g11",
+                "sentence": "Somehow, I was found ___ the gods.",
+                "options": ["by", "like", "took", ""],
+                "correctAnswer": "by"
+              },
+              {
+                "id": "g12",
+                "sentence": "And back to the humans I ___.",
+                "options": ["went", "like", "took", ""],
+                "correctAnswer": "went"
+              },
+              {
+                "id": "g13",
+                "sentence": "You did everything for them so they ___ love you.",
+                "options": ["would", "like", "took", ""],
+                "correctAnswer": "would"
+              },
+              {
+                "id": "g14",
+                "sentence": "But the gods aren’t the ones ___ make you Maui. You are.",
+                "options": ["who", "are", "took", ""],
+                "correctAnswers": "who"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Moana: We’re alive! We’re aliv...\n\nMaui: Listen. I appreciate what you did down there.\n\nMoana: Mm-hmm.\n\nMaui: It took guts.\n\nMoana: Mm-hmm. Mm-hmm. Mm-hmm.\n\nMaui: But ah... I’m sorry. I’m trying to be sincere for once, and it feels like you’re distracted.\n\nMoana: No. no. No way!\n\nMaui: Really? Because you’re looking at me like I have a shark head.\n\nMoana: What? Do you have a shark head? Cuz...\n\nMaui: Look, the point is, for a little girl, child, thing, whatever, who had no business being down there, you did me a solid. But you also almost died. And I couldn’t even beat the dumb crab. So, chances of beating Te Kā? Bupkis. We’re never making it to Te Fiti. This mission is cursed.\n\nMoana: It’s not cursed.\n\nMaui: Shark head.\n\nMoana: It is not cursed.\n\nMaui: Cursed.\n\nMaui: ♪ What can I say except we’re dead soon. We’re dead soon. ♪\n\nMoana: Can you at least try?\n\nMaui: Giant hawk. Hey, it’s okay, it’s okay. We’re dead soon.\n\nMoana: All right. Break time’s over. Get up.\n\nMaui: Why? Are you going to give me a speech? Tell me I can beat Te Kā because I’m Maui? Take a hike, tiny.\n\nMoana: How do you get your tattoos?\n\nMaui: They show up when I earn them.\n\nMoana: How did you earn that one? What’s that for?\n\nMaui: I wasn’t born a demigod. I had human parents. They took one look and decided they did not want me. They threw me into the sea like I was nothing. Somehow, I was found by the gods. They gave me the hook. They made me Maui. And back to the humans I went. I gave them islands, fire, coconuts. Anything they could ever want.\n\nMoana: You took the Heart for them. You did everything for them so they’d love you.\n\nMaui: It was never enough.\n\nMoana: But the gods aren’t the ones who make you Maui. You are.\n\nMaui: Okay, okay. I love you, too, buddy."
+        }
+      }
+    }
+  ]
+}

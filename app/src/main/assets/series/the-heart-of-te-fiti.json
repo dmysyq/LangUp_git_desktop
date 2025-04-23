@@ -2,16 +2,16 @@
   "series": [
     {
   "metadata": {
-    "id": 2,
+    "id": 6,
     "title": "The Heart of Te Fiti",
     "videoUrl": "https://youtu.be/rKROIpEZO_8?list=TLGGoB41aLSJrNYyMzA0MjAyNQ",
-    "country": "Polynesia",
+    "country": "USA",
     "accent": "Polynesian",
     "imageUrl": "moana_banner",
     "source": "Disney",
     "difficulty": 4,
     "genres": ["Animation", "Adventure", "Fantasy"],
-    "countries": ["Polynesia"]
+    "countries": ["USA"]
   },
   "content": {
     "vocabulary": [
@@ -171,7 +171,7 @@
           "Te Kā",
           "Maui"
         ],
-        "correctAnswer": 1
+        "correctAnswer": 0
       },
       {
         "id": "q6",
@@ -231,7 +231,7 @@
       },
       {
         "id": "q11",
-        "type": "single_choice",
+        "type": "multiple_choice",
         "question": "Gramma Tala believes someone will one day ______.",
         "options": [
           "restore Te Fiti's heart",
@@ -239,7 +239,7 @@
           "save everyone",
           "find Maui"
         ],
-        "correctAnswer": 0
+        "correctAnswers": [1,2,3,4]
       },
       {
         "id": "q12",

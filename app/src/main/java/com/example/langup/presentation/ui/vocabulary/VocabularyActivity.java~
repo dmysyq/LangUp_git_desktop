@@ -1,0 +1,124 @@
+package com.example.langup.presentation.ui.vocabulary;
+
+import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import com.example.langup.R;
+import com.example.langup.domain.model.VocabularyItem;
+import com.example.langup.data.JsonLoader;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import java.util.ArrayList;
+import java.util.List;
+
+public class VocabularyActivity extends AppCompatActivity {
+    private static final String TAG = "VocabularyActivity";
+    
+    private String seriesId;
+    private RecyclerView vocabularyRecyclerView;
+    private VocabularyAdapter adapter;
+    private ImageButton translateButton;
+    private boolean isTranslationVisible = false;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_vocabulary);
+
+        // Get data from intent
+        seriesId = getIntent().getStringExtra("seriesId");
+        Log.d(TAG, "Vocabulary Activity started with series ID: " + seriesId);
+
+        // Setup toolbar
+        setupToolbar();
+
+        // Initialize views
+        initializeViews();
+
+        // Load vocabulary data
+        loadVocabularyData();
+    }
+
+    private void setupToolbar() {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+            getSupportActionBar().setTitle(R.string.vocabulary);
+        }
+    }
+
+    private void initializeViews() {
+        vocabularyRecyclerView = findViewById(R.id.vocabularyRecyclerView);
+        vocabularyRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new VocabularyAdapter(new ArrayList<>());
+        vocabularyRecyclerView.setAdapter(adapter);
+
+        translateButton = findViewById(R.id.translateButton);
+        translateButton.setOnClickListener(v -> toggleTranslations());
+    }
+
+    private void loadVocabularyData() {
+        if (seriesId == null) {
+            Log.e(TAG, "Series ID is null");
+            return;
+        }
+
+        Log.d(TAG, "Loading vocabulary data for series: " + seriesId);
+        try {
+            String jsonContent = JsonLoader.loadJSONFromAsset(this, "series/annoying-rommate-habits.json");
+            if (jsonContent != null) {
+                JSONObject jsonObject = new JSONObject(jsonContent);
+                JSONArray seriesArray = jsonObject.getJSONArray("series");
+                
+                // Find the series with matching ID
+                for (int i = 0; i < seriesArray.length(); i++) {
+                    JSONObject series = seriesArray.getJSONObject(i);
+                    JSONObject metadata = series.getJSONObject("metadata");
+                    if (metadata.getInt("id") == Integer.parseInt(seriesId)) {
+                        JSONObject content = series.getJSONObject("content");
+                        JSONArray vocabularyArray = content.getJSONArray("vocabulary");
+                        List<VocabularyItem> vocabularyItems = new ArrayList<>();
+                        
+                        for (int j = 0; j < vocabularyArray.length(); j++) {
+                            JSONObject item = vocabularyArray.getJSONObject(j);
+                            String word = item.getString("word");
+                            String translation = item.getString("translation");
+                            vocabularyItems.add(new VocabularyItem(word, translation));
+                            Log.d(TAG, "Loaded vocabulary item: " + word);
+                        }
+                        
+                        adapter.setItems(vocabularyItems);
+                        Log.d(TAG, "Successfully loaded " + vocabularyItems.size() + " vocabulary items");
+                        break;
+                    }
+                }
+            } else {
+                Log.e(TAG, "Error: series JSON file not found");
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error loading vocabulary data from JSON", e);
+        }
+    }
+
+    private void toggleTranslations() {
+        isTranslationVisible = !isTranslationVisible;
+        adapter.setTranslationsVisible(isTranslationVisible);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+} 

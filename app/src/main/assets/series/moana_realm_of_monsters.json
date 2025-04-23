@@ -1,0 +1,271 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 4,
+        "title": "Into the Realm of Monsters",
+        "videoUrl": "https://youtu.be/gX657fNrkik?list=TLGGAwHekaSy2CoyMzA0MjAyNQ",
+        "country": "USA",
+        "accent": "Polynesian",
+        "imageUrl": "moana_banner",
+        "source": "Disney",
+        "difficulty": 4,
+        "genres": ["Animation", "Musical", "Adventure"],
+        "countries": ["USA"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "beauty rest",
+            "translation": "сон для красоты",
+            "example": "beauty rest [exp] - sleep that helps you look good"
+          },
+          {
+            "word": "a wayfinder",
+            "translation": "мореплаватель",
+            "example": "a wayfinder [n] - a good sailor, someone who navigates"
+          },
+          {
+            "word": "muscle up",
+            "translation": "собраться с силами",
+            "example": "muscle up [phv] - get ready, be strong"
+          },
+          {
+            "word": "buttercup",
+            "translation": "милашка",
+            "example": "buttercup [n] - a nice name to call someone"
+          },
+          {
+            "word": "a scavenger",
+            "translation": "падальщик",
+            "example": "a scavenger [n] - an animal that searches for food from garbage (rats, crabs, hyenas)"
+          },
+          {
+            "word": "a collectible",
+            "translation": "коллекционный предмет",
+            "example": "a collectible [n] - an item that people collect"
+          },
+          {
+            "word": "cool",
+            "translation": "крутой",
+            "example": "cool [adj] - awesome, great"
+          },
+          {
+            "word": "a realm",
+            "translation": "царство",
+            "example": "a realm [n] - an area, like a kingdom"
+          },
+          {
+            "word": "a chicken",
+            "translation": "трус",
+            "example": "a chicken [exp] - a coward"
+          },
+          {
+            "word": "gimme",
+            "translation": "дай мне",
+            "example": "gimme [exp] - give it to me"
+          },
+          {
+            "word": "That's a good one",
+            "translation": "хорошая шутка",
+            "example": "That's a good one [exp] - That is a funny joke"
+          },
+          {
+            "word": "get it",
+            "translation": "понять",
+            "example": "get it [exp] - understand"
+          },
+          {
+            "word": "How do I phrase this?",
+            "translation": "как это сказать?",
+            "example": "How do I phrase this? [exp] - How do I say this?"
+          },
+          {
+            "word": "sail",
+            "translation": "плавать под парусом",
+            "example": "sail [v] - travel on water using a boat"
+          },
+          {
+            "word": "It makes sense",
+            "translation": "это логично",
+            "example": "It makes sense [exp] - it is logical. It is clear"
+          },
+          {
+            "word": "straight up",
+            "translation": "прямо",
+            "example": "straight up [adj] - exactly"
+          },
+          {
+            "word": "kooky-dooks",
+            "translation": "чудной",
+            "example": "kooky-dooks [exp] - crazy, silly, weird"
+          },
+          {
+            "word": "throw up",
+            "translation": "блевать",
+            "example": "throw up [phv] - vomit"
+          },
+          {
+            "word": "a human sacrifice",
+            "translation": "человеческое жертвоприношение",
+            "example": "a human sacrifice [n] - killing a person in a ritual"
+          },
+          {
+            "word": "kidding",
+            "translation": "шутить",
+            "example": "kidding [v] - joking"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "true_false",
+            "question": "Maui thinks that Moana needs more sleep.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q2",
+            "type": "true_false",
+            "question": "Maui tells Moana that she has become a real wayfinder.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q3",
+            "type": "true_false",
+            "question": "Tamatoa stole Maui's hook from him.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q4",
+            "type": "true_false",
+            "question": "Moana’s people sent her on the journey to return the Heart of Te Fiti.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q5",
+            "type": "true_false",
+            "question": "Lalotai is known as the Realm of Monsters.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q6",
+            "type": "true_false",
+            "question": "Maui makes a joke about Moana being scared.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q7",
+            "type": "true_false",
+            "question": "Maui wonders why the ocean didn't bring him his hook.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q8",
+            "type": "true_false",
+            "question": "Maui asks Moana to sing a song.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q9",
+            "type": "true_false",
+            "question": "The entrance to Lalotai only appears after a human sacrifice.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q10",
+            "type": "true_false",
+            "question": "The entrance to Lalotai is not as far down as it seems.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Connectors and Conjunctions",
+            "explanation": "Choose the word and place in the sentence that most logically connects the ideas in the sentence. Use words like: get, the, one, why, did, makes, for, it, up, lot, than, still. Some boxes will be empty.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "A real wayfinder never sleeps, so they actually ___ where they need to go.",
+                "options": ["get", "did", "for", ""],
+                "correctAnswer": "get"
+              },
+              {
+                "id": "g2",
+                "sentence": "My hook is ___ coolest collectible.",
+                "options": ["the", "one", "for", ""],
+                "correctAnswer": "the"
+              },
+              {
+                "id": "g3",
+                "sentence": "That was a good ___. How do you not ___ it?",
+                "options": ["one", "get", "why", ""],
+                "correctAnswers": ["one", "get"]
+              },
+              {
+                "id": "g4",
+                "sentence": "I’m just trying to understand ___ your people decided to send you.",
+                "options": ["why", "for", "did", ""],
+                "correctAnswer": "why"
+              },
+              {
+                "id": "g5",
+                "sentence": "My people didn’t send me. The ocean ___.",
+                "options": ["did", "for", "why", ""],
+                "correctAnswer": "did"
+              },
+              {
+                "id": "g6",
+                "sentence": "The ocean? It ___ sense.",
+                "options": ["makes", "did", "for", ""],
+                "correctAnswer": "makes"
+              },
+              {
+                "id": "g7",
+                "sentence": "It chose me ___ a reason.",
+                "options": ["for", "why", "did", ""],
+                "correctAnswer": "for"
+              },
+              {
+                "id": "g8",
+                "sentence": "Why didn’t ___ just take the Heart back to Te Fiti itself?",
+                "options": ["it", "did", "for", ""],
+                "correctAnswer": "it"
+              },
+              {
+                "id": "g9",
+                "sentence": "If you start singing, I’m going to throw ___.",
+                "options": ["up", "for", "did", ""],
+                "correctAnswer": "up"
+              },
+              {
+                "id": "g10",
+                "sentence": "It’s a ___ farther down ___ it looks.",
+                "options": ["lot", "than", "for", ""],
+                "correctAnswers": ["lot", "than"]
+              },
+              {
+                "id": "g11",
+                "sentence": "I am ___ falling!",
+                "options": ["still", "for", "did", ""],
+                "correctAnswer": "still"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Maui: (Did you) Enjoy your beauty rest? You know, a real wayfinder never sleeps, so they actually get where they need to go. Muscle up, buttercup. We’re here.\n\nMoana: You’re sure this guy is going to have your hook?\n\nMaui: Tamatoa? Oh, he’ll have it. He’s a scavenger. Collects stuff. Thinks it makes him look cool. And for Tamatoa, trust me, my hook is the coolest collectible.\n\nMoana: And he lives up there?\n\nMaui: No, no, no. That’s just the entrance to Lalotai.\n\nMoana: Lalotai? Realm of Monsters? We’re going to the Realm of Monsters?\n\nMaui: We? No. Me. You are going to stay here with the other chicken. That’s what I’m talking about. Gimme some. Come on. That was a good one. How do you not get it? I called her a chicken. There’s a chicken on the boat.\n\nMaui: So, daughter of the chief, I thought you stayed in the village. You know, kissing babies and things. Hey, I’m just trying to understand why your people decided to send, how do I phrase this, you!\n\nMoana: My people didn’t send me. The ocean did.\n\nMaui: The ocean? (That) Makes sense. You’re what, eight? Can’t sail. Obvious choice.\n\nMoana: It chose me for a reason.\n\nMaui: If the ocean is so smart, why didn’t it just take the Heart back to Te Fiti itself? Or bring me my hook? The ocean is straight up kooky-dooks. But I’m sure it’s not wrong about you. You’re the Chosen One!\n\nMoana: The ocean chose you for a reason.\n\nMaui: If you start singing, I’m going to throw up.\n\nMoana: So, (I'm) not seeing an entrance.\n\nMaui: Yes, because it only appears after a human sacrifice. Kidding. So serious.\n\nMaui: (Performs a short haka)\n\nMaui: Don’t worry. It’s a lot farther down than it looks. Cheeeehoooo!\n\nMaui: I am still falling!\n\nMoana: You can do this. Go!"
+        }
+      }
+    }
+  ]
+}

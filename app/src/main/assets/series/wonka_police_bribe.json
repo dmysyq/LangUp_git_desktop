@@ -1,0 +1,351 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 9,  
+        "title": "Police Bribe",
+        "videoUrl": "https://youtu.be/gDtiFm7IPwQ",
+        "country": "USA",
+        "accent": "American",
+        "imageUrl": "wonka_banner",
+        "source": "Warner Bros.",
+        "difficulty": 5,
+        "genres": ["Musical", "Fantasy", "Comedy"],
+        "countries": ["USA", "UK"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "an invoice",
+            "translation": "счёт",
+            "example": "an invoice [n] - a document stating the amount of money owed"
+          },
+          {
+            "word": "a chocolatier",
+            "translation": "шоколатье",
+            "example": "a chocolatier [n] - a person who makes or sells chocolate"
+          },
+          {
+            "word": "a fee",
+            "translation": "плата",
+            "example": "a fee [n] - a payment for a service"
+          },
+          {
+            "word": "move on",
+            "translation": "продолжать дальше",
+            "example": "move on [phv] - stop doing and leave"
+          },
+          {
+            "word": "a sovereign",
+            "translation": "суверен",
+            "example": "a sovereign [n] - a gold coin, money"
+          },
+          {
+            "word": "refrain from",
+            "translation": "воздерживаться от",
+            "example": "refrain from [v] - stop doing"
+          },
+          {
+            "word": "a demographic",
+            "translation": "демографическая группа",
+            "example": "a demographic [n] - a group of people with the same age, income, or other characteristic"
+          },
+          {
+            "word": "in my presence",
+            "translation": "в моём присутствии",
+            "example": "in my presence [exp] - near me"
+          },
+          {
+            "word": "back up",
+            "translation": "поддерживать",
+            "example": "back up [phv] - support"
+          },
+          {
+            "word": "be liable to",
+            "translation": "быть склонным к",
+            "example": "be liable to [exp] - be likely to"
+          },
+          {
+            "word": "on the same page",
+            "translation": "на одной волне",
+            "example": "on the same page [exp] - have a shared understanding, believe the same thing"
+          },
+          {
+            "word": "fellas",
+            "translation": "ребята",
+            "example": "fellas [n] - guys"
+          },
+          {
+            "word": "an officer of the law",
+            "translation": "офицер закона",
+            "example": "an officer of the law [exp] - a police officer"
+          },
+          {
+            "word": "rough up",
+            "translation": "избивать",
+            "example": "rough up [phv] - physically harm"
+          },
+          {
+            "word": "integrity",
+            "translation": "честность",
+            "example": "integrity [n] - having strong morals, being honest, being ethical"
+          },
+          {
+            "word": "a sweet tooth",
+            "translation": "любовь к сладкому",
+            "example": "a sweet tooth [exp] - a strong liking for sweet foods"
+          },
+          {
+            "word": "want a word with (s/o)",
+            "translation": "хотеть поговорить с (кем-либо)",
+            "example": "want a word with (s/o) [exp] - want to speak with (someone)"
+          },
+          {
+            "word": "a word in private",
+            "translation": "разговор наедине",
+            "example": "a word in private [exp] - talk privately"
+          },
+          {
+            "word": "if I may",
+            "translation": "позвольте",
+            "example": "if I may [exp] - please"
+          },
+          {
+            "word": "talk my way out of",
+            "translation": "выкрутиться словами",
+            "example": "talk my way out of [exp] - use persuasion or clever speech to escape a difficult situation"
+          },
+          {
+            "word": "a tight spot",
+            "translation": "затруднительное положение",
+            "example": "a tight spot [exp] - a difficult situation"
+          },
+          {
+            "word": "You've got a mouth on you!",
+            "translation": "Какой ты дерзкий!",
+            "example": "You've got a mouth on you! [exp] - You are too rude. You talk too much"
+          },
+          {
+            "word": "make sense",
+            "translation": "иметь смысл",
+            "example": "make sense [exp] - be logical"
+          },
+          {
+            "word": "all out of whack",
+            "translation": "всё наперекосяк",
+            "example": "all out of whack [exp] - confused, unbalanced, not feeling well"
+          },
+          {
+            "word": "a bonk",
+            "translation": "удар",
+            "example": "a bonk [n] - a hit"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "The chocolatiers pay the Chief for ______.",
+            "options": [
+              "stealing Wonka's chocolate",
+              "helping Wonka escape",
+              "putting Wonka in jail",
+              "moving Wonka on"
+            ],
+            "correctAnswer": 3
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "Fickelgruber feels sick because ______.",
+            "options": [
+              "poor people can afford Wonka's chocolate",
+              "the Chief wants more chocolate",
+              "Wonka is opening new stores",
+              "Wonka's chocolate is so good"
+            ],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "Slugworth and the other chocolatiers want the Chief to ______ Wonka.",
+            "options": [
+              "arrest",
+              "scare",
+              "help",
+              "kill"
+            ],
+            "correctAnswer": 3
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "The chocolatiers bribe the Chief with ______.",
+            "options": [
+              "a golden ticket",
+              "chocolate",
+              "respect",
+              "money"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "The Chief ______ to participate in illegal activities.",
+            "options": [
+              "doesn't want",
+              "refuses",
+              "wants",
+              "offers"
+            ],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "Wonka tells Noodle to ______ when he confronts the Chief.",
+            "options": [
+              "stay and watch",
+              "help him",
+              "leave",
+              "hide"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "Wonka ______ the Chief's warning because the Chief pushes his head underwater.",
+            "options": [
+              "doesn't understand",
+              "refuses to follow",
+              "agrees to"
+            ],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "The Chief ______ Wonka for his behavior.",
+            "options": [
+              "apologizes to",
+              "gets angry at",
+              "laughs at",
+              "thanks"
+            ],
+            "correctAnswer": 0
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Connectors and Conjunctions",
+            "explanation": "Choose the word and place in the sentence that most logically connects the ideas in the sentence. Use words like: brought, to, listening, require, moving on, been, refrain, mentioning, to send, to meet, saying, making, to mean, roughing up, get out of, talked, to be, doing, give. Some boxes will be empty.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "I’ve ___ my invoice. One chocolatier moved on for the usual fee.",
+                "options": ["bring", "brought", "to", "bringing"],
+                "correctAnswer": "brought"
+              },
+              {
+                "id": "g2",
+                "sentence": "How would you like ___ a few more of those?",
+                "options": ["earn", "earned", "to earn", "earning"],
+                "correctAnswer": "to earn"
+              },
+              {
+                "id": "g3",
+                "sentence": "Oh, I am ___.",
+                "options": ["listened", "to listen", "listening", "listen"],
+                "correctAnswer": "listening"
+              },
+              {
+                "id": "g4",
+                "sentence": "Mr. Wonka might a little more than simply ___.",
+                "options": ["to move on", "moving on", "move on", "moved on"],
+                "correctAnswers": ["moving on"]
+              },
+              {
+                "id": "g5",
+                "sentence": "I’ve just ___ a little bit sick in my mouth.",
+                "options": ["been", "to be", "to", "being"],
+                "correctAnswer": "been"
+              },
+              {
+                "id": "g6",
+                "sentence": "Could you please ___ from mentioning that demographic in my presence?",
+                "options": ["refrain", "refrained", "refraining", "refrained from"],
+                "correctAnswers": ["refrain"]
+              },
+              {
+                "id": "g7",
+                "sentence": "We want you ___ Wonka a message.",
+                "options": ["to send", "sent", "sending", "sent to"],
+                "correctAnswer": "to send"
+              },
+              {
+                "id": "g8",
+                "sentence": "He is liable ___ with a little accident.",
+                "options": ["to meet", "meeting", "meet", "met"],
+                "correctAnswer": "to meet"
+              },
+              {
+                "id": "g9",
+                "sentence": "You don’t have to keep ___ it.",
+                "options": ["say saying", "saying", "to say", "said"],
+                "correctAnswer": "saying"
+              },
+              {
+                "id": "g10",
+                "sentence": "I’m just ___ sure we’re all on the same page.",
+                "options": ["making", "to make", "make", "made"],
+                "correctAnswer": "making"
+              },
+              {
+                "id": "g11",
+                "sentence": "What’s that supposed ___?",
+                "options": ["mean", "to mean", "means", "meant"],
+                "correctAnswer": "to mean"
+              },
+              {
+                "id": "g12",
+                "sentence": "I can’t just go around ___ your competition.",
+                "options": ["roughing up", "rough", "to rough", "rough"],
+                "correctAnswer": "roughing up"
+              },
+              {
+                "id": "g13",
+                "sentence": "You had better ___ here, Noodle.",
+                "options": ["get out of", "got out of", "to get out of", "got out"],
+                "correctAnswer": "get out of"
+              },
+              {
+                "id": "g14",
+                "sentence": "I’ve ___ my way out of tighter spots than this.",
+                "options": ["talking", "talked", "to talk", "talked"],
+                "correctAnswer": "talked"
+              },
+              {
+                "id": "g15",
+                "sentence": "I don’t want ___ this.",
+                "options": ["to be doing", "doing", "to been", "to be"],
+                "correctAnswers": ["to be doing"]
+              },
+              {
+                "id": "g16",
+                "sentence": "Can you ___ me just a second?",
+                "options": ["gave", "giving", "given", "give"],
+                "correctAnswer": "give"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Woman: They’re all waiting.\n\nChief: Thank you very much. Good evening, gentlemen. I’ve brought my invoice. One chocolatier moved on for the usual fee. Oh. Here we go, baby. There’s the good stuff. Yeah.\n\nSlugworth: Tell me, Chief. How would you like to earn a few more of those?\n\nChief: Oh, I am listening.\n\nSlugworth: We think that Mr. Wonka might require a little more than simply moving on. He’s good.\n\nProdnose: Too good.\n\nFickelgruber: And what’s more, he only charges a sovereign a chocolate. So anyone can afford them, even the… You know, the…\n\nChief: The poor?\n\nFickelgruber: Oh, dear. I’ve just been a little bit sick in my mouth. Could you please refrain from mentioning that demographic in my presence?\n\nProdnose: He doesn’t like it when people say “poor.” Sorry, Felix.\n\nSlugworth: We want you to send Wonka a message.\n\nProdnose: Backed up by physical force.\n\nSlugworth: That if he attempts to sell chocolate in this town again, he is liable to meet with a little accident.\n\nProdnose: In which he dies.\n\nChief: Yeah, no, I… I got that already.\n\nFickelgruber: You don’t have to keep saying it.\n\nProdnose: I’m just making sure we’re all on the same page.\n\nFickelgruber: Well, no one’s on your page.\n\nProdnose: What’s that supposed to mean? Well, I know what it means. Actually, what does it mean?\n\nSlugworth: Gentleman, please. So, what do you say, Chief? Do we have a deal?\n\nChief: Well, listen, fellas, I’m an officer of the law. I can’t just go around roughin’ up your competition. I’m sorry.\n\nSlugworth: Well now, Chief. I can see that you’re a man of integrity.\n\nChief: Thank you.\n\nSlugworth: But ask yourself this. ♪ Have you got a sweet tooth? ♪\n\nChief: ♪ I do ♪\n\nSlugworth: ♪ A hunger That you have to feed? Have you got a sweet tooth? ♪\n\nChief: ♪ I do ♪\n\nSlugworth: ♪ Well, we’ve got Everything you need. ♪\n\nAffable: Chief, you know that fella you wanted a word with?\n\nChief: Mr. Wonka! A word in private, if I may.\n\nWilly: Certainly, Officer.\n\nChief: Be on your way, Affable.\n\nAffable: Are you sure, sir?\n\nChief: Oh, yeah. This is between me and Mr. Wonka.\n\nWilly: You better get out of here, Noodle.\n\nNoodle: But Willy…\n\nWilly: Don’t worry about me. I’ve talked my way out of tighter spots than this. I’ll meet you back at the cart.\n\nWilly: Now, Officer, if this is about Abigail…\n\nChief: I got a message for you, pal.\n\nWilly: Whoa! No.\n\nChief: Do not sell chocolate in this town! You got it?\n\nWilly: Not really, I’m afraid.\n\nChief: Oh, so you got a mouth on you, huh, Candy Man? I said: Don’t sell chocolate! (Did) You hear me that time?\n\nWilly: I have water in my ears.\n\nChief: Oh. Yeah, that… Okay, that makes sense. Yeah. Listen, I’m sorry. I’m all out of whack. (The) Truth is, I don’t want to be doing this.\n\nWilly: I don’t want you to be doing this.\n\nChief: But I still got to give you a message. (If you) Sell chocolate in this town again, you’re going to get more than a bonk on the head.\n\nWilly: I don’t have a bonk on the head.\n\nChief: What is with me today? I… Can you give me just a second?\n\nWilly: Sure."
+        }
+      }
+    }
+  ]
+}

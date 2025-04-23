@@ -34,4 +34,5 @@ public class Series implements Serializable {
     public String getSource() { return metadata.getSource(); }
     public int getDifficulty() { return metadata.getDifficulty(); }
     public List<String> getGenres() { return metadata.getGenres(); }
+    public String getVideoUrl() { return metadata.getVideoUrl(); }
 } 

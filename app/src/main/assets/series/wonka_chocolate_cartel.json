@@ -1,0 +1,334 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 8,
+        "title": "The Chocolate Cartel",
+        "videoUrl": "https://youtu.be/VGxLuvV4WuE",
+        "country": "USA",
+        "accent": "American",
+        "imageUrl": "wonka_banner",
+        "source": "Warner Bros.",
+        "difficulty": 4,
+        "genres": ["Musical", "Fantasy", "Comedy"],
+        "countries": ["USA", "UK"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "cutting it a bit fine",
+            "translation": "чуть не опоздать",
+            "example": "cutting it a bit fine [exp] - almost late"
+          },
+          {
+            "word": "pull his weight",
+            "translation": "вносить свою лепту",
+            "example": "pull his weight [exp] - do his fair share of work"
+          },
+          {
+            "word": "productivity",
+            "translation": "производительность",
+            "example": "productivity [n] - how much work gets done"
+          },
+          {
+            "word": "take (time) off",
+            "translation": "взять выходной",
+            "example": "take (time) off [phv] - not work for (time)"
+          },
+          {
+            "word": "flatter (s/o)",
+            "translation": "льстить (кому-либо)",
+            "example": "flatter (s/o) [v] - say overly nice things about (someone)"
+          },
+          {
+            "word": "pay off (s/o)",
+            "translation": "расплатиться (с кем-либо)",
+            "example": "pay off (s/o) [phv] - pay a debt to (someone)"
+          },
+          {
+            "word": "have a run-in with (s/o)",
+            "translation": "столкнуться (с кем-либо)",
+            "example": "have a run-in with (s/o) [exp] - have a conflict or argument with (someone)"
+          },
+          {
+            "word": "an accountant",
+            "translation": "бухгалтер",
+            "example": "an accountant [n] - a person who manages money"
+          },
+          {
+            "word": "a bookkeeper",
+            "translation": "счетовод",
+            "example": "a bookkeeper [n] - a person who manages money"
+          },
+          {
+            "word": "be off sick",
+            "translation": "отсутствовать по болезни",
+            "example": "be off sick [exp] - not go to work because of sickness"
+          },
+          {
+            "word": "straightforward",
+            "translation": "простой",
+            "example": "straightforward [adj] - simple and clear"
+          },
+          {
+            "word": "be in cahoots",
+            "translation": "быть в сговоре",
+            "example": "be in cahoots [exp] - secretly working together"
+          },
+          {
+            "word": "a cartel",
+            "translation": "картель",
+            "example": "a cartel [n] - a group controlling prices or trade"
+          },
+          {
+            "word": "store",
+            "translation": "хранить",
+            "example": "store [v] - keep"
+          },
+          {
+            "word": "the excess",
+            "translation": "излишек",
+            "example": "the excess [n] - the extra amount"
+          },
+          {
+            "word": "a vault",
+            "translation": "хранилище",
+            "example": "a vault [n] - a safe and secure storage room"
+          },
+          {
+            "word": "a cathedral",
+            "translation": "собор",
+            "example": "a cathedral [n] - a large church"
+          },
+          {
+            "word": "round the clock",
+            "translation": "круглосуточно",
+            "example": "round the clock [exp] - all day and night, 24 hours per day"
+          },
+          {
+            "word": "corrupt",
+            "translation": "коррумпированный",
+            "example": "corrupt [adj] - dishonest, unethical"
+          },
+          {
+            "word": "a cleric",
+            "translation": "священник",
+            "example": "a cleric [n] - a religious leader"
+          },
+          {
+            "word": "a chocoholic",
+            "translation": "шоколадоголик",
+            "example": "a chocoholic [n] - someone addicted to chocolate"
+          },
+          {
+            "word": "a monk",
+            "translation": "монах",
+            "example": "a monk [n] - a religious man living a simple life"
+          },
+          {
+            "word": "subterranean",
+            "translation": "подземный",
+            "example": "subterranean [adj] - underground"
+          },
+          {
+            "word": "a sentinel",
+            "translation": "страж",
+            "example": "a sentinel [n] - a guard or watchman"
+          },
+          {
+            "word": "bribe",
+            "translation": "давать взятку",
+            "example": "bribe [v] - illegally pay for favors"
+          },
+          {
+            "word": "blackmail",
+            "translation": "шантажировать",
+            "example": "blackmail [v] - threaten to reveal secrets for money"
+          },
+          {
+            "word": "bludgeon",
+            "translation": "избивать",
+            "example": "bludgeon [v] - hit repeatedly with a heavy object"
+          },
+          {
+            "word": "put your foot down",
+            "translation": "настоять на своём",
+            "example": "put your foot down [exp] - be strong and say no"
+          },
+          {
+            "word": "a ledger",
+            "translation": "бухгалтерская книга",
+            "example": "a ledger [n] - a book with financial information about a company"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "true_false",
+            "question": "Willy arrives late to the meeting.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q2",
+            "type": "true_false",
+            "question": "Tiddles has helped increase productivity by 13%.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q3",
+            "type": "true_false",
+            "question": "Willy smells like chocolate.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q4",
+            "type": "true_false",
+            "question": "Noodle claims that Willy’s chocolate is the best in the world.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q5",
+            "type": "true_false",
+            "question": "Abacus worked as Slugworth’s accountant for at least a week.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q6",
+            "type": "true_false",
+            "question": "Slugworth keeps two sets of books.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q7",
+            "type": "true_false",
+            "question": "Slugworth, Fickelgruber, and Prodnose secretly store excess chocolate beneath a library.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q8",
+            "type": "true_false",
+            "question": "The Mistress of the Keys rarely goes outside.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q9",
+            "type": "true_false",
+            "question": "The cartel bribe and blackmail their competition.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q10",
+            "type": "true_false",
+            "question": "Slugworth fired Abacus for selling chocolate.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Connectors and Conjunctions",
+            "explanation": "Choose the word and place in the sentence that most logically connects the ideas in the sentence. Use words like: to, am, been, has, is, off, at, with, one, which, that, in, if, by, who, on, where. Some boxes will be empty.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "Good of you ___ join us.",
+                "options": ["to", "with", "at", ""],
+                "correctAnswer": "to"
+              },
+              {
+                "id": "g2",
+                "sentence": "Not late, ___ I?",
+                "options": ["am", "is", "has", ""],
+                "correctAnswer": "am"
+              },
+              {
+                "id": "g3",
+                "sentence": "Has Tiddles ___ pulling his weight?",
+                "options": ["been", "has", "is", ""],
+                "correctAnswer": "been"
+              },
+              {
+                "id": "g4",
+                "sentence": "Tiddles ___ been a very good boy, and productivity ___ up 30%.",
+                "options": ["has", "is", "been", ""],
+                "correctAnswers": ["has", "is"]
+              },
+              {
+                "id": "g5",
+                "sentence": "We took the afternoon ___.",
+                "options": ["off", "with", "at", ""],
+                "correctAnswer": "off"
+              },
+              {
+                "id": "g6",
+                "sentence": "The plan is ___ sell chocolate and pay off Mrs. Scrubitt ___ least, that was the plan.",
+                "options": ["to", "at", "with", ""],
+                "correctAnswers": ["to", "at"]
+              },
+              {
+                "id": "g7",
+                "sentence": "You had a little run-in ___ the chief of police?",
+                "options": ["with", "at", "by", ""],
+                "correctAnswer": "with"
+              },
+              {
+                "id": "g8",
+                "sentence": "There ___ two sets of books: ___ for the authorities, and one ___ told the truth.",
+                "options": ["were", "one", "which", ""],
+                "correctAnswers": ["were", "one", "which"]
+              },
+              {
+                "id": "g9",
+                "sentence": "A sort of chocolate cartel, ___ you will.",
+                "options": ["if", "that", "which", ""],
+                "correctAnswer": "if"
+              },
+              {
+                "id": "g10",
+                "sentence": "It is guarded round the clock ___ a corrupt cleric.",
+                "options": ["by", "with", "at", ""],
+                "correctAnswer": "by"
+              },
+              {
+                "id": "g11",
+                "sentence": "The only way in ___ down a secret elevator.",
+                "options": ["is", "by", "with", ""],
+                "correctAnswer": "is"
+              },
+              {
+                "id": "g12",
+                "sentence": "She is a subterranean sentinel ___ hasn’t seen sunlight in years.",
+                "options": ["who", "that", "which", ""],
+                "correctAnswer": "who"
+              },
+              {
+                "id": "g13",
+                "sentence": "From now ___ , I’ll be keeping the ledger in the vault.",
+                "options": ["on", "at", "by", ""],
+                "correctAnswer": "on"
+              },
+              {
+                "id": "g14",
+                "sentence": "They’ve got you right ___ they want you.",
+                "options": ["where", "that", "which", ""],
+                "correctAnswer": "where"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Willy: See you downstairs. Geronimo!\n\nAbacus: Ah, Mr. Wonka. Good of you to join us.\n\nWilly: Not late, am I?\n\nAbacus: Well, no. Cutting it a bit fine, but…\n\nWilly: Has Tiddles been pulling his weight?\n\nAbacus: As a matter of fact, Tiddles has been a very good boy, and productivity is up 30%.\n\nLarry: We took the afternoon off.\n\nAbacus: But that’s not the point.\n\nLarry: This is the point.\n\nAbacus: Not now, Larry.\n\nLarry: Sorry.\n\nAbacus: The point is: Where have you been?\n\nPiper: And why do you smell of giraffe?\n\nWilly: (I) Guess I owe you guys an explanation. The truth is I’m a chocolate maker.\n\nNoodle: Not just any chocolate. The best in the world.\n\nWilly: Ah, well, Noodle is flattering me, but she’s right. They’re exquisite.\n\nNoodle: (The) Plan is to sell chocolate and pay off Mrs. Scrubitt. At least, that was the plan, until…\n\nAbacus: Oh, let me guess. You had a little run-in with the chief of police?\n\nWilly: How do you know that?\n\nAbacus: Because I was Slugworth’s accountant for a week, at least. His regular bookkeeper was off sick. And I was called halfway across the country to take his place.\n\nAbacus: Good evening, Mr. Slugworth. I just need your signature on…\n\nAbacus: (It) Seemed a straightforward job. Until I realized there were two sets of books: one for the authorities, and one which told the truth. Slugworth, Fickelgruber, and Prodnose have been in cahoots for years. A sort of chocolate cartel, if you will. They’ve been watering down their chocolate and storing the excess in a secret vault deep beneath the cathedral, guarded round the clock by a corrupt cleric and 500 chocoholic monks. The only way in is down a secret elevator and past the Mistress of the Keys, a subterranean sentinel who hasn’t seen sunlight in years. There's thousands of gallons of chocolate down there, and the cartel use it to bribe, blackmail, and bludgeon the competition.\n\nSlugworth: I do not care that they were school children. They were in our way. Next time, put your foot down.\n\nSlugworth: Miss BonBon?\n\nMiss BonBon: Good morning, Mr. Slugworth.\n\nSlugworth: From now on, I’ll be keeping the ledger in the vault.\n\nMiss BonBon: Very good, sir.\n\nSlugworth: Oh, and Mr. Crunch?\n\nAbacus: Yes?\n\nSlugworth: You’re fired.\n\nAbacus: Very good, sir.\n\nAbacus: I’m sorry, Mr. Wonka, but they’ve got you right where they want you. You can’t get a shop without selling chocolate, and you can’t sell chocolate without a shop."
+        }
+      }
+    }
+  ]
+}

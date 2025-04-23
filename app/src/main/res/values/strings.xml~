@@ -165,8 +165,4 @@
     <string name="source">Source</string>
     <string name="all_sources">All Sources</string>
     <string name="accent_label">Accent: %1$s</string>
-    <string name="transcript">transript</string>
-    <string name="watch_video_first">Посмотрите это видео</string>
-    <string name="complete_levels_after">После просмотра видео пройдите уровни ниже</string>
-    <string name="level_selection">Выбор уровня</string>
 </resources>

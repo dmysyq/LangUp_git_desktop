@@ -24,6 +24,9 @@ public class SeriesMetadata implements Serializable {
     @SerializedName("imageUrl")
     private String imageUrl;
 
+    @SerializedName("videoUrl")
+    private String videoUrl;
+
     @SerializedName("source")
     private String source;
 
@@ -48,6 +51,7 @@ public class SeriesMetadata implements Serializable {
     public String getCountry() { return country; }
     public String getAccent() { return accent; }
     public String getImageUrl() { return imageUrl; }
+    public String getVideoUrl() { return videoUrl; }
     public String getSource() { return source; }
     public int getDifficulty() { return difficulty; }
     public List<String> getGenres() { return genres; }
@@ -60,6 +64,7 @@ public class SeriesMetadata implements Serializable {
     public void setCountry(String country) { this.country = country; }
     public void setAccent(String accent) { this.accent = accent; }
     public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
+    public void setVideoUrl(String videoUrl) { this.videoUrl = videoUrl; }
     public void setSource(String source) { this.source = source; }
     public void setDifficulty(int difficulty) { this.difficulty = difficulty; }
     public void setGenres(List<String> genres) { this.genres = genres; }

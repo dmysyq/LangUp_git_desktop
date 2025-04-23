@@ -1,0 +1,346 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 7,
+        "title": "Joel's Birthday Breakfast",
+        "videoUrl": "https://youtu.be/Diq2Ik9Kwqw",
+        "country": "USA",
+        "accent": "American",
+        "imageUrl": "tlou_banner",
+        "source": "HBO",
+        "difficulty": 5,
+        "genres": ["Drama", "Action", "Horror"],
+        "countries": ["USA"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "pancake mix",
+            "translation": "смесь для блинов",
+            "example": "pancake mix [n] - powder (flour) to make pancakes"
+          },
+          {
+            "word": "I swear",
+            "translation": "клянусь",
+            "example": "I swear [exp] - I promise"
+          },
+          {
+            "word": "fractions",
+            "translation": "дроби",
+            "example": "fractions [n] - a type of math (¼ + ½ = , ⅔ x ⅚ = )"
+          },
+          {
+            "word": "diapers",
+            "translation": "подгузники",
+            "example": "diapers [n] - the shorts that babies (and old people) wear before they can use the toilet"
+          },
+          {
+            "word": "shell",
+            "translation": "скорлупа",
+            "example": "shell [n] - the outside of an egg"
+          },
+          {
+            "word": "calcium",
+            "translation": "кальций",
+            "example": "calcium [n] - the nutrient in milk (and eggshells) that is good for your bones and teeth"
+          },
+          {
+            "word": "you old fucker",
+            "translation": "старый приятель",
+            "example": "you old fucker [exp] - you old friend"
+          },
+          {
+            "word": "on the road",
+            "translation": "в пути",
+            "example": "on the road [exp] - on our way to the destination (while we are driving)"
+          },
+          {
+            "word": "concrete",
+            "translation": "бетон",
+            "example": "concrete [n] - like cement, used in construction"
+          },
+          {
+            "word": "pour (concrete)",
+            "translation": "заливать (бетон)",
+            "example": "pour (concrete) [v] - one step in making a house foundation using concrete"
+          },
+          {
+            "word": "frame (concrete)",
+            "translation": "формировать (бетон)",
+            "example": "frame (concrete) [v] - another step in making a house foundation using concrete"
+          },
+          {
+            "word": "work a double",
+            "translation": "работать двойную смену",
+            "example": "work a double [exp] - work a double shift, work overtime"
+          },
+          {
+            "word": "split it",
+            "translation": "разделить",
+            "example": "split it [exp] - divide the money between two or more people"
+          },
+          {
+            "word": "the Middle East",
+            "translation": "Ближний Восток",
+            "example": "the Middle East [n] - western Asia (Iran, Iraq, Turkey, etc...)"
+          },
+          {
+            "word": "It doesn't ring a bell",
+            "translation": "не знакомо",
+            "example": "It doesn't ring a bell [exp] - It is not familiar. I don't know. I cannot remember"
+          },
+          {
+            "word": "not mutually exclusive",
+            "translation": "не взаимоисключающие",
+            "example": "not mutually exclusive [exp] - not always separate or different"
+          },
+          {
+            "word": "drop (someone) off",
+            "translation": "высадить (кого-либо)",
+            "example": "drop (someone) off [phv] - take someone to place, usually by car"
+          },
+          {
+            "word": "inside out",
+            "translation": "наизнанку",
+            "example": "inside out [adj] - clothing that has the inside part facing outwards"
+          },
+          {
+            "word": "asking after you",
+            "translation": "спрашивать о тебе",
+            "example": "asking after you [exp] - asking about you"
+          },
+          {
+            "word": "biscuits",
+            "translation": "печенье",
+            "example": "biscuits [n] - a type of bread (made with flour)"
+          },
+          {
+            "word": "Atkins",
+            "translation": "Аткинс",
+            "example": "Atkins [n] - a type of diet in which you don't eat bread (eat mainly protein and fat)"
+          },
+          {
+            "word": "Solid!",
+            "translation": "Отлично!",
+            "example": "Solid! [exp] - Awesome! Great!"
+          },
+          {
+            "word": "Put that out",
+            "translation": "Потуши это",
+            "example": "Put that out [phv] - Extinguish that! (Throw away your cigarette)"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "true_false",
+            "question": "Today is Joel's birthday.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q2",
+            "type": "true_false",
+            "question": "Sarah made pancakes for Joel.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q3",
+            "type": "true_false",
+            "question": "Joel loves pancakes.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q4",
+            "type": "true_false",
+            "question": "There is some eggshell in Joel's eggs.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q5",
+            "type": "true_false",
+            "question": "Joel is 36 years old.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q6",
+            "type": "true_false",
+            "question": "There is enough food for Tommy.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q7",
+            "type": "true_false",
+            "question": "Joel thinks that 'love' and 'dependent' are the same.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q8",
+            "type": "true_false",
+            "question": "Joel wants to hire another worker so that they can finish earlier.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q9",
+            "type": "true_false",
+            "question": "Joel is going to have to work late today.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q10",
+            "type": "true_false",
+            "question": "Sarah promises to get a cake for Joel.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q11",
+            "type": "true_false",
+            "question": "Jakarta is in the Middle East.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q12",
+            "type": "true_false",
+            "question": "Joel and Tommy are good at geography.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q13",
+            "type": "true_false",
+            "question": "Joel's t-shirt is inside out.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q14",
+            "type": "true_false",
+            "question": "Joel eats some of the neighbor's biscuits.",
+            "Responsive": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q15",
+            "type": "true_false",
+            "question": "Sarah says she will visit the neighbors later.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q16",
+            "type": "true_false",
+            "question": "Joel doesn't want Tommy to smoke in the truck.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Connectors and Conjunctions",
+            "explanation": "Choose the word and place in the sentence that most logically connects the ideas in the sentence. Use words like: did, for, how, are, is, until, with, and, but, where, have, she. Some boxes will be empty.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "___ you get your homework done?",
+                "options": ["Did", "How", "For", ""],
+                "correctAnswer": "Did"
+              },
+              {
+                "id": "g2",
+                "sentence": "I was going to make you birthday pancakes ___ my benefit.",
+                "options": ["for", "with", "and", ""],
+                "correctAnswer": "for"
+              },
+              {
+                "id": "g3",
+                "sentence": "___ old are you again?",
+                "options": ["How", "Did", "For", ""],
+                "correctAnswer": "How"
+              },
+              {
+                "id": "g4",
+                "sentence": "He's dependent on me. It's not the same. I think it ___ the same.",
+                "options": ["is", "are", "for", ""],
+                "correctAnswer": "is"
+              },
+              {
+                "id": "g5",
+                "sentence": "We can't frame ___ we pour.",
+                "options": ["until", "for", "with", ""],
+                "correctAnswer": "until"
+              },
+              {
+                "id": "g6",
+                "sentence": "I'm not splitting this job ___ you.",
+                "options": ["with", "for", "and", ""],
+                "correctAnswer": "with"
+              },
+              {
+                "id": "g7",
+                "sentence": "I'll bring back a cake ___ I promise.",
+                "options": ["and", "for", "with", ""],
+                "correctAnswer": "and"
+              },
+              {
+                "id": "g8",
+                "sentence": "Jakarta ___ a country.",
+                "options": ["is", "are", "for", ""],
+                "correctAnswer": ""
+              },
+              {
+                "id": "g9",
+                "sentence": "We'll drop you off ___ you got seven minutes.",
+                "options": ["but", "and", "for", ""],
+                "correctAnswer": "but"
+              },
+              {
+                "id": "g10",
+                "sentence": "Connie was asking after you, since you haven't been over ___ a while.",
+                "options": ["for", "with", "and", ""],
+                "correctAnswer": "for"
+              },
+              {
+                "id": "g11",
+                "sentence": "Y'all can bake ___ whatever.",
+                "options": ["and", "for", "with", ""],
+                "correctAnswer": "and"
+              },
+              {
+                "id": "g12",
+                "sentence": "We ___ got to run, ___ Sarah will be by later.",
+                "options": ["have", "but", "she", ""],
+                "correctAnswers": ["have", "but"]
+              },
+              {
+                "id": "g13",
+                "sentence": "___ will tell you all about Atkins.",
+                "options": ["She", "For", "And", ""],
+                "correctAnswer": "She"
+              },
+              {
+                "id": "g14",
+                "sentence": "Put that out ___ Happy Birthday to you.",
+                "options": ["and", "for", "with", ""],
+                "correctAnswer": "and"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Sarah: Where is the pancake mix?\n\nJoel: Oh, was I... Yeah, I was. Sorry.\n\nSarah: I was going to make you birthday pancakes. I swear.\n\nJoel: You know I don't really like pancakes.\n\nSarah: I know you don't like them. It was for my benefit. Vitamin C.\n\nJoel: (Did) You get your homework done? Fractions?\n\nSarah: How old are you again?\n\nJoel: Thirty-six.\n\nSarah: You are going to have to wear diapers soon.\n\nJoel: Who says I don't already? Shell.\n\nSarah: Calcium.\n\nJoel: Lovely. Is there enough for Uncle Tommy?\n\nSarah: There would've been.\n\nTommy: Ay! You're still alive, you old fucker.\n\nSarah: Aw, he loves you.\n\nJoel: He's dependent on me. It's not the same.\n\nSarah: I think it's the same.\n\nTommy: It's definitely the same. I thought we was having pancakes.\n\nJoel: We'll pick you something up on the road. Are the concrete guys going to be there?\n\nTommy: Yeah, they said maybe.\n\nJoel: Maybe? We can't frame until we pour. We're not getting paid until we frame.\n\nTommy: Well, we could bring someone else on, and get the job done faster.\n\nJoel: No, no. I'm not splitting this job. I barely want to split it with you. We could work a double.\n\nSarah: Literally? Today?\n\nJoel: I know. I'd be done by nine. By nine, right?\n\nTommy: Yeah.\n\nJoel: I'll bring back a cake. I promise.\n\nRadio: ...continued disturbances in Jakarta, but are advising U.S. citizens...\n\nJoel: Jakarta. Where is that, Middle East?\n\nTommy: It doesn't ring a bell. It's definitely a country. Or maybe part of Asia?\n\nSarah: Jakarta isn't a country. Being a part of Asia isn't mutually exclusive with being a country, and in fact, it's the capital of Indonesia.\n\nTommy: Shit. (There is) Hope for us yet.\n\nJoel: All right. Finish up quick. We'll drop you off.\n\nSarah: I'm still eating my eggshells.\n\nJoel: You got seven minutes.\n\nSarah: Your t-shirt is inside out.\n\nJoel: Shit.\n\nTommy: He's losing it.\n\nMr. Adler: Hey, neighbor!\n\nSarah: Oh, hi.\n\nMr. Adler: Uh, Connie was asking after you, since you haven't been over in a while.\n\nJoel: Make them happy.\n\nSarah: I could come by after school, but just for, like, a little bit?\n\nMr. Adler: Oh, she'll take what you got. Y'all can bake, whatever. Speaking of, we got a lot of extra here. Y'all, y'all want some biscuits?\n\nSarah: Dad, you love biscuits.\n\nJoel: I do. But I'm on Atkins.\n\nMr. Adler: On what now?\n\nJoel: It's... You know what? We (have) got to run, but Sarah will be by later. She'll stay as long as you want. (She will) Tell you all about Atkins.\n\nMr. Adler: Great! I'll let Connie know.\n\nSarah: Solid.\n\nTommy: I can't tell you how exciting it was listening to that fucking conversation.\n\nJoel: Put that out.\n\nTommy: Happy Birthday to you."
+        }
+      }
+    }
+  ]
+}

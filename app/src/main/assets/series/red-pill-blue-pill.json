@@ -1,0 +1,223 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 5,
+        "title": "Red Pill, Blue Pill",
+        "videoUrl": "https://youtu.be/p6Hcc2rRvrk?list=TLGGr-mYOB9sy_0yMzA0MjAyNQ",
+        "country": "USA",
+        "accent": "American",
+        "imageUrl": "matrix_banner",
+        "source": "Warner Bros.",
+        "difficulty": 5,
+        "genres": ["Science Fiction", "Action", "Cyberpunk"],
+        "countries": ["USA", "Australia"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "not far from the truth",
+            "translation": "почти правда",
+            "example": "not far from the truth [exp] - almost correct"
+          },
+          {
+            "word": "fate",
+            "translation": "судьба",
+            "example": "fate [n] - the idea that events are predetermined and beyond human control"
+          },
+          {
+            "word": "ironically",
+            "translation": "иронично",
+            "example": "ironically [adv] - something happens in a surprising or opposite way"
+          },
+          {
+            "word": "a splinter",
+            "translation": "заноза",
+            "example": "a splinter [n] - a small problem that won’t go away (a small sharp piece of wood in your finger)"
+          },
+          {
+            "word": "drive (s/o) mad",
+            "translation": "сводить с ума",
+            "example": "drive (s/o) mad [exp] - make (someone) crazy or frustrated"
+          },
+          {
+            "word": "in this very room",
+            "translation": "в этой самой комнате",
+            "example": "in this very room [exp] - in this exact room"
+          },
+          {
+            "word": "have the wool pulled over your eyes",
+            "translation": "быть обманутым",
+            "example": "have the wool pulled over your eyes [exp] - be tricked or lied to"
+          },
+          {
+            "word": "blind",
+            "translation": "слепой",
+            "example": "blind [adj] - unable to see"
+          },
+          {
+            "word": "a slave",
+            "translation": "раб",
+            "example": "a slave [n] - someone who is not free"
+          },
+          {
+            "word": "bondage",
+            "translation": "рабство",
+            "example": "bondage [n] - being trapped, being a slave"
+          },
+          {
+            "word": "turn back",
+            "translation": "вернуться назад",
+            "example": "turn back [phv] - stop and return"
+          },
+          {
+            "word": "Wonderland",
+            "translation": "Страна чудес",
+            "example": "Wonderland [n] - a strange, magical place (from: Alice in Wonderland)"
+          },
+          {
+            "word": "the rabbit hole",
+            "translation": "кроличья нора",
+            "example": "the rabbit hole [exp] - a deep, confusing journey into something strange (from: Alice in Wonderland)"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "true_false",
+            "question": "Neo believes in fate.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q2",
+            "type": "true_false",
+            "question": "Morpheus says Neo looks like he is expecting to wake up from a dream.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "true_false",
+            "question": "Neo says that he has always felt that something is wrong with the world.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q4",
+            "type": "true_false",
+            "question": "Neo has never heard of the Matrix before.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q5",
+            "type": "true_false",
+            "question": "Morpheus says the Matrix is only in people’s minds.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q6",
+            "type": "true_false",
+            "question": "Morpheus compares the Matrix to slavery.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q7",
+            "type": "true_false",
+            "question": "Morpheus gives Neo a chance to return to his old life.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q8",
+            "type": "true_false",
+            "question": "Morpheus offers Neo two choices: the truth or his old life.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q9",
+            "type": "true_false",
+            "question": "If Neo takes the blue pill, he will see the truth.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Connectors and Conjunctions",
+            "explanation": "Choose the word and place in the sentence that most logically connects the ideas in the sentence. Use words like: because, that, what, which, if, when, and. Some boxes will be empty.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "You have the look of a man who accepts what ___",
+                "options": ["he sees", "does he see"],
+                "correctAnswer": "he sees"
+              },
+              {
+                "id": "g2",
+                "sentence": "___ in fate, Neo?",
+                "options": ["Do you believe", "You believe"],
+                "correctAnswer": "Do you believe"
+              },
+              {
+                "id": "g3",
+                "sentence": "I know exactly what ___.",
+                "options": ["you mean", "do you mean"],
+                "correctAnswer": "you mean"
+              },
+              {
+                "id": "g4",
+                "sentence": "Let me tell you why ___ here.",
+                "options": ["you are", "are you"],
+                "correctAnswer": "you are"
+              },
+              {
+                "id": "g5",
+                "sentence": "What ___ you can’t explain.",
+                "options": ["you know", "do you know"],
+                "correctAnswer": "you know"
+              },
+              {
+                "id": "g6",
+                "sentence": "You don’t know what ___.",
+                "options": ["it is", "is it"],
+                "correctAnswer": "it is"
+              },
+              {
+                "id": "g7",
+                "sentence": "Do you know what ___ about?",
+                "options": ["I am talking", "am I talking"],
+                "correctAnswer": "I am talking"
+              },
+              {
+                "id": "g8",
+                "sentence": "Unfortunately, no one can be told what ___. You have to see it for yourself.",
+                "options": ["the Matrix is", "is the Matrix"],
+                "correctAnswer": "the Matrix is"
+              },
+              {
+                "id": "g9",
+                "sentence": "You wake up in your bed and believe whatever ___ to believe.",
+                "options": ["you want", "do you want"],
+                "correctAnswer": "you want"
+              },
+              {
+                "id": "g10",
+                "sentence": "I show you how deep ___.",
+                "options": ["the rabbit hole goes", "does the rabbit hole go"],
+                "correctAnswer": "the rabbit hole goes"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Morpheus: At last. Welcome, Neo. As you no doubt have guessed, I am Morpheus.\n\nNeo: It’s an honor to meet you.\n\nMorpheus: No, the honor is mine. Please, come. Sit.\n\nMorpheus: You have the look of a man who accepts what he sees because he is expecting to wake up. Ironically, this is not far from the truth. Do you believe in fate, Neo?\n\nNeo: No.\n\nMorpheus: Why not?\n\nNeo: Because I don’t like the idea that I’m not in control of my life.\n\nMorpheus: I know exactly what you mean. Let me tell you why you’re here. You’re here because you know something. What you know you can’t explain, but you feel it. You’ve felt it#: your entire life. That there’s something wrong with the world. You don’t know what it is, but it’s there like a splinter in your mind driving you mad. It is this feeling that has brought you to me. Do you know what I’m talking about?\n\nNeo: The Matrix?\n\nMorpheus: The Matrix is everywhere. It is all around us, even now in this very room. It is the world that has been pulled over your eyes to blind you from the truth.\n\nNeo: What truth?\n\nMorpheus: That you are a slave, Neo. Like everyone else, you were born into bondage, born into a prison that you cannot smell or taste or touch. A prison for your mind.\n\nMorpheus: Unfortunately, no one can be told what the Matrix is. You have to see it for yourself.\n\nMorpheus: This is your last chance. After this, there is no turning back. You take the blue pill, the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill, you stay in Wonderland, and I show you how deep the rabbit hole goes.\n\nMorpheus: Remember, all I’m offering is the truth, nothing more."
+        }
+      }
+    }
+  ]
+}

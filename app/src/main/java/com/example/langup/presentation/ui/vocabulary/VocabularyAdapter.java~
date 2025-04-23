@@ -1,0 +1,62 @@
+package com.example.langup.presentation.ui.vocabulary;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+import com.example.langup.R;
+import com.example.langup.data.model.VocabularyItem;
+import java.util.List;
+
+public class VocabularyAdapter extends RecyclerView.Adapter<VocabularyAdapter.VocabularyViewHolder> {
+    private List<VocabularyItem> items;
+    private boolean showTranslations = false;
+
+    public VocabularyAdapter(List<VocabularyItem> items) {
+        this.items = items;
+    }
+
+    @NonNull
+    @Override
+    public VocabularyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item_vocabulary, parent, false);
+        return new VocabularyViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull VocabularyViewHolder holder, int position) {
+        VocabularyItem item = items.get(position);
+        holder.wordTextView.setText(item.getWord());
+        holder.translationTextView.setText(item.getTranslation());
+        holder.translationTextView.setVisibility(showTranslations ? View.VISIBLE : View.GONE);
+    }
+
+    @Override
+    public int getItemCount() {
+        return items.size();
+    }
+
+    public void setItems(List<VocabularyItem> items) {
+        this.items = items;
+        notifyDataSetChanged();
+    }
+
+    public void setTranslationsVisible(boolean visible) {
+        showTranslations = visible;
+        notifyDataSetChanged();
+    }
+
+    static class VocabularyViewHolder extends RecyclerView.ViewHolder {
+        TextView wordTextView;
+        TextView translationTextView;
+
+        VocabularyViewHolder(@NonNull View itemView) {
+            super(itemView);
+            wordTextView = itemView.findViewById(R.id.wordTextView);
+            translationTextView = itemView.findViewById(R.id.translationTextView);
+        }
+    }
+} 

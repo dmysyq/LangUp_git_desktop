@@ -25,6 +25,8 @@ import com.example.langup.R;
 import com.example.langup.presentation.ui.dialogs.SearchFilterDialog;
 import com.google.firebase.auth.FirebaseAuth;
 import com.example.langup.data.local.JsonLoader;
+import com.example.langup.presentation.ui.level.LevelSelectionActivity;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +34,7 @@ import android.util.Log;
 import java.util.stream.Collectors;
 
 public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnSeriesClickListener, SearchFilterDialog.OnSearchFilterListener {
+    private static final String TAG = "MainActivity";
     private RecyclerView recyclerView;
     private SeriesAdapter adapter;
     private ProgressBar progressBar;
@@ -154,7 +157,17 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
 
     @Override
     public void onSeriesClick(Series series) {
-        // Handle series click
+        Intent intent = new Intent(this, LevelSelectionActivity.class);
+        intent.putExtra("series_id", series.getId());
+        intent.putExtra("title", series.getTitle());
+        intent.putExtra("description", series.getDescription());
+        intent.putExtra("difficulty", series.getDifficulty());
+        intent.putExtra("accent", series.getAccent());
+        intent.putExtra("video_url", series.getVideoUrl());
+        intent.putExtra("transcript", series.getContent().getTranscript().getFull());
+        intent.putExtra("vocabulary", new Gson().toJson(series.getContent().getVocabulary()));
+        Log.d(TAG, "Starting LevelSelectionActivity with series ID: " + series.getId());
+        startActivity(intent);
     }
 
     @Override

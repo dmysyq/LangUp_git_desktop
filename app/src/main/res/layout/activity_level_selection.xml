@@ -11,8 +11,8 @@
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -30,69 +30,97 @@
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:textColor="@android:color/black" />
+                android:layout_marginBottom="8dp"/>
 
             <TextView
                 android:id="@+id/descriptionTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"/>
 
             <TextView
-                android:id="@+id/sourceTextView"
+                android:id="@+id/difficultyTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:textSize="14sp"
-                android:textStyle="italic"
-                android:textColor="@android:color/darker_gray" />
-
-            <Button
-                android:id="@+id/youtubeButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/watch_on_youtube"
-                android:drawableStart="@drawable/ic_youtube"
-                android:drawablePadding="8dp" />
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
 
             <TextView
+                android:id="@+id/accentTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="8dp"
-                android:text="@string/select_level"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"/>
 
-            <Button
-                android:id="@+id/questionsButton"
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/videoInfoCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/questions" />
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/watch_video_first"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp"/>
+
+                    <TextView
+                        android:id="@+id/videoUrlTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/design_default_color_primary"
+                        android:textSize="14sp"
+                        android:autoLink="web"
+                        android:layout_marginBottom="8dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/complete_levels_after"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
 
             <Button
                 android:id="@+id/vocabularyButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/vocabulary" />
+                android:text="@string/vocabulary"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/questionsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/questions"
+                android:layout_marginBottom="8dp"/>
 
             <Button
                 android:id="@+id/grammarButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/grammar" />
+                android:text="@string/grammar"
+                android:layout_marginBottom="8dp"/>
 
             <Button
-                android:id="@+id/buildingButton"
+                android:id="@+id/transcriptButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/building" />
+                android:text="@string/transcript"
+                android:layout_marginBottom="8dp"/>
 
         </LinearLayout>
     </ScrollView>
