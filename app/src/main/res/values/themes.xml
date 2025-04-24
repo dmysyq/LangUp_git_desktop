@@ -16,7 +16,7 @@
         <item name="colorAccent">@color/accent</item>
 
         <!-- Status bar color -->
-        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:statusBarColor">@color/primary</item>
 
         <!-- Background colors -->
         <item name="android:windowBackground">@color/background_primary</item>
@@ -54,7 +54,7 @@
         <item name="colorAccent">@color/accent</item>
 
         <!-- Status bar color -->
-        <item name="android:statusBarColor">@color/background_dark</item>
+        <item name="android:statusBarColor">@color/primary</item>
 
         <!-- Background colors -->
         <item name="android:windowBackground">@color/background_dark</item>

@@ -70,4 +70,6 @@
     <color name="wrong_answer">#F44336</color>
     <color name="colorPrimaryWelcomeActivity">#9E9E9E</color>
     <color name="colorPrimaryMainActivity">#9E9E9E</color>
+    <color name="character_name">#1A1F46</color>
+    <color name="stage_direction">#F44336</color>
 </resources>

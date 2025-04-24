@@ -54,27 +54,27 @@
         <activity
             android:name=".presentation.ui.questions.QuestionsResultsActivity"
             android:exported="false"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            android:theme="@style/Theme.LangUp" />
         <activity
             android:name=".presentation.ui.level.LevelSelectionActivity"
             android:exported="false"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            android:theme="@style/Theme.LangUp" />
         <activity
             android:name=".presentation.ui.questions.QuestionsActivity"
             android:exported="false"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            android:theme="@style/Theme.LangUp" />
         <activity
             android:name=".presentation.ui.vocabulary.VocabularyActivity"
             android:exported="false"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            android:theme="@style/Theme.LangUp" />
         <activity
             android:name=".presentation.ui.grammar.GrammarActivity"
             android:exported="false"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            android:theme="@style/Theme.LangUp" />
         <activity
             android:name=".presentation.ui.transcript.TranscriptActivity"
             android:exported="false"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            android:theme="@style/Theme.LangUp" />
 
         <meta-data
             android:name="preloaded_fonts"

@@ -9,7 +9,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
     private SeriesAdapter adapter;
     private ProgressBar progressBar;
     private Toolbar toolbar;
-    private LinearLayout bottomNav;
     private List<Series> allSeries = new ArrayList<>();
     private int selectedDifficulty = 0;
     private String selectedAccent = "";
@@ -69,7 +68,6 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
         toolbar = findViewById(R.id.toolbar);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         progressBar = findViewById(R.id.progressBar);
-        bottomNav = findViewById(R.id.bottom_nav);
 
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         adapter = new SeriesAdapter(new ArrayList<>(), this);
@@ -78,7 +76,19 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
 
     private void setupToolbar() {
         setSupportActionBar(toolbar);
-        Objects.requireNonNull(getSupportActionBar()).setTitle(R.string.app_name);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
+        
+        TextView titleView = new TextView(this);
+        titleView.setText(R.string.app_name);
+        titleView.setLayoutParams(new Toolbar.LayoutParams(
+            Toolbar.LayoutParams.WRAP_CONTENT,
+            Toolbar.LayoutParams.WRAP_CONTENT,
+            android.view.Gravity.CENTER
+        ));
+        titleView.setTextAppearance(com.google.android.material.R.style.TextAppearance_MaterialComponents_Headline6);
+        titleView.setTextColor(getResources().getColor(R.color.text_tertiary_light, null));
+        titleView.setTextSize(20);
+        toolbar.addView(titleView);
     }
 
     private void setupNavigation() {
