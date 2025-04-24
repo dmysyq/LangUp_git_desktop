@@ -66,7 +66,7 @@
     </style>
 
     <!-- Стиль для кнопок -->
-    <style name="PrimaryButton" parent="Widget.MaterialComponents.Button">
+    <style name="DuolingoButton" parent="Widget.MaterialComponents.Button">
         <item name="android:textColor">@color/button_text</item>
         <item name="android:textSize">16sp</item>
         <item name="android:fontFamily">sans-serif-bold</item>
@@ -78,19 +78,19 @@
     </style>
 
     <!-- Стиль для основной кнопки -->
-    <style name="PrimaryButton.Primary" parent="PrimaryButton">
+    <style name="DuolingoButton.Primary" parent="DuolingoButton">
         <item name="backgroundTint">@color/button_primary</item>
         <item name="rippleColor">@color/button_primary_pressed</item>
     </style>
 
     <!-- Стиль для вторичной кнопки -->
-    <style name="PrimaryButton.Secondary" parent="PrimaryButton">
+    <style name="DuolingoButton.Secondary" parent="DuolingoButton">
         <item name="backgroundTint">@color/button_secondary</item>
         <item name="rippleColor">@color/button_secondary_pressed</item>
     </style>
 
     <!-- Стиль для карточек -->
-    <style name="Cards" parent="Widget.MaterialComponents.CardView">
+    <style name="DuolingoCard" parent="Widget.MaterialComponents.CardView">
         <item name="cardBackgroundColor">@color/background_primary</item>
         <item name="cardCornerRadius">12dp</item>
         <item name="cardElevation">2dp</item>
@@ -304,10 +304,11 @@
 
     <!-- Bottom Navigation Styles -->
     <style name="BottomNavigation.LangUp" parent="Widget.MaterialComponents.BottomNavigationView">
-        <item name="itemIconTint">@null</item>
-        <item name="itemTextColor">@null</item>
-        <item name="itemRippleColor">@null</item>
-        <item name="itemBackground">@null</item>
+        <item name="itemIconTint">@color/text_primary</item>
+        <item name="itemTextColor">@color/text_primary</item>
+        <item name="itemRippleColor">@color/chip_background_selected</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.LangUp.Body2</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.LangUp.Body2</item>
     </style>
 
     <!-- Toolbar Styles -->

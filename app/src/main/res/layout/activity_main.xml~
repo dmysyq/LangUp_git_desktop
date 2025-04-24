@@ -9,7 +9,6 @@
         android:id="@+id/toolbar"
         style="@style/Toolbar.LangUp"
         android:layout_width="match_parent"
-        android:background="?attr/colorPrimary"
         android:layout_height="?attr/actionBarSize"
         android:elevation="4dp"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,11 +37,14 @@
 
     </FrameLayout>
 
-    <include
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
-        layout="@layout/custom_bottom_nav"
+        style="@style/BottomNavigation.LangUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:background="@color/background_primary"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

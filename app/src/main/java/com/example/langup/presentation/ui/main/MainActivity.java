@@ -5,10 +5,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -39,9 +40,7 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
     private SeriesAdapter adapter;
     private ProgressBar progressBar;
     private Toolbar toolbar;
-    private ImageButton navHome;
-    private ImageButton navProfile;
-    private ImageButton navSettings;
+    private LinearLayout bottomNav;
     private List<Series> allSeries = new ArrayList<>();
     private int selectedDifficulty = 0;
     private String selectedAccent = "";
@@ -70,9 +69,7 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
         toolbar = findViewById(R.id.toolbar);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         progressBar = findViewById(R.id.progressBar);
-        navHome = findViewById(R.id.nav_home);
-        navProfile = findViewById(R.id.nav_profile);
-        navSettings = findViewById(R.id.nav_settings);
+        bottomNav = findViewById(R.id.bottom_nav);
 
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         adapter = new SeriesAdapter(new ArrayList<>(), this);
@@ -85,13 +82,21 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
     }
 
     private void setupNavigation() {
-        navHome.setOnClickListener(v -> {
+        ImageButton homeButton = findViewById(R.id.nav_home);
+        ImageButton profileButton = findViewById(R.id.nav_profile);
+        ImageButton settingsButton = findViewById(R.id.nav_settings);
+
+        homeButton.setOnClickListener(v -> {
             // Already on home
         });
 
-        navProfile.setOnClickListener(v -> startActivity(new Intent(this, UserProfileActivity.class)));
+        profileButton.setOnClickListener(v -> {
+            startActivity(new Intent(this, UserProfileActivity.class));
+        });
 
-        navSettings.setOnClickListener(v -> startActivity(new Intent(this, SettingsActivity.class)));
+        settingsButton.setOnClickListener(v -> {
+            startActivity(new Intent(this, SettingsActivity.class));
+        });
     }
 
     private void loadSeries() {

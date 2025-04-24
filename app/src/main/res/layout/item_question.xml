@@ -2,12 +2,11 @@
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Card.LangUp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="8dp"
-    android:layout_marginVertical="4dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="2dp">
+    android:layout_marginVertical="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,11 +16,10 @@
 
         <TextView
             android:id="@+id/questionTextView"
+            style="@style/TextAppearance.LangUp.Body1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="@color/text_primary"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp" />
 
         <RadioGroup
             android:id="@+id/singleChoiceGroup"
@@ -31,15 +29,19 @@
 
             <RadioButton
                 android:id="@+id/option0"
+                style="@style/TextAppearance.LangUp.Body1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/text_primary" />
 
             <RadioButton
                 android:id="@+id/option1"
+                style="@style/TextAppearance.LangUp.Body1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/text_primary" />
 
         </RadioGroup>
 
@@ -52,25 +54,30 @@
 
             <CheckBox
                 android:id="@+id/checkbox0"
+                style="@style/TextAppearance.LangUp.Body1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/text_primary" />
 
             <CheckBox
                 android:id="@+id/checkbox1"
+                style="@style/TextAppearance.LangUp.Body1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/text_primary" />
 
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/checkButton"
+            style="@style/Button.LangUp.Primary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginTop="16dp"
-            android:text="@string/check_answer"/>
+            android:text="@string/check_answer" />
 
     </LinearLayout>
 

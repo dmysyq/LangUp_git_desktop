@@ -26,7 +26,6 @@
     <string name="password">Пароль</string>
     <string name="name">Имя</string>
     <string name="forgot_password">Забыли пароль?</string>
-    <string name="or_sign_in_with">или войдите через</string>
     <string name="google_sign_in">Войти через Google</string>
     <string name="no_account">Нет аккаунта?</string>
     <string name="sign_up">Зарегистрироваться</string>
@@ -36,7 +35,6 @@
     <string name="create_account">Создать аккаунт</string>
     <string name="full_name">Полное имя</string>
     <string name="confirm_password">Подтвердите пароль</string>
-    <string name="or_sign_up_with">или зарегистрируйтесь через</string>
     <string name="google_sign_up">Зарегистрироваться через Google</string>
     <string name="dont_have_account">Нет аккаунта?</string>
     <string name="already_have_account">Уже есть аккаунт?</string>
@@ -78,7 +76,6 @@
     <string name="preferences_error">Ошибка при сохранении предпочтений</string>
     <string name="or">или</string>
     <string name="continue_with_google">Продолжить с Google</string>
-    <string name="continue_with_facebook">Продолжить с Facebook</string>
     <string name="by_signing_up_langup_you_agree_to_our_terms_and_privacy_policy">Регистрируясь на LangUp, вы соглашаетесь с нашими Условиями и Политикой конфиденциальности.</string>
     <string name="profile">Профиль</string>
     <string name="preferences">Предпочтения</string>
@@ -109,8 +106,6 @@
     <string name="questions_title">Вопросы</string>
     <string name="correct_answers_count">Правильных ответов: %1$d из %2$d</string>
     <string name="error_loading_episode">Ошибка загрузки эпизода.</string>
-    <string name="first_connector">Первый разъем</string>
-    <string name="second_connector">Второй разъем</string>
     <string name="grammar_exercise">Грамматическое упражнение</string>
     <string name="your_answer">Ваш ответ</string>
     <string name="correct_answer">Правильный!</string>
