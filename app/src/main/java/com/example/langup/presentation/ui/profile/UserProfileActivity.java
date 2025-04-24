@@ -50,11 +50,7 @@ public class UserProfileActivity extends AppCompatActivity {
     private ChipGroup genresChipGroup;
     private ChipGroup countriesChipGroup;
     private ChipGroup sourcesChipGroup;
-    private final TextView savePreferencesButton;
-
-    public UserProfileActivity(TextView savePreferencesButton) {
-        this.savePreferencesButton = savePreferencesButton;
-    }
+    private TextView savePreferencesButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
