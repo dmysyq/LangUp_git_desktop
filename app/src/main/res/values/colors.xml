@@ -73,4 +73,7 @@
     <color name="colorPrimaryMainActivity">#9E9E9E</color>
     <color name="character_name">#1A1F46</color>
     <color name="stage_direction">#F44336</color>
+    <color name="correct_answer_light">#D6F5D6</color>
+    <color name="wrong_answer_light">#FFD6D6</color>
+    <color name="warning_light">#FFF7CC</color>
 </resources>

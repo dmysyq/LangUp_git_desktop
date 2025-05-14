@@ -89,7 +89,12 @@ public class SignUpActivity extends BaseActivity implements AuthManager.TokenRef
         googleSignUpButton.setOnClickListener(v -> signUpWithGoogle());
         facebookSignUpButton.setOnClickListener(v -> signUpWithFacebook());
         loginTextView.setOnClickListener(v -> finish());
-        backButton.setOnClickListener(v -> finish());
+        backButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, WelcomeActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
+        });
     }
 
     private void togglePasswordVisibility(EditText passwordField, ImageButton toggleButton) {
@@ -266,5 +271,13 @@ public class SignUpActivity extends BaseActivity implements AuthManager.TokenRef
             Toast.makeText(this, getString(R.string.session_expired), Toast.LENGTH_SHORT).show();
             startMainActivity();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, WelcomeActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
     }
 } 

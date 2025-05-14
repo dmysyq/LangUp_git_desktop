@@ -56,6 +56,8 @@ public class SeriesContent implements Serializable {
         private List<String> options;
         private List<Integer> correctAnswers;
         private Integer correctAnswer;
+        private List<Integer> selectedAnswers = new ArrayList<>();
+        private Integer selectedAnswer = null;
 
         public Question() {
             options = new ArrayList<>();
@@ -79,6 +81,29 @@ public class SeriesContent implements Serializable {
 
         public Integer getCorrectAnswer() { return correctAnswer; }
         public void setCorrectAnswer(Integer correctAnswer) { this.correctAnswer = correctAnswer; }
+
+        public List<Integer> getSelectedAnswers() { return selectedAnswers; }
+        public void setSelectedAnswers(List<Integer> selectedAnswers) { this.selectedAnswers = selectedAnswers; }
+        public Integer getSelectedAnswer() { return selectedAnswer; }
+        public void setSelectedAnswer(Integer selectedAnswer) { this.selectedAnswer = selectedAnswer; }
+
+        public boolean isAnswered() {
+            if (isSingleChoice()) {
+                return selectedAnswer != null;
+            } else if (isMultipleChoice()) {
+                return selectedAnswers != null && !selectedAnswers.isEmpty();
+            }
+            return false;
+        }
+
+        public boolean isCorrect() {
+            if (isSingleChoice()) {
+                return selectedAnswer != null && selectedAnswer.equals(correctAnswer);
+            } else if (isMultipleChoice()) {
+                return selectedAnswers != null && correctAnswers != null && selectedAnswers.equals(correctAnswers);
+            }
+            return false;
+        }
 
         public boolean isSingleChoice() {
             return "single_choice".equals(type);

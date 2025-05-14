@@ -80,7 +80,12 @@ public class LoginActivity extends BaseActivity implements AuthManager.TokenRefr
         facebookLoginButton.setOnClickListener(v -> signInWithFacebook());
         forgotPasswordTextView.setOnClickListener(v -> startPasswordReset());
         signUpTextView.setOnClickListener(v -> startSignUp());
-        backButton.setOnClickListener(v -> finish());
+        backButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, WelcomeActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
+        });
     }
 
     private void togglePasswordVisibility() {
@@ -250,5 +255,13 @@ public class LoginActivity extends BaseActivity implements AuthManager.TokenRefr
             Toast.makeText(this, getString(R.string.session_expired), Toast.LENGTH_SHORT).show();
             startMainActivity();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, WelcomeActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
     }
 }

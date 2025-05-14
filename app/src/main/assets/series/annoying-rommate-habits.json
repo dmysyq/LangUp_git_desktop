@@ -327,12 +327,6 @@
                 "correctAnswer": "when"
               },
               {
-                "id": "g10",
-                "sentence": "Deflect all you want ___ you and I both know ___ you care about Enid.",
-                "options": ["but", "that", "and", ""],
-                "correctAnswers": ["but", "that"]
-              },
-              {
                 "id": "g11",
                 "sentence": "It was barely perceptible to the average eye ___ I noticed.",
                 "options": ["but", "and", "that", ""],
@@ -343,12 +337,6 @@
                 "sentence": "Is it really so difficult for you to admit ___ you made a friend...",
                 "options": ["that", "which", "when", ""],
                 "correctAnswer": "that"
-              },
-              {
-                "id": "g13",
-                "sentence": "...and ___ she's gone ___ you might actually miss her?",
-                "options": ["now that", "if", "when", ""],
-                "correctAnswers": ["now that", "that"]
               },
               {
                 "id": "g14",

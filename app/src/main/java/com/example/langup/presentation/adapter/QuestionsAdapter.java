@@ -43,57 +43,92 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
             position, question.getId(), question.getType()));
         
         holder.questionTextView.setText(question.getQuestion());
-        
-        // Clear previous options
+        holder.singleChoiceGroup.setOnCheckedChangeListener(null);
         holder.singleChoiceGroup.removeAllViews();
         holder.multipleChoiceGroup.removeAllViews();
-        
-        // Initially disable check button
         holder.checkButton.setEnabled(false);
-        
-        // Add options based on question type
+
         if (question.isSingleChoice()) {
-            Log.d(TAG, "onBindViewHolder: Setting up single choice question");
             holder.singleChoiceGroup.setVisibility(View.VISIBLE);
             holder.multipleChoiceGroup.setVisibility(View.GONE);
-            
+            List<RadioButton> radioButtons = new ArrayList<>();
             for (int i = 0; i < question.getOptions().size(); i++) {
                 RadioButton radioButton = new RadioButton(holder.itemView.getContext());
                 radioButton.setText(question.getOptions().get(i));
                 radioButton.setId(i);
+                radioButton.setEnabled(!question.isAnswered());
+                radioButtons.add(radioButton);
                 holder.singleChoiceGroup.addView(radioButton);
             }
-            
-            // Enable check button when an option is selected
-            holder.singleChoiceGroup.setOnCheckedChangeListener((group, checkedId) -> {
-                holder.checkButton.setEnabled(checkedId != -1);
-            });
-            
+            // Восстановить выбранный ответ
+            if (question.getSelectedAnswer() != null) {
+                RadioButton selected = holder.singleChoiceGroup.findViewById(question.getSelectedAnswer());
+                if (selected != null) selected.setChecked(true);
+            }
+            // Если уже отвечено, покрасить варианты
+            if (question.isAnswered()) {
+                for (int i = 0; i < holder.singleChoiceGroup.getChildCount(); i++) {
+                    RadioButton rb = (RadioButton) holder.singleChoiceGroup.getChildAt(i);
+                    if (question.getSelectedAnswer() != null && i == question.getSelectedAnswer()) {
+                        updateOptionColor(rb, question.isCorrect(), false);
+                    } else if (question.getCorrectAnswer() != null && i == question.getCorrectAnswer() && !question.isCorrect()) {
+                        updateOptionColor(rb, true, false);
+                    }
+                    rb.setEnabled(false);
+                }
+                holder.checkButton.setEnabled(false);
+            } else {
+                holder.singleChoiceGroup.setOnCheckedChangeListener((group, checkedId) -> {
+                    holder.checkButton.setEnabled(checkedId != -1);
+                });
+            }
         } else if (question.isMultipleChoice()) {
-            Log.d(TAG, "onBindViewHolder: Setting up multiple choice question");
             holder.singleChoiceGroup.setVisibility(View.GONE);
             holder.multipleChoiceGroup.setVisibility(View.VISIBLE);
-            
+            final int maxSelectable = question.getCorrectAnswers() != null ? question.getCorrectAnswers().size() : 1;
+            List<CheckBox> checkBoxes = new ArrayList<>();
             for (int i = 0; i < question.getOptions().size(); i++) {
                 CheckBox checkBox = new CheckBox(holder.itemView.getContext());
                 checkBox.setText(question.getOptions().get(i));
                 checkBox.setId(i);
+                checkBox.setEnabled(!question.isAnswered());
+                checkBoxes.add(checkBox);
+                // Восстановить выбранные
+                if (question.getSelectedAnswers() != null && question.getSelectedAnswers().contains(i)) {
+                    checkBox.setChecked(true);
+                }
                 checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
-                    // Check if any checkbox is checked
-                    boolean hasCheckedOption = false;
-                    for (int j = 0; j < holder.multipleChoiceGroup.getChildCount(); j++) {
-                        CheckBox cb = (CheckBox) holder.multipleChoiceGroup.getChildAt(j);
-                        if (cb.isChecked()) {
-                            hasCheckedOption = true;
-                            break;
-                        }
+                    int checkedCount = 0;
+                    for (CheckBox cb : checkBoxes) {
+                        if (cb.isChecked()) checkedCount++;
                     }
+                    if (checkedCount > maxSelectable) {
+                        buttonView.setChecked(false);
+                        return;
+                    }
+                    boolean hasCheckedOption = checkedCount > 0;
                     holder.checkButton.setEnabled(hasCheckedOption);
                 });
                 holder.multipleChoiceGroup.addView(checkBox);
             }
+            // Если уже отвечено, покрасить варианты
+            if (question.isAnswered()) {
+                for (int i = 0; i < holder.multipleChoiceGroup.getChildCount(); i++) {
+                    CheckBox cb = (CheckBox) holder.multipleChoiceGroup.getChildAt(i);
+                    boolean isSelected = question.getSelectedAnswers() != null && question.getSelectedAnswers().contains(i);
+                    boolean isCorrectAnswer = question.getCorrectAnswers() != null && question.getCorrectAnswers().contains(i);
+                    if (isSelected && isCorrectAnswer) {
+                        updateOptionColor(cb, true, false);
+                    } else if (isSelected) {
+                        updateOptionColor(cb, false, false);
+                    } else if (isCorrectAnswer) {
+                        updateOptionColor(cb, false, true);
+                    }
+                    cb.setEnabled(false);
+                }
+                holder.checkButton.setEnabled(false);
+            }
         }
-
         holder.checkButton.setOnClickListener(v -> checkAnswer(holder, question));
     }
 
@@ -109,14 +144,15 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
                 selectedId, question.getCorrectAnswer()));
             
             if (selectedId != -1 && question.getCorrectAnswer() != null) {
+                question.setSelectedAnswer(selectedId);
                 RadioButton selectedButton = holder.itemView.findViewById(selectedId);
                 isCorrect = selectedId == question.getCorrectAnswer();
                 Log.d(TAG, "checkAnswer: Single choice - isCorrect=" + isCorrect);
-                updateOptionColor(selectedButton, isCorrect);
+                updateOptionColor(selectedButton, isCorrect, false);
                 
                 if (!isCorrect) {
                     RadioButton correctButton = holder.itemView.findViewById(question.getCorrectAnswer());
-                    updateOptionColor(correctButton, true);
+                    updateOptionColor(correctButton, true, false);
                 }
                 
                 // Disable radio buttons after checking
@@ -127,7 +163,7 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
             } else {
                 Log.w(TAG, "checkAnswer: Single choice - No answer selected or correctAnswer is null");
             }
-        } else if (question.isMultipleChoice()) {
+        } else {
             List<Integer> selectedAnswers = new ArrayList<>();
             for (int i = 0; i < holder.multipleChoiceGroup.getChildCount(); i++) {
                 CheckBox checkBox = (CheckBox) holder.multipleChoiceGroup.getChildAt(i);
@@ -135,7 +171,7 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
                     selectedAnswers.add(checkBox.getId());
                 }
             }
-            
+            question.setSelectedAnswers(selectedAnswers);
             Log.d(TAG, String.format("checkAnswer: Multiple choice - selectedAnswers=%s, correctAnswers=%s",
                 selectedAnswers, question.getCorrectAnswers()));
             
@@ -150,27 +186,37 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
                     question.getCorrectAnswers().contains(i);
                 
                 if (isSelected && isCorrectAnswer) {
-                    updateOptionColor(checkBox, true);
+                    updateOptionColor(checkBox, true, false); // green
                 } else if (isSelected) {
-                    updateOptionColor(checkBox, false);
+                    updateOptionColor(checkBox, false, false); // red
                 } else if (isCorrectAnswer) {
-                    updateOptionColor(checkBox, true);
+                    updateOptionColor(checkBox, false, true); // yellow
                 }
-                
                 // Disable checkboxes after checking
                 checkBox.setEnabled(false);
             }
         }
-        
         // Disable check button after checking
         holder.checkButton.setEnabled(false);
+        // Оповестим активность, что был дан ответ (чтобы обновить счетчик)
+        if (holder.itemView.getContext() instanceof android.app.Activity) {
+            ((android.app.Activity) holder.itemView.getContext()).runOnUiThread(() -> {
+                if (holder.itemView.getContext() instanceof com.example.langup.presentation.ui.questions.QuestionsActivity) {
+                    ((com.example.langup.presentation.ui.questions.QuestionsActivity) holder.itemView.getContext()).updateResultButtonState();
+                }
+            });
+        }
     }
 
-    private void updateOptionColor(View option, boolean isCorrect) {
-        Log.d(TAG, "updateOptionColor: Updating color for option, isCorrect=" + isCorrect);
-        int color = isCorrect ? 
-            ContextCompat.getColor(option.getContext(), R.color.correct_answer) :
-            ContextCompat.getColor(option.getContext(), R.color.wrong_answer);
+    private void updateOptionColor(View option, boolean isCorrect, boolean isWarning) {
+        int color;
+        if (isWarning) {
+            color = ContextCompat.getColor(option.getContext(), R.color.warning_light);
+        } else if (isCorrect) {
+            color = ContextCompat.getColor(option.getContext(), R.color.correct_answer_light);
+        } else {
+            color = ContextCompat.getColor(option.getContext(), R.color.wrong_answer_light);
+        }
         option.setBackgroundColor(color);
     }
 

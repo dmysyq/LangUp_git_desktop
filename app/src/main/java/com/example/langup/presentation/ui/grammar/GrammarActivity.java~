@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,7 +26,6 @@ public class GrammarActivity extends AppCompatActivity {
     private List<GrammarExercise> exercises;
     private GrammarAdapter adapter;
     private TextView answeredCounter;
-    private TextView resultTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,10 +43,6 @@ public class GrammarActivity extends AppCompatActivity {
         loadGrammarExercises(grammarJson);
         resultButton = findViewById(R.id.resultButton);
         answeredCounter = findViewById(R.id.answeredCounter);
-        resultTextView = new TextView(this);
-        resultTextView.setTextAppearance(this, androidx.appcompat.R.style.TextAppearance_AppCompat_Large);
-        resultTextView.setVisibility(View.GONE);
-        ((ViewGroup) resultButton.getParent()).addView(resultTextView);
         resultButton.setOnClickListener(v -> showResult());
         updateResultButtonState();
     }
@@ -98,7 +92,7 @@ public class GrammarActivity extends AppCompatActivity {
         return true;
     }
 
-    public void updateResultButtonState() {
+    private void updateResultButtonState() {
         int answered = 0;
         int total = exercises != null ? exercises.size() : 0;
         if (exercises != null) {
@@ -126,10 +120,7 @@ public class GrammarActivity extends AppCompatActivity {
         }
         int percent = total > 0 ? (100 * correct / total) : 0;
         String result = getString(R.string.correct_answers_count, correct, total) + " (" + percent + "%)";
-        resultTextView.setText(result);
-        resultTextView.setVisibility(View.VISIBLE);
-        resultButton.setVisibility(View.GONE);
-        answeredCounter.setVisibility(View.GONE);
+        Snackbar.make(grammarRecyclerView, result, Snackbar.LENGTH_LONG).show();
     }
 
     private record Grammar(List<GrammarExercise> exercises) {

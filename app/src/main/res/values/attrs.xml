@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Material Design Color Attributes -->
-    <attr name="colorPrimary" format="color" />
-    <attr name="colorPrimaryDark" format="color" />
-    <attr name="colorAccent" format="color" />
-    <attr name="colorSecondary" format="color" />
-    <attr name="colorSecondaryDark" format="color" />
-</resources> 

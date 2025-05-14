@@ -115,6 +115,7 @@
     <string name="watch_on_youtube">Watch on YouTube</string>
     
     <!-- Difficulty Levels -->
+    <string name="difficulty_label">Difficulty</string>
     <string name="all_levels">All Levels</string>
     <string name="difficulty_level">Difficulty: %1$s</string>
     <string name="level_1">Beginner (A1)</string>

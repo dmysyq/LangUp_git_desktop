@@ -3,6 +3,9 @@ package com.example.langup.presentation.ui.questions;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -22,6 +25,11 @@ public class QuestionsActivity extends AppCompatActivity {
     
     private TextView titleTextView;
     private RecyclerView questionsRecyclerView;
+    private Button resultButton;
+    private List<Question> questions;
+    private QuestionsAdapter adapter;
+    private TextView answeredCounter;
+    private TextView resultTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +47,14 @@ public class QuestionsActivity extends AppCompatActivity {
         setupToolbar(title);
         setupRecyclerView();
         loadQuestions(questionsJson);
+        resultButton = findViewById(R.id.resultButton);
+        answeredCounter = findViewById(R.id.answeredCounter);
+        resultTextView = new TextView(this);
+        resultTextView.setTextAppearance(this, androidx.appcompat.R.style.TextAppearance_AppCompat_Large);
+        resultTextView.setVisibility(View.GONE);
+        ((ViewGroup) resultButton.getParent()).addView(resultTextView);
+        resultButton.setOnClickListener(v -> showResult());
+        updateResultButtonState();
     }
 
     private void initializeViews() {
@@ -69,28 +85,8 @@ public class QuestionsActivity extends AppCompatActivity {
         if (questionsJson != null && !questionsJson.isEmpty()) {
             try {
                 Type listType = new TypeToken<List<Question>>(){}.getType();
-                List<Question> questions = new Gson().fromJson(questionsJson, listType);
-                Log.d(TAG, "loadQuestions: Successfully parsed " + questions.size() + " questions");
-                
-                // Log each question details
-                for (Question question : questions) {
-                    Log.d(TAG, String.format("""
-                                    Question details:
-                                      id: %s
-                                      type: %s
-                                      question: %s
-                                      options: %s
-                                      correctAnswer: %s
-                                      correctAnswers: %s""",
-                        question.getId(),
-                        question.getType(),
-                        question.getQuestion(),
-                        question.getOptions(),
-                        question.getCorrectAnswer(),
-                        question.getCorrectAnswers()));
-                }
-
-                QuestionsAdapter adapter = new QuestionsAdapter(questions);
+                questions = new Gson().fromJson(questionsJson, listType);
+                adapter = new QuestionsAdapter(questions);
                 questionsRecyclerView.setAdapter(adapter);
             } catch (Exception e) {
                 Log.e(TAG, "Error parsing questions JSON: " + e.getMessage(), e);
@@ -115,5 +111,48 @@ public class QuestionsActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    // Проверка, отвечены ли все вопросы
+    private boolean allQuestionsAnswered() {
+        if (questions == null) return false;
+        for (Question q : questions) {
+            if (!q.isAnswered()) return false;
+        }
+        return true;
+    }
+
+    public void updateResultButtonState() {
+        int answered = 0;
+        int total = questions != null ? questions.size() : 0;
+        if (questions != null) {
+            for (Question q : questions) {
+                if (q.isAnswered()) answered++;
+            }
+        }
+        answeredCounter.setText(answered + "/" + total);
+        resultButton.setEnabled(answered == total && total > 0);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        updateResultButtonState();
+    }
+
+    private void showResult() {
+        int correct = 0;
+        int total = questions != null ? questions.size() : 0;
+        if (questions != null) {
+            for (Question q : questions) {
+                if (q.isAnswered() && q.isCorrect()) correct++;
+            }
+        }
+        int percent = total > 0 ? (100 * correct / total) : 0;
+        String result = getString(R.string.correct_answers_count, correct, total) + " (" + percent + "%)";
+        resultTextView.setText(result);
+        resultTextView.setVisibility(View.VISIBLE);
+        resultButton.setVisibility(View.GONE);
+        answeredCounter.setVisibility(View.GONE);
     }
 } 

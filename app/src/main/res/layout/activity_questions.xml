@@ -30,4 +30,28 @@
         android:clipToPadding="false"
         android:padding="8dp" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp">
+
+        <Button
+            android:id="@+id/resultButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/show_results"
+            android:enabled="false" />
+
+        <TextView
+            android:id="@+id/answeredCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/0"
+            android:gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    </LinearLayout>
+
 </LinearLayout> 
