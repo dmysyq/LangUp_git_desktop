@@ -69,11 +69,42 @@ public class LevelSelectionActivity extends BaseActivity {
         descriptionTextView.setText(description != null ? description : "");
         difficultyTextView.setText(getString(R.string.difficulty_level, String.valueOf(difficulty)));
         accentTextView.setText(getString(R.string.accent_label, accent != null ? accent : ""));
+        
+        // Show/hide video info card
         if (videoUrl != null && !videoUrl.isEmpty()) {
             videoUrlTextView.setText(videoUrl);
             videoInfoCard.setVisibility(View.VISIBLE);
         } else {
             videoInfoCard.setVisibility(View.GONE);
+        }
+
+        // Show/hide buttons based on data availability
+        // Vocabulary button
+        if (vocabularyJson != null && !vocabularyJson.equals("[]")) {
+            vocabularyButton.setVisibility(View.VISIBLE);
+        } else {
+            vocabularyButton.setVisibility(View.GONE);
+        }
+
+        // Questions button
+        if (questionsJson != null && !questionsJson.equals("[]")) {
+            questionsButton.setVisibility(View.VISIBLE);
+        } else {
+            questionsButton.setVisibility(View.GONE);
+        }
+
+        // Grammar button
+        if (grammarJson != null && !grammarJson.equals("[]")) {
+            grammarButton.setVisibility(View.VISIBLE);
+        } else {
+            grammarButton.setVisibility(View.GONE);
+        }
+
+        // Transcript button
+        if (transcript != null && !transcript.isEmpty()) {
+            transcriptButton.setVisibility(View.VISIBLE);
+        } else {
+            transcriptButton.setVisibility(View.GONE);
         }
     }
 

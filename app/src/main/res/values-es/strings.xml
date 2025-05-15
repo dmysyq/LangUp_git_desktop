@@ -128,15 +128,15 @@
     <string name="select_level">Seleccionar nivel</string>
     
     <!-- Accents -->
-    <string name="accent">Acento</string>
-    <string name="accent_label">Acento: %1$s</string>
-    <string name="all_accents">Todos los acentos</string>
-    <string name="american">Americano</string>
-    <string name="australian">Australiano</string>
-    <string name="british">Británico</string>
-    <string name="new_zealand">Neozelandés</string>
-    <string name="other_accent">Otro</string>
-    <string name="south_african">Sudafricano</string>
+    <string name="accent">Accent</string>
+    <string name="accent_label">Accent: %1$s</string>
+    <string name="all_accents">All Accents</string>
+    <string name="american">American</string>
+    <string name="australian">Australian</string>
+    <string name="british">British</string>
+    <string name="new_zealand">New Zealand</string>
+    <string name="other_accent">Other</string>
+    <string name="south_african">South African</string>
     
     <!-- Search and Filter -->
     <string name="all_sources">Todas las fuentes</string>

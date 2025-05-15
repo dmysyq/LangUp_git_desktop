@@ -7,6 +7,9 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.example.langup.R;
 import com.example.langup.domain.utils.LocaleManager;
+import com.example.langup.presentation.ui.main.MainActivity;
+
+import java.util.Objects;
 
 public abstract class BaseActivity extends AppCompatActivity {
     protected LocaleManager localeManager;
@@ -26,20 +29,17 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         localeManager = LocaleManager.getInstance(this);
         setContentView(getLayoutResourceId());
-
-        toolbar = findViewById(R.id.toolbar);
-        if (toolbar != null) {
-            setSupportActionBar(toolbar);
-            if (getSupportActionBar() != null) {
-                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            }
+        setupToolbar();
+        if (this instanceof MainActivity) {
+            Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(false);
+        } else {
+            Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        // Проверяем, не изменился ли язык
         String currentLanguage = localeManager.getCurrentLanguage();
         if (!currentLanguage.equals(getResources().getConfiguration().locale.getLanguage())) {
             localeManager.forceLocaleUpdate(this);
@@ -59,5 +59,12 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void updateLocale(String language) {
         localeManager.setLocale(language);
         recreate();
+    }
+
+    private void setupToolbar() {
+        toolbar = findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
     }
 } 

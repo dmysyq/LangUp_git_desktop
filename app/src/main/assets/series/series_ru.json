@@ -1,0 +1,72 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 1,
+        "title": "Русский сериал 1",
+        "lang": "ru",
+        "level": "A1",
+        "accent": "russian",
+        "source": "youtube",
+        "videoUrl": "https://youtu.be/example1",
+        "country": "Russia",
+        "imageUrl": "russian_banner",
+        "difficulty": 3,
+        "genres": ["Drama", "Comedy"],
+        "countries": ["Russia"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "пример",
+            "translation": "example",
+            "example": "Это пример слова"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Пример вопроса?",
+            "options": ["Да", "Нет"],
+            "correctAnswer": 0
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "id": 2,
+        "title": "Русский сериал 2",
+        "lang": "ru",
+        "level": "A2",
+        "accent": "russian",
+        "source": "youtube",
+        "videoUrl": "https://youtu.be/example2",
+        "country": "Russia",
+        "imageUrl": "russian_banner",
+        "difficulty": 4,
+        "genres": ["Drama", "Comedy"],
+        "countries": ["Russia"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "пример",
+            "translation": "example",
+            "example": "Это пример слова"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Пример вопроса?",
+            "options": ["Да", "Нет"],
+            "correctAnswer": 0
+          }
+        ]
+      }
+    }
+  ]
+} 

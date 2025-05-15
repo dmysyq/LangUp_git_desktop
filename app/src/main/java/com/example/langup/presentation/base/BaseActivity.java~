@@ -2,13 +2,16 @@ package com.example.langup.presentation.base;
 
 import android.content.Context;
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import com.example.langup.R;
 import com.example.langup.domain.utils.LocaleManager;
+import java.util.Objects;
 
 public abstract class BaseActivity extends AppCompatActivity {
-    private LocaleManager localeManager;
+    protected LocaleManager localeManager;
+    protected Toolbar toolbar;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -17,23 +20,49 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.attachBaseContext(context);
     }
 
+    protected abstract int getLayoutResourceId();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         localeManager = LocaleManager.getInstance(this);
+        setContentView(getLayoutResourceId());
+        setupToolbar();
+        if (this instanceof MainActivity) {
+            Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(false);
+        } else {
+            Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        // Проверяем, не изменился ли язык
         String currentLanguage = localeManager.getCurrentLanguage();
         if (!currentLanguage.equals(getResources().getConfiguration().locale.getLanguage())) {
             localeManager.forceLocaleUpdate(this);
         }
     }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
     protected LocaleManager getLocaleManager() {
         return localeManager;
+    }
+
+    protected void updateLocale(String language) {
+        localeManager.setLocale(language);
+        recreate();
+    }
+
+    private void setupToolbar() {
+        toolbar = findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
     }
 } 

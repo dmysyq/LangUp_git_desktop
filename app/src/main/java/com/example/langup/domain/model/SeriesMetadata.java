@@ -39,6 +39,9 @@ public class SeriesMetadata implements Serializable {
     @SerializedName("countries")
     private List<String> countries;
 
+    @SerializedName("lang")
+    private String lang;
+
     public SeriesMetadata() {
         genres = new ArrayList<>();
         countries = new ArrayList<>();
@@ -56,6 +59,7 @@ public class SeriesMetadata implements Serializable {
     public int getDifficulty() { return difficulty; }
     public List<String> getGenres() { return genres; }
     public List<String> getCountries() { return countries; }
+    public String getLang() { return lang; }
 
     // Setters
     public void setId(String id) { this.id = id; }
@@ -69,4 +73,5 @@ public class SeriesMetadata implements Serializable {
     public void setDifficulty(int difficulty) { this.difficulty = difficulty; }
     public void setGenres(List<String> genres) { this.genres = genres; }
     public void setCountries(List<String> countries) { this.countries = countries; }
+    public void setLang(String lang) { this.lang = lang; }
 } 

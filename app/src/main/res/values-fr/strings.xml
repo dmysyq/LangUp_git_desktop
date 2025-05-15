@@ -129,14 +129,14 @@
     
     <!-- Accents -->
     <string name="accent">Accent</string>
-    <string name="accent_label">Accent : %1$s</string>
-    <string name="all_accents">Tous les accents</string>
-    <string name="american">Américain</string>
-    <string name="australian">Australien</string>
-    <string name="british">Britannique</string>
-    <string name="new_zealand">Néo-zélandais</string>
-    <string name="other_accent">Autre</string>
-    <string name="south_african">Sud-africain</string>
+    <string name="accent_label">Accent: %1$s</string>
+    <string name="all_accents">All Accents</string>
+    <string name="american">American</string>
+    <string name="australian">Australian</string>
+    <string name="british">British</string>
+    <string name="new_zealand">New Zealand</string>
+    <string name="other_accent">Other</string>
+    <string name="south_african">South African</string>
     
     <!-- Search and Filter -->
     <string name="all_sources">Toutes les sources</string>

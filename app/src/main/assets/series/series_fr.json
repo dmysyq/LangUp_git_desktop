@@ -1,0 +1,72 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 3,
+        "title": "Série française 1",
+        "lang": "fr",
+        "level": "A1",
+        "accent": "french",
+        "source": "youtube",
+        "videoUrl": "https://youtu.be/example1",
+        "country": "France",
+        "imageUrl": "french_banner",
+        "difficulty": 3,
+        "genres": ["Drama", "Comedy"],
+        "countries": ["France"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "exemple",
+            "translation": "example",
+            "example": "C'est un exemple de mot"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Exemple de question?",
+            "options": ["Oui", "Non"],
+            "correctAnswer": 0
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "id": 4,
+        "title": "Série française 2",
+        "lang": "fr",
+        "level": "A2",
+        "accent": "french",
+        "source": "youtube",
+        "videoUrl": "https://youtu.be/example2",
+        "country": "France",
+        "imageUrl": "french_banner",
+        "difficulty": 4,
+        "genres": ["Drama", "Comedy"],
+        "countries": ["France"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "exemple",
+            "translation": "example",
+            "example": "C'est un exemple de mot"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Exemple de question?",
+            "options": ["Oui", "Non"],
+            "correctAnswer": 0
+          }
+        ]
+      }
+    }
+  ]
+} 

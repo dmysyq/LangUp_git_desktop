@@ -121,14 +121,15 @@
     <string name="level_4">Выше среднего (B2)</string>
     <string name="level_5">Продвинутый (C1)</string>
     <string name="level_6">В совершенстве (C2)</string>
-    <string name="accent">Акцент</string>
-    <string name="all_accents">Все акценты</string>
-    <string name="american">Американский</string>
-    <string name="british">Британский</string>
-    <string name="south_african">Южноафриканский</string>
-    <string name="new_zealand">Новозеландский</string>
-    <string name="australian">Австралийский</string>
-    <string name="other_accent">Другой</string>
+    <string name="accent">Accent</string>
+    <string name="accent_label">Accent: %1$s</string>
+    <string name="all_accents">All Accents</string>
+    <string name="american">American</string>
+    <string name="australian">Australian</string>
+    <string name="british">British</string>
+    <string name="new_zealand">New Zealand</string>
+    <string name="other_accent">Other</string>
+    <string name="south_african">South African</string>
     <string name="apply">Применить</string>
     <string name="score_format">Оценка: %1$d/%2$d</string>
     <string name="excellent_score">Превосходно! Продолжайте в том же духе!</string>
@@ -165,7 +166,6 @@
     <string name="series_image">Изображение серии</string>
     <string name="source">Источник</string>
     <string name="all_sources">Все источники</string>
-    <string name="accent_label">Акцент: %1$s</string>
     <string name="error_loading_questions">Ошибка загрузки вопросов</string>
 
     <!-- Level Selection -->

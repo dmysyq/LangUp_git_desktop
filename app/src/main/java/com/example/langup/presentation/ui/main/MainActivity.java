@@ -10,6 +10,9 @@ import android.widget.Toast;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Spinner;
+import android.widget.AdapterView;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -27,6 +30,8 @@ import com.example.langup.data.local.JsonLoader;
 import com.example.langup.presentation.ui.level.LevelSelectionActivity;
 import com.google.gson.Gson;
 import com.example.langup.presentation.base.BaseActivity;
+import com.example.langup.presentation.adapter.LanguageSelectorAdapter;
+import com.example.langup.presentation.model.LanguageItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,6 +49,8 @@ public class MainActivity extends BaseActivity implements SeriesAdapter.OnSeries
     private int selectedDifficulty = 0;
     private String selectedAccent = "";
     private String selectedSource = "";
+    private String currentLanguage = "en"; // Default language is English
+    private MenuItem filterMenuItem; // Store reference to filter menu item
 
     @Override
     protected int getLayoutResourceId() {
@@ -65,6 +72,7 @@ public class MainActivity extends BaseActivity implements SeriesAdapter.OnSeries
         initializeViews();
         setupToolbar();
         setupNavigation();
+        setupLanguageSelector();
         loadSeries();
     }
 
@@ -82,17 +90,45 @@ public class MainActivity extends BaseActivity implements SeriesAdapter.OnSeries
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
         
+        // Create layout for toolbar content
+        LinearLayout toolbarLayout = new LinearLayout(this);
+        toolbarLayout.setLayoutParams(new Toolbar.LayoutParams(
+            Toolbar.LayoutParams.MATCH_PARENT,
+            Toolbar.LayoutParams.WRAP_CONTENT
+        ));
+        toolbarLayout.setOrientation(LinearLayout.HORIZONTAL);
+
+        // Add language spinner to the left
+        Spinner languageSpinner = findViewById(R.id.languageSpinner);
+        if (languageSpinner != null && languageSpinner.getParent() != null) {
+            ((ViewGroup) languageSpinner.getParent()).removeView(languageSpinner);
+            LinearLayout.LayoutParams spinnerParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            );
+            spinnerParams.setMarginStart(16); // Add some margin from the left edge
+            languageSpinner.setLayoutParams(spinnerParams);
+            toolbarLayout.addView(languageSpinner);
+        }
+
+        // Add title in the center
         TextView titleView = new TextView(this);
         titleView.setText(R.string.app_name);
-        titleView.setLayoutParams(new Toolbar.LayoutParams(
-            Toolbar.LayoutParams.WRAP_CONTENT,
-            Toolbar.LayoutParams.WRAP_CONTENT,
-            android.view.Gravity.CENTER
-        ));
+        LinearLayout.LayoutParams titleParams = new LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.WRAP_CONTENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+        titleParams.gravity = android.view.Gravity.CENTER;
+        titleParams.leftMargin = 248; // Adjust this value to fine-tune the position
+        titleParams.rightMargin = 248; // Adjust this value to fine-tune the position
+        titleView.setLayoutParams(titleParams);
         titleView.setTextAppearance(com.google.android.material.R.style.TextAppearance_MaterialComponents_Headline6);
         titleView.setTextColor(getResources().getColor(R.color.text_tertiary_light, null));
         titleView.setTextSize(20);
-        toolbar.addView(titleView);
+        toolbarLayout.addView(titleView);
+
+        // Add the layout to toolbar
+        toolbar.addView(toolbarLayout);
     }
 
     private void setupNavigation() {
@@ -111,6 +147,56 @@ public class MainActivity extends BaseActivity implements SeriesAdapter.OnSeries
         settingsButton.setOnClickListener(v -> {
             startActivity(new Intent(this, SettingsActivity.class));
         });
+    }
+
+    private void setupLanguageSelector() {
+        List<LanguageItem> languageItems = new ArrayList<>();
+        languageItems.add(new LanguageItem("en", R.drawable.ic_flag_us));
+        languageItems.add(new LanguageItem("ru", R.drawable.ic_flag_ru));
+        languageItems.add(new LanguageItem("fr", R.drawable.ic_flag_fr));
+        languageItems.add(new LanguageItem("es", R.drawable.ic_flag_es));
+        languageItems.add(new LanguageItem("kk", R.drawable.ic_flag_kk));
+
+        Spinner languageSpinner = findViewById(R.id.languageSpinner);
+        LanguageSelectorAdapter adapter = new LanguageSelectorAdapter(this, languageItems);
+        languageSpinner.setAdapter(adapter);
+
+        languageSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                LanguageItem selectedItem = (LanguageItem) parent.getItemAtPosition(position);
+                currentLanguage = selectedItem.getCode();
+                filterSeriesByLanguage(currentLanguage);
+                updateFilterButtonState();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+    }
+
+    private void updateFilterButtonState() {
+        if (filterMenuItem != null) {
+            boolean isEnglish = "en".equals(currentLanguage);
+            filterMenuItem.setEnabled(isEnglish);
+            filterMenuItem.setVisible(isEnglish);
+            
+            // Reset filters if switching from English to another language
+            if (!isEnglish) {
+                onResetFilters();
+            }
+        }
+    }
+
+    private void filterSeriesByLanguage(String languageCode) {
+        List<Series> filteredSeries = allSeries.stream()
+            .filter(series -> {
+                String lang = series.getMetadata().getLang();
+                return lang != null && lang.equals(languageCode);
+            })
+            .collect(Collectors.toList());
+        adapter.updateSeries(filteredSeries);
     }
 
     private void loadSeries() {
@@ -136,13 +222,24 @@ public class MainActivity extends BaseActivity implements SeriesAdapter.OnSeries
     }
 
     private void applyFilters() {
+        // Only apply filters if current language is English
+        if (!"en".equals(currentLanguage)) {
+            return;
+        }
+
         Log.d("MainActivity", "Applying filters: difficulty=" + selectedDifficulty + 
               ", accent='" + selectedAccent + "', source='" + selectedSource + "'");
         
         List<Series> filteredSeries = allSeries.stream()
-            .filter(series -> selectedDifficulty == 0 || series.getMetadata().getDifficulty() == selectedDifficulty)
-            .filter(series -> selectedAccent.isEmpty() || series.getMetadata().getAccent().equals(selectedAccent))
-            .filter(series -> selectedSource.isEmpty() || series.getMetadata().getSource().equals(selectedSource))
+            .filter(series -> {
+                String lang = series.getMetadata().getLang();
+                if (lang == null || !lang.equals(currentLanguage)) {
+                    return false;
+                }
+                return (selectedDifficulty == 0 || series.getMetadata().getDifficulty() == selectedDifficulty) &&
+                       (selectedAccent.isEmpty() || series.getMetadata().getAccent().equals(selectedAccent)) &&
+                       (selectedSource.isEmpty() || series.getMetadata().getSource().equals(selectedSource));
+            })
             .collect(Collectors.toList());
         
         Log.d("MainActivity", "Filtered series count: " + filteredSeries.size());
@@ -152,6 +249,8 @@ public class MainActivity extends BaseActivity implements SeriesAdapter.OnSeries
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        filterMenuItem = menu.findItem(R.id.action_filter);
+        updateFilterButtonState();
         return true;
     }
 
@@ -179,10 +278,25 @@ public class MainActivity extends BaseActivity implements SeriesAdapter.OnSeries
         intent.putExtra("difficulty", series.getDifficulty());
         intent.putExtra("accent", series.getAccent());
         intent.putExtra("video_url", series.getVideoUrl());
-        intent.putExtra("transcript", series.getContent().getTranscript().getFull());
-        intent.putExtra("vocabulary", new Gson().toJson(series.getContent().getVocabulary()));
-        intent.putExtra("questions", new Gson().toJson(series.getContent().getQuestions()));
-        intent.putExtra("grammar", new Gson().toJson(series.getContent().getGrammar()));
+        
+        // Handle null transcript
+        String transcript = "";
+        if (series.getContent() != null && series.getContent().getTranscript() != null) {
+            transcript = series.getContent().getTranscript().getFull();
+        }
+        intent.putExtra("transcript", transcript);
+        
+        // Handle null content
+        if (series.getContent() != null) {
+            intent.putExtra("vocabulary", new Gson().toJson(series.getContent().getVocabulary()));
+            intent.putExtra("questions", new Gson().toJson(series.getContent().getQuestions()));
+            intent.putExtra("grammar", new Gson().toJson(series.getContent().getGrammar()));
+        } else {
+            intent.putExtra("vocabulary", "[]");
+            intent.putExtra("questions", "[]");
+            intent.putExtra("grammar", "[]");
+        }
+        
         Log.d(TAG, "Starting LevelSelectionActivity with series ID: " + series.getId());
         startActivity(intent);
     }
