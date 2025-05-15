@@ -97,7 +97,7 @@
     <string name="definition">Определение</string>
     <string name="translation">Перевод</string>
     <string name="cancel">Отмена</string>
-    <string name="error_loading_vocabulary">Ошибка загрузки словаря.</string>
+    <string name="error_loading_vocabulary">Ошибка загрузки словаря</string>
     <string name="error_saving_word">Ошибка сохранения слова</string>
     <string name="show_answers">Показать ответы</string>
     <string name="hide_answers">Скрыть ответы</string>
@@ -156,15 +156,15 @@
     <string name="show_results">Показать результаты</string>
     <string name="correct_answers">Правильные ответы: %1$d/%2$d</string>
     <string name="question_number">Вопрос %1$d</string>
-    <string name="error_loading_script">Ошибка загрузки содержимого скрипта</string>
-    <string name="watch_video_first">Посмотрите это видео</string>
-    <string name="complete_levels_after">После просмотра видео пройдите уровни ниже</string>
-    <string name="level_selection">Выбор уровня</string>
+    <string name="error_loading_script">Ошибка загрузки текста</string>
+    <string name="watch_video_first">Сначала посмотрите это видео</string>
+    <string name="complete_levels_after">После просмотра видео выполните задания ниже</string>
+    <string name="level_selection">Выберите уровень</string>
     <string name="title_home">главная</string>
     <string name="title_profile">профиль</string>
     <string name="title_settings">настройки</string>
     <string name="next_question">следующий вопрос</string>
-    <string name="show_translation">показать перевод</string>
+    <string name="show_translation">Показать перевод</string>
     <string name="filter_series">Фильтр серий</string>
     <string name="search_hint">поиск</string>
     <string name="filter">фильтр</string>
@@ -172,6 +172,10 @@
     <string name="source">Источник</string>
     <string name="all_sources">Все источники</string>
     <string name="accent_label">Акцент: %1$s</string>
-    <string name="transcript">транскрипт</string>
+    <string name="transcript">Транскрипт</string>
     <string name="error_loading_questions">Ошибка загрузки вопросов</string>
+    <string name="parts_of_speech_info">[n] - существительное,  [v] - глагол,  [phv] - фразовый глагол,  [adj] - прилагательное,  [exp] - выражение</string>
+    <string name="error_loading_grammar">Ошибка загрузки грамматических упражнений</string>
+    <string name="error_parsing_grammar">Ошибка разбора грамматических упражнений</string>
+    <string name="difficulty_label">Сложность</string>
 </resources>

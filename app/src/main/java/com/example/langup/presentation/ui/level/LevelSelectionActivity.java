@@ -7,9 +7,8 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import com.example.langup.R;
+import com.example.langup.presentation.ui.base.BaseActivity;
 import com.example.langup.presentation.ui.grammar.GrammarActivity;
 import com.example.langup.presentation.ui.questions.QuestionsActivity;
 import com.example.langup.presentation.ui.vocabulary.VocabularyActivity;
@@ -17,7 +16,7 @@ import com.example.langup.presentation.ui.transcript.TranscriptActivity;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 
-public class LevelSelectionActivity extends AppCompatActivity {
+public class LevelSelectionActivity extends BaseActivity {
     private static final String TAG = "LevelSelectionActivity";
     
     private TextView titleTextView;
@@ -32,12 +31,16 @@ public class LevelSelectionActivity extends AppCompatActivity {
     private String seriesId;
     private String videoUrl;
 
+    @Override
+    protected int getLayoutResourceId() {
+        return R.layout.activity_level_selection;
+    }
+
     @SuppressLint("StringFormatInvalid")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate: Initializing activity");
-        setContentView(R.layout.activity_level_selection);
 
         // Get data from intent
         seriesId = getIntent().getStringExtra("series_id");
@@ -92,8 +95,6 @@ public class LevelSelectionActivity extends AppCompatActivity {
 
     private void setupToolbar() {
         Log.d(TAG, "setupToolbar: Setting up toolbar");
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setTitle(R.string.level_selection);

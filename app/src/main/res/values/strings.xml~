@@ -193,6 +193,27 @@
     <string name="confirm_password">Confirm your password</string>
     <string name="account_locked">Account blocked. Try again in %1$d minutes</string>
     <string name="parts_of_speech_info">[n] - noun,  [v] - verb,  [phv] - phrasal verb,  [adj] - adjective,  [exp] - expression</string>
+    <string name="error_loading_vocabulary">Error loading vocabulary</string>
     <string name="error_loading_grammar">Error loading grammar exercises</string>
     <string name="error_parsing_grammar">Error parsing grammar exercises</string>
+    <string name="error_loading_script">Error loading script content</string>
+    <string name="level_selection">Select a level</string>
+    <string name="watch_video_first">Watch this video first</string>
+    <string name="complete_levels_after">After watching the video, complete the levels below</string>
+    <string name="show_results">Show Results</string>
+    <string name="show_translation">Show translation</string>
+    <string name="filter_series">Filter Series</string>
+    <string name="difficulty_label">Difficulty</string>
+    <string name="accent">Accent</string>
+    <string name="source">Source</string>
+    <string name="all_levels">All Levels</string>
+    <string name="all_accents">All Accents</string>
+    <string name="all_sources">All Sources</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
+    <string name="apply">Apply</string>
+    <string name="questions">Questions</string>
+    <string name="grammar">Grammar</string>
+    <string name="transcript">Transcript</string>
+    <string name="vocabulary">Vocabulary</string>
 </resources>
