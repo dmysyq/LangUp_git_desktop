@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,10 +15,11 @@ import com.example.langup.presentation.adapter.GrammarAdapter;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.example.langup.presentation.base.BaseActivity;
 
 import java.util.List;
 
-public class GrammarActivity extends AppCompatActivity {
+public class GrammarActivity extends BaseActivity {
     private static final String TAG = "GrammarActivity";
     private TextView titleTextView;
     private RecyclerView grammarRecyclerView;
@@ -30,9 +30,13 @@ public class GrammarActivity extends AppCompatActivity {
     private TextView resultTextView;
 
     @Override
+    protected int getLayoutResourceId() {
+        return R.layout.activity_grammar;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_grammar);
         Log.d(TAG, "onCreate: Starting GrammarActivity");
 
         String title = getIntent().getStringExtra("title");

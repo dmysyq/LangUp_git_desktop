@@ -1,0 +1,39 @@
+package com.example.langup.presentation.base;
+
+import android.content.Context;
+import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.langup.domain.utils.LocaleManager;
+
+public abstract class BaseActivity extends AppCompatActivity {
+    private LocaleManager localeManager;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        localeManager = LocaleManager.getInstance(newBase);
+        Context context = LocaleManager.onAttach(newBase);
+        super.attachBaseContext(context);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        localeManager = LocaleManager.getInstance(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Проверяем, не изменился ли язык
+        String currentLanguage = localeManager.getCurrentLanguage();
+        if (!currentLanguage.equals(getResources().getConfiguration().locale.getLanguage())) {
+            localeManager.forceLocaleUpdate(this);
+        }
+    }
+
+    protected LocaleManager getLocaleManager() {
+        return localeManager;
+    }
+} 

@@ -8,7 +8,6 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.langup.R;
-import com.example.langup.domain.utils.LocaleManager;
 import com.example.langup.presentation.ui.auth.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -26,12 +25,12 @@ import com.google.android.material.chip.Chip;
 import java.util.List;
 import java.util.ArrayList;
 import android.util.TypedValue;
-import com.example.langup.presentation.base.BaseActivity;
 
 import android.view.MenuItem;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class UserProfileActivity extends BaseActivity {
+public class UserProfileActivity extends AppCompatActivity {
     private static final String TAG = "UserProfileActivity";
 
     private FirebaseAuth mAuth;
@@ -53,13 +52,9 @@ public class UserProfileActivity extends BaseActivity {
     private TextView savePreferencesButton;
 
     @Override
-    protected int getLayoutResourceId() {
-        return R.layout.activity_user_profile;
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_user_profile);
 
         // Initialize Firebase and managers
         mAuth = FirebaseAuth.getInstance();

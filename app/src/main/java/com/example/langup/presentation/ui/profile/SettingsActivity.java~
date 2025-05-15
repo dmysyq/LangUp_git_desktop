@@ -9,7 +9,7 @@ import android.widget.Toast;
 import androidx.appcompat.widget.SwitchCompat;
 
 import com.example.langup.R;
-import com.example.langup.presentation.base.BaseActivity;
+import com.example.langup.presentation.ui.base.BaseActivity;
 import com.example.langup.presentation.adapter.LanguageSpinnerAdapter;
 
 public class SettingsActivity extends BaseActivity {
@@ -55,24 +55,7 @@ public class SettingsActivity extends BaseActivity {
         vibrationSwitch.setChecked(preferences.getBoolean("vibration", true));
         
         String currentLanguage = localeManager.getCurrentLanguage();
-        int position = 0; // Default to English
-        
-        switch (currentLanguage) {
-            case "ru":
-                position = 1;
-                break;
-            case "fr":
-                position = 2;
-                break;
-            case "es":
-                position = 3;
-                break;
-            case "kk":
-                position = 4;
-                break;
-        }
-        
-        languageSpinner.setSelection(position);
+        languageSpinner.setSelection(currentLanguage.equals("ru") ? 1 : 0);
     }
 
     private void setupListeners() {
@@ -90,24 +73,7 @@ public class SettingsActivity extends BaseActivity {
         editor.putBoolean("vibration", vibrationSwitch.isChecked());
 
         // Save language setting
-        String languageCode;
-        switch (languageSpinner.getSelectedItemPosition()) {
-            case 1:
-                languageCode = "ru";
-                break;
-            case 2:
-                languageCode = "fr"; // французский
-                break;
-            case 3:
-                languageCode = "es"; // испанский
-                break;
-            case 4:
-                languageCode = "kk"; // казахский
-                break;
-            default:
-                languageCode = "en";
-                break;
-        }
+        String languageCode = languageSpinner.getSelectedItemPosition() == 1 ? "ru" : "en";
         editor.putString("language", languageCode);
         updateLocale(languageCode);
 

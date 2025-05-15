@@ -1,16 +1,25 @@
 package com.example.langup.domain.utils;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.os.Build;
+import android.util.DisplayMetrics;
+import android.util.Log;
 
 import java.util.Locale;
 
 public class LocaleManager {
+    private static final String TAG = "LocaleManager";
     private static final String LANGUAGE_KEY = "language_key";
     private static final String LANGUAGE_SYSTEM = "system";
     private static final String LANGUAGE_EN = "en";
     private static final String LANGUAGE_RU = "ru";
+    private static final String LANGUAGE_FR = "fr";
+    private static final String LANGUAGE_ES = "es";
+    private static final String LANGUAGE_KK = "kk";
 
     private static volatile LocaleManager instance;
     private SharedPreferences preferences;
@@ -48,17 +57,34 @@ public class LocaleManager {
                 try {
                     this.preferences = this.context.getSharedPreferences("locale_prefs", Context.MODE_PRIVATE);
                 } catch (Exception e) {
-                    // В случае ошибки оставляем preferences = null
+                    Log.e(TAG, "Error initializing preferences", e);
                 }
             }
         }
     }
 
     public void setLocale(String language) {
-        if (preferences != null) {
-            preferences.edit().putString(LANGUAGE_KEY, language).apply();
-            updateConfiguration(language);
+        if (preferences == null) return;
+        
+        // Проверяем валидность языка
+        if (!isValidLanguage(language)) {
+            language = LANGUAGE_EN;
         }
+        
+        Log.d(TAG, "Setting locale to: " + language);
+        preferences.edit().putString(LANGUAGE_KEY, language).apply();
+        updateConfiguration(language);
+    }
+
+    private boolean isValidLanguage(String language) {
+        return language != null && (
+            language.equals(LANGUAGE_EN) ||
+            language.equals(LANGUAGE_RU) ||
+            language.equals(LANGUAGE_FR) ||
+            language.equals(LANGUAGE_ES) ||
+            language.equals(LANGUAGE_KK) ||
+            language.equals(LANGUAGE_SYSTEM)
+        );
     }
 
     private Context setLocale(Context context, String language) {
@@ -66,11 +92,20 @@ public class LocaleManager {
             Locale locale = new Locale(language);
             Locale.setDefault(locale);
 
-            Configuration configuration = new Configuration(context.getResources().getConfiguration());
-            configuration.setLocale(locale);
+            Resources resources = context.getResources();
+            Configuration configuration = new Configuration(resources.getConfiguration());
+            
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                configuration.setLocale(locale);
+                context = context.createConfigurationContext(configuration);
+            } else {
+                configuration.locale = locale;
+                resources.updateConfiguration(configuration, resources.getDisplayMetrics());
+            }
 
-            return context.createConfigurationContext(configuration);
+            return context;
         } catch (Exception e) {
+            Log.e(TAG, "Error setting locale", e);
             return context;
         }
     }
@@ -85,6 +120,7 @@ public class LocaleManager {
             }
             return savedLanguage;
         } catch (Exception e) {
+            Log.e(TAG, "Error getting current language", e);
             return LANGUAGE_EN;
         }
     }
@@ -94,10 +130,27 @@ public class LocaleManager {
 
         try {
             Locale systemLocale;
-            systemLocale = context.getResources().getConfiguration().getLocales().get(0);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                systemLocale = context.getResources().getConfiguration().getLocales().get(0);
+            } else {
+                systemLocale = context.getResources().getConfiguration().locale;
+            }
+            
             String language = systemLocale.getLanguage();
-            return language.equals(LANGUAGE_RU) ? LANGUAGE_RU : LANGUAGE_EN;
+            switch (language) {
+                case LANGUAGE_RU:
+                    return LANGUAGE_RU;
+                case LANGUAGE_FR:
+                    return LANGUAGE_FR;
+                case LANGUAGE_ES:
+                    return LANGUAGE_ES;
+                case LANGUAGE_KK:
+                    return LANGUAGE_KK;
+                default:
+                    return LANGUAGE_EN;
+            }
         } catch (Exception e) {
+            Log.e(TAG, "Error getting system language", e);
             return LANGUAGE_EN;
         }
     }
@@ -109,13 +162,20 @@ public class LocaleManager {
             Locale locale = new Locale(language);
             Locale.setDefault(locale);
 
-            Configuration configuration = new Configuration(context.getResources().getConfiguration());
-            configuration.setLocale(locale);
+            Resources resources = context.getResources();
+            Configuration configuration = new Configuration(resources.getConfiguration());
+            DisplayMetrics metrics = resources.getDisplayMetrics();
 
-            context.createConfigurationContext(configuration);
-            context.getResources().updateConfiguration(configuration, context.getResources().getDisplayMetrics());
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                configuration.setLocale(locale);
+                context.createConfigurationContext(configuration);
+            } else {
+                configuration.locale = locale;
+            }
+
+            resources.updateConfiguration(configuration, metrics);
         } catch (Exception e) {
-            // Игнорируем ошибки при обновлении конфигурации
+            Log.e(TAG, "Error updating configuration", e);
         }
     }
 
@@ -127,5 +187,27 @@ public class LocaleManager {
 
     public Locale getCurrentLocale() {
         return new Locale(getCurrentLanguage());
+    }
+
+    public void forceLocaleUpdate(Activity activity) {
+        if (activity == null) return;
+        
+        String currentLanguage = getCurrentLanguage();
+        Log.d(TAG, "Forcing locale update to: " + currentLanguage);
+        
+        Context context = setLocale(activity, currentLanguage);
+        Resources resources = context.getResources();
+        Configuration configuration = new Configuration(resources.getConfiguration());
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+        
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            configuration.setLocale(new Locale(currentLanguage));
+            activity.createConfigurationContext(configuration);
+        } else {
+            configuration.locale = new Locale(currentLanguage);
+        }
+        
+        resources.updateConfiguration(configuration, metrics);
+        activity.recreate();
     }
 } 

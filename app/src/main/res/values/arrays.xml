@@ -3,6 +3,9 @@
     <string-array name="languages">
         <item>English</item>
         <item>Русский</item>
+        <item>Français</item>
+        <item>Español</item>
+        <item>Қазақша</item>
     </string-array>
 
     <string-array name="genres_en">
@@ -69,6 +72,117 @@
     </string-array>
 
     <string-array name="sources_ru">
+        <item>Netflix</item>
+        <item>YouTube</item>
+        <item>BBC</item>
+        <item>TED</item>
+        <item>Disney+</item>
+        <item>Amazon Prime</item>
+        <item>HBO</item>
+        <item>Apple TV+</item>
+    </string-array>
+
+    <string-array name="genres_fr">
+        <item>Fantastique</item>
+        <item>Aventure</item>
+        <item>Comédie</item>
+        <item>Drame</item>
+        <item>Action</item>
+        <item>Thriller</item>
+        <item>Horreur</item>
+        <item>Animation</item>
+        <item>Documentaire</item>
+        <item>Famille</item>
+    </string-array>
+
+    <string-array name="countries_fr">
+        <item>États-Unis</item>
+        <item>Japon</item>
+        <item>Royaume-Uni</item>
+        <item>France</item>
+        <item>Allemagne</item>
+        <item>Italie</item>
+        <item>Corée du Sud</item>
+        <item>Inde</item>
+        <item>Russie</item>
+        <item>Australie</item>
+    </string-array>
+
+    <string-array name="sources_fr">
+        <item>Netflix</item>
+        <item>YouTube</item>
+        <item>BBC</item>
+        <item>TED</item>
+        <item>Disney+</item>
+        <item>Amazon Prime</item>
+        <item>HBO</item>
+        <item>Apple TV+</item>
+    </string-array>
+
+    <string-array name="genres_es">
+        <item>Fantasía</item>
+        <item>Aventura</item>
+        <item>Comedia</item>
+        <item>Drama</item>
+        <item>Acción</item>
+        <item>Suspense</item>
+        <item>Terror</item>
+        <item>Animación</item>
+        <item>Documental</item>
+        <item>Familiar</item>
+    </string-array>
+
+    <string-array name="countries_es">
+        <item>EE.UU.</item>
+        <item>Japón</item>
+        <item>Reino Unido</item>
+        <item>Francia</item>
+        <item>Alemania</item>
+        <item>Italia</item>
+        <item>Corea del Sur</item>
+        <item>India</item>
+        <item>Rusia</item>
+        <item>Australia</item>
+    </string-array>
+
+    <string-array name="sources_es">
+        <item>Netflix</item>
+        <item>YouTube</item>
+        <item>BBC</item>
+        <item>TED</item>
+        <item>Disney+</item>
+        <item>Amazon Prime</item>
+        <item>HBO</item>
+        <item>Apple TV+</item>
+    </string-array>
+
+    <string-array name="genres_kk">
+        <item>Фантастика</item>
+        <item>Шытырман оқиға</item>
+        <item>Комедия</item>
+        <item>Драма</item>
+        <item>Шытырман оқиға</item>
+        <item>Триллер</item>
+        <item>Қорқыныш</item>
+        <item>Анимация</item>
+        <item>Документалды</item>
+        <item>Отбасылық</item>
+    </string-array>
+
+    <string-array name="countries_kk">
+        <item>АҚШ</item>
+        <item>Жапония</item>
+        <item>Ұлыбритания</item>
+        <item>Франция</item>
+        <item>Германия</item>
+        <item>Италия</item>
+        <item>Оңтүстік Корея</item>
+        <item>Үндістан</item>
+        <item>Ресей</item>
+        <item>Австралия</item>
+    </string-array>
+
+    <string-array name="sources_kk">
         <item>Netflix</item>
         <item>YouTube</item>
         <item>BBC</item>

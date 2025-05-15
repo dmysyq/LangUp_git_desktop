@@ -5,7 +5,6 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,12 +15,13 @@ import com.example.langup.presentation.adapter.VocabularyAdapter;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.example.langup.presentation.base.BaseActivity;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VocabularyActivity extends AppCompatActivity {
+public class VocabularyActivity extends BaseActivity {
     private static final String TAG = "VocabularyActivity";
     
     private TextView titleTextView;
@@ -29,9 +29,13 @@ public class VocabularyActivity extends AppCompatActivity {
     private VocabularyAdapter adapter;
 
     @Override
+    protected int getLayoutResourceId() {
+        return R.layout.activity_vocabulary;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vocabulary);
 
         // Get data from intent
         String title = getIntent().getStringExtra("title");

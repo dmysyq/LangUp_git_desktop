@@ -7,23 +7,27 @@ import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 
 import com.example.langup.R;
 import com.google.android.material.snackbar.Snackbar;
+import com.example.langup.presentation.base.BaseActivity;
 
-public class TranscriptActivity extends AppCompatActivity {
+public class TranscriptActivity extends BaseActivity {
     private static final String TAG = "TranscriptActivity";
     
     private TextView titleTextView;
     private TextView scriptTextView;
 
     @Override
+    protected int getLayoutResourceId() {
+        return R.layout.activity_transcript;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_transcript);
 
         // Get data from intent
         String title = getIntent().getStringExtra("title");

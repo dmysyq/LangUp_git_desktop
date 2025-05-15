@@ -1,22 +1,30 @@
-package com.example.langup.presentation.ui.base;
+package com.example.langup.presentation.base;
 
 import android.content.Context;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.langup.R;
 import com.example.langup.domain.utils.LocaleManager;
-import com.google.android.material.appbar.MaterialToolbar;
 
 public abstract class BaseActivity extends AppCompatActivity {
     protected LocaleManager localeManager;
-    protected MaterialToolbar toolbar;
+    protected Toolbar toolbar;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        localeManager = LocaleManager.getInstance(newBase);
+        Context context = LocaleManager.onAttach(newBase);
+        super.attachBaseContext(context);
+    }
+
+    protected abstract int getLayoutResourceId();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        localeManager = LocaleManager.getInstance(this);
-        localeManager.applyCurrentLocale();
         super.onCreate(savedInstanceState);
+        localeManager = LocaleManager.getInstance(this);
         setContentView(getLayoutResourceId());
 
         toolbar = findViewById(R.id.toolbar);
@@ -28,7 +36,15 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
-    protected abstract int getLayoutResourceId();
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Проверяем, не изменился ли язык
+        String currentLanguage = localeManager.getCurrentLanguage();
+        if (!currentLanguage.equals(getResources().getConfiguration().locale.getLanguage())) {
+            localeManager.forceLocaleUpdate(this);
+        }
+    }
 
     @Override
     public boolean onSupportNavigateUp() {
@@ -36,19 +52,12 @@ public abstract class BaseActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        localeManager.applyCurrentLocale();
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(LocaleManager.onAttach(newBase));
+    protected LocaleManager getLocaleManager() {
+        return localeManager;
     }
 
     protected void updateLocale(String language) {
         localeManager.setLocale(language);
         recreate();
     }
-}
+} 

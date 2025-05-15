@@ -91,6 +91,7 @@
     <string name="get_started">НАЧАТЬ</string>
     <string name="correct_answers_grammar">Правильные ответы: %1$d из %2$d</string>
     <string name="enter_answer">Введите ответ</string>
+    <string name="vocabulary">Словарный запас</string>
     <string name="add_word">Добавить слово</string>
     <string name="word">Слово</string>
     <string name="definition">Определение</string>
@@ -114,6 +115,7 @@
     <string name="reset">Сброс</string>
     <string name="search">Поиск</string>
     <string name="search_by_title">Поиск по названию</string>
+    <string name="difficulty_level">Уровень сложности</string>
     <string name="all_levels">Все уровни</string>
     <string name="level_1">Начинающий (A1)</string>
     <string name="level_2">Элементарный (A2)</string>
@@ -144,6 +146,8 @@
     <string name="correct">Верно!</string>
     <string name="watch_on_youtube">Смотреть на YouTube</string>
     <string name="select_level">Выбрать уровень</string>
+    <string name="questions">Вопросы</string>
+    <string name="grammar">Грамматика</string>
     <string name="building">Строительство</string>
     <string name="select_one_answer">Выберите один ответ</string>
     <string name="select_multiple_answers">Выберите несколько ответов</string>
@@ -153,6 +157,8 @@
     <string name="correct_answers">Правильные ответы: %1$d/%2$d</string>
     <string name="question_number">Вопрос %1$d</string>
     <string name="error_loading_script">Ошибка загрузки содержимого скрипта</string>
+    <string name="watch_video_first">Посмотрите это видео</string>
+    <string name="complete_levels_after">После просмотра видео пройдите уровни ниже</string>
     <string name="level_selection">Выбор уровня</string>
     <string name="title_home">главная</string>
     <string name="title_profile">профиль</string>
@@ -166,8 +172,10 @@
     <string name="source">Источник</string>
     <string name="all_sources">Все источники</string>
     <string name="accent_label">Акцент: %1$s</string>
+    <string name="transcript">транскрипт</string>
     <string name="error_loading_questions">Ошибка загрузки вопросов</string>
-
+    <string name="accent_type">Accent-type</string>
+    
     <!-- Level Selection -->
     <string name="difficulty_label">Сложность</string>
     <string name="difficulty_level">Сложность: %1$s</string>

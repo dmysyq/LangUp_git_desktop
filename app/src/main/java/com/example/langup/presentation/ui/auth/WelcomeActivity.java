@@ -6,7 +6,7 @@ import android.widget.Button;
 import androidx.activity.EdgeToEdge;
 
 import com.example.langup.R;
-import com.example.langup.presentation.ui.base.BaseActivity;
+import com.example.langup.presentation.base.BaseActivity;
 
 public class WelcomeActivity extends BaseActivity {
 

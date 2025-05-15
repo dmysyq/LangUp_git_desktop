@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,6 +26,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.example.langup.data.local.JsonLoader;
 import com.example.langup.presentation.ui.level.LevelSelectionActivity;
 import com.google.gson.Gson;
+import com.example.langup.presentation.base.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +35,7 @@ import android.util.Log;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnSeriesClickListener, SearchFilterDialog.OnSearchFilterListener {
+public class MainActivity extends BaseActivity implements SeriesAdapter.OnSeriesClickListener, SearchFilterDialog.OnSearchFilterListener {
     private static final String TAG = "MainActivity";
     private SeriesAdapter adapter;
     private ProgressBar progressBar;
@@ -44,6 +44,11 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
     private int selectedDifficulty = 0;
     private String selectedAccent = "";
     private String selectedSource = "";
+
+    @Override
+    protected int getLayoutResourceId() {
+        return R.layout.activity_main;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +62,6 @@ public class MainActivity extends AppCompatActivity implements SeriesAdapter.OnS
             return;
         }
         
-        setContentView(R.layout.activity_main);
         initializeViews();
         setupToolbar();
         setupNavigation();
