@@ -2,33 +2,33 @@
 <resources>
     <!-- App Info -->
     <string name="app_name">LangUp</string>
-
+    
     <!-- Navigation -->
     <string name="back">Atrás</string>
     <string name="close">Cerrar</string>
-    <string name="next">Mostrar resultados</string>
+    <string name="next">Siguiente</string>
     <string name="ok">OK</string>
-    <string name="title_home">Perfil</string>
-    <string name="title_profile">Configuración</string>
-    <string name="title_settings">Siguiente pregunta</string>
-
+    <string name="title_home">Inicio</string>
+    <string name="title_profile">Perfil</string>
+    <string name="title_settings">Ajustes</string>
+    
     <!-- Authentication -->
-    <string name="already_have_account">¿Ya tienes una cuenta? Restablecer contraseña</string>
+    <string name="already_have_account">¿Ya tienes una cuenta?</string>
     <string name="already_have_an_account">¿Ya tienes una cuenta?</string>
     <string name="authentication_failed">Error de autenticación</string>
     <string name="create_account">Crear cuenta</string>
-    <string name="dont_have_account">¿No tienes cuenta?</string>
+    <string name="dont_have_account">¿No tienes una cuenta?</string>
     <string name="email">Correo electrónico</string>
-    <string name="error_email_already_in_use">Este correo electrónico ya está registrado</string>
+    <string name="error_email_already_in_use">Este correo ya está registrado</string>
     <string name="error_field_required">Este campo es obligatorio</string>
     <string name="error_incorrect_password">Contraseña incorrecta</string>
-    <string name="error_invalid_email">Introduce una dirección de correo electrónico válida</string>
+    <string name="error_invalid_email">Por favor, introduce un correo electrónico válido</string>
     <string name="error_invalid_password">La contraseña debe tener al menos 6 caracteres</string>
     <string name="error_passwords_dont_match">Las contraseñas no coinciden</string>
-    <string name="error_too_many_requests">Demasiados intentos. Vuelve a intentarlo más tarde</string>
-    <string name="error_unknown">Se ha producido un error. Vuelve a intentarlo</string>
+    <string name="error_too_many_requests">Demasiados intentos. Por favor, inténtalo más tarde</string>
+    <string name="error_unknown">Ha ocurrido un error. Por favor, inténtalo de nuevo</string>
     <string name="error_user_disabled">Esta cuenta ha sido deshabilitada</string>
-    <string name="error_user_not_found">No se encontró ninguna cuenta con este correo electrónico</string>
+    <string name="error_user_not_found">No se encontró ninguna cuenta con este correo</string>
     <string name="forgot_password">¿Olvidaste tu contraseña?</string>
     <string name="full_name">Nombre completo</string>
     <string name="google_sign_in">Iniciar sesión con Google</string>
@@ -36,52 +36,52 @@
     <string name="google_sign_up">Registrarse con Google</string>
     <string name="login">Iniciar sesión</string>
     <string name="name">Nombre</string>
-    <string name="New_to_LangUp">¿Eres nuevo en LangUp?</string>
+    <string name="New_to_LangUp">¿Nuevo en LangUp?</string>
     <string name="no_account">¿No tienes cuenta?</string>
     <string name="password">Contraseña</string>
-    <string name="password_reset_email_sent">Correo electrónico de restablecimiento de contraseña enviado</string>
-    <string name="password_reset_failed">Error al enviar el correo electrónico de restablecimiento de contraseña</string>
-    <string name="reset_password">Ingresa tu correo electrónico para restablecer tu contraseña</string>
-    <string name="session_expired">Tu sesión ha expirado. Vuelve a iniciar sesión</string>
+    <string name="password_reset_email_sent">Correo de restablecimiento enviado</string>
+    <string name="password_reset_failed">Error al enviar el correo de restablecimiento</string>
+    <string name="reset_password">Restablecer contraseña</string>
+    <string name="session_expired">Tu sesión ha expirado. Por favor, inicia sesión de nuevo</string>
     <string name="SIGN_IN">INICIAR SESIÓN</string>
     <string name="sign_up">Registrarse</string>
-    <string name="start_learning_a_language_now">Empieza a aprender un idioma ahora.</string>
+    <string name="start_learning_a_language_now">Comienza a aprender un idioma ahora.</string>
     <string name="username">Nombre de usuario</string>
     <string name="welcome">Bienvenido</string>
-
+    
     <!-- Social Authentication -->
     <string name="continue_with_google">Continuar con Google</string>
     <string name="or">o</string>
-
+    
     <!-- Settings -->
     <string name="appearance">Apariencia</string>
-    <string name="dark_mode">Efectos de sonido</string>
-    <string name="language">Inglés</string>
+    <string name="dark_mode">Modo oscuro</string>
+    <string name="language">Idioma</string>
     <string name="notifications">Notificaciones</string>
     <string name="save">Guardar</string>
-    <string name="settings">Configuración</string>
-    <string name="settings_saved">Configuración guardada</string>
-    <string name="settings_title">Modo oscuro</string>
-    <string name="sound_effects">Vibración</string>
-    <string name="vibration">Idioma</string>
-
+    <string name="settings">Ajustes</string>
+    <string name="settings_saved">Ajustes guardados</string>
+    <string name="settings_title">Ajustes</string>
+    <string name="sound_effects">Efectos de sonido</string>
+    <string name="vibration">Vibración</string>
+    
     <!-- Languages -->
-    <string name="english">English</string>
+    <string name="english">Inglés</string>
     <string name="french">Francés</string>
     <string name="kazakh">Kazajo</string>
     <string name="russian">Ruso</string>
     <string name="spanish">Español</string>
-
+    
     <!-- Profile -->
     <string name="account">Cuenta</string>
-    <string name="by_signing_up_langup_you_agree_to_our_terms_and_privacy_policy">Al registrarte en LangUp, aceptas nuestros Términos y Política de Privacidad.</string>
+    <string name="by_signing_up_langup_you_agree_to_our_terms_and_privacy_policy">Al registrarte en LangUp, aceptas nuestros términos y política de privacidad.</string>
     <string name="change_avatar">CAMBIAR AVATAR</string>
     <string name="get_started">COMENZAR</string>
     <string name="logout">CERRAR SESIÓN</string>
     <string name="pick_up_where_you_left_off">Continúa donde lo dejaste.</string>
     <string name="profile">Perfil</string>
     <string name="select_avatar">Seleccionar un avatar</string>
-
+    
     <!-- Preferences -->
     <string name="countries_title">Países</string>
     <string name="favorite_countries">Países favoritos</string>
@@ -89,110 +89,120 @@
     <string name="favorite_sources">Fuentes favoritas</string>
     <string name="genres_title">Géneros favoritos</string>
     <string name="preferences">Preferencias</string>
-    <string name="preferences_error">Error al guardar preferencias</string>
+    <string name="preferences_error">Error al guardar las preferencias</string>
     <string name="preferences_saved">Preferencias guardadas</string>
     <string name="preferences_title">Preferencias</string>
     <string name="save_preferences">Guardar preferencias</string>
     <string name="sources_title">Fuentes</string>
-
+    
     <!-- Learning Content -->
     <string name="add_word">Añadir palabra</string>
-    <string name="building">Seleccionar una respuesta</string>
+    <string name="building">Construcción</string>
     <string name="definition">Definición</string>
-    <string name="grammar">Desarrollo</string>
+    <string name="grammar">Gramática</string>
     <string name="grammar_exercise">Ejercicio de gramática</string>
-    <string name="questions">Gramática</string>
+    <string name="questions">Preguntas</string>
     <string name="questions_title">Preguntas</string>
-    <string name="transcript">Error al cargar las preguntas</string>
+    <string name="transcript">Transcripción</string>
     <string name="translation">Traducción</string>
     <string name="vocabulary">Vocabulario</string>
     <string name="word">Palabra</string>
-
+    
     <!-- Video Content -->
-    <string name="complete_levels_after">Seleccionar un nivel</string>
+    <string name="complete_levels_after">Después de ver el video, completa los niveles a continuación</string>
     <string name="watch_video">Ver video</string>
-    <string name="watch_video_first">Después de ver el video, completa los niveles a continuación.</string>
-    <string name="watch_on_youtube">Seleccionar nivel</string>
-
+    <string name="watch_video_first">Mira este video</string>
+    <string name="watch_on_youtube">Ver en YouTube</string>
+    
     <!-- Difficulty Levels -->
-    <string name="difficulty_label">Difficulty</string>
-    <string name="all_levels">Principiante (A1)</string>
-    <string name="difficulty_level">Todos los niveles</string>
-    <string name="level_1">Básico (A2)</string>
-    <string name="level_2">Intermedio (B1)</string>
-    <string name="level_3">Intermedio superior (B2)</string>
-    <string name="level_4">Avanzado (C1)</string>
-    <string name="level_5">Dominio (C2)</string>
-    <string name="level_6">Acento</string>
-    <string name="level_selection">Inicio</string>
-    <string name="select_level">Preguntas</string>
-
+    <string name="difficulty_label">Dificultad</string>
+    <string name="all_levels">Todos los niveles</string>
+    <string name="difficulty_level">Dificultad: %1$s</string>
+    <string name="level_1">Principiante (A1)</string>
+    <string name="level_2">Elemental (A2)</string>
+    <string name="level_3">Intermedio (B1)</string>
+    <string name="level_4">Intermedio alto (B2)</string>
+    <string name="level_5">Avanzado (C1)</string>
+    <string name="level_6">Maestría (C2)</string>
+    <string name="level_selection">Selecciona un nivel</string>
+    <string name="select_level">Seleccionar nivel</string>
+    
     <!-- Accents -->
-    <string name="accent">Todos los acentos</string>
-    <string name="accent_label">transcripción</string>
-    <string name="all_accents">Americano</string>
-    <string name="american">Británico</string>
-    <string name="australian">Otro</string>
-    <string name="british">Sudafricano</string>
-    <string name="new_zealand">Australiano</string>
-    <string name="other_accent">Solicitar</string>
-    <string name="south_african">Neozelandés</string>
-
+    <string name="accent">Accent</string>
+    <string name="accent_label">Accent: %1$s</string>
+    <string name="all_accents">All Accents</string>
+    <string name="american">American</string>
+    <string name="australian">Australian</string>
+    <string name="british">British</string>
+    <string name="new_zealand">New Zealand</string>
+    <string name="other_accent">Other</string>
+    <string name="south_african">South African</string>
+    
     <!-- Search and Filter -->
-    <string name="all_sources">Acento: %1$s</string>
-    <string name="filter">Imagen de la serie</string>
-    <string name="filter_series">Sugerencia de búsqueda</string>
-    <string name="search">Buscar por título</string>
-    <string name="search_by_title">Dificultad: %1$s</string>
-    <string name="search_hint">Filtrar</string>
-    <string name="series_image">Fuente</string>
-    <string name="source">Todas las fuentes</string>
-
+    <string name="all_sources">Todas las fuentes</string>
+    <string name="filter">Filtrar</string>
+    <string name="filter_series">Filtrar series</string>
+    <string name="search">Buscar</string>
+    <string name="search_by_title">Buscar por título</string>
+    <string name="search_hint">Buscar</string>
+    <string name="series_image">Imagen de la serie</string>
+    <string name="source">Fuente</string>
+    
     <!-- Exercises -->
-    <string name="available_words">Completa los espacios con las palabras correctas</string>
-    <string name="check_answer">Siguiente</string>
+    <string name="available_words">Palabras disponibles</string>
+    <string name="check_answer">Comprobar</string>
     <string name="check_answers">Comprobar respuestas</string>
-    <string name="correct">¡Correcto! Ver en YouTube</string>
+    <string name="correct">¡Correcto!</string>
     <string name="correct_answer">¡Correcto!</string>
-    <string name="correct_answers">Pregunta %1$d</string>
+    <string name="correct_answers">Respuestas correctas: %1$d/%2$d</string>
     <string name="correct_answers_count">Respuestas correctas: %1$d de %2$d</string>
     <string name="correct_answers_grammar">Respuestas correctas: %1$d de %2$d</string>
     <string name="continue_button">Continuar</string>
-    <string name="enter_answer">Ingresa tu respuesta</string>
+    <string name="enter_answer">Introduce tu respuesta</string>
     <string name="error_loading_episode">Error al cargar el episodio</string>
-    <string name="error_loading_questions">[n] - sustantivo, [v] - verbo, [phv] - verbo frasal, [adj] - adjetivo, [exp] - expresión</string>
-    <string name="error_loading_script">Ver este video</string>
+    <string name="error_loading_questions">Error al cargar las preguntas</string>
+    <string name="error_loading_script">Error al cargar el guión</string>
     <string name="error_loading_series">Error al cargar los datos de la serie</string>
     <string name="error_loading_vocabulary">Error al cargar el vocabulario</string>
     <string name="error_saving_word">Error al guardar la palabra</string>
     <string name="excellent_job">¡Excelente! ¡Sigue así!</string>
     <string name="excellent_score">¡Excelente! ¡Sigue así!</string>
-    <string name="fill_in_the_blanks">Reiniciar</string>
+    <string name="fill_in_the_blanks">Completa los espacios con las palabras correctas</string>
     <string name="good_job">¡Buen trabajo! Sigue practicando para mejorar.</string>
     <string name="good_score">¡Buen trabajo! Sigue practicando para mejorar.</string>
     <string name="hide_answers">Ocultar respuestas</string>
-    <string name="incorrect_answer">¡Incorrecto! ¡Inténtalo de nuevo! Palabras disponibles</string>
+    <string name="incorrect_answer">Incorrecto. ¡Inténtalo de nuevo!</string>
     <string name="keep_practicing">¡Sigue practicando! Mejorarás con el tiempo.</string>
     <string name="need_practice">¡Sigue practicando! Mejorarás con el tiempo.</string>
-    <string name="next_question">Mostrar traducción</string>
-    <string name="question_number">Error al cargar el contenido del guion</string>
-    <string name="reset">Buscar</string>
+    <string name="next_question">Siguiente pregunta</string>
+    <string name="question_number">Pregunta %1$d</string>
+    <string name="reset">Reiniciar</string>
     <string name="results">Resultados</string>
     <string name="score_format">Puntuación: %1$d/%2$d</string>
-    <string name="select_multiple_answers">Comprobar</string>
-    <string name="select_one_answer">Seleccionar varias respuestas</string>
+    <string name="select_multiple_answers">Selecciona varias respuestas</string>
+    <string name="select_one_answer">Selecciona una respuesta</string>
     <string name="show_answers">Mostrar respuestas</string>
-    <string name="show_results">Respuestas correctas: %1$d/%2$d</string>
-    <string name="show_translation">Filtrar series</string>
+    <string name="show_results">Mostrar resultados</string>
+    <string name="show_translation">Mostrar traducción</string>
     <string name="your_answer">Tu respuesta</string>
-    <string name="apply">Apply</string>
+    <string name="apply">Aplicar</string>
+    <string name="yearly_subscription">Anual: $89.99/año (Ahorra un 25%)</string>
     <string name="cancel">Cancelar</string>
-    <string name="enter_email_for_reset">Enviar enlace</string>
-    <string name="send_reset_link">Volver a iniciar sesión</string>
-    <string name="back_to_login">Configuración</string>
+    <string name="enter_email_for_reset">Introduce tu correo para restablecer tu contraseña</string>
+    <string name="send_reset_link">Enviar enlace</string>
+    <string name="back_to_login">Volver al inicio de sesión</string>
     <string name="confirm_password">Confirma tu contraseña</string>
-    <string name="account_locked">Cuenta bloqueada. Vuelve a intentarlo en %1$d minutos</string>
-    <string name="parts_of_speech_info">Error al cargar los ejercicios de gramática</string>
-    <string name="error_loading_grammar">Error al analizar los ejercicios de gramática</string>
-    <string name="error_parsing_grammar">Dificultad</string>
-</resources>
+    <string name="account_locked">Cuenta bloqueada. Inténtalo de nuevo en %1$d minutos</string>
+    <string name="accent_type">Accent-type</string>
+    <string name="premium_content">Contenido Premium</string>
+    <string name="premium_content_description">Accede a contenido y funciones premium exclusivos</string>
+    <string name="subscribe_now">Suscríbete ahora</string>
+    <string name="subscription_active_until">Tu suscripción estará activa hasta %s</string>
+    <string name="subscription_successful">¡Suscripción exitosa!</string>
+    <string name="payment_failed">Pago fallido: %s</string>
+    <string name="premium_content_requires_subscription">Este contenido requiere una suscripción activa</string>
+    <string name="choose_subscription">Elige tu suscripción</string>
+    <string name="subscription_benefits">Accede a todo el contenido premium, incluyendo series y funciones exclusivas</string>
+    <string name="monthly_subscription">Mensual: $9.99/mes</string>
+    <string name="subscribe">subscribe</string>
+</resources> 

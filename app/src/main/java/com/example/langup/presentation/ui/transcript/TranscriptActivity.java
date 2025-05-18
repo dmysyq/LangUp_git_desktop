@@ -7,12 +7,12 @@ import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
-
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 
 import com.example.langup.R;
-import com.example.langup.presentation.ui.base.BaseActivity;
 import com.google.android.material.snackbar.Snackbar;
+import com.example.langup.presentation.base.BaseActivity;
 
 public class TranscriptActivity extends BaseActivity {
     private static final String TAG = "TranscriptActivity";
@@ -29,15 +29,16 @@ public class TranscriptActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Get data from intent
         String title = getIntent().getStringExtra("title");
         String transcript = getIntent().getStringExtra("transcript");
 
-        Log.d(TAG, "onCreate: Received transcript data length: " + 
+        Log.d(TAG, "onCreate: Received transcript length: " + 
             (transcript != null ? transcript.length() : 0));
 
         initializeViews();
         setupToolbar(title);
-        loadTranscript(transcript);
+        displayTranscript(transcript);
     }
 
     private void initializeViews() {
@@ -46,13 +47,15 @@ public class TranscriptActivity extends BaseActivity {
     }
 
     private void setupToolbar(String title) {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             titleTextView.setText(title);
         }
     }
 
-    private void loadTranscript(String transcript) {
+    private void displayTranscript(String transcript) {
         if (transcript != null && !transcript.isEmpty()) {
             SpannableString formattedText = formatTranscript(transcript);
             scriptTextView.setText(formattedText);
