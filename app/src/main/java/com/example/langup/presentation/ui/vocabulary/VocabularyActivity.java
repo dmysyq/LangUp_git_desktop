@@ -5,17 +5,16 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.langup.R;
 import com.example.langup.domain.model.VocabularyItem;
 import com.example.langup.presentation.adapter.VocabularyAdapter;
+import com.example.langup.presentation.ui.base.BaseActivity;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.example.langup.presentation.base.BaseActivity;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -59,8 +58,6 @@ public class VocabularyActivity extends BaseActivity {
     }
 
     private void setupToolbar(String title) {
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             titleTextView.setText(title);

@@ -55,7 +55,7 @@ public class QuestionsActivity extends BaseActivity {
         resultButton = findViewById(R.id.resultButton);
         answeredCounter = findViewById(R.id.answeredCounter);
         resultTextView = new TextView(this);
-        resultTextView.setTextAppearance(this, androidx.appcompat.R.style.TextAppearance_AppCompat_Large);
+        resultTextView.setTextAppearance(this, android.R.style.TextAppearance_Large);
         resultTextView.setVisibility(View.GONE);
         ((ViewGroup) resultButton.getParent()).addView(resultTextView);
         resultButton.setOnClickListener(v -> showResult());

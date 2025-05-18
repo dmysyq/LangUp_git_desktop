@@ -7,15 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.langup.R;
 import com.example.langup.presentation.adapter.GrammarAdapter;
+import com.example.langup.presentation.ui.base.BaseActivity;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.example.langup.presentation.base.BaseActivity;
 
 import java.util.List;
 
@@ -37,7 +36,6 @@ public class GrammarActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG, "onCreate: Starting GrammarActivity");
 
         String title = getIntent().getStringExtra("title");
         String grammarJson = getIntent().getStringExtra("grammar");
@@ -64,8 +62,6 @@ public class GrammarActivity extends BaseActivity {
     }
 
     private void setupToolbar(String title) {
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowTitleEnabled(false);

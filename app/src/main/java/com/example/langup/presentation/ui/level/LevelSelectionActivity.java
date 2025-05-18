@@ -7,24 +7,22 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import androidx.appcompat.widget.Toolbar;
 import com.example.langup.R;
-import com.google.android.material.button.MaterialButton;
-import com.google.android.material.card.MaterialCardView;
-import com.example.langup.presentation.base.BaseActivity;
-import com.example.langup.presentation.ui.vocabulary.VocabularyActivity;
+import com.example.langup.presentation.ui.base.BaseActivity;
 import com.example.langup.presentation.ui.grammar.GrammarActivity;
 import com.example.langup.presentation.ui.questions.QuestionsActivity;
+import com.example.langup.presentation.ui.vocabulary.VocabularyActivity;
 import com.example.langup.presentation.ui.transcript.TranscriptActivity;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 
 public class LevelSelectionActivity extends BaseActivity {
     private static final String TAG = "LevelSelectionActivity";
+    
     private TextView titleTextView;
     private TextView descriptionTextView;
     private TextView difficultyTextView;
     private TextView accentTextView;
-    private TextView videoUrlTextView;
-    private MaterialCardView videoInfoCard;
     private MaterialButton vocabularyButton;
     private MaterialButton questionsButton;
     private MaterialButton grammarButton;
@@ -33,14 +31,18 @@ public class LevelSelectionActivity extends BaseActivity {
     private String seriesId;
     private String videoUrl;
 
+    @Override
+    protected int getLayoutResourceId() {
+        return R.layout.activity_level_selection;
+    }
+
     @SuppressLint("StringFormatInvalid")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate: Initializing activity");
-        setContentView(R.layout.activity_level_selection);
 
-        // Get data from intent using old keys and types
+        // Get data from intent
         seriesId = getIntent().getStringExtra("series_id");
         String title = getIntent().getStringExtra("title");
         String description = getIntent().getStringExtra("description");
@@ -48,64 +50,24 @@ public class LevelSelectionActivity extends BaseActivity {
         String accent = getIntent().getStringExtra("accent");
         videoUrl = getIntent().getStringExtra("video_url");
         String grammarJson = getIntent().getStringExtra("grammar");
-        String vocabularyJson = getIntent().getStringExtra("vocabulary");
-        String questionsJson = getIntent().getStringExtra("questions");
-        String transcript = getIntent().getStringExtra("transcript");
-
-        Log.d(TAG, "onCreate: Received data - seriesId: " + seriesId +
-                ", title: " + title +
-                ", description: " + description +
-                ", difficulty: " + difficulty +
-                ", accent: " + accent +
-                ", videoUrl: " + videoUrl);
+        
+        Log.d(TAG, "onCreate: Received data - seriesId: " + seriesId + 
+              ", title: " + title + 
+              ", description: " + description + 
+              ", difficulty: " + difficulty + 
+              ", accent: " + accent + 
+              ", videoUrl: " + videoUrl);
         Log.d(TAG, "onCreate: Received grammar JSON: " + grammarJson);
 
         initializeViews();
-        setupToolbar(title);
-        setupClickListeners(title, vocabularyJson, grammarJson, questionsJson, transcript);
-
-        // Set text views (always show fields, even if empty)
-        titleTextView.setText(title != null ? title : "");
-        descriptionTextView.setText(description != null ? description : "");
-        difficultyTextView.setText(getString(R.string.difficulty_level, String.valueOf(difficulty)));
-        accentTextView.setText(getString(R.string.accent_label, accent != null ? accent : ""));
+        setupToolbar();
+        setupClickListeners();
         
-        // Show/hide video info card
-        if (videoUrl != null && !videoUrl.isEmpty()) {
-            videoUrlTextView.setText(videoUrl);
-            videoInfoCard.setVisibility(View.VISIBLE);
-        } else {
-            videoInfoCard.setVisibility(View.GONE);
-        }
-
-        // Show/hide buttons based on data availability
-        // Vocabulary button
-        if (vocabularyJson != null && !vocabularyJson.equals("[]")) {
-            vocabularyButton.setVisibility(View.VISIBLE);
-        } else {
-            vocabularyButton.setVisibility(View.GONE);
-        }
-
-        // Questions button
-        if (questionsJson != null && !questionsJson.equals("[]")) {
-            questionsButton.setVisibility(View.VISIBLE);
-        } else {
-            questionsButton.setVisibility(View.GONE);
-        }
-
-        // Grammar button
-        if (grammarJson != null && !grammarJson.equals("[]")) {
-            grammarButton.setVisibility(View.VISIBLE);
-        } else {
-            grammarButton.setVisibility(View.GONE);
-        }
-
-        // Transcript button
-        if (transcript != null && !transcript.isEmpty()) {
-            transcriptButton.setVisibility(View.VISIBLE);
-        } else {
-            transcriptButton.setVisibility(View.GONE);
-        }
+        // Set text views
+        titleTextView.setText(title);
+        descriptionTextView.setText(description);
+        difficultyTextView.setText(getString(R.string.difficulty_level, String.valueOf(difficulty)));
+        accentTextView.setText(getString(R.string.accent_label, accent));
     }
 
     @SuppressLint("WrongViewCast")
@@ -115,33 +77,39 @@ public class LevelSelectionActivity extends BaseActivity {
         descriptionTextView = findViewById(R.id.descriptionTextView);
         difficultyTextView = findViewById(R.id.difficultyTextView);
         accentTextView = findViewById(R.id.accentTextView);
-        videoUrlTextView = findViewById(R.id.videoUrlTextView);
-        videoInfoCard = findViewById(R.id.videoInfoCard);
+        TextView videoUrlTextView = findViewById(R.id.videoUrlTextView);
+        MaterialCardView videoInfoCard = findViewById(R.id.videoInfoCard);
         vocabularyButton = findViewById(R.id.vocabularyButton);
         questionsButton = findViewById(R.id.questionsButton);
         grammarButton = findViewById(R.id.grammarButton);
         transcriptButton = findViewById(R.id.transcriptButton);
+
+        // Set video URL
+        if (videoUrl != null && !videoUrl.isEmpty()) {
+            videoUrlTextView.setText(videoUrl);
+            videoInfoCard.setVisibility(View.VISIBLE);
+        } else {
+            videoInfoCard.setVisibility(View.GONE);
+        }
     }
 
-    private void setupToolbar(String title) {
+    private void setupToolbar() {
         Log.d(TAG, "setupToolbar: Setting up toolbar");
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setTitle(R.string.level_selection);
         }
     }
 
-    private void setupClickListeners(String title, String vocabularyJson, String grammarJson, String questionsJson, String transcript) {
+    private void setupClickListeners() {
         Log.d(TAG, "setupClickListeners: Setting up click listeners");
-
+        
         vocabularyButton.setOnClickListener(v -> {
             Log.d(TAG, "Vocabulary button clicked");
             Intent intent = new Intent(this, VocabularyActivity.class);
             intent.putExtra("series_id", seriesId);
             intent.putExtra("title", titleTextView.getText().toString());
-            intent.putExtra("vocabulary", vocabularyJson);
+            intent.putExtra("vocabulary", getIntent().getStringExtra("vocabulary"));
             startActivity(intent);
         });
 
@@ -150,12 +118,13 @@ public class LevelSelectionActivity extends BaseActivity {
             Intent intent = new Intent(this, QuestionsActivity.class);
             intent.putExtra("series_id", seriesId);
             intent.putExtra("title", titleTextView.getText().toString());
-            intent.putExtra("questions", questionsJson);
+            intent.putExtra("questions", getIntent().getStringExtra("questions"));
             startActivity(intent);
         });
 
         grammarButton.setOnClickListener(v -> {
             Log.d(TAG, "Grammar button clicked");
+            String grammarJson = getIntent().getStringExtra("grammar");
             Log.d(TAG, "Grammar data being passed: " + grammarJson);
             Intent intent = new Intent(this, GrammarActivity.class);
             intent.putExtra("series_id", seriesId);
@@ -169,7 +138,7 @@ public class LevelSelectionActivity extends BaseActivity {
             Intent intent = new Intent(this, TranscriptActivity.class);
             intent.putExtra("series_id", seriesId);
             intent.putExtra("title", titleTextView.getText().toString());
-            intent.putExtra("transcript", transcript);
+            intent.putExtra("transcript", getIntent().getStringExtra("transcript"));
             startActivity(intent);
         });
     }
@@ -188,10 +157,5 @@ public class LevelSelectionActivity extends BaseActivity {
         Log.d(TAG, "onSupportNavigateUp: Navigating back");
         onBackPressed();
         return true;
-    }
-
-    @Override
-    protected int getLayoutResourceId() {
-        return R.layout.activity_level_selection;
     }
 } 

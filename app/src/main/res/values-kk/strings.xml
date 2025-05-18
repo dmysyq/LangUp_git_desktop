@@ -2,152 +2,152 @@
 <resources>
     <!-- App Info -->
     <string name="app_name">LangUp</string>
-    
+
     <!-- Navigation -->
     <string name="back">Артқа</string>
     <string name="close">Жабу</string>
     <string name="next">Келесі</string>
     <string name="ok">Жарайды</string>
-    <string name="title_home">Басты бет</string>
-    <string name="title_profile">Профиль</string>
-    <string name="title_settings">Баптаулар</string>
-    
+    <string name="title_home">үй</string>
+    <string name="title_profile">профиль</string>
+    <string name="title_settings">параметрлері</string>
+
     <!-- Authentication -->
-    <string name="already_have_account">Сізде тіркелгі бар ма?</string>
-    <string name="already_have_an_account">Сізде тіркелгі бар ма?</string>
+    <string name="already_have_account">Есептік жазбаңыз бар ма?</string>
+    <string name="already_have_an_account">Есептік жазбаңыз бар ма?</string>
     <string name="authentication_failed">Аутентификация сәтсіз аяқталды</string>
-    <string name="create_account">Тіркелгі жасау</string>
-    <string name="dont_have_account">Сізде тіркелгі жоқ па?</string>
+    <string name="create_account">Аккаунт ашу</string>
+    <string name="dont_have_account">Есептік жазбаңыз жоқ па?</string>
     <string name="email">Электрондық пошта</string>
-    <string name="error_email_already_in_use">Бұл электрондық пошта тіркелген</string>
-    <string name="error_field_required">Бұл өріс міндетті</string>
+    <string name="error_email_already_in_use">Бұл электронды пошта бұрын тіркелген</string>
+    <string name="error_field_required">Бұл өріс қажет</string>
     <string name="error_incorrect_password">Қате құпия сөз</string>
     <string name="error_invalid_email">Жарамды электрондық пошта мекенжайын енгізіңіз</string>
-    <string name="error_invalid_password">Құпия сөз кемінде 6 таңба болуы керек</string>
+    <string name="error_invalid_password">Құпия сөз кемінде 6 таңбадан тұруы керек</string>
     <string name="error_passwords_dont_match">Құпия сөздер сәйкес келмейді</string>
-    <string name="error_too_many_requests">Тым көп әрекет. Кейінірек қайталап көріңіз</string>
+    <string name="error_too_many_requests">Тым көп әрекет. Тағы жасауды сәл кейінірек көріңізді өтінеміз</string>
     <string name="error_unknown">Қате орын алды. Қайталап көріңіз</string>
-    <string name="error_user_disabled">Бұл тіркелгі өшірілген</string>
+    <string name="error_user_disabled">Бұл есептік жазба өшірілген</string>
     <string name="error_user_not_found">Бұл электрондық поштамен тіркелгі табылмады</string>
-    <string name="forgot_password">Құпия сөзіңізді ұмыттыңыз ба?</string>
+    <string name="forgot_password">Құпия сөзді ұмыттыңыз ба?</string>
     <string name="full_name">Толық аты-жөні</string>
-    <string name="google_sign_in">Google арқылы кіру</string>
-    <string name="google_sign_in_failed">Google арқылы кіру сәтсіз аяқталды</string>
-    <string name="google_sign_up">Google арқылы тіркелу</string>
-    <string name="login">Кіру</string>
+    <string name="google_sign_in">Google арқылы жүйеге кіріңіз</string>
+    <string name="google_sign_in_failed">Google жүйесіне кіру сәтсіз аяқталды</string>
+    <string name="google_sign_up">Google арқылы тіркеліңіз</string>
+    <string name="login">Жүйеге кіру</string>
     <string name="name">Аты</string>
-    <string name="New_to_LangUp">LangUp-та жаңасыз ба?</string>
-    <string name="no_account">Тіркелгіңіз жоқ па?</string>
+    <string name="New_to_LangUp">LangUp қолданбасын жаңадан бастадыңыз ба?</string>
+    <string name="no_account">Есептік жазба жоқ па?</string>
     <string name="password">Құпия сөз</string>
-    <string name="password_reset_email_sent">Құпия сөзді қалпына келтіру хатты жіберілді</string>
-    <string name="password_reset_failed">Құпия сөзді қалпына келтіру хатты жіберу сәтсіз аяқталды</string>
+    <string name="password_reset_email_sent">Құпия сөзді қалпына келтіру электрондық поштасы жіберілді</string>
+    <string name="password_reset_failed">Құпия сөзді қалпына келтіру электрондық поштасын жіберу мүмкін болмады</string>
     <string name="reset_password">Құпия сөзді қалпына келтіру</string>
-    <string name="session_expired">Сессияңыз аяқталды. Қайта кіріңіз</string>
+    <string name="session_expired">Сеансыңыздың мерзімі аяқталды. Қайтадан кіріңіз</string>
     <string name="SIGN_IN">КІРУ</string>
     <string name="sign_up">Тіркелу</string>
-    <string name="start_learning_a_language_now">Қазір тіл үйренуді бастаңыз.</string>
+    <string name="start_learning_a_language_now">Тіл үйренуді қазірден бастаңыз.</string>
     <string name="username">Пайдаланушы аты</string>
     <string name="welcome">Қош келдіңіз</string>
-    
+
     <!-- Social Authentication -->
-    <string name="continue_with_google">Google арқылы жалғастыру</string>
+    <string name="continue_with_google">Google арқылы жалғастырыңыз</string>
     <string name="or">немесе</string>
-    
+
     <!-- Settings -->
-    <string name="appearance">Сыртқы көрініс</string>
+    <string name="appearance">Сыртқы түрі</string>
     <string name="dark_mode">Қараңғы режим</string>
     <string name="language">Тіл</string>
     <string name="notifications">Хабарландырулар</string>
     <string name="save">Сақтау</string>
-    <string name="settings">Баптаулар</string>
-    <string name="settings_saved">Баптаулар сақталды</string>
-    <string name="settings_title">Баптаулар</string>
+    <string name="settings">Параметрлер</string>
+    <string name="settings_saved">Параметрлер сақталды</string>
+    <string name="settings_title">Параметрлер</string>
     <string name="sound_effects">Дыбыс әсерлері</string>
     <string name="vibration">Діріл</string>
-    
+
     <!-- Languages -->
     <string name="english">Ағылшын</string>
-    <string name="french">Француз</string>
-    <string name="kazakh">Қазақ</string>
-    <string name="russian">Орыс</string>
-    <string name="spanish">Испан</string>
-    
+    <string name="french">француз</string>
+    <string name="kazakh">қазақ</string>
+    <string name="russian">орыс</string>
+    <string name="spanish">испан</string>
+
     <!-- Profile -->
-    <string name="account">Тіркелгі</string>
-    <string name="by_signing_up_langup_you_agree_to_our_terms_and_privacy_policy">LangUp-та тіркелу арқылы сіз біздің шарттар мен құпиялылық саясатын қабылдайсыз.</string>
-    <string name="change_avatar">АВАТАРДЫ ӨЗГЕРТУ</string>
+    <string name="account">Есептік жазба</string>
+    <string name="by_signing_up_langup_you_agree_to_our_terms_and_privacy_policy">LangUp жүйесіне тіркелу арқылы сіз біздің шарттармен және құпиялылық саясатымызбен келісесіз.</string>
+    <string name="change_avatar">АВАТОРДЫ ӨЗГЕРТУ</string>
     <string name="get_started">БАСТАУ</string>
     <string name="logout">ШЫҒУ</string>
-    <string name="pick_up_where_you_left_off">Қайда қалғаныңыздан жалғастырыңыз.</string>
+    <string name="pick_up_where_you_left_off">Тоқтаған жерден жалғастырыңыз.</string>
     <string name="profile">Профиль</string>
-    <string name="select_avatar">Аватар таңдау</string>
-    
+    <string name="select_avatar">Аватарды таңдаңыз</string>
+
     <!-- Preferences -->
     <string name="countries_title">Елдер</string>
     <string name="favorite_countries">Сүйікті елдер</string>
     <string name="favorite_genres">Сүйікті жанрлар</string>
-    <string name="favorite_sources">Сүйікті көздер</string>
+    <string name="favorite_sources">Таңдаулы көздер</string>
     <string name="genres_title">Сүйікті жанрлар</string>
-    <string name="preferences">Үйлесімдер</string>
-    <string name="preferences_error">Үйлесімдерді сақтау кезінде қате орын алды</string>
-    <string name="preferences_saved">Үйлесімдер сақталды</string>
-    <string name="preferences_title">Үйлесімдер</string>
-    <string name="save_preferences">Үйлесімдерді сақтау</string>
-    <string name="sources_title">Көздер</string>
-    
+    <string name="preferences">Параметрлер</string>
+    <string name="preferences_error">Параметрлерді сақтау қатесі</string>
+    <string name="preferences_saved">Параметрлер сақталды</string>
+    <string name="preferences_title">Параметрлер</string>
+    <string name="save_preferences">Параметрлерді сақтаңыз</string>
+    <string name="sources_title">Дереккөздер</string>
+
     <!-- Learning Content -->
-    <string name="add_word">Сөз қосу</string>
-    <string name="building">Құрылыс</string>
+    <string name="add_word">Word қосыңыз</string>
+    <string name="building">Ғимарат</string>
     <string name="definition">Анықтама</string>
     <string name="grammar">Грамматика</string>
     <string name="grammar_exercise">Грамматикалық жаттығу</string>
     <string name="questions">Сұрақтар</string>
     <string name="questions_title">Сұрақтар</string>
-    <string name="transcript">Транскрипт</string>
+    <string name="transcript">транскрипт</string>
     <string name="translation">Аударма</string>
     <string name="vocabulary">Сөздік</string>
     <string name="word">Сөз</string>
-    
+
     <!-- Video Content -->
-    <string name="complete_levels_after">Бейнені көргеннен кейін төмендегі деңгейлерді орындаңыз</string>
-    <string name="watch_video">Бейнені көру</string>
-    <string name="watch_video_first">Бұл бейнені көріңіз</string>
-    <string name="watch_on_youtube">YouTube-та көру</string>
-    
+    <string name="complete_levels_after">Бейнені көргеннен кейін төмендегі деңгейлерді аяқтаңыз</string>
+    <string name="watch_video">Бейне көру</string>
+    <string name="watch_video_first">Бұл бейнені қараңыз</string>
+    <string name="watch_on_youtube">YouTube сайтында көру</string>
+
     <!-- Difficulty Levels -->
     <string name="difficulty_label">Қиындық</string>
     <string name="all_levels">Барлық деңгейлер</string>
-    <string name="difficulty_level">Қиындық: %1$s</string>
-    <string name="level_1">Бастаушы (A1)</string>
-    <string name="level_2">Бастапқы (A2)</string>
+    <string name="difficulty_level">Күрделілігі: %1$s</string>
+    <string name="level_1">Бастауыш (A1)</string>
+    <string name="level_2">Бастауыш (A2)</string>
     <string name="level_3">Орташа (B1)</string>
-    <string name="level_4">Жоғары орташа (B2)</string>
-    <string name="level_5">Жоғары (C1)</string>
+    <string name="level_4">Жоғарғы орта (B2)</string>
+    <string name="level_5">Жетілдірілген (C1)</string>
     <string name="level_6">Шеберлік (C2)</string>
-    <string name="level_selection">Деңгей таңдау</string>
-    <string name="select_level">Деңгейді таңдау</string>
-    
+    <string name="level_selection">Деңгейді таңдаңыз</string>
+    <string name="select_level">Деңгейді таңдаңыз</string>
+
     <!-- Accents -->
-    <string name="accent">Accent</string>
-    <string name="accent_label">Accent: %1$s</string>
-    <string name="all_accents">All Accents</string>
-    <string name="american">American</string>
-    <string name="australian">Australian</string>
-    <string name="british">British</string>
-    <string name="new_zealand">New Zealand</string>
-    <string name="other_accent">Other</string>
-    <string name="south_african">South African</string>
-    
+    <string name="accent">Акцент</string>
+    <string name="accent_label">Акцент: %1$s</string>
+    <string name="all_accents">Барлық екпіндер</string>
+    <string name="american">американдық</string>
+    <string name="australian">австралиялық</string>
+    <string name="british">Британдық</string>
+    <string name="new_zealand">Жаңа зеландия</string>
+    <string name="other_accent">Басқа</string>
+    <string name="south_african">Оңтүстік Африка</string>
+
     <!-- Search and Filter -->
     <string name="all_sources">Барлық көздер</string>
-    <string name="filter">Сүзгі</string>
-    <string name="filter_series">Сериалдарды сүзгілеу</string>
+    <string name="filter">сүзгі</string>
+    <string name="filter_series">Сүзгі сериясы</string>
     <string name="search">Іздеу</string>
     <string name="search_by_title">Тақырып бойынша іздеу</string>
-    <string name="search_hint">Іздеу</string>
-    <string name="series_image">Сериал суреті</string>
-    <string name="source">Көз</string>
-    
+    <string name="search_hint">іздеу туралы кеңес</string>
+    <string name="series_image">Сериялық сурет</string>
+    <string name="source">Дереккөз</string>
+
     <!-- Exercises -->
     <string name="available_words">Қолжетімді сөздер</string>
     <string name="check_answer">Тексеру</string>
@@ -155,54 +155,44 @@
     <string name="correct">Дұрыс!</string>
     <string name="correct_answer">Дұрыс!</string>
     <string name="correct_answers">Дұрыс жауаптар: %1$d/%2$d</string>
-    <string name="correct_answers_count">Дұрыс жауаптар: %1$d/%2$d</string>
-    <string name="correct_answers_grammar">Дұрыс жауаптар: %1$d/%2$d</string>
+    <string name="correct_answers_count">Дұрыс жауаптар: %2$d/%1$d</string>
+    <string name="correct_answers_grammar">Дұрыс жауаптар: %2$d/%1$d</string>
     <string name="continue_button">Жалғастыру</string>
     <string name="enter_answer">Жауабыңызды енгізіңіз</string>
-    <string name="error_loading_episode">Эпизодты жүктеу кезінде қате орын алды</string>
-    <string name="error_loading_questions">Сұрақтарды жүктеу кезінде қате орын алды</string>
-    <string name="error_loading_script">Сценарийді жүктеу кезінде қате орын алды</string>
-    <string name="error_loading_series">Сериал деректерін жүктеу кезінде қате орын алды</string>
-    <string name="error_loading_vocabulary">Сөздікті жүктеу кезінде қате орын алды</string>
-    <string name="error_saving_word">Сөзді сақтау кезінде қате орын алды</string>
-    <string name="excellent_job">Тамаша! Жалғастырыңыз!</string>
-    <string name="excellent_score">Тамаша! Жалғастырыңыз!</string>
-    <string name="fill_in_the_blanks">Бос орындарды дұрыс сөздермен толтырыңыз</string>
+    <string name="error_loading_episode">Эпизодты жүктеу қатесі</string>
+    <string name="error_loading_questions">қате жүктеу сұрақтары</string>
+    <string name="error_loading_script">Скрипт мазмұнын жүктеу қатесі</string>
+    <string name="error_loading_series">Сериялар деректерін жүктеу қатесі</string>
+    <string name="error_loading_vocabulary">Сөздік қорды жүктеу қатесі</string>
+    <string name="error_saving_word">Сөзді сақтау қатесі</string>
+    <string name="excellent_job">Өте жақсы! Үлкен жұмысты жалғастырыңыз!</string>
+    <string name="excellent_score">Өте жақсы! Үлкен жұмысты жалғастырыңыз!</string>
+    <string name="fill_in_the_blanks">Бос орындарды дұрыс сөздермен толтыр</string>
     <string name="good_job">Жақсы жұмыс! Жақсарту үшін жаттығуды жалғастырыңыз.</string>
     <string name="good_score">Жақсы жұмыс! Жақсарту үшін жаттығуды жалғастырыңыз.</string>
     <string name="hide_answers">Жауаптарды жасыру</string>
-    <string name="incorrect_answer">Қате. Қайталап көріңіз!</string>
-    <string name="keep_practicing">Жаттығуды жалғастырыңыз! Уақыт өте келе жақсарасыз.</string>
-    <string name="need_practice">Жаттығуды жалғастырыңыз! Уақыт өте келе жақсарасыз.</string>
-    <string name="next_question">Келесі сұрақ</string>
-    <string name="question_number">Сұрақ %1$d</string>
+    <string name="incorrect_answer">Дұрыс емес. Қайтадан байқап көріңіз!</string>
+    <string name="keep_practicing">Жаттығуды жалғастырыңыз! Уақыт өте келе жақсарасың.</string>
+    <string name="need_practice">Жаттығуды жалғастырыңыз! Уақыт өте келе жақсарасың.</string>
+    <string name="next_question">келесі сұрақ</string>
+    <string name="question_number">%1$d сұрақ</string>
     <string name="reset">Қалпына келтіру</string>
     <string name="results">Нәтижелер</string>
     <string name="score_format">Ұпай: %1$d/%2$d</string>
-    <string name="select_multiple_answers">Бірнеше жауап таңдаңыз</string>
-    <string name="select_one_answer">Бір жауап таңдаңыз</string>
+    <string name="select_multiple_answers">Бірнеше жауапты таңдаңыз</string>
+    <string name="select_one_answer">Бір жауапты таңдаңыз</string>
     <string name="show_answers">Жауаптарды көрсету</string>
     <string name="show_results">Нәтижелерді көрсету</string>
-    <string name="show_translation">Аударманы көрсету</string>
-    <string name="your_answer">Сіздің жауабыңыз</string>
+    <string name="show_translation">аудармасын көрсету</string>
+    <string name="your_answer">Сіздің Жауабыңыз</string>
     <string name="apply">Қолдану</string>
-    <string name="yearly_subscription">Жыл сайын - $89,99/жыл (25% үнемдеңіз)</string>
-    <string name="cancel">Бас тарту</string>
-    <string name="enter_email_for_reset">Құпия сөзіңізді қалпына келтіру үшін электрондық поштаңызды енгізіңіз</string>
-    <string name="send_reset_link">Сілтемені жіберу</string>
-    <string name="back_to_login">Кіру бетіне оралу</string>
+    <string name="cancel">Болдырмау</string>
+    <string name="enter_email_for_reset">Құпия сөзді қалпына келтіру үшін электрондық поштаңызды енгізіңіз</string>
+    <string name="send_reset_link">Сілтеме жіберу</string>
+    <string name="back_to_login">Жүйеге оралу</string>
     <string name="confirm_password">Құпия сөзіңізді растаңыз</string>
-    <string name="account_locked">Тіркелгі бұғатталды. %1$d минуттан кейін қайталап көріңіз</string>
-    <string name="accent_type">Accent-type</string>
-    <string name="premium_content">Премиум мазмұн</string>
-    <string name="premium_content_description">Эксклюзивті премиум мазмұн мен мүмкіндіктерге қол жеткізіңіз</string>
-    <string name="subscribe_now">Қазір жазылыңыз</string>
-    <string name="subscription_active_until">Жазылым %s дейін белсенді</string>
-    <string name="subscription_successful">Жазылым сәтті өтті!</string>
-    <string name="payment_failed">Төлем орындалмады: %s</string>
-    <string name="premium_content_requires_subscription">Бұл мазмұн белсенді жазылуды қажет етеді</string>
-    <string name="choose_subscription">Жазылымыңызды таңдаңыз</string>
-    <string name="subscription_benefits">Барлық премиум мазмұнға, соның ішінде эксклюзивті сериялар мен мүмкіндіктерге қол жеткізіңіз</string>
-    <string name="monthly_subscription">Ай сайын - айына $9,99</string>
-    <string name="subscribe">subscribe</string>
-</resources> 
+    <string name="account_locked">Есептік жазба бұғатталды. %1$d минуттан кейін әрекетті қайталаңыз</string>
+    <string name="parts_of_speech_info">[n] - зат есім, [v] - етістік, [phv] - фразалық етістік, [adj] - сын есім, [exp] - өрнек</string>
+    <string name="error_loading_grammar">Грамматикалық жаттығуларды жүктеу қатесі</string>
+    <string name="error_parsing_grammar">Грамматикалық жаттығуларды талдау қатесі</string>
+</resources>

@@ -6,11 +6,11 @@
     <!-- Navigation -->
     <string name="back">Atrás</string>
     <string name="close">Cerrar</string>
-    <string name="next">Mostrar resultados</string>
+    <string name="next">Next</string>
     <string name="ok">OK</string>
-    <string name="title_home">Perfil</string>
-    <string name="title_profile">Configuración</string>
-    <string name="title_settings">Siguiente pregunta</string>
+    <string name="title_home">home</string>
+    <string name="title_profile">profile</string>
+    <string name="title_settings">settings</string>
 
     <!-- Authentication -->
     <string name="already_have_account">¿Ya tienes una cuenta? Restablecer contraseña</string>
@@ -97,22 +97,22 @@
 
     <!-- Learning Content -->
     <string name="add_word">Añadir palabra</string>
-    <string name="building">Seleccionar una respuesta</string>
+    <string name="building">Building</string>
     <string name="definition">Definición</string>
-    <string name="grammar">Desarrollo</string>
+    <string name="grammar">Grammar</string>
     <string name="grammar_exercise">Ejercicio de gramática</string>
-    <string name="questions">Gramática</string>
+    <string name="questions">Questions</string>
     <string name="questions_title">Preguntas</string>
-    <string name="transcript">Error al cargar las preguntas</string>
+    <string name="transcript">transcript</string>
     <string name="translation">Traducción</string>
     <string name="vocabulary">Vocabulario</string>
     <string name="word">Palabra</string>
 
     <!-- Video Content -->
-    <string name="complete_levels_after">Seleccionar un nivel</string>
+    <string name="complete_levels_after">After watching the video, complete the levels below</string>
     <string name="watch_video">Ver video</string>
-    <string name="watch_video_first">Después de ver el video, completa los niveles a continuación.</string>
-    <string name="watch_on_youtube">Seleccionar nivel</string>
+    <string name="watch_video_first">Watch this video</string>
+    <string name="watch_on_youtube">Watch on YouTube</string>
 
     <!-- Difficulty Levels -->
     <string name="difficulty_label">Difficulty</string>
@@ -124,12 +124,12 @@
     <string name="level_4">Avanzado (C1)</string>
     <string name="level_5">Dominio (C2)</string>
     <string name="level_6">Acento</string>
-    <string name="level_selection">Inicio</string>
-    <string name="select_level">Preguntas</string>
+    <string name="level_selection">Select a level</string>
+    <string name="select_level">Select Level</string>
 
     <!-- Accents -->
     <string name="accent">Todos los acentos</string>
-    <string name="accent_label">transcripción</string>
+    <string name="accent_label">Accent: %1$s</string>
     <string name="all_accents">Americano</string>
     <string name="american">Británico</string>
     <string name="australian">Otro</string>
@@ -139,51 +139,51 @@
     <string name="south_african">Neozelandés</string>
 
     <!-- Search and Filter -->
-    <string name="all_sources">Acento: %1$s</string>
-    <string name="filter">Imagen de la serie</string>
-    <string name="filter_series">Sugerencia de búsqueda</string>
+    <string name="all_sources">All Sources</string>
+    <string name="filter">filter</string>
+    <string name="filter_series">Filter Series</string>
     <string name="search">Buscar por título</string>
     <string name="search_by_title">Dificultad: %1$s</string>
-    <string name="search_hint">Filtrar</string>
-    <string name="series_image">Fuente</string>
-    <string name="source">Todas las fuentes</string>
+    <string name="search_hint">search hint</string>
+    <string name="series_image">Series image</string>
+    <string name="source">Source</string>
 
     <!-- Exercises -->
     <string name="available_words">Completa los espacios con las palabras correctas</string>
-    <string name="check_answer">Siguiente</string>
+    <string name="check_answer">Check</string>
     <string name="check_answers">Comprobar respuestas</string>
-    <string name="correct">¡Correcto! Ver en YouTube</string>
+    <string name="correct">Correct!</string>
     <string name="correct_answer">¡Correcto!</string>
-    <string name="correct_answers">Pregunta %1$d</string>
+    <string name="correct_answers">Correct answers: %1$d/%2$d</string>
     <string name="correct_answers_count">Respuestas correctas: %1$d de %2$d</string>
     <string name="correct_answers_grammar">Respuestas correctas: %1$d de %2$d</string>
-    <string name="continue_button">Continuar</string>
+    <string name="continue_button">Continue</string>
     <string name="enter_answer">Ingresa tu respuesta</string>
     <string name="error_loading_episode">Error al cargar el episodio</string>
-    <string name="error_loading_questions">[n] - sustantivo, [v] - verbo, [phv] - verbo frasal, [adj] - adjetivo, [exp] - expresión</string>
-    <string name="error_loading_script">Ver este video</string>
-    <string name="error_loading_series">Error al cargar los datos de la serie</string>
+    <string name="error_loading_questions">error loading questions</string>
+    <string name="error_loading_script">Error loading script content</string>
+    <string name="error_loading_series">Error loading series data</string>
     <string name="error_loading_vocabulary">Error al cargar el vocabulario</string>
     <string name="error_saving_word">Error al guardar la palabra</string>
-    <string name="excellent_job">¡Excelente! ¡Sigue así!</string>
-    <string name="excellent_score">¡Excelente! ¡Sigue así!</string>
+    <string name="excellent_job">Excellent! Keep up the great work!</string>
+    <string name="excellent_score">Excellent! Keep up the great work!</string>
     <string name="fill_in_the_blanks">Reiniciar</string>
-    <string name="good_job">¡Buen trabajo! Sigue practicando para mejorar.</string>
-    <string name="good_score">¡Buen trabajo! Sigue practicando para mejorar.</string>
+    <string name="good_job">Good job! Keep practicing to improve.</string>
+    <string name="good_score">Good job! Keep practicing to improve.</string>
     <string name="hide_answers">Ocultar respuestas</string>
     <string name="incorrect_answer">¡Incorrecto! ¡Inténtalo de nuevo! Palabras disponibles</string>
-    <string name="keep_practicing">¡Sigue practicando! Mejorarás con el tiempo.</string>
-    <string name="need_practice">¡Sigue practicando! Mejorarás con el tiempo.</string>
-    <string name="next_question">Mostrar traducción</string>
-    <string name="question_number">Error al cargar el contenido del guion</string>
+    <string name="keep_practicing">Keep practicing! You\'ll get better with time.</string>
+    <string name="need_practice">Keep practicing! You\'ll get better with time.</string>
+    <string name="next_question">next question</string>
+    <string name="question_number">Question %1$d</string>
     <string name="reset">Buscar</string>
-    <string name="results">Resultados</string>
-    <string name="score_format">Puntuación: %1$d/%2$d</string>
-    <string name="select_multiple_answers">Comprobar</string>
-    <string name="select_one_answer">Seleccionar varias respuestas</string>
+    <string name="results">Results</string>
+    <string name="score_format">Score: %1$d/%2$d</string>
+    <string name="select_multiple_answers">Select multiple answers</string>
+    <string name="select_one_answer">Select one answer</string>
     <string name="show_answers">Mostrar respuestas</string>
-    <string name="show_results">Respuestas correctas: %1$d/%2$d</string>
-    <string name="show_translation">Filtrar series</string>
+    <string name="show_results">Show Results</string>
+    <string name="show_translation">show translation</string>
     <string name="your_answer">Tu respuesta</string>
     <string name="apply">Apply</string>
     <string name="cancel">Cancelar</string>
@@ -192,7 +192,7 @@
     <string name="back_to_login">Configuración</string>
     <string name="confirm_password">Confirma tu contraseña</string>
     <string name="account_locked">Cuenta bloqueada. Vuelve a intentarlo en %1$d minutos</string>
-    <string name="parts_of_speech_info">Error al cargar los ejercicios de gramática</string>
-    <string name="error_loading_grammar">Error al analizar los ejercicios de gramática</string>
-    <string name="error_parsing_grammar">Dificultad</string>
+    <string name="parts_of_speech_info">[n] - noun,  [v] - verb,  [phv] - phrasal verb,  [adj] - adjective,  [exp] - expression</string>
+    <string name="error_loading_grammar">Error loading grammar exercises</string>
+    <string name="error_parsing_grammar">Error parsing grammar exercises</string>
 </resources>
