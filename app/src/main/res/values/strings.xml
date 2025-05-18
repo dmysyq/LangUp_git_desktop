@@ -186,11 +186,29 @@
     <string name="show_translation">show translation</string>
     <string name="your_answer">Your answer</string>
     <string name="apply">Apply</string>
-    <string name="cancel">Cancel</string>
     <string name="enter_email_for_reset">Enter your email to reset your password</string>
     <string name="send_reset_link">Send link</string>
     <string name="back_to_login">Back to login</string>
     <string name="confirm_password">Confirm your password</string>
     <string name="account_locked">Account blocked. Try again in %1$d minutes</string>
     <string name="accent_type">Accent-type</string>
+    
+    <!-- Premium Content -->
+    <string name="premium_content">Premium Content</string>
+    <string name="premium_content_description">Get access to exclusive premium content and features</string>
+    <string name="subscribe_now">Оформить подписку</string>
+    <string name="subscription_active_until">Your subscription is active until %s</string>
+    <string name="subscription_successful">Subscription successful!</string>
+    <string name="payment_failed">Payment failed: %s</string>
+    <string name="premium_content_requires_subscription">This content requires an active subscription</string>
+    
+    <!-- Subscription Dialog -->
+    <string name="choose_subscription">Choose Your Subscription</string>
+    <string name="subscription_benefits">Get access to all premium content, including exclusive series and features</string>
+    <string name="monthly_subscription">Monthly - $9.99/month</string>
+    <string name="yearly_subscription">Yearly - $89.99/year (Save 25%)</string>
+    <string name="cancel">Cancel</string>
+    <string name="subscribe">subscribe</string>
+    <string name="processing">Обработка...</string>
+    <string name="stripe_publishable_key">pk_test_51RPUd7P4tVIMsRBYCzX8QuIRynuOpWHVE9V5CgoDeg4zOJ2huEMdiU3nsuFBTD4lmaihlaSenQ0YQcruSbeOM96700YXo7w0NA</string>
 </resources>

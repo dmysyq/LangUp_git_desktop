@@ -11,6 +11,7 @@ import androidx.appcompat.widget.SwitchCompat;
 import com.example.langup.R;
 import com.example.langup.presentation.base.BaseActivity;
 import com.example.langup.presentation.adapter.LanguageSpinnerAdapter;
+import com.example.langup.domain.utils.LocaleManager;
 
 public class SettingsActivity extends BaseActivity {
     private SharedPreferences preferences;
@@ -19,6 +20,7 @@ public class SettingsActivity extends BaseActivity {
     private Spinner languageSpinner;
     private ImageButton backButton;
     private Button saveButton;
+    private LocaleManager localeManager;
 
     @Override
     protected int getLayoutResourceId() {
@@ -30,6 +32,7 @@ public class SettingsActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         preferences = getSharedPreferences("LangUpSettings", MODE_PRIVATE);
+        localeManager = new LocaleManager();
         initializeViews();
         setupSpinner();
         loadSettings();
@@ -54,7 +57,7 @@ public class SettingsActivity extends BaseActivity {
         soundEffectsSwitch.setChecked(preferences.getBoolean("sound_effects", true));
         vibrationSwitch.setChecked(preferences.getBoolean("vibration", true));
         
-        String currentLanguage = localeManager.getCurrentLanguage();
+        String currentLanguage = preferences.getString("language", "en");
         int position = 0; // Default to English
         
         switch (currentLanguage) {
@@ -109,7 +112,7 @@ public class SettingsActivity extends BaseActivity {
                 break;
         }
         editor.putString("language", languageCode);
-        updateLocale(languageCode);
+        super.updateLocale(languageCode);
 
         editor.apply();
         Toast.makeText(this, R.string.settings_saved, Toast.LENGTH_SHORT).show();

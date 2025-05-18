@@ -25,7 +25,7 @@ public class LocaleManager {
     private SharedPreferences preferences;
     private Context context;
 
-    private LocaleManager() {
+    public LocaleManager() {
         // Private constructor
     }
 

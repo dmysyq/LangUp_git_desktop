@@ -30,9 +30,14 @@ import com.example.langup.presentation.base.BaseActivity;
 
 import android.view.MenuItem;
 import androidx.appcompat.widget.Toolbar;
+import com.example.langup.data.repository.SubscriptionManager;
+import com.example.langup.domain.model.Subscription;
+import com.example.langup.presentation.ui.premium.SubscriptionDialog;
+import android.view.View;
 
 public class UserProfileActivity extends BaseActivity {
     private static final String TAG = "UserProfileActivity";
+    private static final int REQUEST_SUBSCRIBE = 101;
 
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
@@ -51,6 +56,10 @@ public class UserProfileActivity extends BaseActivity {
     private ChipGroup countriesChipGroup;
     private ChipGroup sourcesChipGroup;
     private TextView savePreferencesButton;
+    private SubscriptionManager subscriptionManager;
+    private TextView subscriptionStatus;
+    private TextView subscriptionDate;
+    private android.widget.Button subscribeButton;
 
     @Override
     protected int getLayoutResourceId() {
@@ -72,6 +81,7 @@ public class UserProfileActivity extends BaseActivity {
             return;
         }
         preferencesManager = new PreferencesManager(this, userId);
+        subscriptionManager = new SubscriptionManager(this);
 
         // Initialize views
         initializeViews();
@@ -79,11 +89,10 @@ public class UserProfileActivity extends BaseActivity {
         // Load user data and preferences
         loadUserData();
         loadUserPreferences();
+        checkSubscription();
 
         // Set up click listeners
         setupClickListeners();
-
-        setupToolbar();
     }
 
     private void initializeViews() {
@@ -98,6 +107,9 @@ public class UserProfileActivity extends BaseActivity {
         genresChipGroup = findViewById(R.id.genresChipGroup);
         countriesChipGroup = findViewById(R.id.countriesChipGroup);
         sourcesChipGroup = findViewById(R.id.sourcesChipGroup);
+        subscriptionStatus = findViewById(R.id.subscriptionStatus);
+        subscriptionDate = findViewById(R.id.subscriptionDate);
+        subscribeButton = findViewById(R.id.subscribeButton);
 
         // Set email field as non-editable
         emailEditText.setEnabled(false);
@@ -245,6 +257,7 @@ public class UserProfileActivity extends BaseActivity {
         if (savePreferencesButton != null) {
             savePreferencesButton.setOnClickListener(v -> saveUserPreferences());
         }
+        subscribeButton.setOnClickListener(v -> openSubscribeActivity());
     }
 
     private void showAvatarPicker() {
@@ -408,12 +421,41 @@ public class UserProfileActivity extends BaseActivity {
         });
     }
 
-    private void setupToolbar() {
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setTitle(R.string.profile);
+    private void checkSubscription() {
+        subscriptionManager.checkSubscription(new SubscriptionManager.SubscriptionCallback() {
+            @Override
+            public void onSuccess(Subscription subscription) {
+                updateSubscriptionUI(subscription);
+            }
+            @Override
+            public void onError(String error) {
+                updateSubscriptionUI(null);
+            }
+        });
+    }
+
+    private void updateSubscriptionUI(Subscription subscription) {
+        if (subscription != null && subscription.isActive()) {
+            subscriptionStatus.setText("Подписка: Активна");
+            subscriptionDate.setText("Срок подписки: " + subscription.getEndDate().toDate().toString());
+            subscribeButton.setVisibility(View.GONE);
+        } else {
+            subscriptionStatus.setText("Подписка: Нет");
+            subscriptionDate.setText("Срок подписки: -");
+            subscribeButton.setVisibility(View.VISIBLE);
+        }
+    }
+
+    private void openSubscribeActivity() {
+        Intent intent = new Intent(this, com.example.langup.presentation.ui.premium.SubscribeActivity.class);
+        startActivityForResult(intent, REQUEST_SUBSCRIBE);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_SUBSCRIBE && resultCode == RESULT_OK) {
+            checkSubscription();
         }
     }
 

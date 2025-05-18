@@ -30,11 +30,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         localeManager = LocaleManager.getInstance(this);
         setContentView(getLayoutResourceId());
         setupToolbar();
-        if (this instanceof MainActivity) {
-            Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(false);
-        } else {
-            Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-        }
     }
 
     @Override

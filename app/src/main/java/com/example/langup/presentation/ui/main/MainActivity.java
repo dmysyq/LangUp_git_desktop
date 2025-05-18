@@ -32,6 +32,9 @@ import com.google.gson.Gson;
 import com.example.langup.presentation.base.BaseActivity;
 import com.example.langup.presentation.adapter.LanguageSelectorAdapter;
 import com.example.langup.presentation.model.LanguageItem;
+import com.example.langup.data.repository.SubscriptionManager;
+import com.example.langup.domain.model.Subscription;
+import com.example.langup.presentation.ui.premium.SubscribeActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,6 +54,8 @@ public class MainActivity extends BaseActivity implements SeriesAdapter.OnSeries
     private String selectedSource = "";
     private String currentLanguage = "en"; // Default language is English
     private MenuItem filterMenuItem; // Store reference to filter menu item
+    private SubscriptionManager subscriptionManager;
+    private static final int REQUEST_SUBSCRIBE = 102;
 
     @Override
     protected int getLayoutResourceId() {
@@ -73,6 +78,7 @@ public class MainActivity extends BaseActivity implements SeriesAdapter.OnSeries
         setupToolbar();
         setupNavigation();
         setupLanguageSelector();
+        subscriptionManager = new SubscriptionManager(this);
         loadSeries();
     }
 
@@ -271,21 +277,44 @@ public class MainActivity extends BaseActivity implements SeriesAdapter.OnSeries
 
     @Override
     public void onSeriesClick(Series series) {
+        if (series.getMetadata().isPremium()) {
+            subscriptionManager.checkSubscription(new SubscriptionManager.SubscriptionCallback() {
+                @Override
+                public void onSuccess(Subscription subscription) {
+                    // User is subscribed, open the series
+                    startSeriesActivity(series);
+                }
+
+                @Override
+                public void onError(String error) {
+                    // User is not subscribed or error occurred
+                    Toast.makeText(MainActivity.this, R.string.premium_content_requires_subscription, Toast.LENGTH_SHORT).show();
+                    openSubscribeActivity();
+                }
+            });
+        } else {
+            // Not a premium series, open directly
+            startSeriesActivity(series);
+        }
+    }
+
+    private void startSeriesActivity(Series series) {
+        // Replace placeholder with actual logic to launch LevelSelectionActivity
         Intent intent = new Intent(this, LevelSelectionActivity.class);
         intent.putExtra("series_id", series.getId());
-        intent.putExtra("title", series.getTitle());
-        intent.putExtra("description", series.getDescription());
-        intent.putExtra("difficulty", series.getDifficulty());
-        intent.putExtra("accent", series.getAccent());
-        intent.putExtra("video_url", series.getVideoUrl());
-        
+        intent.putExtra("title", series.getMetadata().getTitle());
+        intent.putExtra("description", series.getMetadata().getDescription());
+        intent.putExtra("difficulty", series.getMetadata().getDifficulty());
+        intent.putExtra("accent", series.getMetadata().getAccent());
+        intent.putExtra("video_url", series.getMetadata().getVideoUrl());
+
         // Handle null transcript
         String transcript = "";
         if (series.getContent() != null && series.getContent().getTranscript() != null) {
             transcript = series.getContent().getTranscript().getFull();
         }
         intent.putExtra("transcript", transcript);
-        
+
         // Handle null content
         if (series.getContent() != null) {
             intent.putExtra("vocabulary", new Gson().toJson(series.getContent().getVocabulary()));
@@ -296,9 +325,24 @@ public class MainActivity extends BaseActivity implements SeriesAdapter.OnSeries
             intent.putExtra("questions", "[]");
             intent.putExtra("grammar", "[]");
         }
-        
+
         Log.d(TAG, "Starting LevelSelectionActivity with series ID: " + series.getId());
         startActivity(intent);
+    }
+
+    private void openSubscribeActivity() {
+        Intent intent = new Intent(this, com.example.langup.presentation.ui.premium.SubscribeActivity.class);
+        startActivityForResult(intent, REQUEST_SUBSCRIBE);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_SUBSCRIBE && resultCode == RESULT_OK) {
+            // Subscription successful, refresh UI if needed (optional here, as check happens on resume)
+            // For now, just log or show a message
+            Log.d(TAG, "Subscription successful, returning from SubscribeActivity");
+        }
     }
 
     @Override

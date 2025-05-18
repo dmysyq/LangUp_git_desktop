@@ -88,6 +88,14 @@ public class SeriesAdapter extends RecyclerView.Adapter<SeriesAdapter.SeriesView
             holder.imageView.setImageResource(R.drawable.ic_image_placeholder);
         }
         
+        // Premium icon
+        ImageView premiumIcon = holder.itemView.findViewById(R.id.premium_icon);
+        if (metadata.isPremium()) {
+            premiumIcon.setVisibility(View.VISIBLE);
+        } else {
+            premiumIcon.setVisibility(View.GONE);
+        }
+        
         holder.itemView.setOnClickListener(v -> {
             if (listener != null) {
                 listener.onSeriesClick(series);

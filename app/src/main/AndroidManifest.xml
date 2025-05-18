@@ -75,6 +75,11 @@
             android:name=".presentation.ui.transcript.TranscriptActivity"
             android:exported="false"
             android:theme="@style/Theme.LangUp" />
+        <activity
+            android:name=".presentation.ui.premium.PremiumContentActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LangUp" />
+        <activity android:name=".presentation.ui.premium.SubscribeActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

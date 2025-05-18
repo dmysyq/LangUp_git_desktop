@@ -42,9 +42,13 @@ public class SeriesMetadata implements Serializable {
     @SerializedName("lang")
     private String lang;
 
+    @SerializedName("isPremium")
+    private boolean isPremium;
+
     public SeriesMetadata() {
         genres = new ArrayList<>();
         countries = new ArrayList<>();
+        isPremium = false;
     }
 
     // Getters
@@ -60,6 +64,7 @@ public class SeriesMetadata implements Serializable {
     public List<String> getGenres() { return genres; }
     public List<String> getCountries() { return countries; }
     public String getLang() { return lang; }
+    public boolean isPremium() { return isPremium; }
 
     // Setters
     public void setId(String id) { this.id = id; }
@@ -74,4 +79,5 @@ public class SeriesMetadata implements Serializable {
     public void setGenres(List<String> genres) { this.genres = genres; }
     public void setCountries(List<String> countries) { this.countries = countries; }
     public void setLang(String lang) { this.lang = lang; }
+    public void setPremium(boolean premium) { isPremium = premium; }
 } 

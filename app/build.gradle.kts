@@ -60,6 +60,9 @@ dependencies {
     implementation(libs.play.services.base)
     implementation(libs.play.services.tasks.v1810)
     
+    // Stripe
+    implementation("com.stripe:stripe-android:20.38.0")
+    
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

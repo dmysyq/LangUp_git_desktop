@@ -12,12 +12,26 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/series_image"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:contentDescription="@string/series_image"/>
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/series_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/series_image"/>
+
+            <ImageView
+                android:id="@+id/premium_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="top|end"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_premium"
+                android:visibility="gone"/>
+        </FrameLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -186,6 +186,7 @@
     <string name="show_translation">Аударманы көрсету</string>
     <string name="your_answer">Сіздің жауабыңыз</string>
     <string name="apply">Қолдану</string>
+    <string name="yearly_subscription">Жыл сайын - $89,99/жыл (25% үнемдеңіз)</string>
     <string name="cancel">Бас тарту</string>
     <string name="enter_email_for_reset">Құпия сөзіңізді қалпына келтіру үшін электрондық поштаңызды енгізіңіз</string>
     <string name="send_reset_link">Сілтемені жіберу</string>
@@ -193,4 +194,15 @@
     <string name="confirm_password">Құпия сөзіңізді растаңыз</string>
     <string name="account_locked">Тіркелгі бұғатталды. %1$d минуттан кейін қайталап көріңіз</string>
     <string name="accent_type">Accent-type</string>
+    <string name="premium_content">Премиум мазмұн</string>
+    <string name="premium_content_description">Эксклюзивті премиум мазмұн мен мүмкіндіктерге қол жеткізіңіз</string>
+    <string name="subscribe_now">Қазір жазылыңыз</string>
+    <string name="subscription_active_until">Жазылым %s дейін белсенді</string>
+    <string name="subscription_successful">Жазылым сәтті өтті!</string>
+    <string name="payment_failed">Төлем орындалмады: %s</string>
+    <string name="premium_content_requires_subscription">Бұл мазмұн белсенді жазылуды қажет етеді</string>
+    <string name="choose_subscription">Жазылымыңызды таңдаңыз</string>
+    <string name="subscription_benefits">Барлық премиум мазмұнға, соның ішінде эксклюзивті сериялар мен мүмкіндіктерге қол жеткізіңіз</string>
+    <string name="monthly_subscription">Ай сайын - айына $9,99</string>
+    <string name="subscribe">subscribe</string>
 </resources> 

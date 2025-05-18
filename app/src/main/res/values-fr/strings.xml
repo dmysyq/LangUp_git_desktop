@@ -186,6 +186,7 @@
     <string name="show_translation">Afficher la traduction</string>
     <string name="your_answer">Votre réponse</string>
     <string name="apply">Appliquer</string>
+    <string name="yearly_subscription">Annuel : 89,99 $/an (économisez 25 %)</string>
     <string name="cancel">Annuler</string>
     <string name="enter_email_for_reset">Entrez votre e-mail pour réinitialiser votre mot de passe</string>
     <string name="send_reset_link">Envoyer le lien</string>
@@ -193,4 +194,15 @@
     <string name="confirm_password">Confirmez votre mot de passe</string>
     <string name="account_locked">Compte verrouillé. Réessayez dans %1$d minutes</string>
     <string name="accent_type">Accent-type</string>
+    <string name="premium_content">Contenu Premium</string>
+    <string name="premium_content_description">Accédez à du contenu et des fonctionnalités premium exclusifs</string>
+    <string name="subscribe_now">Abonnez-vous</string>
+    <string name="subscription_active_until">Votre abonnement est actif jusqu\'au %s</string>
+    <string name="subscription_successful">Abonnement réussi !</string>
+    <string name="payment_failed">Échec du paiement : %s</string>
+    <string name="premium_content_requires_subscription">Ce contenu nécessite un abonnement actif</string>
+    <string name="choose_subscription">Choisissez votre abonnement</string>
+    <string name="subscription_benefits">Accédez à tout le contenu premium, y compris les séries et fonctionnalités exclusives</string>
+    <string name="monthly_subscription">Mensuel : 9,99 $/mois</string>
+    <string name="subscribe">subscribe</string>
 </resources> 
