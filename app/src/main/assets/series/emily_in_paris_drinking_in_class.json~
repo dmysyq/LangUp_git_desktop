@@ -1,0 +1,198 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 23,
+        "title": "Drinking in Class",
+        "videoUrl": "https://youtu.be/DEokVfbW8a8",
+        "country": "USA",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "French",
+        "imageUrl": "emily_in_paris_banner",
+        "source": "Netflix",
+        "difficulty": 4,
+        "genres": ["Comedy", "Romance", "Drama"],
+        "countries": ["USA", "France"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "a traveler",
+            "translation": "пиво на вынос",
+            "example": "a traveler [n] - a beer that you can carry to the next bar"
+          },
+          {
+            "word": "whilst",
+            "translation": "в то время как",
+            "example": "whilst [exp] - while"
+          },
+          {
+            "word": "one thing I'll give old XXX is",
+            "translation": "одно, что я ценю в XXX, это",
+            "example": "one thing I'll give old Paris is [exp] - something that I admire about Paris is"
+          },
+          {
+            "word": "open container laws",
+            "translation": "законы об открытых контейнерах",
+            "example": "open container laws [exp] - laws that allow people to drink alcohol on the street"
+          },
+          {
+            "word": "get on the lash",
+            "translation": "напиться",
+            "example": "get on the lash [exp] - getting drunk"
+          },
+          {
+            "word": "nicked",
+            "translation": "пойманный полицией",
+            "example": "nicked [adj] - caught by the police"
+          },
+          {
+            "word": "fancy",
+            "translation": "хотеть, нравиться",
+            "example": "fancy [v] - want, like, enjoy"
+          },
+          {
+            "word": "banged up",
+            "translation": "пьяный",
+            "example": "banged up [adj] - drunk"
+          },
+          {
+            "word": "hunky-dory",
+            "translation": "в порядке",
+            "example": "hunky-dory [adj] - good, okay"
+          },
+          {
+            "word": "taking the piss",
+            "translation": "издеваться",
+            "example": "taking the piss [exp] - making fun of, teasing"
+          },
+          {
+            "word": "the board",
+            "translation": "доска",
+            "example": "the board [n] - the white board at the front of the classroom"
+          },
+          {
+            "word": "abstract",
+            "translation": "абстрактный",
+            "example": "abstract [adj] - theoretical, not concrete, not practical"
+          },
+          {
+            "word": "bloody brilliant",
+            "translation": "чертовски здорово",
+            "example": "bloody brilliant [exp] - really great"
+          },
+          {
+            "word": "immerse",
+            "translation": "погружаться",
+            "example": "immerse [v] - use or engage fully or deeply"
+          },
+          {
+            "word": "come over me",
+            "translation": "охватить меня",
+            "example": "come over me [phv] - affect me, happen to me"
+          },
+          {
+            "word": "Not bothered",
+            "translation": "меня это не волнует",
+            "example": "Not bothered [exp] - I am not angry. It does not bother me"
+          },
+          {
+            "word": "She is so into me",
+            "translation": "она от меня без ума",
+            "example": "She is so into me [exp] - She really likes or fancies me"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Emily and Alfie are drinking what?",
+            "options": ["tea", "beer", "wine", "coffee"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "One thing that Alfie likes about Paris is that what?",
+            "options": [
+              "the food is good",
+              "the beer is cheap",
+              "you can drink on the street",
+              "the weather is better than in London"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "Who wants to skip French class?",
+            "options": ["Emily", "Alfie"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "Alfie invites Emily to what tonight?",
+            "options": [
+              "go drinking",
+              "go out for dinner",
+              "come back to his apartment"
+            ],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "'Hunky-dory' is what kind of expression?",
+            "options": ["British", "American"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "Emily and Alfie got what scores on their tests?",
+            "options": ["high", "low"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "The teacher is trying to what with Alfie?",
+            "options": ["help", "flirt with", "embarrass"],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "What does Emily do when Alfie makes a mistake at the board?",
+            "options": ["ignores", "defends", "makes fun of"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "The teacher suggests that Emily is improving because of what reasons?",
+            "options": [
+              "she is a little drunk and not thinking too much",
+              "she has been studying more and spending time with French people",
+              "she is a little drunk and spending time with French people",
+              "she has been studying more and not thinking too much"
+            ],
+            "correctAnswers": [0, 1]
+          },
+          {
+            "id": "q10",
+            "type": "single_choice",
+            "question": "Alfie is what at the teacher?",
+            "options": ["angry", "not angry"],
+            "correctAnswer": 1
+          }
+        ],
+        "transcript": {
+          "full": "Alfie: There you go.\n\nEmily: Ooh, coffee! Good idea.\n\nAlfie: It's a traveler, Cooper.\n\nEmily: Mmm-hmm! Oh, that's, that's beer! What did you call it?\n\nAlfie: A traveler. To drink whilst you're traveling to the next bar.\n\nEmily: Or French class.\n\nAlfie: You know, one thing I'll give old Paris, open container laws, I mean you can get on the lash wherever you want.\n\nEmily: I don't think that's true.\n\nAlfie: Well, I haven't been nicked yet. Maybe tonight's the night. You fancy getting banged up abroad, Cooper?\n\nEmily: You know, the more you drink, the more British you sound. Are you sure we're not too drunk for French class? Should we skip it?\n\nAlfie: Can't. Need to get my little attendance slip signed for work. Don't worry, love. We'll be hunky-dory.\n\nEmily: Hunky-dory? Oh, now you're just taking the piss. I'm a fast learner.\n\nTeacher: I hope you both find your grades as funny.\n\nTeacher: Alfie, can you join me at the board, please. So, one common mistake in the test was people using 'je suppose' instead of 'j'imagine.' They're very similar, but 'j'imagine' is more abstract.\n\nTeacher: Alfie, can you write on the board, please, 'J'imagine que je suis en vacances.'\n\nAlfie: What was the rest?\n\nTeacher: Non, pas Jean Magine. J'imagine.\n\nAlfie: Yeah, that's what I wrote.\n\nTeacher: No.\n\nAlfie: Who the hell's Jean Magine, anyway?\n\nTeacher: En francais, s'il vous plait.\n\nAlfie: Qui est Jean Magine?\n\nEmily: I imagine Alfie's doing his best. He doesn't have much opportunity to speak with many French people.\n\nAlfie: Now that was bloody brilliant! What did she say?\n\nTeacher: Emily! Well done. Tonight for the first time, you fully immersed yourself in the language. You didn't overthink it.\n\nEmily: Merci. I don't know really what came over me, but maybe it's the heatwave.\n\nTeacher: Yeah, or whatever's in that cup. Alfie, I wish I could say the same to you.\n\nAlfie: All good. Not bothered.\n\nTeacher: I didn't think so. Hmm. Bonne nuit.\n\nAlfie: She is so into me."
+        }
+      }
+    }
+  ]
+}

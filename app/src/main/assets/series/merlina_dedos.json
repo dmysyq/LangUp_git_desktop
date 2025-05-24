@@ -1,0 +1,152 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 1,
+        "title": "Dedos casi pierde la vida",
+        "videoUrl": "!TODO",
+        "country": "USA",
+        "lang": "es",
+        "level": "B1",
+        "accent": "latin american spanish",
+        "source": "Netflix",
+        "imageUrl": "merlina_dedos_banner",
+        "difficulty": 5,
+        "genres": ["Misterio", "Comedia", "Fantasía"],
+        "countries": ["USA", "Romania"],
+        "isPremium": true
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "herido",
+            "translation": "раненый",
+            "example": "En la escena, Dedos está herido y Merlina está muy asustada."
+          },
+          {
+            "word": "reanimar",
+            "translation": "оживлять",
+            "example": "Merlina intenta reanimar a Dedos, pero parece que no funciona."
+          },
+          {
+            "word": "miedo",
+            "translation": "страх",
+            "example": "Merlina tiene mucho miedo de perder a Dedos."
+          },
+          {
+            "word": "alivio",
+            "translation": "облегчение",
+            "example": "Cuando Dedos despierta, Merlina siente un gran alivio."
+          },
+          {
+            "word": "promesa",
+            "translation": "обещание",
+            "example": "Merlina le hace una promesa a Dedos de no dejarlo morir."
+          },
+          {
+            "word": "tío",
+            "translation": "дядя",
+            "example": "El tío de Merlina, Gomez, es un personaje muy extraño."
+          },
+          {
+            "word": "luchar",
+            "translation": "бороться",
+            "example": "Merlina lucha para encontrar una manera de salvar a Dedos."
+          },
+          {
+            "word": "dedo meñique",
+            "translation": "мизинец",
+            "example": "El dedo meñique de Dedos es el que Merlina intenta curar."
+          },
+          {
+            "word": "curar",
+            "translation": "лечить",
+            "example": "Merlina intenta curar el dedo meñique de Dedos."
+          },
+          {
+            "word": "desesperación",
+            "translation": "отчаяние",
+            "example": "Merlina siente una gran desesperación al ver que Dedos no reacciona."
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "¿Está Dedos herido en la escena?",
+            "options": ["Sí", "No"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "¿Quién intenta reanimar a Dedos?",
+            "options": ["Merlina", "El tío Lucas"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "¿Muestra Merlina emociones en esta escena?",
+            "options": ["Sí", "No"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "¿Qué hace Merlina cuando Dedos se mueve?",
+            "options": ["Se alegra", "Se enoja"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "¿Usa el tío Lucas electricidad para salvar a Dedos?",
+            "options": ["Sí", "No"],
+            "correctAnswer": 0
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Pretérito perfecto y subjuntivo",
+            "explanation": "Escoge la forma correcta del verbo para completar la oración, enfocándote en el pretérito perfecto (acciones completadas) o el subjuntivo (deseos, emociones).",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "Merlina ___ (llorar) porque Dedos está herido.",
+                "options": ["ha llorado", "lloró", "llorará", "llore"],
+                "correctAnswer": "ha llorado"
+              },
+              {
+                "id": "g2",
+                "sentence": "Espero que Dedos ___ (recuperarse) pronto.",
+                "options": ["se recupere", "se recuperó", "se recupera", "se recuperará"],
+                "correctAnswer": "se recupere"
+              },
+              {
+                "id": "g3",
+                "sentence": "El tío Lucas ___ (intentar) salvar a Dedos.",
+                "options": ["ha intentado", "intentó", "intentará", "intente"],
+                "correctAnswer": "ha intentado"
+              },
+              {
+                "id": "g4",
+                "sentence": "Merlina no quiere que Dedos ___ (morir).",
+                "options": ["muera", "murió", "morirá", "muere"],
+                "correctAnswer": "muera"
+              },
+              {
+                "id": "g5",
+                "sentence": "Dedos ___ (moverse) después de que Lucas lo ayuda.",
+                "options": ["se ha movido", "se movió", "se mueve", "se moverá"],
+                "correctAnswer": "se ha movido"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Merlina: ¡Dedos, no! ¡No puedes morir! ¡Quédate conmigo!\nLucas: Tranquila, pequeña. ¡Yo me encargo! ¡Un poco de chispa lo arreglará!\nMerlina: ¡No se mueve! ¡Haz algo, Lucas!\nLucas: ¡Vamos, Dedos, eres más fuerte que esto!\nMerlina: ¡Dedos! ¡Estás bien! [Hace una promesa con el dedo meñique]\nLucas: ¡Te dije que es un luchador!"
+        }
+      }
+    }
+  ]
+}
