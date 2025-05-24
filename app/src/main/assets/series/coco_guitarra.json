@@ -1,0 +1,153 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 1,
+        "title": "Coco: La guitarra de de la Cruz",
+        "videoUrl": "https://www.disneyplus.com/movies/coco/7g1ZuU7jF7bF",
+        "country": "USA",
+        "lang": "es",
+        "level": "A2",
+        "accent": "spanish",
+        "source": "Disney",
+        "imageUrl": "coco_banner",
+        "difficulty": 3,
+        "genres": ["Animación", "Familia", "Fantasía"],
+        "countries": ["USA"],
+        "isPremium": true
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "tataranieto",
+            "translation": "правнук",
+            "example": "Miguel es el tataranieto de de la Cruz."
+          },
+          {
+            "word": "guitarra",
+            "translation": "гитара",
+            "example": "La guitarra de de la Cruz es famosa."
+          },
+          {
+            "word": "maldición",
+            "translation": "проклятие",
+            "example": "La música es una maldición para la familia."
+          },
+          {
+            "word": "prestar",
+            "translation": "одолжить",
+            "example": "Preciso tomar prestado algo."
+          },
+          {
+            "word": "corazón",
+            "translation": "сердце",
+            "example": "Sigue tu corazón para ser feliz."
+          },
+          {
+            "word": "plaza",
+            "translation": "площадь",
+            "example": "Voy a tocar en la plaza."
+          },
+          {
+            "word": "robar",
+            "translation": "украсть",
+            "example": "Alguien robó la guitarra."
+          },
+          {
+            "word": "familia",
+            "translation": "семья",
+            "example": "Somos tu familia, Miguel."
+          },
+          {
+            "word": "lo siento",
+            "translation": "извини",
+            "example": "Lo siento, no quise hacer daño."
+          },
+          {
+            "word": "ver",
+            "translation": "видеть",
+            "example": "¿Puedes verme? Estoy aquí."
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "¿Por qué toma Miguel la guitarra?",
+            "options": ["Para tocar en la plaza", "Para venderla"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "¿Qué piensa la familia de Miguel sobre la música?",
+            "options": ["Es una maldición", "Es una bendición"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "¿Qué pasa con la guitarra de de la Cruz?",
+            "options": ["Desaparece", "Se rompe"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "¿Quiénes son las personas que encuentra Miguel?",
+            "options": ["Su familia", "Sus amigos"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "¿Puede Dante ver a Miguel en la escena?",
+            "options": ["Sí", "No"],
+            "correctAnswer": 0
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Presente y modales",
+            "explanation": "Escoge la forma correcta del verbo para completar la oración, enfocándote en el presente (acciones actuales) o verbos modales (necesidad, permiso).",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "Miguel ___ que la música es una maldición.",
+                "options": ["cree", "creía", "creerá", "creyó"],
+                "correctAnswer": "cree"
+              },
+              {
+                "id": "g2",
+                "sentence": "Preciso ___ la guitarra prestada.",
+                "options": ["tomar", "tomo", "tomé", "tomaré"],
+                "correctAnswer": "tomar"
+              },
+              {
+                "id": "g3",
+                "sentence": "Si le ___ bien, voy a tocar en la plaza.",
+                "options": ["parece", "pareció", "parecerá", "parezca"],
+                "correctAnswer": "parece"
+              },
+              {
+                "id": "g4",
+                "sentence": "¿___ verme? Estoy aquí.",
+                "options": ["Puedes", "Pudiste", "Podrás", "Pudieras"],
+                "correctAnswer": "Puedes"
+              },
+              {
+                "id": "g5",
+                "sentence": "Somos tu familia que ___ aquí.",
+                "options": ["está", "estaba", "estará", "esté"],
+                "correctAnswer": "está"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Miguel: Señor de la Cruz, por favor, no se enoje. Soy Miguel. Su tataranieto. Preciso tomar esto prestado. Nuestra familia cree que la música es una maldición. Ninguno de ellos entiende, pero sé que usted lo haría. Usted me hubiera dicho que siga mi corazón. ¡Que viva mi momento! Así que si le parece bien, voy a tocar en la plaza. ¡Como usted!\nGuardia: ¡La guitarra! ¡Desapareció!\nGuardia: ¡Alguien robó la guitarra de de la Cruz!\nGuardia: La ventana está rota. ¡Miren!\nGuardia: Bueno, ¿quién anda ahí?\nMiguel: Lo siento. No es lo que parece. De la Cruz es mi...\nGuardia: No hay nadie.\nFamilia: Miguel, ven a casa. Miguel, ¿dónde estás?\nFamilia: ¡Dios mío! Muchachito. ¿Estás bien? Toma. Déjame ayudarte.\nMiguel: Gracias. Yo...\nFamilia: Mira qué grande se está poniendo ella.\nMiguel: ¡Dante!"
+        }
+      }
+    }
+  ]
+}

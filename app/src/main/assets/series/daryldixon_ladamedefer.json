@@ -1,0 +1,153 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 1,
+        "title": "The Walking Dead: Daryl Dixon: La Dame de Fer",
+        "videoUrl": "https://www.netflix.com/title/81494987",
+        "country": "USA",
+        "lang": "es",
+        "level": "B1",
+        "accent": "spanish",
+        "source": "AMC",
+        "imageUrl": "daryldixon_banner",
+        "difficulty": 5,
+        "genres": ["Drama", "Horror", "Acción"],
+        "countries": ["USA"],
+        "isPremium": true
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "apuñalar",
+            "translation": "заколоть",
+            "example": "Jimmy tuvo que apuñalar al cerdo muchas veces."
+          },
+          {
+            "word": "desangrar",
+            "translation": "истечь кровью",
+            "example": "El cerdo se desangró lentamente."
+          },
+          {
+            "word": "lastimar",
+            "translation": "причинить боль",
+            "example": "No quería lastimar al cerdo, pero lo hizo peor."
+          },
+          {
+            "word": "gritar",
+            "translation": "кричать",
+            "example": "El cerdo gritó toda la noche."
+          },
+          {
+            "word": "negociar",
+            "translation": "договариваться",
+            "example": "Daryl quiere negociar para salvar a Laurent."
+          },
+          {
+            "word": "mapa",
+            "translation": "карта",
+            "example": "Él puede dibujarnos un mapa para entrar."
+          },
+          {
+            "word": "peligroso",
+            "translation": "опасный",
+            "example": "Es un plan peligroso, pero necesario."
+          },
+          {
+            "word": "confiar",
+            "translation": "доверять",
+            "example": "¿Confías en Quinn para ayudarnos?"
+          },
+          {
+            "word": "atado",
+            "translation": "связанный (перен.)",
+            "example": "Todo estará bien si está atado."
+          },
+          {
+            "word": "barco",
+            "translation": "лодка",
+            "example": "Un barco nos espera en el río."
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "¿Por qué cuenta Daryl la historia de Jimmy?",
+            "options": ["Para asustar al hombre", "Para contar su infancia"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "¿Qué hace Isabelle durante el interrogatorio?",
+            "options": ["Se queda", "Se va"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "¿Qué está usando Quinn para atraer a Isabelle?",
+            "options": ["A Laurent", "Un mapa"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "¿Qué hará el grupo en el Pont de la Tournelle?",
+            "options": ["Encontrar un barco", "Luchar contra Quinn"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "¿Qué dice el grupo antes de partir?",
+            "options": ["Entra como uno, regresa como uno", "Lucha y sobrevive"],
+            "correctAnswer": 0
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Pretérito perfecto y subjuntivo presente",
+            "explanation": "Escoge la forma correcta del verbo para completar la oración, enfocándote en el pretérito perfecto (acciones completadas) o el subjuntivo presente (hipótesis, deseos).",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "Quinn ___ a Laurent para atraer a Isabelle.",
+                "options": ["ha usado", "usó", "usará", "use"],
+                "correctAnswer": "ha usado"
+              },
+              {
+                "id": "g2",
+                "sentence": "Espero que nadie ___ herido en el plan.",
+                "options": ["resulte", "resultó", "resultará", "resulta"],
+                "correctAnswer": "resulte"
+              },
+              {
+                "id": "g3",
+                "sentence": "Daryl ___ una historia para asustar al hombre.",
+                "options": ["ha inventado", "inventó", "inventará", "invente"],
+                "correctAnswer": "ha inventado"
+              },
+              {
+                "id": "g4",
+                "sentence": "Quiero que ___ un mapa para entrar.",
+                "options": ["dibuje", "dibujó", "dibujará", "dibuja"],
+                "correctAnswer": "dibuje"
+              },
+              {
+                "id": "g5",
+                "sentence": "El grupo ___ el plan antes de partir.",
+                "options": ["ha discutido", "discutió", "discutirá", "discuta"],
+                "correctAnswer": "ha discutido"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Isabelle: Solía seguirlo como un perrito. Incluso lo esperé después de la escuela.\nDaryl: Quiere hacerlo rápido y sin dolor. La cuestión es que, como Jimmy no intenta lastimar al cerdo, termina lastimándolo peor. Lo apuñaló en el vientre, en la espalda, en las piernas, hasta que simplemente se desangró. Y ese cerdo gritó toda la noche. Todos los vecinos lo oyeron. Ya nadie jodía con Jimmy.\nIsabelle: Está usando a Laurent para llegar a mí.\nDaryl: Bueno, no podemos pasar por la puerta principal. Tiene que haber otra manera de entrar.\nDaryl: Creo que tal vez quieras irte. A menos que quieras oír gritar a este cerdo.\nIsabelle: Me quedaré.\nArmand: Él conoce una manera de entrar. Es peligroso, pero puede dibujarnos un mapa.\nDaryl: No necesitamos un mapa. Lo llevaremos con nosotros.\nIsabelle: El niño de la historia, ese eras tú, ¿no?\nDaryl: No, yo inventé toda esa mierda.\nFallou: Muy bien, ¿sabemos lo que estamos haciendo?\nDaryl: Sí. Isabelle y yo iremos al Pont de la Tournelle. Allí nos estará esperando un hombre llamado Azlan del nido con un barco.\nFallou: Estamos listos.\nIsabelle: Quinn te estará esperando.\nDaryl: ¿Tú confías en él?\nIsabelle: Sí. Sí, siempre y cuando esté todo atado.\nFallou: ¿Puedo decir algo?\nFallou: Entra como uno, regresa como uno.\nGrupo: Entra como uno, regresa como...\nGrupo: ¡Uno!"
+        }
+      }
+    }
+  ]
+}

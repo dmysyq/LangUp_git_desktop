@@ -1,0 +1,153 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 1,
+        "title": "Le Petit Prince : Le drame des baobabs",
+        "videoUrl": "https://gallica.bnf.fr/ark:/12148/bpt6k3323645w",
+        "country": "France",
+        "lang": "fr",
+        "level": "B1",
+        "accent": "french",
+        "source": "Antoine de Saint",
+        "imageUrl": "le_petit_prince_banner",
+        "difficulty": 5,
+        "genres": ["Conte", "Philosophie", "Aventure"],
+        "countries": ["France"],
+        "isPremium": true
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "baobab",
+            "translation": "baobab",
+            "example": "Je connus le drame des baobabs."
+          },
+          {
+            "word": "mouton",
+            "translation": "mouton",
+            "example": "Les moutons mangent les arbustes ?"
+          },
+          {
+            "word": "arbuste",
+            "translation": "arbuste",
+            "example": "Les moutons mangent les arbustes."
+          },
+          {
+            "word": "content",
+            "translation": "content",
+            "example": "Ah ! Je suis content."
+          },
+          {
+            "word": "doute",
+            "translation": "doute",
+            "example": "Comme pris d’un doute grave."
+          },
+          {
+            "word": "graine",
+            "translation": "graine",
+            "example": "De bonnes graines de bonnes herbes."
+          },
+          {
+            "word": "évidence",
+            "translation": "évidence",
+            "example": "Comme il s’agissait là d’une évidence."
+          },
+          {
+            "word": "réflexion",
+            "translation": "réflexion",
+            "example": "Au hasard des réflexions."
+          },
+          {
+            "word": "planète",
+            "translation": "planète",
+            "example": "Sur la planète du petit prince."
+          },
+          {
+            "word": "comprendre",
+            "translation": "comprendre",
+            "example": "Pour comprendre à moi seul ce problème."
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Pourquoi le petit prince est-il content ?",
+            "options": ["Parce que les moutons mangent les arbustes", "Parce qu’il a vu des éléphants"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "Qu’est-ce que les baobabs sont au début ?",
+            "options": ["De petits plants", "De grands arbres"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "Pourquoi le petit prince veut-il que les moutons mangent les baobabs ?",
+            "options": ["Pour protéger sa planète", "Pour nourrir les moutons"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "Que fait le narrateur chaque jour ?",
+            "options": ["Il apprend quelque chose", "Il arrache des baobabs"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "Qu’arrive-t-il si un baobab grandit trop ?",
+            "options": ["Il détruit la planète", "Il devient un rosier"],
+            "correctAnswer": 0
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Passé composé, subjonctif présent et propositions relatives",
+            "explanation": "Choisissez la forme grammaticale correcte pour compléter la phrase, en vous concentrant sur le passé composé (par exemple, ‘j’apprennais’), le subjonctif présent (par exemple, ‘mangeassent’) et les propositions relatives (par exemple, ‘que les moutons mangent’).",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "Chaque jour, j’___ quelque chose sur la planète.",
+                "options": ["apprenais", "apprends", "ai appris", "apprendrai"],
+                "correctAnswer": "apprenais"
+              },
+              {
+                "id": "g2",
+                "sentence": "Il était important que les moutons ___ les arbustes.",
+                "options": ["mangeassent", "mangent", "mangèrent", "mangeront"],
+                "correctAnswer": "mangeassent"
+              },
+              {
+                "id": "g3",
+                "sentence": "Les baobabs ___ par être petits.",
+                "options": ["commencent", "commençaient", "ont commencé", "commenceront"],
+                "correctAnswer": "commencent"
+              },
+              {
+                "id": "g4",
+                "sentence": "Le petit prince ___ que c’était une évidence.",
+                "options": ["répondit", "répond", "a répondu", "répondra"],
+                "correctAnswer": "répondit"
+              },
+              {
+                "id": "g5",
+                "sentence": "Il y avait des graines ___ dormaient dans la terre.",
+                "options": ["qui", "que", "dont", "où"],
+                "correctAnswer": "qui"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Chaque jour j’apprennais quelque chose sur la planète, sur le départ, sur le voyage. Ca venait tout doucement, au hasard des réflexions. C’est ainsi que, le troisième jour, je connus le drame des baobabs. Cette fois-ci encore fut grâce au mouton, car brusquement le petit prince m’interrogea, comme pris d’un doute grave :\n— C’est bien vrai, n’est-ce pas, que les moutons mangent les arbustes ?\n— Oui. C’est vrai.\n— Ah ! Je suis content.\nJe ne compris pas pourquoi il était si important que les moutons mangeassent les arbustes. Mais le petit prince ajouta :\n— Par conséquent ils mangent aussi les baobabs ?\nJe fis remarquer au petit prince que les baobabs ne sont pas des arbustes, mais des arbres grand comme des églises et que, si même il emportait avec lui tout un troupeau d’éléphants, ce troupeau ne viendrait pas à bout d’un seul baobab.\nL’idée du troupeau d’éléphants fit rire le petit prince :\n— Il faudrait les mettre les uns sur les autres…\nMais il remarqua avec sagesse :\n— Les baobabs, avant de grandir, ça commence par être petit.\n— C’est exact ! Mais pourquoi veux-tu que tes moutons mangent les petits baobabs ?\nIl me répondit : « Ben ! Voyons ! » comme il s’agissait là d’une évidence. Et il me fallut un grand effort d’intelligence pour comprendre à moi seul ce problème."
+        }
+      }
+    }
+  ]
+}

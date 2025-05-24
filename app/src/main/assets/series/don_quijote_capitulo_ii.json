@@ -1,0 +1,153 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 1,
+        "title": "Don Quijote de la Mancha: La llegada a la venta",
+        "videoUrl": "https://www.cervantesvirtual.com/obra-visor/don-quijote-de-la-mancha--0/html/",
+        "country": "Spain",
+        "lang": "es",
+        "level": "B2",
+        "accent": "spanish",
+        "source": "Miguel de Cervantes Saavedra",
+        "imageUrl": "don_quijote_banner",
+        "difficulty": 6,
+        "genres": ["Comedia", "Sátira", "Aventura"],
+        "countries": ["Spain"],
+        "isPremium": true
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "mesura",
+            "translation": "moderación, recato",
+            "example": "Bien parece la mesura en las fermosas."
+          },
+          {
+            "word": "sandez",
+            "translation": "tontería",
+            "example": "Es mucha sandez además la risa que de leve causa procede."
+          },
+          {
+            "word": "caballero",
+            "translation": "caballero",
+            "example": "Si vuestra merced, señor caballero, busca posada."
+          },
+          {
+            "word": "ventero",
+            "translation": "posadero",
+            "example": "El ventero, hombre que, por ser muy gordo, era muy pacífico."
+          },
+          {
+            "word": "posada",
+            "translation": "posada, alojamiento",
+            "example": "Busca posada, amén del lecho."
+          },
+          {
+            "word": "adarga",
+            "translation": "escudo ligero",
+            "example": "Armada de armas tan desiguales como eran la brida, lanza, adarga."
+          },
+          {
+            "word": "enojo",
+            "translation": "enojo, ira",
+            "example": "Acrecentaba en él el enojo."
+          },
+          {
+            "word": "contento",
+            "translation": "alegría, satisfacción",
+            "example": "Acompañar a las doncellas en las muestras de su contento."
+          },
+          {
+            "word": "comedidamente",
+            "translation": "cortésmente",
+            "example": "Determinó de hablarle comedidamente."
+          },
+          {
+            "word": "contrahecha",
+            "translation": "deforme, ridícula",
+            "example": "Viendo aquella figura contrahecha."
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "¿Por qué se ríen las doncellas de Don Quijote?",
+            "options": ["Por su apariencia y lenguaje", "Por su caballo"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "¿Cómo describe el ventero a Don Quijote?",
+            "options": ["Como una figura contrahecha", "Como un hombre pacífico"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "¿Por qué el ventero habla comedidamente?",
+            "options": ["Por temor a los pertrechos", "Porque es andaluz"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "¿Qué busca Don Quijote en la venta?",
+            "options": ["Posada", "Comida"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "¿Qué provoca el enojo de Don Quijote?",
+            "options": ["La risa de las doncellas", "Las palabras del ventero"],
+            "correctAnswer": 0
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Verbos en pasado, subjuntivo y estructuras condicionales",
+            "explanation": "Selecciona la forma gramatical correcta para completar la oración, enfocándote en los verbos en pasado (pretérito imperfecto y pluscuamperfecto), el subjuntivo (pretérito imperfecto) y las estructuras condicionales (por ejemplo, ‘si… no saliera’).",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "Las doncellas ___ de Don Quijote por su lenguaje extraño.",
+                "options": ["se reían", "se ríen", "se rieron", "se reirán"],
+                "correctAnswer": "se reían"
+              },
+              {
+                "id": "g2",
+                "sentence": "Si el ventero no ___ a tiempo, el enojo hubiera crecido.",
+                "options": ["saliera", "salió", "sale", "saldrá"],
+                "correctAnswer": "saliera"
+              },
+              {
+                "id": "g3",
+                "sentence": "El ventero ___ muy pacífico por ser gordo.",
+                "options": ["era", "es", "fue", "será"],
+                "correctAnswer": "era"
+              },
+              {
+                "id": "g4",
+                "sentence": "Don Quijote no ___ en nada en mostrarse enojado.",
+                "options": ["estuviera", "estuvo", "está", "estará"],
+                "correctAnswer": "estuviera"
+              },
+              {
+                "id": "g5",
+                "sentence": "Las armas de Don Quijote ___ tan desiguales.",
+                "options": ["eran", "son", "fueron", "serán"],
+                "correctAnswer": "eran"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "— Bien parece la mesura en las fermosas, y es mucha sandez además la risa que de leve causa procede; pero no vos lo digo porque os acuitedes ni mostredes mal talante; que el mío non es de ál que de serviros.\nEl lenguaje, no entendido de las señoras, y el mal talle de nuestro caballero acrecentaba en ellas la risa y en él el enojo; y pasara muy adelante si a aquel punto no saliera el ventero, hombre que, por ser muy gordo, era muy pacífico, el cual, viendo aquella figura contrahecha, armada de armas tan desiguales como eran la brida, lanza, adarga y coselete, no estuvo en nada en acompañar a las doncellas en las muestras de su contento. Mas, en efeto, temiendo la máquina de tantos pertrechos, determinó de hablarle comedidamente; y así, le dijo:\n— Si vuestra merced, señor caballero, busca posada, amén del lecho (porque en esta venta no hay ninguno), todo lo demás se hallará en ella en mucha abundancia.\nViendo don Quijote la humildad del alcaide de la fortaleza, que tal le pareció a él el ventero y la venta, respondió:\n— Para mí, señor castellano, cualquiera cosa basta, porque mis arreos son las armas, mi descanso el pelear, etc.\nPensó el huésped que el haberle llamado castellano había sido por haberle parecido de los sanos de Castilla, aunque él era andaluz y de los de la playa de Sanlúcar, no menos ladrón que Caco, ni menos maleante que estudiantado paje; y así, le respondió:"
+        }
+      }
+    }
+  ]
+}

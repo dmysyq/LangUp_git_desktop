@@ -8,9 +8,9 @@
         "country": "USA",
         "lang": "es",
         "level": "B1",
-        "accent": "latin american spanish",
+        "accent": "spanish",
         "source": "Netflix",
-        "imageUrl": "merlina_dedos_banner",
+        "imageUrl": "wednesday_banner",
         "difficulty": 5,
         "genres": ["Misterio", "Comedia", "Fantasía"],
         "countries": ["USA", "Romania"],
@@ -67,6 +67,7 @@
             "word": "desesperación",
             "translation": "отчаяние",
             "example": "Merlina siente una gran desesperación al ver que Dedos no reacciona."
+          }
         ],
         "questions": [
           {

@@ -1,0 +1,153 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 1,
+        "title": "Amélie: L'enfance d'Amélie",
+        "videoUrl": "https://www.netflix.com/title/60022304",
+        "country": "France",
+        "lang": "fr",
+        "level": "A2",
+        "accent": "french",
+        "source": "Netflix",
+        "imageUrl": "amelie_banner",
+        "difficulty": 3,
+        "genres": ["Comédie", "Romance", "Fantaisie"],
+        "countries": ["France", "Germany"],
+        "isPremium": true
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "parquet",
+            "translation": "паркет",
+            "example": "Amélie aime faire briller le parquet."
+          },
+          {
+            "word": "ranger",
+            "translation": "прибирать",
+            "example": "Elle range tout dans son sac à main."
+          },
+          {
+            "word": "père",
+            "translation": "отец",
+            "example": "Son père est distant avec Amélie."
+          },
+          {
+            "word": "mère",
+            "translation": "мать",
+            "example": "Sa mère lui enseigne à la maison."
+          },
+          {
+            "word": "bouleversée",
+            "translation": "взволнованная",
+            "example": "Amélie est bouleversée par son père."
+          },
+          {
+            "word": "cœur",
+            "translation": "сердце",
+            "example": "Son cœur bat la chamade."
+          },
+          {
+            "word": "maladie",
+            "translation": "болезнь",
+            "example": "Son père croit à une maladie cardiaque."
+          },
+          {
+            "word": "crêpes",
+            "translation": "блины",
+            "example": "Les disques sont comme des crêpes."
+          },
+          {
+            "word": "cachalot",
+            "translation": "кашалот",
+            "example": "Son ami est un poisson nommé Cachalot."
+          },
+          {
+            "word": "stress",
+            "translation": "стресс",
+            "example": "Le poisson augmente le stress de sa mère."
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Que fait Amélie pour s’amuser ?",
+            "options": ["Faire briller le parquet", "Jouer avec des amis"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "Pourquoi Amélie ne va-t-elle pas à l’école ?",
+            "options": ["À cause d’une maladie fictive", "Parce qu’elle n’aime pas étudier"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "Qui enseigne à Amélie ?",
+            "options": ["Sa mère", "Son père"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "Que pense Amélie des disques vinyles ?",
+            "options": ["Ils sont faits comme des crêpes", "Ils sont comme des livres"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "Comment est le poisson Cachalot ?",
+            "options": ["Neurasthénique et suicidaire", "Joyeux et amical"],
+            "correctAnswer": 0
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Présent et imparfait",
+            "explanation": "Choisissez la forme correcte du verbe pour compléter la phrase, en vous concentrant sur le présent (actions habituelles) ou l’imparfait (description du passé).",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "Amélie ___ dans un monde qu’elle invente.",
+                "options": ["vit", "vivait", "vivra", "vive"],
+                "correctAnswer": "vit"
+              },
+              {
+                "id": "g2",
+                "sentence": "Son père ___ distant avec elle.",
+                "options": ["était", "est", "sera", "soit"],
+                "correctAnswer": "était"
+              },
+              {
+                "id": "g3",
+                "sentence": "Sa mère ___ des leçons à Amélie.",
+                "options": ["donne", "donnait", "donnera", "donne"],
+                "correctAnswer": "donnait"
+              },
+              {
+                "id": "g4",
+                "sentence": "Le Cachalot ___ neurasthénique.",
+                "options": ["est", "était", "sera", "soit"],
+                "correctAnswer": "est"
+              },
+              {
+                "id": "g5",
+                "sentence": "Amélie ___ que son père la serre dans ses bras.",
+                "options": ["aimerait", "aime", "aimait", "aimera"],
+                "correctAnswer": "aimerait"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Narrateur: Faire briller le parquet avec des patins. Vider son sac à main, bien le nettoyer, et tout ranger enfin. Amélie a six ans. Comme toutes les petites filles, elle aimerait que son père la serre dans ses bras de temps en temps. Mais il n’a de contact physique avec elle qu’au cours de l’examen médical mensuel. La fillette, bouleversée par cette intimité exceptionnelle, ne peut empêcher son cœur de battre la chamade. Dès lors, son père la croit victime d’une anomalie cardiaque. À cause de cette maladie fictive, la petite Amélie ne va pas à l’école. C’est sa mère qui lui tient lieu de préceptrice.\nMère: Les poules couvent souvent au couvent.\nAmélie: Les poules couvent...\nMère: Très bien.\nAmélie: Souve au couve.\nMère: Non!\nNarrateur: Privée du contact des autres enfants, ballottée entre la fébrilité de sa mère et la distance glaciale de son père, Amélie n’a de refuge que dans le monde qu’elle invente. Dans ce monde, les disques vinyles sont fabriqués comme des crêpes. Et la femme du voisin, dans le coma depuis des mois, a en réalité choisi d’effectuer d’une traite, la totalité de ses heures de sommeil.\nVoisine: Comme ça, je pourrai rester éveillée jour et nuit le reste de ma vie.\nNarrateur: Le seul ami d’Amélie s’appelle 'Le Cachalot'. Malheureusement, l’ambiance familiale a rendu le poisson rouge neurasthénique et suicidaire. Les tentatives de suicide du Cachalot ne faisant qu’augmenter le stress maternel, une décision est prise.\nMère: Assez!"
+        }
+      }
+    }
+  ]
+}

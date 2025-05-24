@@ -1,0 +1,153 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 1,
+        "title": "La Casa de Papel: Planificación del atraco",
+        "videoUrl": "https://www.netflix.com/title/80192098",
+        "country": "Spain",
+        "lang": "es",
+        "level": "B1",
+        "accent": "spanish",
+        "source": "Netflix",
+        "imageUrl": "lacasadepapel_banner",
+        "difficulty": 5,
+        "genres": ["Crimen", "Drama", "Comedia"],
+        "countries": ["Spain"],
+        "isPremium": true
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "atraco",
+            "translation": "ограбление",
+            "example": "El atraco fue planeado con cuidado."
+          },
+          {
+            "word": "careta",
+            "translation": "маска",
+            "example": "La careta de Dalí es famosa."
+          },
+          {
+            "word": "cabrones",
+            "translation": "негодяи (груб.)",
+            "example": "Todos pensarán que somos unos cabrones."
+          },
+          {
+            "word": "puñeteros",
+            "translation": "чертовы (груб.)",
+            "example": "Seremos los puñeteros héroes del pueblo."
+          },
+          {
+            "word": "víctima",
+            "translation": "жертва",
+            "example": "No queremos ninguna víctima en el atraco."
+          },
+          {
+            "word": "opinión pública",
+            "translation": "общественное мнение",
+            "example": "La opinión pública estará de nuestro lado."
+          },
+          {
+            "word": "fantasma",
+            "translation": "призрак (перен.)",
+            "example": "El Profesor es un fantasma sin antecedentes."
+          },
+          {
+            "word": "héroes",
+            "translation": "герои",
+            "example": "Queremos ser héroes, no criminales."
+          },
+          {
+            "word": "payo",
+            "translation": "парень (разг.)",
+            "example": "¿Quién era ese payo del bigote?"
+          },
+          {
+            "word": "gilipollas",
+            "translation": "идиот (груб.)",
+            "example": "No seas gilipollas, la careta da miedo."
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "¿Qué quiere evitar El Profesor durante el atraco?",
+            "options": ["Una víctima", "Un error"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "¿Cómo quiere El Profesor que los vean las personas?",
+            "options": ["Como héroes", "Como criminales"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "¿Qué critica Tokio sobre la careta?",
+            "options": ["No da miedo", "Es demasiado grande"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "¿Quién era el ‘payo’ de la careta según Berlín?",
+            "options": ["Dalí", "Picasso"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "¿Qué robarán los atracadores?",
+            "options": ["La Fábrica de Moneda", "Un banco"],
+            "correctAnswer": 0
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Subjuntivo presente y condicional",
+            "explanation": "Escoge la forma correcta del verbo para completar la oración, enfocándote en el subjuntivo presente (hipótesis, deseos) o el condicional (consecuencias).",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "Es fundamental que ___ la opinión pública de nuestro lado.",
+                "options": ["tengamos", "tenemos", "tendremos", "tuviéramos"],
+                "correctAnswer": "tengamos"
+              },
+              {
+                "id": "g2",
+                "sentence": "Si hubiera una víctima, ___ de ser héroes.",
+                "options": ["dejaríamos", "dejamos", "dejaremos", "dejáramos"],
+                "correctAnswer": "dejaríamos"
+              },
+              {
+                "id": "g3",
+                "sentence": "El Profesor quiere que nadie ___ herido.",
+                "options": ["resulte", "resultó", "resultará", "resulta"],
+                "correctAnswer": "resulte"
+              },
+              {
+                "id": "g4",
+                "sentence": "Con una careta de Mickey Mouse, la gente ___ que estás loco.",
+                "options": ["pensaría", "piensa", "pensará", "pensó"],
+                "correctAnswer": "pensaría"
+              },
+              {
+                "id": "g5",
+                "sentence": "Tokio dice que las caretas ___ miedo.",
+                "options": ["den", "dan", "darán", "dieron"],
+                "correctAnswer": "den"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Narrador: Van a pensar: 'Qué cabrones, ojalá se me hubiera ocurrido a mí'. 'El Profesor, sin antecedentes, sin registro. La última vez que renovó el DNI fue con 19 años. A todos los efectos, un fantasma, pero un fantasma muy inteligente'. No vamos a robar... el dinero de nadie, porque les vamos a caer hasta simpáticos. Y eso es fundamental, es fundamental que tengamos la opinión pública de nuestra parte. Vamos a ser los puñeteros héroes de toda esta gente. Pero mucho cuidado, porque en el momento en que haya una sola gota de sangre, esto es muy importante, como haya una sola víctima, dejaremos de ser unos Robin Hood para convertirnos simplemente en unos hijos de puta.\nProfesor: Señorita Tokio.\nTokio: ¿Qué vamos a robar?\nProfesor: La Fábrica Nacional de Moneda y Timbre.\nTokio: ¿Quién eligió la careta?\nBerlín: ¿Qué le pasa a la careta?\nTokio: Que no da miedo. Tú ves las pelis de atracadores y las caretas dan miedo. Son zombis, esqueletos, la muerte, yo qué sé, sientes...\nBerlín: Con un arma en la mano te aseguro que da más miedo un loco que un esqueleto.\nTokio: Venga ya. ¿Quién era el payo este del bigote?\nBerlín: Dalí, hijo, un pintor español. Era muy bueno.\nTokio: Un pintor."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 1,
+        "title": "Intouchables : Premier jour de Driss au travail",
+        "videoUrl": "https://www.netflix.com/title/70244128",
+        "country": "France",
+        "lang": "fr",
+        "level": "B1",
+        "accent": "french",
+        "source": "Netflix",
+        "imageUrl": "intouchables_banner",
+        "difficulty": 5,
+        "genres": ["Comédie", "Drame", "Biographie"],
+        "countries": ["France"],
+        "isPremium": true
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "merde",
+            "translation": "чёрт (груб.)",
+            "example": "Merde, j’ai oublié mes devoirs !"
+          },
+          {
+            "word": "putain",
+            "translation": "чёрт (груб.)",
+            "example": "Putain, je suis en retard !"
+          },
+          {
+            "word": "café",
+            "translation": "кофе",
+            "example": "Préparez-moi un café, s’il vous plaît."
+          },
+          {
+            "word": "voisin",
+            "translation": "сосед",
+            "example": "Le voisin bloque le parking."
+          },
+          {
+            "word": "parking",
+            "translation": "парковка",
+            "example": "Ce parking est réservé pour nous."
+          },
+          {
+            "word": "charger",
+            "translation": "грузить",
+            "example": "Je ne vais pas vous charger comme un cheval."
+          },
+          {
+            "word": "pragmatique",
+            "translation": "прагматичный",
+            "example": "Il faut être pragmatique pour choisir."
+          },
+          {
+            "word": "casse-toi",
+            "translation": "уйди (груб.)",
+            "example": "Casse-toi, dégage de là !"
+          },
+          {
+            "word": "emplacement",
+            "translation": "место",
+            "example": "Cet emplacement est réservé."
+          },
+          {
+            "word": "imprimer",
+            "translation": "печатать",
+            "example": "T’imprime le message et tu dégages."
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Pourquoi Driss est-il en retard ?",
+            "options": ["Il n’a pas vu l’heure", "Il ne veut pas travailler"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "Que demande Driss avec son café ?",
+            "options": ["Du Nutella", "De la confiture"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "Pourquoi Driss refuse-t-il la camionnette ?",
+            "options": ["Elle est moins adaptée", "Elle est trop chère"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "Que fait Driss pour résoudre le problème de parking ?",
+            "options": ["Il écrit un message", "Il appelle la police"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "Comment Driss appelle-t-il le voisin ?",
+            "options": ["Patrick Juvet", "Monsieur Dupont"],
+            "correctAnswer": 0
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Présent, impératif et conditionnel présent",
+            "explanation": "Choisissez la forme correcte du verbe pour compléter la phrase, en vous concentrant sur le présent (actions actuelles), l’impératif (ordres) ou le conditionnel présent (hypothèses).",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "Driss ___ toujours le baby-phone avec lui.",
+                "options": ["garde", "gardait", "gardera", "garde"],
+                "correctAnswer": "garde"
+              },
+              {
+                "id": "g2",
+                "sentence": "___ un café, j’arrive !",
+                "options": ["Préparez", "Prépares", "Préparerez", "Préparais"],
+                "correctAnswer": "Préparez"
+              },
+              {
+                "id": "g3",
+                "sentence": "Si le voisin ___ encore, ça va changer.",
+                "options": ["bloquerait", "bloque", "bloquait", "bloquera"],
+                "correctAnswer": "bloque"
+              },
+              {
+                "id": "g4",
+                "sentence": "Lis plus fort, je ___ pas !",
+                "options": ["t’entends", "t’entendais", "t’entendrai", "t’entende"],
+                "correctAnswer": "t’entends"
+              },
+              {
+                "id": "g5",
+                "sentence": "Cette camionnette ___ moins adaptée.",
+                "options": ["serait", "est", "était", "soit"],
+                "correctAnswer": "est"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Driss: Ah, merde, putain, j’oublie tout le temps.\nDriss: Ah oui, putain, pardon.\nYvonne: Oui ?\nYvonne: Ça c’est bien ça.\nYvonne: Driss ?\nYvonne: Vous pouvez venir ?\nYvonne: Vous pouvez venir, s’il vous plaît.\nYvonne: Driss ?\nYvonne: Driss, vous m’entendez ?\nDriss: Quoi ?\nYvonne: Il est presque 9h, Philippe vous attend.\nDriss: Ah, il est 9h ?\nDriss: J’ai pas vu le temps passer, parce que ça a mis du temps à mousser là. Porcherie.\nDriss: Préparez-moi un café, j’arrive.\nYvonne: Et le baby-phone, toujours avec vous !\nDriss: Hé, avec du Nutella, hein ! Pas les confitures bizarres là, des fruits qu’on connaît pas.\nDriss: Bah, je vous mets pas là-dedans. Même pour vous.\nDriss: Je vais pas vous charger à l’arrière comme un cheval.\nPhilippe: Ça c’est quoi là ?\nYvonne: Non, celle-là est beaucoup moins adaptée.\nDriss: C’est à dire ?\nYvonne: C’est à dire que malheureusement, faut être pragmatique.\nDriss: Pragmatique ?\nDriss: Oh putain, ha ha.\nDriss: Oh le bruit !\nDriss: Oh ça fait du bien ça.\nPhilippe: C’est bon ça ?\nDriss: C’est bien.\nDriss: Elle est nerveuse.\nDriss: Allez !\nDriss: Ça c’est encore le voisin, il se met tout le temps là.\nDriss: Non mais il est persuadé que c’est son parking, alors..."
+        }
+      }
+    }
+  ]
+}
