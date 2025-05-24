@@ -1,0 +1,333 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 2,
+        "title": "The Interview",
+        "videoUrl": "https://youtu.be/SfiMsaV61Yc",
+        "country": "USA",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "American",
+        "imageUrl": "bladerunner_banner",
+        "source": "Warner Bros.",
+        "difficulty": 6,
+        "genres": ["Science Fiction", "Thriller", "Noir"],
+        "countries": ["USA"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "artificial",
+            "translation": "искусственный",
+            "example": "artificial [adj] - fake, not real"
+          },
+          {
+            "word": "a replicant",
+            "translation": "репликант",
+            "example": "a replicant [n] - a robot or android"
+          },
+          {
+            "word": "a hazard",
+            "translation": "опасность",
+            "example": "a hazard [n] - a danger"
+          },
+          {
+            "word": "retire",
+            "translation": "устранить",
+            "example": "retire [v] - kill"
+          },
+          {
+            "word": "an empathy test",
+            "translation": "тест на эмпатию",
+            "example": "an empathy test [n] - a test to see if someone has emotions"
+          },
+          {
+            "word": "capillary dilation",
+            "translation": "расширение капилляров",
+            "example": "capillary dilation [n] - when blood vessels become bigger, more noticeable on the skin"
+          },
+          {
+            "word": "the blush response",
+            "translation": "реакция покраснения",
+            "example": "the blush response [exp] - when your face turns red due to some strong emotion"
+          },
+          {
+            "word": "fluctuation of the pupil",
+            "translation": "колебание зрачка",
+            "example": "fluctuation of the pupil [exp] - when the pupil (eye) changes size to adjust to the level of light"
+          },
+          {
+            "word": "the subject",
+            "translation": "испытуемый",
+            "example": "the subject [n] - the person who is being studied"
+          },
+          {
+            "word": "Indulge me!",
+            "translation": "позвольте мне!",
+            "example": "Indulge me! [exp] - please do this unusual thing without asking questions"
+          },
+          {
+            "word": "a calfskin wallet",
+            "translation": "кошелёк из телячьей кожи",
+            "example": "a calfskin wallet [n] - a wallet made of baby cow leather"
+          },
+          {
+            "word": "a wasp",
+            "translation": "оса",
+            "example": "a wasp [n] - a type of insect"
+          },
+          {
+            "word": "nude",
+            "translation": "обнажённый",
+            "example": "nude [adj] - naked, no clothes"
+          },
+          {
+            "word": "a lesbian",
+            "translation": "лесбиянка",
+            "example": "a lesbian [n] - a woman who is attracted to other women"
+          },
+          {
+            "word": "spot",
+            "translation": "заметить",
+            "example": "spot [v] - notice, identify"
+          },
+          {
+            "word": "suspect",
+            "translation": "подозревать",
+            "example": "suspect [v] - guess, be suspicious"
+          },
+          {
+            "word": "commerce",
+            "translation": "коммерция",
+            "example": "commerce [n] - trade, business"
+          },
+          {
+            "word": "a motto",
+            "translation": "девиз",
+            "example": "a motto [n] - a short phrase that is used to represent a company"
+          },
+          {
+            "word": "store up",
+            "translation": "накапливать",
+            "example": "store up [phv] - keep or accumulate"
+          },
+          {
+            "word": "a strange obsession",
+            "translation": "странная одержимость",
+            "example": "a strange obsession [n] - always thinking about"
+          },
+          {
+            "word": "take for granted",
+            "translation": "принимать как должное",
+            "example": "take for granted [exp] - fail to properly appreciate"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "The owl is ______.",
+            "options": ["artificial", "real"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "The owl is ______.",
+            "options": ["expensive", "dangerous"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "Deckard thinks that replicants are ______ machines.",
+            "options": ["not", "just"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "Deckard says that he ______ killed a human.",
+            "options": ["has", "hasn't"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "This is the ______ time that Deckard has met Dr. Tyrell.",
+            "options": ["first", "second"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "Tyrell says that he wants Deckard to test ______ first.",
+            "options": ["a human", "a replicant"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "Tyrell asks Deckard to test ______.",
+            "options": ["Rachael", "himself (Tyrell)"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "The test requires ______ light.",
+            "options": ["bright", "dim"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q9",
+            "type": "single_choice",
+            "question": "It ______ Rachael's birthday.",
+            "options": ["is", "isn't"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q10",
+            "type": "single_choice",
+            "question": "Rachael ______ accept a calfskin wallet as a gift.",
+            "options": ["would", "would not"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q11",
+            "type": "single_choice",
+            "question": "Rachael ______ kill a wasp.",
+            "options": ["would", "would not"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q12",
+            "type": "single_choice",
+            "question": "Rachael ______ that she is a lesbian.",
+            "options": ["admits", "doesn't admit"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q13",
+            "type": "single_choice",
+            "question": "Rachael ______ let her husband hang up a picture of a naked woman.",
+            "options": ["would", "would not"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q14",
+            "type": "single_choice",
+            "question": "Rachael ______ a replicant.",
+            "options": ["is", "isn't"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q15",
+            "type": "single_choice",
+            "question": "Deckard asked Rachael ______ questions than usual.",
+            "options": ["more", "fewer"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q16",
+            "type": "single_choice",
+            "question": "Rachael thinks that she is ______.",
+            "options": ["a human", "a replicant"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q17",
+            "type": "single_choice",
+            "question": "Tyrell gave Rachael ______.",
+            "options": ["fake memories", "no memories"],
+            "correctAnswer": 0
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Advanced Verb Tenses, Reported Speech, and Sentence Structures",
+            "explanation": "Choose the grammatically correct word or phrase to complete the sentence, focusing on verb tenses, reported speech, modals, or sentence structures. Each question has one correct answer and three incorrect options.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "Deckard ___ the artificial owl as he walks into the room.",
+                "options": ["admires", "admired", "is admiring", "has admired"],
+                "correctAnswer": "admires"
+              },
+              {
+                "id": "g2",
+                "sentence": "Rachael ___ to like or trust Deckard.",
+                "options": ["doesn't seem", "isn't seeming", "didn't seem", "hasn't seemed"],
+                "correctAnswer": "doesn't seem"
+              },
+              {
+                "id": "g3",
+                "sentence": "Deckard claims ___ he has never retired a human by mistake.",
+                "options": ["that", "which", "if", "whether"],
+                "correctAnswer": "that"
+              },
+              {
+                "id": "g4",
+                "sentence": "Tyrell ___ into the room and explains how the empathy test works.",
+                "options": ["walks", "walked", "is walking", "has walked"],
+                "correctAnswer": "walks"
+              },
+              {
+                "id": "g5",
+                "sentence": "Tyrell asks Deckard ___ the empathy test on Rachael.",
+                "options": ["to demonstrate", "demonstrating", "demonstrated", "demonstrates"],
+                "correctAnswer": "to demonstrate"
+              },
+              {
+                "id": "g6",
+                "sentence": "Tyrell says ___ he wants to see a negative test result before he provides Deckard with a positive result.",
+                "options": ["that", "which", "if", "whether"],
+                "correctAnswer": "that"
+              },
+              {
+                "id": "g7",
+                "sentence": "Deckard asks Rachael a series of hypothetical questions ___ designed to evoke an emotional response from the subject.",
+                "options": ["that were", "which was", "that was", "which were"],
+                "correctAnswer": "that were"
+              },
+              {
+                "id": "g8",
+                "sentence": "Rachael answers most of the questions coldly and ___ emotion.",
+                "options": ["without", "with", "by", "for"],
+                "correctAnswer": "without"
+              },
+              {
+                "id": "g9",
+                "sentence": "When Rachael is gone, Deckard speculates ___ Rachael is a replicant.",
+                "options": ["that", "if", "whether", "which"],
+                "correctAnswer": "that"
+              },
+              {
+                "id": "g10",
+                "sentence": "Tyrell points out ___ Deckard had to ask Rachael many more questions than usual.",
+                "options": ["that", "which", "if", "whether"],
+                "correctAnswer": "that"
+              },
+              {
+                "id": "g11",
+                "sentence": "Deckard ___ understand how Rachael doesn’t know what she is.",
+                "options": ["can’t", "couldn’t", "won’t", "shouldn’t"],
+                "correctAnswer": "can’t"
+              },
+              {
+                "id": "g12",
+                "sentence": "Tyrell gave Rachael fake memories ___ her easier to control.",
+                "options": ["to make", "making", "made", "for making"],
+                "correctAnswer": "to make"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Rachael: Do you like our owl?\n\nDeckard: It's artificial?\n\nRachael: Of course it is.\n\nDeckard: Must be expensive.\n\nRachael: Very. I'm Rachael.\n\nDeckard: Deckard.\n\nRachael: It seems you feel our work is not a benefit to the public.\n\nDeckard: Replicants are like any other machine. They're either a benefit or a hazard. If they're a benefit, it's not my problem.\n\nRachael: May I ask you a personal question?\n\nDeckard: Sure.\n\nRachael: Have you ever retired a human by mistake?\n\nDeckard: No.\n\nRachael: But in your position that is a risk?\n\nTyrell: Is this to be an empathy test? Capillary dilation of the so-called blush response? Fluctuation of the pupil?\n\nDeckard: We call it Voight-Kampff for short.\n\nRachael: Mr. Deckard, Dr. Eldon Tyrell.\n\nTyrell: Demonstrate it. I want to see it work.\n\nDeckard: Where's the subject?\n\nTyrell: I want to see it work on a person. I want to see a negative before I provide you with a positive.\n\nDeckard: What's that going to prove?\n\nTyrell: Indulge me.\n\nDeckard: On you?\n\nTyrell: Try her.\n\nDeckard: It's too bright in here.\n\nDeckard: All right, I'm going to ask you a series of questions. Just relax and answer them as simply as you can.\n\nDeckard: It's your birthday. Someone gives you a calfskin wallet.\n\nRachael: I wouldn't accept it. Also, I'd report the person who gave it to me to the police.\n\nDeckard: You've got a little boy. He shows you his butterfly collection plus the killing jar.\n\nRachael: I'd take him to the doctor.\n\nDeckard: You're watching television. Suddenly you realize there's a wasp crawling on your arm.\n\nRachael: I'd kill it.\n\nDeckard: You're reading a magazine. You come across a fullpage nude photo of a girl.\n\nRachael: Is this testing whether I'm a replicant or a lesbian, Mr. Deckard?\n\nDeckard: Just answer the questions, please. You show it to your husband. He likes it so much he hangs it on your bedroom wall.\n\nRachael: I wouldn't let him.\n\nDeckard: Why not?\n\nRachael: I should be enough for him.\n\nTyrell: Would you step out for a few moments, Rachael? Thank you.\n\nDeckard: She's a replicant, isn't she?\n\nTyrell: I'm impressed. How many questions does it usually take to spot them?\n\nDeckard: I don't get it Tyrell.\n\nTyrell: How many questions?\n\nDeckard: Twenty, thirty, cross-referenced.\n\nTyrell: It took more than a hundred for Rachael, didn't it?\n\nDeckard: She doesn't know?!\n\nTyrell: She's beginning to suspect, I think.\n\nDeckard: Suspect? How can it not know what it is?\n\nTyrell: Commerce, is our goal here at Tyrell. More human than human is our motto. Rachael is an experiment, nothing more. We began to recognize in them strange obsession. After all they are emotional inexperienced with only a few years in which to store up the experiences which you and I take for granted. If we gift them the past we create a cushion or pillow for their emotions and consequently we can control them better.\n\nDeckard: Memories. You're talking about memories."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 8,
+        "title": "Relationship Talk",
+        "videoUrl": "https://youtu.be/kZjcP5Be91g",
+        "country": "USA",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "American",
+        "imageUrl": "english_file_ltwo_banner",
+        "source": "Oxford Press",
+        "difficulty": 2,
+        "genres": ["Educational", "Comedy"],
+        "countries": ["United Kingdom", "USA"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "break up with",
+            "translation": "расстаться с",
+            "example": "break up with (someone) [phv] - end a relationship with (someone)"
+          },
+          {
+            "word": "take up",
+            "translation": "занимать",
+            "example": "take up (time/energy) [phv] - use (time/energy)"
+          },
+          {
+            "word": "a cab",
+            "translation": "такси",
+            "example": "a cab [n] - a taxi"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "_______ made dinner.",
+            "options": ["Rob", "Jenny"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "Jenny's offer came at a ______ time for Rob.",
+            "options": ["good", "busy", "difficult"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "Rob wanted to ______.",
+            "options": ["try something new", "get a promotion", "quit his job"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "Rob broke up with his girlfriend _______ he met Jenny.",
+            "options": ["before", "after"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "Jenny doesn't have a boyfriend because ______.",
+            "options": ["she recently broke up", "she is busy with work", "she can't find a nice guy"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "Rob wasn't feeling well ______.",
+            "options": ["yesterday", "this morning", "this afternoon"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "Rob ______ going running with Jenny.",
+            "options": ["enjoyed", "regrets"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "Jenny offers Rob ______.",
+            "options": ["a kiss", "a beer", "a glass of wine", "another coffee"],
+            "correctAnswer": 3
+          },
+          {
+            "id": "q9",
+            "type": "single_choice",
+            "question": "Rob leaves because ______.",
+            "options": ["he is not interested in Jenny", "he will be busy tomorrow", "he feels tired", "he feels sick"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q10",
+            "type": "single_choice",
+            "question": "Jenny thinks that it is easier to get a taxi by ______.",
+            "options": ["calling", "waiting on the street", "using an app on her phone"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q11",
+            "type": "single_choice",
+            "question": "Rob seems ______.",
+            "options": ["shy", "naive", "stupid", "aggressive", "old-fashioned", "like a gentleman"],
+            "correctAnswer": 5
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Gerunds and Infinitives",
+            "explanation": "Choose the grammatically correct word to complete the sentence, focusing on gerunds, infinitives, or sentence structure. Each question has one correct answer and three incorrect options.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "It's been great ___ in New York.",
+                "options": ["being", "be", "to be", "been"],
+                "correctAnswer": "being"
+              },
+              {
+                "id": "g2",
+                "sentence": "Your offer ___ here came at a very good time.",
+                "options": ["to work", "working", "work", "worked"],
+                "correctAnswer": "to work"
+              },
+              {
+                "id": "g3",
+                "sentence": "I've been too busy recently ___ about relationships.",
+                "options": ["to think", "thinking", "think", "thought"],
+                "correctAnswer": "to think"
+              },
+              {
+                "id": "g4",
+                "sentence": "___ this job was a really big thing for me.",
+                "options": ["Getting", "Get", "To get", "Got"],
+                "correctAnswer": "Getting"
+              },
+              {
+                "id": "g5",
+                "sentence": "Only ___ about work isn't very good for you.",
+                "options": ["thinking", "to think", "think", "thought"],
+                "correctAnswer": "thinking"
+              },
+              {
+                "id": "g6",
+                "sentence": "I wanted ___. It was nice.",
+                "options": ["to go", "going", "go", "went"],
+                "correctAnswer": "to go"
+              },
+              {
+                "id": "g7",
+                "sentence": "I think I should ___ back to the hotel now.",
+                "options": ["get", "getting", "to get", "got"],
+                "correctAnswer": "get"
+              },
+              {
+                "id": "g8",
+                "sentence": "It's much easier ___ a cab on the street.",
+                "options": ["to get", "getting", "get", "got"],
+                "correctAnswer": "to get"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Rob: That was a lovely meal. Thanks Jenny.\n\nJenny: That's okay.\n\nRob: It's been great being in New York. You know your offer to work here came at a very good time for me.\n\nJenny: Really?\n\nRob: Yeah. I was looking for something new. Something different. You see, I broke up with my girlfriend a few months before I met you.\n\nJenny: Oh. Right.\n\nRob: What about you?\n\nJenny: What about me?\n\nRob: You know. Relationships.\n\nJenny: I've been too busy recently to think about relationships. Getting this job at the magazine was a really big thing for me. I guess that's taken up all my time and energy.\n\nRob: But that isn't very good for you. Only thinking about work, I mean.\n\nJenny: Why didn't you tell me you weren't feeling well this morning? We didn't have to go for a run.\n\nRob: I wanted to go. It was nice.\n\nJenny: Well, I'm glad you're feeling better. Would you like another coffee?\n\nRob: No thanks. I think I should get back to the hotel now. I've got a really busy day tomorrow. Do you have a telephone number for a taxi?\n\nJenny: Yeah, but it's much easier to get a cab on the street.\n\nRob: Okay then.\n\nJenny: I'll see you in the morning if you're feeling okay.\n\nRob: Oh, I'm sure I'll be fine. Thanks again for a great evening.\n\nJenny: Anytime.\n\nRob: Good night.\n\nJenny: Night Rob."
+        }
+      }
+    }
+  ]
+}

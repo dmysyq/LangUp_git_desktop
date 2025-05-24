@@ -1,0 +1,190 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 11,
+        "title": "Talking about the Future",
+        "videoUrl": "https://youtu.be/bIGcT9U4dRQ",
+        "country": "USA",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "American",
+        "imageUrl": "english_file_ltwo_banner",
+        "source": "Oxford Press",
+        "difficulty": 2,
+        "genres": ["Educational", "Comedy"],
+        "countries": ["United Kingdom", "USA"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "still be in touch",
+            "translation": "продолжать общаться",
+            "example": "still be in touch [exp] - continue communicating"
+          },
+          {
+            "word": "You missed him.",
+            "translation": "ты его только что пропустил",
+            "example": "You missed him. [exp] - He left here recently."
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Rob has been in New York for over a month.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "Rob will go back to London soon.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "Rob has had a difficult time in New York.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "Rob wants to keep in touch with Jenny.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "Rob offers to visit Jenny in New York.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "Jenny suggests that she could move to London.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "Rob wants Jenny to move to London.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "Rob and Jenny plan to go out for a special dinner tomorrow night.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q9",
+            "type": "single_choice",
+            "question": "Rob has to do one more interview in New York.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q10",
+            "type": "single_choice",
+            "question": "Barbara wants to talk to Rob.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q11",
+            "type": "single_choice",
+            "question": "Barbara talks to Rob on the phone.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Verb Tenses and Connectors",
+            "explanation": "Choose the grammatically correct word to complete the sentence, focusing on present perfect, future plans, or connectors. Each question has one correct answer and three incorrect options.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "I can't ___ it.",
+                "options": ["believe", "believing", "believed", "to believe"],
+                "correctAnswer": "believe"
+              },
+              {
+                "id": "g2",
+                "sentence": "It's ___ so fast.",
+                "options": ["gone", "going", "went", "go"],
+                "correctAnswer": "gone"
+              },
+              {
+                "id": "g3",
+                "sentence": "I've ___ a great time, Jenny.",
+                "options": ["had", "have", "having", "to have"],
+                "correctAnswer": "had"
+              },
+              {
+                "id": "g4",
+                "sentence": "It's ___ really special.",
+                "options": ["been", "be", "being", "to be"],
+                "correctAnswer": "been"
+              },
+              {
+                "id": "g5",
+                "sentence": "You can ___ me in London.",
+                "options": ["visit", "visiting", "visited", "to visit"],
+                "correctAnswer": "visit"
+              },
+              {
+                "id": "g6",
+                "sentence": "I can ___ back here to see you.",
+                "options": ["come", "coming", "came", "to come"],
+                "correctAnswer": "come"
+              },
+              {
+                "id": "g7",
+                "sentence": "You can't ___ that Jenny.",
+                "options": ["do", "doing", "did", "to do"],
+                "correctAnswer": "do"
+              },
+              {
+                "id": "g8",
+                "sentence": "You've just ___ this job.",
+                "options": ["got", "getting", "get", "to get"],
+                "correctAnswer": "got"
+              },
+              {
+                "id": "g9",
+                "sentence": "We're ___ out for dinner tonight.",
+                "options": ["going", "go", "went", "to go"],
+                "correctAnswer": "going"
+              },
+              {
+                "id": "g10",
+                "sentence": "I'm ___ to take you somewhere really nice.",
+                "options": ["going", "go", "went", "to go"],
+                "correctAnswer": "going"
+              },
+              {
+                "id": "g11",
+                "sentence": "Oh, you just ___ him, Barbara.",
+                "options": ["missed", "missing", "miss", "to miss"],
+                "correctAnswer": "missed"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Jenny: I can't believe it. Your month here is nearly over. It's gone so fast.\n\nRob: I know. I've had a great time, Jenny.\n\nJenny: Me too. It's been really special. But...\n\nRob: But what?\n\nJenny: It won't be the same when you're in London and I'm here.\n\nRob: But we'll still be in touch. You can visit me in London, and I can come back here to see you.\n\nJenny: It still won't be the same.\n\nRob: No no it won't.\n\nJenny: Maybe I could come back to London with you.\n\nRob: You can't do that Jenny. You've just got this job.\n\nJenny: That's true.\n\nRob: Well, we still have some time together. We're going out for dinner tonight.\n\nJenny: Yes, and I'm going to take you somewhere really nice.\n\nRob: Look at the time. I have to go now. It's my last interview in New York. I don't want to be late.\n\nJenny: Okay. See you later then.\n\nRob: Bye.\n\nBarbara: Jenny, is Rob here?\n\nJenny: Oh, you just missed him, Barbara.\n\nBarbara: I really need to talk to him. I'll try him in his cell phone.\n\nBarbara: Hello Rob. It's Barbara. Can you give me a call? There's something I'd like to talk about with you."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 1,
+        "title": "British & American Terms",
+        "videoUrl": "https://youtu.be/Y5LbYx5YuYM",
+        "country": "United Kingdom",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "British",
+        "imageUrl": "robwords_british_american_terms_banner",
+        "source": "RobWords",
+        "difficulty": 5,
+        "genres": ["Educational", "Comedy"],
+        "countries": ["United Kingdom"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "pop on",
+            "translation": "надеть",
+            "example": "pop on [phv] - put on (clothes)"
+          },
+          {
+            "word": "hit the road",
+            "translation": "отправиться в путь",
+            "example": "hit the road [exp] - start moving"
+          },
+          {
+            "word": "via",
+            "translation": "через",
+            "example": "via [prep] - through"
+          },
+          {
+            "word": "incidentally",
+            "translation": "кстати",
+            "example": "incidentally [adv] - by the way, as a side note"
+          },
+          {
+            "word": "weird",
+            "translation": "странный",
+            "example": "weird [adj] - strange, unusual"
+          },
+          {
+            "word": "varying",
+            "translation": "различный",
+            "example": "varying [adj] - different"
+          },
+          {
+            "word": "degrees",
+            "translation": "уровни",
+            "example": "degrees [n] - levels"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "You need to queue at the post office.",
+            "options": ["British", "American"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "I had fish & chips for dinner.",
+            "options": ["British", "American"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "The public transport in this city is very good.",
+            "options": ["British", "American"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "My parents owned a station wagon when I was a child.",
+            "options": ["British", "American"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "Please throw your garbage in the trash can.",
+            "options": ["British", "American"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "Where is the nearest pedestrian crossing?",
+            "options": ["British", "American"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "Let's get some takeout. I'm too tired to cook.",
+            "options": ["British", "American"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "Look at that old phone box. I wonder if the phone still works.",
+            "options": ["British", "American"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q9",
+            "type": "single_choice",
+            "question": "I got totally trollied at the pub last night.",
+            "options": ["British", "American"],
+            "correctAnswer": 0
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Prepositions, Articles, and Verb Forms",
+            "explanation": "Choose the grammatically correct word to complete the sentence, focusing on prepositions, articles, or verb forms. Each question has one correct answer and three incorrect options.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "We send things ___ the post, not in the mail.",
+                "options": ["via", "in", "by", "with"],
+                "correctAnswer": "via"
+              },
+              {
+                "id": "g2",
+                "sentence": "This is ___ postbox, not a mailbox.",
+                "options": ["a", "the", "an", "no"],
+                "correctAnswer": "a"
+              },
+              {
+                "id": "g3",
+                "sentence": "We ___ fish and chips, not French fries.",
+                "options": ["eat", "eating", "ate", "to eat"],
+                "correctAnswer": "eat"
+              },
+              {
+                "id": "g4",
+                "sentence": "This is what we ___ an estate car.",
+                "options": ["call", "calling", "called", "to call"],
+                "correctAnswer": "call"
+              },
+              {
+                "id": "g5",
+                "sentence": "Littering is ___ British word for dropping trash.",
+                "options": ["a", "the", "an", "no"],
+                "correctAnswer": "a"
+              },
+              {
+                "id": "g6",
+                "sentence": "One can get varying degrees of pissed ___ pints.",
+                "options": ["on", "with", "by", "in"],
+                "correctAnswer": "on"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "As I'm sure you're well aware, British English and American English have lots of different words for exactly the same thing.\n\nWell, I happen to be back in my hometown in central England this week, and I thought I'd take this opportunity to show you some of those differences by giving you a little tour around the village.\n\nSo, I've popped on my trainers, and I've hit the pavement.\n\nRight, first stop. It's the post office, where we send things via the post, not in the mail. This is a postbox, not a mailbox. We queue, we don't stand in line.\n\nNow, a very important one. That is the fish & chip shop, where we eat fish and chips, not French fries. Incidentally, what the Americans call chips, we call crisps.\n\nWhat else have we got? That is the Chinese takeaway—what an American would call Chinese takeout.\n\nThis is a bus stop. We call buses and trains public transport. In America, they're called public transportation.\n\nOoh, here's a good one. This is what we'd call an estate car, where (whereas) the Americans would call it a station wagon.\n\nLitter. Littering is a British word for dropping trash on the floor. Here's a key difference: that's a dustbin or a litter bin. It's not a trash can.\n\nThis is a phone box. It's not a phone booth. No one uses them anyway. It smells weird.\n\nThis is a pedestrian crossing. It's not a crosswalk.\n\nAnd this is probably the most important thing in the village. It's the pub, where one can get varying degrees of pissed on pints, including 'slightly sozzled' and 'totally trollied.'\n\nYum."
+        }
+      }
+    }
+  ]
+}

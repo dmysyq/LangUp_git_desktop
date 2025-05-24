@@ -1,0 +1,186 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 17,
+        "title": "The Computer Expert",
+        "videoUrl": "https://youtu.be/Q0DxLBzYkNs?list=TLGGBT7C6HEw7iMyNDA1MjAyNQ",
+        "country": "USA",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "American",
+        "imageUrl": "top_notch_lthree_banner",
+        "source": "Pearson Education",
+        "difficulty": 2,
+        "genres": ["Educational", "Comedy"],
+        "countries": ["USA"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "crash",
+            "translation": "сбой",
+            "example": "crash [v] - when a computer stops working"
+          },
+          {
+            "word": "an attachment",
+            "translation": "вложение",
+            "example": "an attachment [n] - a file attached to an email"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "What does Marie need help with?",
+            "options": [
+              "Her keyboard doesn't work.",
+              "She received an email that might have a virus.",
+              "Her monitor doesn't work.",
+              "Her computer crashed.",
+              "She can't print a document."
+            ],
+            "correctAnswer": 4
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "What is Bob's advice?",
+            "options": [
+              "Don't open the attachment.",
+              "Restart the computer with a paper clip.",
+              "Install an antivirus program.",
+              "Click on the 'no virus' icon.",
+              "Press the green button to turn it on.",
+              "Change the batteries in the mouse."
+            ],
+            "correctAnswer": 4
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "What does Paul need help with?",
+            "options": [
+              "His keyboard doesn't work.",
+              "He received an email that might have a virus.",
+              "His monitor doesn't work.",
+              "His computer crashed.",
+              "He can't print a document."
+            ],
+            "correctAnswer": 3
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "What is Bob's advice?",
+            "options": [
+              "Don't open the attachment.",
+              "Restart the computer with a paper clip.",
+              "Install an antivirus program.",
+              "Click on the 'no virus' icon.",
+              "Press the green button to turn it on.",
+              "Change the batteries in the mouse."
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "What does Cheryl need help with?",
+            "options": [
+              "Her keyboard doesn't work.",
+              "She received an email that might have a virus.",
+              "Her monitor doesn't work.",
+              "Her computer crashed.",
+              "She can't print a document."
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "What is Bob's advice?",
+            "options": [
+              "Don't open the attachment.",
+              "Restart the computer with a paper clip.",
+              "Install an antivirus program.",
+              "Click on the 'no virus' icon.",
+              "Press the green button to turn it on.",
+              "Change the batteries in the mouse."
+            ],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "Why does Bob get angry?",
+            "options": [
+              "His computer crashes.",
+              "He is losing his game.",
+              "People keep asking him questions."
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "What is Bob doing?",
+            "options": [
+              "Writing an email.",
+              "Playing a game.",
+              "Fixing his computer."
+            ],
+            "correctAnswer": 1
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Imperatives and Modals",
+            "explanation": "Choose the grammatically correct word to complete the sentence, focusing on imperatives, modals, or sentence structure. Each question has one correct answer and three incorrect options.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "___ the green button on the printer.",
+                "options": ["Push", "Pushing", "To push", "Pushed"],
+                "correctAnswer": "Push"
+              },
+              {
+                "id": "g2",
+                "sentence": "___ open the attachment.",
+                "options": ["Don't", "Not", "Doesn't", "No"],
+                "correctAnswer": "Don't"
+              },
+              {
+                "id": "g3",
+                "sentence": "___ I help you with something?",
+                "options": ["Can", "Could", "Will", "Do"],
+                "correctAnswer": "Can"
+              },
+              {
+                "id": "g4",
+                "sentence": "Click on the 'No-Virus' icon to ___ the computer.",
+                "options": ["clean", "cleaning", "to clean", "cleaned"],
+                "correctAnswer": "clean"
+              },
+              {
+                "id": "g5",
+                "sentence": "Stick this here to ___ the computer.",
+                "options": ["restart", "restarting", "to restart", "restarted"],
+                "correctAnswer": "restart"
+              },
+              {
+                "id": "g6",
+                "sentence": "I ___ get any work done with all these questions!",
+                "options": ["can't", "cannot", "not can", "don't"],
+                "correctAnswer": "can't"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Marie: Bob, can you help me with something?\n\nBob: Sure.\n\nMarie: I'm trying to print a file, but the printer won't work.\n\nBob: Push the green button on the printer.\n\nMarie: Why?\n\nBob: To turn it on. It won't print unless it's on.\n\nMarie: Oh, right. Silly me. Thank you.\n\nPaul: Hey, Bob. My laptop crashed, and I can't get it to do anything. I type on the keyboard, and nothing happens.\n\nBob: Stick this here.\n\nPaul: Why?\n\nBob: To restart the computer.\n\nPaul: You sure? OK. Thanks.\n\nCheryl: Bob, I could use a hand with something.\n\nBob: What is it?\n\nCheryl: Somebody sent me an e-mail, but I think it has a virus in it.\n\nBob: Don't open the attachment. Click on the No-Virus icon on the toolbar.\n\nCheryl: Why?\n\nBob: To clean the computer and stop the virus.\n\nCheryl: Thanks!\n\nMarie: Bob, can I ask you another question?\n\nBob: I'm sorry, but I can't get any work done with all these questions! Please. I have some very important stuff I need to finish right now.\n\nMarie: Very important stuff?\n\nBob: How can I help you?"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,287 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 7,
+        "title": "Ted Goes Blond",
+        "videoUrl": "https://youtu.be/_cOwbsYBi2Q",
+        "country": "USA",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "American",
+        "imageUrl": "himym_banner",
+        "source": "CBS",
+        "difficulty": 3,
+        "genres": ["Comedy", "Romantic Comedy"],
+        "countries": ["USA"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "a dude",
+            "translation": "парень",
+            "example": "a dude [n] - a guy or man"
+          },
+          {
+            "word": "pull off",
+            "translation": "успешно справиться",
+            "example": "pull off (s/t) [phv] - do something difficult successfully (It is surprising that it was successful.)"
+          },
+          {
+            "word": "lifeguarding",
+            "translation": "работа спасателем",
+            "example": "lifeguarding [v] - working as a lifeguard, a person who protects swimmers at a pool or beach"
+          },
+          {
+            "word": "a country club",
+            "translation": "загородный клуб",
+            "example": "a country club [n] - a private club for social and recreational activities"
+          },
+          {
+            "word": "lather",
+            "translation": "наносить пену",
+            "example": "lather [v] - apply liquid to something (like hair)"
+          },
+          {
+            "word": "the old mop",
+            "translation": "волосы",
+            "example": "the old mop [n] - slang for hair"
+          },
+          {
+            "word": "natural highlights",
+            "translation": "натуральные блики",
+            "example": "natural highlights [n] - lighter strands (pieces) of hair caused by the sun"
+          },
+          {
+            "word": "delicate",
+            "translation": "хрупкий",
+            "example": "delicate [adj] - difficult, must be done carefully"
+          },
+          {
+            "word": "promising",
+            "translation": "перспективный",
+            "example": "promising [adj] - having potential for success"
+          },
+          {
+            "word": "play the next 30 seconds right",
+            "translation": "правильно провести следующие 30 секунд",
+            "example": "play the next 30 seconds right [exp] - make the right decisions for the next 30 seconds"
+          },
+          {
+            "word": "dye",
+            "translation": "красить",
+            "example": "dye [v] - color something like clothes or hair"
+          },
+          {
+            "word": "picture",
+            "translation": "представить",
+            "example": "picture [v] - imagine, visualize"
+          },
+          {
+            "word": "emphatically",
+            "translation": "решительно",
+            "example": "emphatically [adv] - with emphasis, with feeling, with force"
+          },
+          {
+            "word": "follow my lead",
+            "translation": "следуй моему примеру",
+            "example": "follow my lead [exp] - follow what I do, copy my actions"
+          },
+          {
+            "word": "Screw it",
+            "translation": "похер",
+            "example": "Screw it [exp] - I don't care!"
+          },
+          {
+            "word": "an outcome",
+            "translation": "результат",
+            "example": "an outcome [n] - a result"
+          },
+          {
+            "word": "freaking",
+            "translation": "чертовски",
+            "example": "freaking [adv] - very, really, f@#king"
+          },
+          {
+            "word": "This might be the depression talking.",
+            "translation": "Это может говорить депрессия.",
+            "example": "This might be the depression talking. [exp] - This might be because of the depression."
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Lily thinks Barney looks good with blond hair.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "Ted used to be a lifeguard.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "Ted used to put lemon juice in his hair.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "Ted thinks that he would look good with blond hair.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "Robin doesn't want Ted to dye his hair.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "Ted orders tacos.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "Marshall tells Ted that he would look good with blond hair.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "They are all disappointed when Ted decides to dye his hair blond.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q9",
+            "type": "single_choice",
+            "question": "Only Marshall thinks that Ted looks good with blond hair.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q10",
+            "type": "single_choice",
+            "question": "Ted thinks that dying his hair blond was a mistake.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Verb Tenses and Modals",
+            "explanation": "Choose the grammatically correct word to complete the sentence, focusing on verb tenses, modals, or negation. Each question has one correct answer and three incorrect options.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "I ___ know about that.",
+                "options": ["don't", "doesn't", "not", "didn't"],
+                "correctAnswer": "don't"
+              },
+              {
+                "id": "g2",
+                "sentence": "That summer I ___ lifeguarding at the Chagrin Falls Country Club.",
+                "options": ["was", "am", "is", "were"],
+                "correctAnswer": "was"
+              },
+              {
+                "id": "g3",
+                "sentence": "I ___ lathering a little lemon juice into the old mop.",
+                "options": ["was", "am", "is", "were"],
+                "correctAnswer": "was"
+              },
+              {
+                "id": "g4",
+                "sentence": "Anyway, I ___ look good blond.",
+                "options": ["would", "will", "can", "should"],
+                "correctAnswer": "would"
+              },
+              {
+                "id": "g5",
+                "sentence": "If we play the next 30 seconds right, Ted ___ dye his hair blond.",
+                "options": ["will", "would", "can", "might"],
+                "correctAnswer": "will"
+              },
+              {
+                "id": "g6",
+                "sentence": "How ___ we do this?",
+                "options": ["do", "does", "did", "will"],
+                "correctAnswer": "do"
+              },
+              {
+                "id": "g7",
+                "sentence": "What ___ we all thinking about?",
+                "options": ["are", "is", "were", "do"],
+                "correctAnswer": "are"
+              },
+              {
+                "id": "g8",
+                "sentence": "I ___ know. I'm still kind of full from lunch.",
+                "options": ["don't", "doesn't", "not", "didn't"],
+                "correctAnswer": "don't"
+              },
+              {
+                "id": "g9",
+                "sentence": "Ah, screw it. I ___ eat.",
+                "options": ["could", "can", "will", "would"],
+                "correctAnswer": "could"
+              },
+              {
+                "id": "g10",
+                "sentence": "Yes, we ___ all like some nachos.",
+                "options": ["would", "will", "can", "should"],
+                "correctAnswer": "would"
+              },
+              {
+                "id": "g11",
+                "sentence": "There is absolutely no way that you ___ pull off blond.",
+                "options": ["could", "can", "will", "would"],
+                "correctAnswer": "could"
+              },
+              {
+                "id": "g12",
+                "sentence": "It just ___ look right.",
+                "options": ["wouldn't", "won't", "can't", "doesn't"],
+                "correctAnswer": "wouldn't"
+              },
+              {
+                "id": "g13",
+                "sentence": "That is not the outcome we ___ hoping for!",
+                "options": ["were", "are", "was", "is"],
+                "correctAnswer": "were"
+              },
+              {
+                "id": "g14",
+                "sentence": "This ___ be the depression talking.",
+                "options": ["might", "may", "can", "will"],
+                "correctAnswer": "might"
+              },
+              {
+                "id": "g15",
+                "sentence": "I ___ changing my hair back.",
+                "options": ["am", "is", "was", "are"],
+                "correctAnswer": "am"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Lily: Say what you will about the guy, but Barney seems right as a blond.\n\nRobin: Well, that's true. Not every dude can pull off that blond look.\n\nTed: I don't know about that.\n\nLily: What?\n\nTed: Oh, that summer I was lifeguarding at the Chagrin Falls Country Club, I was lathering a little lemon juice into the old mop, playing with some natural highlights. Anyway, I'd look good blond.\n\nMarshall: Okay, people, we're in a delicate but very, very promising situation here.\n\nLily: If we play the next 30 seconds right, Ted will dye his hair blond.\n\nRobin: Guys, this is mean. We can't-- Wup! I just pictured it. How do we do this?\n\nTed: What are we all thinking about? Nachos?\n\nMarshall: Ted Mosby responds to one thing above all else.\n\nTed: I don't know. I'm still kind of full from lunch.\n\nMarshall: A bunch of people emphatically telling him not to do something. Follow my lead.\n\nTed: Ah, screw it, I could eat. Yes, we'd all like some nachos.\n\nMarshall: I love you, buddy, but there's absolutely no way that you could pull off blond.\n\nRobin: It just wouldn't look right.\n\nLily: Yeah, seriously, Ted, don't go blond.\n\nTed: I'm going blond!\n\nLily: No!\n\nRobin: No!\n\nMarshall: That is not the outcome we were hoping for!\n\nRobin: Hey.\n\nBarney: Hey.\n\nLily: Guys, this might be the depression talking, but is Ted's hair starting to look kind of good?\n\nMarshall: Thank God. I thought I was the only one!\n\nBarney: He looks like a freaking movie star!\n\nTed: Oh, and by the way, this was a huge mistake. I'm changing my hair back.\n\nLily: Smart.\n\nBarney: Told you.\n\nMarshall: Not at all awesome."
+        }
+      }
+    }
+  ]
+}

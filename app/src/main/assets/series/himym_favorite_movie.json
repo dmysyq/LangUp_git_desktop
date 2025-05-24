@@ -1,0 +1,242 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 9,
+        "title": "Favorite Movie",
+        "videoUrl": "https://youtu.be/ckqETQOYzFk",
+        "country": "USA",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "American",
+        "imageUrl": "himym_banner",
+        "source": "CBS",
+        "difficulty": 3,
+        "genres": ["Comedy", "Romantic Comedy"],
+        "countries": ["USA"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "a drive-in",
+            "translation": "кинотеатр под открытым небом",
+            "example": "a drive-in [n] - a movie theater where you watch the movie while sitting in your car [image]"
+          },
+          {
+            "word": "calm down",
+            "translation": "успокоиться",
+            "example": "calm down [phv] - relax"
+          },
+          {
+            "word": "all-time favorite movie",
+            "translation": "любимый фильм всех времён",
+            "example": "all-time favorite movie [exp] - number one favorite movie"
+          },
+          {
+            "word": "compatible",
+            "translation": "совместимый",
+            "example": "compatible [adj] - match each other well, able to live together easily"
+          },
+          {
+            "word": "figure",
+            "translation": "думать",
+            "example": "figure [v] - think, guess"
+          },
+          {
+            "word": "no big deal",
+            "translation": "не велика беда",
+            "example": "no big deal [exp] - it is not important"
+          },
+          {
+            "word": "be off to",
+            "translation": "начать с",
+            "example": "be off to... [exp] - start with..."
+          },
+          {
+            "word": "grab",
+            "translation": "взять",
+            "example": "grab [v] - get"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Stella recently watched Star Wars with her daughter Lucy.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "Ted first saw Star Wars at a drive-in theater with his dad.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "Marshall thinks it's totally fine if Stella doesn't like Star Wars.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "Star Wars is Ted's all-time favorite movie.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "Ted and Marshall watch Star Wars two times in a row.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "Ted decides he doesn't want to marry Stella.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "Ted asks Stella to grab a beer.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "Ted asked Marshall to hide behind the couch.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q9",
+            "type": "single_choice",
+            "question": "Marshall is unemployed.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Verb Tenses and Modals",
+            "explanation": "Choose the grammatically correct word to complete the sentence, focusing on verb tenses, modals, or negation. Each question has one correct answer and three incorrect options.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "You know, I ___ actually never seen Star Wars.",
+                "options": ["have", "had", "has", "having"],
+                "correctAnswer": "have"
+              },
+              {
+                "id": "g2",
+                "sentence": "She ___ never seen Star Wars?!",
+                "options": ["has", "have", "had", "is"],
+                "correctAnswer": "has"
+              },
+              {
+                "id": "g3",
+                "sentence": "The only people in the universe who ___ seen Star Wars are the characters.",
+                "options": ["haven't", "hasn't", "don't", "didn't"],
+                "correctAnswer": "haven't"
+              },
+              {
+                "id": "g4",
+                "sentence": "You ___ got to calm down.",
+                "options": ["have", "has", "had", "are"],
+                "correctAnswer": "have"
+              },
+              {
+                "id": "g5",
+                "sentence": "I told you you ___ know this girl well enough.",
+                "options": ["didn't", "don't", "haven't", "not"],
+                "correctAnswer": "didn't"
+              },
+              {
+                "id": "g6",
+                "sentence": "What if you show it to her and she ___ like it?",
+                "options": ["doesn't", "don't", "didn't", "not"],
+                "correctAnswer": "doesn't"
+              },
+              {
+                "id": "g7",
+                "sentence": "If Stella ___ like this movie, I ___ marry her.",
+                "options": ["doesn't", "don't", "didn't", "not"],
+                "correctAnswer": "doesn't"
+              },
+              {
+                "id": "g8",
+                "sentence": "If Stella doesn't like this movie, I ___ marry her.",
+                "options": ["can't", "couldn't", "won't", "don't"],
+                "correctAnswer": "can't"
+              },
+              {
+                "id": "g9",
+                "sentence": "No, you ___ .",
+                "options": ["can't", "couldn't", "won't", "don't"],
+                "correctAnswer": "can't"
+              },
+              {
+                "id": "g10",
+                "sentence": "Yes, I ___ .",
+                "options": ["do", "does", "did", "will"],
+                "correctAnswer": "do"
+              },
+              {
+                "id": "g11",
+                "sentence": "I just thought it ___ be fun to watch a movie tonight.",
+                "options": ["would", "will", "can", "should"],
+                "correctAnswer": "would"
+              },
+              {
+                "id": "g12",
+                "sentence": "And since you ___ never seen Star Wars, I figured why not?",
+                "options": ["have", "had", "has", "having"],
+                "correctAnswer": "have"
+              },
+              {
+                "id": "g13",
+                "sentence": "The movie ___ already started, so...",
+                "options": ["has", "have", "had", "is"],
+                "correctAnswer": "has"
+              },
+              {
+                "id": "g14",
+                "sentence": "What ___ you doing down there?",
+                "options": ["are", "is", "were", "do"],
+                "correctAnswer": "are"
+              },
+              {
+                "id": "g15",
+                "sentence": "I ___ making sure my best friend ___ marrying the right woman.",
+                "options": ["am", "is", "was", "are"],
+                "correctAnswer": "am"
+              },
+              {
+                "id": "g16",
+                "sentence": "What the hell ___ you doing hiding behind the couch?",
+                "options": ["are", "is", "were", "do"],
+                "correctAnswer": "are"
+              },
+              {
+                "id": "g17",
+                "sentence": "I really do, ___ I.",
+                "options": ["don't", "doesn't", "not", "didn't"],
+                "correctAnswer": "don't"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Ted: Ahhh ... first movie you ever saw?\n\nStella: Benji, 1981. I watched it recently with Lucy and I just thought, 'Oh, that dog is so dead right now.' What about you?\n\nTed: My dad took me to an old drive-in to see the original Star Wars.\n\nStella: You know, I've actually never seen Star Wars.\n\nMarshall: She's never seen Star Wars?! Ted, the only people in the universe who haven't seen Star Wars are the characters in Star Wars, and that's because they lived them. That's because they lived the Star Wars.\n\nTed: You've got to calm down.\n\nMarshall: I told you. I told you you didn't know this girl well enough. What if you show it to her and she doesn't like it?\n\nTed: Dude, it's just a movie.\n\nMarshall: Star Wars is your all-time favorite movie, and whether or not Stella likes it is actually important. It's like, it's a test of how compatible you guys are.\n\nTed: Marshall, it's just a movie. It's just a movie!\n\n121 awesome minutes later...\n\nTed: Okay, if Stella doesn't like this movie, I can't marry her.\n\nMarshall: No, you can't.\n\nTed: (Do) You want to watch it again?\n\nMarshall: Yes, I do.\n\nTed: I just thought it'd be fun to watch a movie tonight, and since you've never seen Star Wars, I figured why not? No big deal. It's pretty good.\n\nStella: It sounds like a plan.\n\nTed: Hmmmm.\n\nStella: Hey, I'm just going to grab a beer. (Do) You want one?\n\nTed: The movie's already started, so...\n\nStella: Yeah, it's just some words flying through space. I mean I'm not going to read that anyway.\n\nTed: Oh, my God.\n\nMarshall: (You're) Off to a bad start.\n\nTed: What are you doing down there?\n\nMarshall: I'm making sure my best friend is marrying the right woman. That's what I'm doing.\n\nTed: Dude, what the hell are you doing hiding behind the couch? You need to get a job.\n\nMarshall: I really do, don't I."
+        }
+      }
+    }
+  ]
+}

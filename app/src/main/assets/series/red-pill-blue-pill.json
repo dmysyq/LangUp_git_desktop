@@ -11,7 +11,7 @@
         "accent": "American",
         "imageUrl": "matrix_banner",
         "source": "Warner Bros.",
-        "difficulty": 5,
+        "difficulty": 6,
         "genres": ["Science Fiction", "Action", "Cyberpunk"],
         "countries": ["USA", "Australia"]
       },

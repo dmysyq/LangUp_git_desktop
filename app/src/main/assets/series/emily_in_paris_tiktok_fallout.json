@@ -1,0 +1,287 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 24,
+        "title": "TikTok Fallout",
+        "videoUrl": "https://youtu.be/JKvFJdGFCFE?list=TLGGPGik6x_Ai7MyNDA1MjAyNQ",
+        "country": "USA",
+        "lang": "en",
+        "isPremium": true,
+        "accent": "French",
+        "imageUrl": "emily_in_paris_banner",
+        "source": "Netflix",
+        "difficulty": 4,
+        "genres": ["Romantic Comedy", "Drama"],
+        "countries": ["USA", "France"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "thrilled",
+            "translation": "взволнованный",
+            "example": "thrilled [adj] - very excited"
+          },
+          {
+            "word": "a launch",
+            "translation": "запуск",
+            "example": "a launch [n] - the start of something new"
+          },
+          {
+            "word": "a campaign",
+            "translation": "кампания",
+            "example": "a campaign [n] - a planned series of advertisements"
+          },
+          {
+            "word": "fake",
+            "translation": "подделать",
+            "example": "fake [v] - make something look real when it’s not"
+          },
+          {
+            "word": "premier",
+            "translation": "премьера",
+            "example": "premier [v] - show something for the first time"
+          },
+          {
+            "word": "the big screen",
+            "translation": "большой экран",
+            "example": "the big screen [n] - the large screen or monitor at a sporting event [image]"
+          },
+          {
+            "word": "Roland-Garros",
+            "translation": "Ролан Гаррос",
+            "example": "Roland-Garros [n] - the location of the French Open tennis tournament"
+          },
+          {
+            "word": "a courtside box",
+            "translation": "ложа у корта",
+            "example": "a courtside box [n] - special, private seats near the tennis court for important guests"
+          },
+          {
+            "word": "interactive",
+            "translation": "интерактивный",
+            "example": "interactive [adj] - something that you can participate in"
+          },
+          {
+            "word": "in the flesh",
+            "translation": "лично",
+            "example": "in the flesh [exp] - in person"
+          },
+          {
+            "word": "roam",
+            "translation": "бродить",
+            "example": "roam [v] - move around with no clear destination"
+          },
+          {
+            "word": "whisper",
+            "translation": "шептать",
+            "example": "whisper [v] - speak very quietly"
+          },
+          {
+            "word": "a Cubs game",
+            "translation": "игра Чикаго Кабс",
+            "example": "a Cubs game [n] - a baseball game played by the Chicago Cubs"
+          },
+          {
+            "word": "the Jumbotron",
+            "translation": "джамботрон",
+            "example": "the Jumbotron [n] - a very large screen at a sports stadium used to show things like scores and videos [image]"
+          },
+          {
+            "word": "interfere",
+            "translation": "вмешиваться",
+            "example": "interfere [v] - stop something from happening smoothly"
+          },
+          {
+            "word": "a client",
+            "translation": "клиент",
+            "example": "a client [n] - a person or company that buys services from another business"
+          },
+          {
+            "word": "insert",
+            "translation": "вставлять",
+            "example": "insert [v] - put into, add"
+          },
+          {
+            "word": "a balloon",
+            "translation": "воздушный шар",
+            "example": "a balloon [n] - a bag filled with air or gas that floats [image]"
+          },
+          {
+            "word": "balloon",
+            "translation": "раздуваться",
+            "example": "balloon [v] - get very big very quickly"
+          },
+          {
+            "word": "a breakup",
+            "translation": "расставание",
+            "example": "a breakup [n] - the end of a romantic relationship"
+          },
+          {
+            "word": "broadcast",
+            "translation": "транслировать",
+            "example": "broadcast [v] - send out radio or TV signals"
+          },
+          {
+            "word": "public consumption",
+            "translation": "публичное потребление",
+            "example": "public consumption [n] - not private, content made for everyone to see or hear"
+          },
+          {
+            "word": "blocked my number",
+            "translation": "заблокировал мой номер",
+            "example": "blocked my number [exp] - when someone stops you from calling or texting them"
+          },
+          {
+            "word": "humiliation",
+            "translation": "унижение",
+            "example": "humiliation [n] - feeling very embarrassed or ashamed"
+          },
+          {
+            "word": "Qu'est-ce que c'est?",
+            "translation": "Что это?",
+            "example": "Qu'est-ce que c'est? [French] - What is it?"
+          },
+          {
+            "word": "bisous",
+            "translation": "поцелуи",
+            "example": "bisous [French] - kisses"
+          },
+          {
+            "word": "exactement",
+            "translation": "точно",
+            "example": "exactement [French] - exactly"
+          },
+          {
+            "word": "putain",
+            "translation": "чёрт",
+            "example": "putain [French] - damn"
+          },
+          {
+            "word": "ça suffit",
+            "translation": "хватит",
+            "example": "ça suffit [French] - That’s enough."
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Emily created the 'Love is in the Air' ad campaign for AMI.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "The initial launch of 'Love is in the Air' campaign will be limited to Paris.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "Emily is excited to be in the 'Love is in the Air' campaign.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "Georges doesn't want to do a kiss cam at Roland-Garros (the French Open).",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "Emily can't come to Roland-Garros because she is going to a Cubs game.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "Emily and Alfie's breakup has become public knowledge.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "Alfie deleted Emily from his social media after their breakup.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "Luc blames Emily for the problems with the campaign.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q9",
+            "type": "single_choice",
+            "question": "Sylvie tells Emily to remove herself from the ad campaign.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Verb Tenses and Connectors",
+            "explanation": "Choose the word that correctly completes the sentence, focusing on verb tenses, articles, or French expressions. Use words like: have, a, bisous, or, and. Some boxes may be empty.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "You ___ inserted yourself into the campaign.",
+                "options": ["have", "has", "are", ""],
+                "correctAnswer": "have"
+              },
+              {
+                "id": "g2",
+                "sentence": "We are thrilled for ___ launch of our campaign.",
+                "options": ["the", "a", "an", ""],
+                "correctAnswer": "the"
+              },
+              {
+                "id": "g3",
+                "sentence": "If you really want it to be interactive, ___ get the whole stadium involved.",
+                "options": ["then", "and", "or", ""],
+                "correctAnswer": "then"
+              },
+              {
+                "id": "g4",
+                "sentence": "They do it at ___ Cubs games.",
+                "options": ["the", "a", "an", ""],
+                "correctAnswer": "the"
+              },
+              {
+                "id": "g5",
+                "sentence": "Right, like a caméra ___!",
+                "options": ["bisous", "exactement", "putain", ""],
+                "correctAnswer": "bisous"
+              },
+              {
+                "id": "g6",
+                "sentence": "I was trying not to ___ with your client.",
+                "options": ["interfere", "fake", "insert", ""],
+                "correctAnswer": "interfere"
+              },
+              {
+                "id": "g7",
+                "sentence": "Their breakup is all over the Internet, ___ it’s affecting my business.",
+                "options": ["and", "or", "then", ""],
+                "correctAnswer": "and"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "♪ And it's there when you call out my name. ♪\n\n♪ Love is in the air. ♪\n\n♪ Love is in the air. ♪\n\nJulien: We are thrilled for the launch of our 'Love is in the Air' campaign starring our very own Emily Cooper.\n\nGeorges: We tested all of the couples in the balloons, and you two scored the highest by far. You can't fake the look of love in the air.\n\nJulien: Our outdoor campaign launched today in Paris, New York, and Seoul, and we're premiering the ad on the big screen at Roland-Garros tomorrow, where we plan to host our happy couple in the AMI courtside box.\n\nGeorges: You both must be there. We want it to be interactive. The AMI couple in the flesh, and in love, and on the big screen.\n\nLuc: There is something you should see.\n\nJulien: Stop whispering. Everyone can hear you.\n\nEmily: I have an idea. If you really want it to be interactive, then why not get the whole stadium involved. Let the camera roam and find other couples in love. Like a... Like a kiss cam.\n\nGeorges: Qu'est-ce que c'est, une kiss cam?\n\nJulien: Oui, Emily. Qu'est-ce que c'est, une kiss cam?\n\nEmily: You find couples in love in the audience, and when they're on the Jumbotron, they kiss. They do it at the Cubs games.\n\nGeorges: Right, like a caméra bisous.\n\nGeorges: Oui, oui, bisou bisou for everyone. Right. It's way better than me and Alfie, you know. Yeah. You don't even need us.\n\nGeorges: Ah, non, non, non, bisou for you too. For, for the entire world.\n\nGeorges: Mm-hmm. Oui, oui, oui. Oui, Emily. The AMI campaign is about the love story between you and Alfie.\n\nGeorges: Exactement.\n\nJulien: Putain. Why didn't you say anything?\n\nEmily: I was trying not to interfere with your client, like I promised.\n\nJulien: Not interfere? You've inserted yourself into the campaign.\n\nLuc: Yes, but who could imagine things would balloon the way they did?\n\nSylvie: What happened?\n\nJulien: AMI wants her and Alfie in their box, but now their breakup is all over the Internet.\n\nSylvie: I warned you about this, Emily. You broadcast your entire life for public consumption, and now it's affecting my business.\n\nEmily: I can try to get it taken down, okay, but I don't know about Alfie. He won't even speak to me, and well, he blocked my number and deleted me on Instagram.\n\nLuc: After such a humiliation, who can blame him?\n\nSylvie: Okay, ça suffit. I have a meeting at Maison Lavaux. Fix this."
+        }
+      }
+    }
+  ]
+}

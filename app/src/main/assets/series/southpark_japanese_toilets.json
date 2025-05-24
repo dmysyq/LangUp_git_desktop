@@ -1,0 +1,269 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 9,
+        "title": "Japanese Toilets",
+        "videoUrl": "https://youtu.be/uRL4l2GOqXk",
+        "country": "USA",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "American",
+        "imageUrl": "southpark_banner",
+        "source": "Comedy Central",
+        "difficulty": 5,
+        "genres": ["Animation", "Comedy", "Satire"],
+        "countries": ["USA"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "fairy guys",
+            "translation": "феи",
+            "example": "fairy guys [n] - small, magical people from stories (and Harry Potter)"
+          },
+          {
+            "word": "the powder room",
+            "translation": "гостевая ванная",
+            "example": "the powder room [n] - a small bathroom for guests"
+          },
+          {
+            "word": "jiggle",
+            "translation": "трясти",
+            "example": "jiggle [v] - shake quickly"
+          },
+          {
+            "word": "the bowl",
+            "translation": "унитазная чаша",
+            "example": "the bowl [n] - the part of the toilet that holds water"
+          },
+          {
+            "word": "the lid",
+            "translation": "крышка унитаза",
+            "example": "the lid [n] - the cover of the toilet bowl"
+          },
+          {
+            "word": "ol'",
+            "translation": "старый",
+            "example": "ol' [adj] - old (used to show fondness for something)"
+          },
+          {
+            "word": "take a shit",
+            "translation": "сходить по-большому",
+            "example": "take a shit [exp] - go to the bathroom for a bowel movement (very informal)"
+          },
+          {
+            "word": "weed",
+            "translation": "марихуана",
+            "example": "weed [n] - marijuana"
+          },
+          {
+            "word": "a full warranty",
+            "translation": "полная гарантия",
+            "example": "a full warranty [n] - a promise to fix or replace something if it breaks"
+          },
+          {
+            "word": "the top model",
+            "translation": "лучшая модель",
+            "example": "the top model [exp] - the best or most advanced version of a product"
+          },
+          {
+            "word": "the bells and whistles",
+            "translation": "дополнительные функции",
+            "example": "the bells and whistles [exp] - extra features"
+          },
+          {
+            "word": "that kind of money",
+            "translation": "такие деньги",
+            "example": "that kind of money [exp] - a lot of money"
+          },
+          {
+            "word": "high-end features",
+            "translation": "премиум-функции",
+            "example": "high-end features [exp] - special and expensive features"
+          },
+          {
+            "word": "a bidet",
+            "translation": "биде",
+            "example": "a bidet [n] - a toilet device that sprays water to wash your bottom"
+          },
+          {
+            "word": "raise",
+            "translation": "поднимать",
+            "example": "raise [v] - lift"
+          },
+          {
+            "word": "mount",
+            "translation": "устанавливать",
+            "example": "mount [v] - install, attach something to a surface"
+          },
+          {
+            "word": "mad",
+            "translation": "сумасшедший",
+            "example": "mad [adj] - crazy or unbelievable"
+          },
+          {
+            "word": "a test drive",
+            "translation": "тестовый запуск",
+            "example": "a test drive [exp] - try something before buying it"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Stan is playing the new Harry Potter game.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "Sharon wants Randy to fix the powder room door.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "Randy doesn't want to lift the toilet lid.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "Sharon decides that she wants Randy to buy a new toilet.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "Randy wants to find a good cheap toilet.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "The Japanese toilets have seat warmers.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "The Japanese toilet lid goes up when you press a button.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "The Japanese toilets serve you champagne.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q9",
+            "type": "single_choice",
+            "question": "The Japanese toilets come with high-end toilet paper.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q10",
+            "type": "single_choice",
+            "question": "Randy wants to buy a Japanese toilet.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Verb Forms, Prepositions, and Expressions",
+            "explanation": "Choose the grammatically correct word or phrase to complete the sentence, focusing on verb forms, prepositions, or expressions. Each question has one correct answer and three incorrect options.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "Did you ___ the handle?",
+                "options": ["jiggle", "jiggled", "jiggling", "jiggles"],
+                "correctAnswer": "jiggle"
+              },
+              {
+                "id": "g2",
+                "sentence": "Why can't I ___ the lid?",
+                "options": ["lift", "lifting", "lifted", "lifts"],
+                "correctAnswer": "lift"
+              },
+              {
+                "id": "g3",
+                "sentence": "Your mom ___ a shit and doesn't want me to see it.",
+                "options": ["took", "take", "takes", "taking"],
+                "correctAnswer": "took"
+              },
+              {
+                "id": "g4",
+                "sentence": "Randy! We need to ___ a new toilet.",
+                "options": ["get", "got", "getting", "gets"],
+                "correctAnswer": "get"
+              },
+              {
+                "id": "g5",
+                "sentence": "We can't just ___ 'Ol Blue, Sharon.",
+                "options": ["get rid of", "getting rid of", "got rid of", "gets rid of"],
+                "correctAnswer": "get rid of"
+              },
+              {
+                "id": "g6",
+                "sentence": "All our toilets here are standard bowl and ___ a full warranty.",
+                "options": ["come with", "comes with", "coming with", "came with"],
+                "correctAnswer": "come with"
+              },
+              {
+                "id": "g7",
+                "sentence": "How much are you ___ to spend?",
+                "options": ["looking", "look", "looked", "looks"],
+                "correctAnswer": "looking"
+              },
+              {
+                "id": "g8",
+                "sentence": "That's probably the top model before you start ___ the Japanese toilets.",
+                "options": ["getting into", "get into", "got into", "gets into"],
+                "correctAnswer": "getting into"
+              },
+              {
+                "id": "g9",
+                "sentence": "You probably don't want to spend ___ money.",
+                "options": ["that kind of", "those kind of", "that kinds of", "this kind"],
+                "correctAnswer": "that kind of"
+              },
+              {
+                "id": "g10",
+                "sentence": "My name is Rick. ___ if there's anything you need.",
+                "options": ["Let me know", "Letting me know", "Let me knew", "Lets me know"],
+                "correctAnswer": "Let me know"
+              },
+              {
+                "id": "g11",
+                "sentence": "All the toilet's functions are operated by a touch-button remote which you ___ where the toilet-paper roll used to go.",
+                "options": ["mount", "mounting", "mounted", "mounts"],
+                "correctAnswer": "mount"
+              },
+              {
+                "id": "g12",
+                "sentence": "So then where do you ___ the toilet paper?",
+                "options": ["keep", "keeping", "kept", "keeps"],
+                "correctAnswer": "keep"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Randy: See, Stan? You've got to choose if you want to be in Gryffindor or Slytherin.\n\nStan: Yeah, can I do it?\n\nRandy: Yeah, see, you've got to fight these fairy guys.\n\nSharon: Randy. Randy! The powder room toilet is broken. Again!\n\nRandy: Did you jiggle the handle?\n\nSharon: Yes, I jiggled the handle. Will you come fix this, please?\n\nRandy: Okay, okay...\n\nRandy: Huh, well, let's see. It's got to be the little black floaty thingy. What'd you do to it?\n\nSharon: I didn't do anything.\n\nRandy: Let me see if there's water in the bowl.\n\nSharon: No! Don't lift the lid!\n\nRandy: Why can't I lift the lid?\n\nSharon: Don't, Randy!\n\nRandy: Uh-huh... Hey, guys! Your mom took a shit and doesn't want me to see it.\n\nStan: Ew!\n\nShelly: Gross, Dad!\n\nSharon: Randy! We need to get a new toilet.\n\nRandy: We can't just get rid of 'Ol Blue, Sharon.\n\nSharon: This is embarrassing. It's the powder room toilet, the one guests use. You get a new toilet, Randy, or I'm not helping you sell weed anymore!\n\nRandy: All right, all right. Sharron, you win. As usual. Poor 'Ol Blue...\n\nEmployee: Can I help you with anything?\n\nRandy: Oh, yeah, I'm just looking for a new toilet to replace Ol' Blue.\n\nEmployee: All right, well, all our toilets here are standard bowl, come with full warranty. How much are you looking to spend?\n\nRandy: Well, I'm not poor. I happen to have my own weed business. So that's pretty much the nicest one you have, right?\n\nEmployee: Yeah, that's probably the top model, you know, before you start getting into Japanese toilets.\n\nRandy: Japanese toilets?\n\nEmployee: Yeah, they're the sort of the super-high-class luxury models with all the bells and whistles. But you probably don't want to spend that kind of money.\n\nRandy: I'm not poor.\n\nEmployee: Oh, well, we can show them to you. The Japanese toilets are right over there.\n\nEmployee: Hi, Rick. This gentleman would like to see the Japanese toilets.\n\nRick: Well, of course, sir. My name is Rick. Let me know if there's anything you need.\n\nEmployee: These toilets are all equipped with the highest-end features, including an automatic bidet system, Bluetooth capability, and seat warmers.\n\nRandy: Seat warmers?\n\nEmployee: Of course. And the toilet senses when you've come into the room, turns on a small light, plays welcome music, and raises the lid for you.\n\nWaitress: Can I offer you some sparkling water or champagne?\n\nRandy: Oh, sure, I'll take some champagne.\n\nEmployee: All the toilet's functions are operated by a touch-button remote which you mount where the toilet-paper roll used to go.\n\nRandy: So then where do you keep the toilet paper?\n\nEmployee: With a Japanese toilet, you don't need toilet paper. The toilet washes you completely clean.\n\nRandy: You're mad.\n\nEmployee: No, it's true. It has warm water and a dryer and cleans you eight times better than toilet paper can. Would you like to take one for a test drive?\n\nRandy: Oh, uh, sure. I did have kind of a big breakfast.\n\nEmployee: Right over here.\n\nRandy: Oh! Whoa! Ooh. Oh, oh! Oh. Ahh! Oh, oh...\n\nRandy: Okay, how much?"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,387 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 4,
+        "title": "The Hotel Bill",
+        "videoUrl": "https://youtu.be/mukYoHRfviA",
+        "country": "United Kingdom",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "American, British",
+        "imageUrl": "wonka_hotel_bill_banner",
+        "source": "Warner Bros.",
+        "difficulty": 6,
+        "genres": ["Fantasy", "Comedy", "Musical"],
+        "countries": ["United Kingdom", "USA"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "defy",
+            "translation": "противиться",
+            "example": "defy [v] - not follow orders or rules"
+          },
+          {
+            "word": "a Hoverchoc",
+            "translation": "шоколад, который заставляет летать",
+            "example": "a Hoverchoc [n] - a chocolate that makes you fly"
+          },
+          {
+            "word": "disrupt",
+            "translation": "нарушать",
+            "example": "disrupt [v] - stop something from happening smoothly"
+          },
+          {
+            "word": "obliged",
+            "translation": "обязанный",
+            "example": "obliged [adj] - having to do something, no choice"
+          },
+          {
+            "word": "move on",
+            "translation": "заставить уйти",
+            "example": "move (s/o) on [phv] - tell someone to leave a place"
+          },
+          {
+            "word": "confiscate",
+            "translation": "конфисковать",
+            "example": "confiscate [v] - officially take away something"
+          },
+          {
+            "word": "earnings",
+            "translation": "заработок",
+            "example": "earnings [n] - money made from work"
+          },
+          {
+            "word": "a good cause",
+            "translation": "благое дело",
+            "example": "a good cause [n] - something that helps people or society"
+          },
+          {
+            "word": "a sovereign",
+            "translation": "монета",
+            "example": "a sovereign [n] - one coin (money)"
+          },
+          {
+            "word": "settle up",
+            "translation": "расплатиться",
+            "example": "settle up [phv] - pay a bill"
+          },
+          {
+            "word": "incur",
+            "translation": "навлечь",
+            "example": "incur [v] - experience something, usually something unpleasant"
+          },
+          {
+            "word": "during the course of your residency",
+            "translation": "в течение вашего пребывания",
+            "example": "during the course of your residency [exp] - while you were staying here"
+          },
+          {
+            "word": "warmed your cockles",
+            "translation": "согрел душу",
+            "example": "warmed your cockles [exp] - made you feel happy and warm"
+          },
+          {
+            "word": "the stair charge",
+            "translation": "плата за лестницу",
+            "example": "the stair charge [n] - the fee to use the stairs"
+          },
+          {
+            "word": "a minibar",
+            "translation": "минибар",
+            "example": "a minibar [n] - a small fridge with drinks and snacks (and maybe soap?)"
+          },
+          {
+            "word": "a sink",
+            "translation": "раковина",
+            "example": "a sink [n] - a bowl in the kitchen or bathroom for washing"
+          },
+          {
+            "word": "a ditch",
+            "translation": "канава",
+            "example": "a ditch [n] - a narrow channel dug in the ground, typically used for drainage alongside a road [image]"
+          },
+          {
+            "word": "raised in a ditch",
+            "translation": "вырос в трудных условиях",
+            "example": "raised in a ditch [exp] - grew up in very poor or tough conditions"
+          },
+          {
+            "word": "linen",
+            "translation": "постельное бельё",
+            "example": "linen [n] - sheets, pillowcases, and towels"
+          },
+          {
+            "word": "the small print",
+            "translation": "мелкий шрифт",
+            "example": "the small print [n] - important details in a contract, usually in small letters"
+          },
+          {
+            "word": "work it off",
+            "translation": "отработать",
+            "example": "work it off [phv] - do work to pay for something"
+          },
+          {
+            "word": "a chartered accountant",
+            "translation": "дипломированный бухгалтер",
+            "example": "a chartered accountant [n] - a certified professional accountant"
+          },
+          {
+            "word": "He runs the place.",
+            "translation": "Он здесь главный.",
+            "example": "He runs the place. [exp] - He is in charge here. He is the boss here."
+          },
+          {
+            "word": "answer to me",
+            "translation": "отвечать передо мной",
+            "example": "answer to me [exp] - be responsible to me"
+          },
+          {
+            "word": "a plumber",
+            "translation": "сантехник",
+            "example": "a plumber [n] - a person who fixes water pipes and bathrooms"
+          },
+          {
+            "word": "by trade",
+            "translation": "по профессии",
+            "example": "by trade [exp] - as a job"
+          },
+          {
+            "word": "neglected to read",
+            "translation": "не удосужился прочитать",
+            "example": "neglected to read [exp] - didn't read"
+          },
+          {
+            "word": "not work out",
+            "translation": "не сложилось",
+            "example": "not work out [phv] - not be successful"
+          },
+          {
+            "word": "watertight",
+            "translation": "неприступный",
+            "example": "watertight [adj] - perfectly made, no exceptions"
+          },
+          {
+            "word": "roll call",
+            "translation": "перекличка",
+            "example": "roll call [n] - the act of reading names to check who is present"
+          },
+          {
+            "word": "suds",
+            "translation": "пена",
+            "example": "suds [n] - bubbles from soap"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Why does the officer have to move Wonka on and confiscate his earnings?",
+            "options": [
+              "Wonka is disrupting other businesses",
+              "Wonka injured some people",
+              "Wonka is not paying taxes",
+              "Wonka is a foreigner"
+            ],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "What does Wonka ask the officer to leave him with?",
+            "options": [
+              "Some respect",
+              "His chocolate",
+              "His earnings",
+              "A sovereign"
+            ],
+            "correctAnswer": 3
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What extra charges did Wonka incur?",
+            "options": [
+              "Warming his cockles by the fire",
+              "Drinking a glass of gin",
+              "Turning on the lights",
+              "Ruining his mattress",
+              "Eating breakfast",
+              "Using the stairs",
+              "Using the linen"
+            ],
+            "correctAnswers": [0, 1, 5, 6]
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "What did Wonka use from the minibar?",
+            "options": [
+              "A pillow",
+              "Soap",
+              "Nuts",
+              "Gin"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "How many sovereigns does Mrs. Scrubitt say Wonka owes in total?",
+            "options": [
+              "1,000",
+              "2,000",
+              "10,000",
+              "12,000"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "How does Mrs. Scrubitt say that Wonka must pay off his debt?",
+            "options": [
+              "Sell his chocolate",
+              "Take care of the dog",
+              "Work in the wash house",
+              "Become a chartered accountant"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "How long does Mrs. Scrubitt say it will take Wonka to pay off his debt?",
+            "options": [
+              "About 1 year",
+              "About 12 years",
+              "About 19 years",
+              "About 27 years"
+            ],
+            "correctAnswer": 3
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "How did the people in the basement end up in the wash house?",
+            "options": [
+              "They didn't read the contract carefully.",
+              "The police brought them there.",
+              "They asked for a job.",
+              "They got married."
+            ],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q9",
+            "type": "single_choice",
+            "question": "How many ex-wives does Larry Chucklesworth have?",
+            "options": [
+              "None",
+              "One",
+              "Two",
+              "Three"
+            ],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q10",
+            "type": "single_choice",
+            "question": "What are the consequences if Wonka is not present at roll call?",
+            "options": [
+              "They will give extra work to the other employees.",
+              "He will be fined 1,000 sovereigns.",
+              "The dog will start to look for him.",
+              "The police will bring him back."
+            ],
+            "correctAnswer": 3
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Noun Phrases, Prepositions, and Verb Forms",
+            "explanation": "Choose the grammatically correct word or phrase to complete the sentence, focusing on noun phrases, prepositions, or verb forms. Each question has one correct answer and three incorrect options.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "___ to see here.",
+                "options": ["Nothing", "Something", "Anything", "Everything"],
+                "correctAnswer": "Nothing"
+              },
+              {
+                "id": "g2",
+                "sentence": "Don't worry, it's going to a good cause. Sick kids, or ___.",
+                "options": ["something", "anything", "nothing", "everything"],
+                "correctAnswer": "something"
+              },
+              {
+                "id": "g3",
+                "sentence": "There was that glass of gin you had on ___.",
+                "options": ["arrival", "arriving", "arrived", "arrives"],
+                "correctAnswer": "arrival"
+              },
+              {
+                "id": "g4",
+                "sentence": "Then you've got your stair charge, and that is ___ step.",
+                "options": ["per", "for", "by", "in"],
+                "correctAnswer": "per"
+              },
+              {
+                "id": "g5",
+                "sentence": "Now, tell me, Mr. Wonka, did you ___ to use the minibar?",
+                "options": ["happen", "happening", "happened", "happens"],
+                "correctAnswer": "happen"
+              },
+              {
+                "id": "g6",
+                "sentence": "Even Bleacher knows you never touch the minibar, and he was ___ in a ditch.",
+                "options": ["raised", "raising", "raises", "raise"],
+                "correctAnswer": "raised"
+              },
+              {
+                "id": "g7",
+                "sentence": "You've got to be ___ me.",
+                "options": ["kidding", "kid", "kidded", "kids"],
+                "correctAnswer": "kidding"
+              },
+              {
+                "id": "g8",
+                "sentence": "It's all in the small ___ , dearie.",
+                "options": ["print", "prints", "printing", "printed"],
+                "correctAnswer": "print"
+              },
+              {
+                "id": "g9",
+                "sentence": "He ___ the place.",
+                "options": ["runs", "run", "running", "ran"],
+                "correctAnswer": "runs"
+              },
+              {
+                "id": "g10",
+                "sentence": "And you'd ___ do as he says, or you'll answer to me.",
+                "options": ["best", "better", "good", "well"],
+                "correctAnswer": "best"
+              },
+              {
+                "id": "g11",
+                "sentence": "One ___ of stupidity, followed by ___ regret.",
+                "options": ["moment", "moments", "momentary", "momentarily"],
+                "correctAnswer": "moment"
+              },
+              {
+                "id": "g12",
+                "sentence": "I've only been married once, and it didn't ___.",
+                "options": ["work out", "working out", "worked out", "works out"],
+                "correctAnswer": "work out"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Chief: All right folks. Nothing to see here. Just a small group of people defying the laws of gravity. Hook them, boys.\n\nWilly: That's the Hoverchoc, sir. That's the point.\n\nOfficer: I'm afraid we've had some complaints about you, sir.\n\nWilly: Complaints?\n\nOfficer: That you're disrupting the trade of other businesses. I'm regrettably obliged to move you on and to confiscate your earnings.\n\nWilly: Hey! What are you doing?\n\nOfficer 2: Don't worry, it's going to a good cause. Sick kids, or something.\n\nOfficer: Sorry, sir. Rules is rules.\n\nWonka: Could you at least leave me a sovereign? I need to pay for my room.\n\nOfficer: Here.\n\nWonka: Thank you.\n\nScrubitt: Evening, Mr. Wonka. How did it go?\n\nWonka: Not quite as well as I'd hoped.\n\nScrubitt: Oh, shame. But I'm afraid we do have to settle up now.\n\nWonka: Well, thankfully, the room is taken care of. I believe we said a sovereign.\n\nScrubitt: For the room, yes. But you have incurred a few extras during the course of your residency with ourselves.\n\nWonka: Have I?\n\nScrubitt: Yes, you have. There was that glass of gin you had on arrival. And if I remember rightly, you warmed your cockles by the fire.\n\nBleacher: He did indeed, Mrs. Scrubitt.\n\nScrubitt: Cocklewarming is extra, see?\n\nBleacher: He used the stairs to get to his room, and all.\n\nScrubitt: Oh, then you've got your stair charge, and that is per step, I'm afraid. Up and down. Now, tell me, Mr. Wonka, did you happen to use the minibar?\n\nWonka: There's a minibar?\n\nBleacher: Minibar of soap.\n\nScrubitt: By the sink.\n\nWonka: I might have, briefly.\n\nScrubitt: See? Even Bleacher knows you never touch the minibar, and he was raised in a ditch. Add in your mattress hire, your linen lease, and your pillow penalty, and you are looking at ten thousand sovereigns.\n\nWonka: You've got to be kidding me?\n\nScrubitt: It's all in the small print, dearie.\n\nWonka: I don't have ten thousand sovereigns.\n\nBleacher: Then we have a problem, Mr. Wonka.\n\nScrubitt: You're going have to work it off in the wash house, ain't ya? At a sovereign a day.\n\nWonka: Ten thousand days is...\n\nScrubitt: Twenty-seven years.\n\nBleacher: Four months.\n\nScrubitt: And 16 days.\n\nAbacus: Ah, you must be Mr. Wonka.\n\nWonka: Who are you?\n\nAbacus: Abacus Crunch, chartered accountant. At least, I was. Now, uh...\n\nPiper: He runs the place. And you'd best do as he says, or you'll answer to me. Piper Benz. Plumber by trade.\n\nAbacus: This is Miss Lottie Bell.\n\nMiss Bell: Hi.\n\nPiper: She don't talk much.\n\nLarry: And I'm Larry Chucklesworth! Comedian.\n\nWonka: They got all of you, too, did they?\n\nAbacus: I'm afraid so. We each of us found ourselves in need of a cheap place to stay, and neglected to read the small print.\n\nPiper: One moment of stupidity, followed by endless regret.\n\nLarry: Sounds like my third marriage. I'm sorry, I do that a lot.\n\nAbacus: He does.\n\nPiper: A lot.\n\nLarry: I've only been married once, and it didn't work out.\n\nWilly: There's got to be some way out of here.\n\nPiper: You don't think we've tried?\n\nWonka: There are bars on the window, and there's a dog on the door.\n\nAbacus: And even if you could get out, that contract is watertight.\n\nPiper: If you're not here at roll call, Mrs. Scrubitt will call the police, they'll bring you right back, and she'll charge you a thousand for the inconvenience.\n\nAbacus: All right, everybody. Back to work. Come along, Mr. Wonka. You come with me. You're in here on suds."
+        }
+      }
+    }
+  ]
+}
