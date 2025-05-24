@@ -1,0 +1,207 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 13,
+        "title": "Do Me a Favor?",
+        "videoUrl": "https://youtu.be/QdcsomFSA34",
+        "country": "USA",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "American",
+        "imageUrl": "top_notch_tv_banner",
+        "source": "Pearson Education",
+        "difficulty": 1,
+        "genres": ["Educational", "Comedy"],
+        "countries": ["USA"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "a favor",
+            "translation": "услуга",
+            "example": "a favor [n] - a kind or helpful action"
+          },
+          {
+            "word": "spill",
+            "translation": "пролить",
+            "example": "spill [v] - allow liquid to fall accidentally"
+          },
+          {
+            "word": "a tie",
+            "translation": "галстук",
+            "example": "a tie [n] - a necktie, worn with a suit, hanging in front of one's shirt"
+          },
+          {
+            "word": "a suit",
+            "translation": "костюм",
+            "example": "a suit [n] - formal clothing with pants and a jacket"
+          },
+          {
+            "word": "a violin",
+            "translation": "скрипка",
+            "example": "a violin [n] - a musical instrument with strings"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Mr. Evans spilled coffee on his tie.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "Mr. Evans has to meet a client in one hour.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "Mr. Evans wants Marie to wash his tie.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "Mr. Evans asks Marie to buy a newspaper.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "Mr. Evans asks Marie to make some coffee.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "Mr. Evans says that his shirt looks very nice.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "Mr. Evans asks Marie to buy him a new suit.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "Mr. Evans asks Marie to buy him a violin.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q9",
+            "type": "single_choice",
+            "question": "Mr. Evans invites Marie to join him for lunch.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q10",
+            "type": "single_choice",
+            "question": "Mr. Evans asks Marie to fix his car.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q11",
+            "type": "single_choice",
+            "question": "Mr. Evans thinks that Marie is not listening to him.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q12",
+            "type": "single_choice",
+            "question": "Mr. Evans decides to buy a new tie by himself.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q13",
+            "type": "single_choice",
+            "question": "Marie was not listening to Mr. Evans.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Connectors and Conjunctions",
+            "explanation": "Choose the word that most logically connects the ideas in the sentence. Use words like: could, can, do, go, get, buy, play, fix, for, too.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "Marie, ___ you do me a favor?",
+                "options": ["could", "would", "should", "might"],
+                "correctAnswer": "could"
+              },
+              {
+                "id": "g2",
+                "sentence": "___ you go to the store and buy a new tie for me?",
+                "options": ["could", "would", "should", "might"],
+                "correctAnswer": "could"
+              },
+              {
+                "id": "g3",
+                "sentence": "And ___ you get a newspaper for me at the store on the corner?",
+                "options": ["can", "will", "shall", "may"],
+                "correctAnswer": "can"
+              },
+              {
+                "id": "g4",
+                "sentence": "This coffee is cold. ___ you buy me a cup of coffee?",
+                "options": ["could", "would", "should", "might"],
+                "correctAnswer": "could"
+              },
+              {
+                "id": "g5",
+                "sentence": "Also, this shirt doesn't look very nice. ___ you buy me a new shirt?",
+                "options": ["can", "will", "shall", "may"],
+                "correctAnswer": "can"
+              },
+              {
+                "id": "g6",
+                "sentence": "___ you get me a new suit, too?",
+                "options": ["could", "would", "should", "might"],
+                "correctAnswer": "could"
+              },
+              {
+                "id": "g7",
+                "sentence": "And ___ you play the violin for me after lunch?",
+                "options": ["can", "will", "shall", "may"],
+                "correctAnswer": "can"
+              },
+              {
+                "id": "g8",
+                "sentence": "___ you fix my car tonight?",
+                "options": ["could", "would", "should", "might"],
+                "correctAnswer": "could"
+              },
+              {
+                "id": "g9",
+                "sentence": "___ I fix his car tonight? Yeah, right.",
+                "options": ["can", "will", "shall", "may"],
+                "correctAnswer": "can"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Mr. Evans: Marie, could you do me a favor? I'm having lunch with a client in an hour, and I spilled coffee on my tie. Could you go to the store and buy a new tie for me?\n\nMarie: Sure, no problem.\n\nMr. Evans: And can you get a newspaper for me at the store on the corner?\n\nMarie: Yup.\n\nMr. Evans: This coffee is cold. Could you buy me a cup of coffee, too?\n\nMarie: Sure.\n\nMr. Evans: Also, this shirt doesn't look very nice. Can you buy me a new shirt?\n\nMarie: Of course.\n\nMr. Evans: Could you get me a new suit, too?\n\nMarie: Yes.\n\nMr. Evans: And can you play the violin for me after lunch?\n\nMarie: Certainly.\n\nMr. Evans: Could you fix my car tonight?\n\nMarie: Yes, sir.\n\nMr. Evans: You didn't hear me at all, did you?\n\nMarie: I'm sorry. What did you say?\n\nMr. Evans: Nothing. Nothing. I'm going to the store to buy a new tie.\n\nMarie: OK.\n\nMarie: Can I fix his car tonight? Yeah, right."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 4,
+        "title": "Who's This?",
+        "videoUrl": "https://youtu.be/4d92nwAFtfI",
+        "country": "USA",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "American",
+        "imageUrl": "top_notch_tv_banner",
+        "source": "Pearson Education",
+        "difficulty": 1,
+        "genres": ["Educational", "Comedy"],
+        "countries": ["USA"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "an architect",
+            "translation": "архитектор",
+            "example": "an architect [n] - a person who designs buildings"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "How old is Cheryl's brother?",
+            "options": ["30", "34", "38", "unknown"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "What is his job?",
+            "options": ["He is a doctor.", "He is an architect.", "He is a teacher.", "He is a student."],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "How does Marie describe him?",
+            "options": ["handsome", "cute", "old", "young", "short"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "How old is Cheryl's mother?",
+            "options": ["50", "55", "58", "unknown"],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "How does Marie describe her?",
+            "options": ["handsome", "cute", "old", "young", "short"],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "Who is an architect?",
+            "options": [
+              "Cheryl's sister",
+              "Cheryl's husband",
+              "Cheryl's friend's husband",
+              "Cheryl's sister's husband"
+            ],
+            "correctAnswer": 3
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "How old is Cheryl's nephew (her sister's son)?",
+            "options": ["12", "18", "22", "unknown"],
+            "correctAnswer": 3
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "What does he do?",
+            "options": ["He is a doctor.", "He is an architect.", "He is a teacher.", "He is a student."],
+            "correctAnswer": 3
+          },
+          {
+            "id": "q9",
+            "type": "single_choice",
+            "question": "How does Marie describe him?",
+            "options": ["handsome", "cute", "old", "young", "short"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q10",
+            "type": "single_choice",
+            "question": "How does Cheryl describe him?",
+            "options": ["handsome", "cute", "old", "young", "short"],
+            "correctAnswer": 3
+          },
+          {
+            "id": "q11",
+            "type": "single_choice",
+            "question": "Who is the 'short old woman' in the photograph?",
+            "options": ["Cheryl's sister", "Cheryl's mother", "Cheryl"],
+            "correctAnswer": 2
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Connectors and Conjunctions",
+            "explanation": "Choose the word and place in the sentence that most logically connects the ideas in the sentence. Use words like: your, my, his, this, is, a, Ø. Some boxes will be empty.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "Is ___ your family?",
+                "options": ["your", "my", "this", ""],
+                "correctAnswer": "this"
+              },
+              {
+                "id": "g2",
+                "sentence": "Who's ___?",
+                "options": ["this", "my", "your", ""],
+                "correctAnswer": "this"
+              },
+              {
+                "id": "g3",
+                "sentence": "___ brother.",
+                "options": ["My", "Your", "His", ""],
+                "correctAnswer": "My"
+              },
+              {
+                "id": "g4",
+                "sentence": "That's ___ wife.",
+                "options": ["his", "my", "your", ""],
+                "correctAnswer": "his"
+              },
+              {
+                "id": "g5",
+                "sentence": "That's ___ mother.",
+                "options": ["my", "your", "his", ""],
+                "correctAnswer": "my"
+              },
+              {
+                "id": "g6",
+                "sentence": "___ mother? But she's so old.",
+                "options": ["Your", "My", "His", ""],
+                "correctAnswer": "Your"
+              },
+              {
+                "id": "g7",
+                "sentence": "No, he's ___ architect.",
+                "options": ["an", "a", "Ø", ""],
+                "correctAnswer": "an"
+              },
+              {
+                "id": "g8",
+                "sentence": "That's ___ sister's husband.",
+                "options": ["my", "your", "his", ""],
+                "correctAnswer": "my"
+              },
+              {
+                "id": "g9",
+                "sentence": "That's ___ sister's son.",
+                "options": ["my", "your", "his", ""],
+                "correctAnswer": "my"
+              },
+              {
+                "id": "g10",
+                "sentence": "He's ___ university student.",
+                "options": ["a", "an", "Ø", ""],
+                "correctAnswer": "a"
+              },
+              {
+                "id": "g11",
+                "sentence": "Who's this short old woman? What? That ___ not a short old woman.",
+                "options": ["is", "a", "Ø", ""],
+                "correctAnswer": "is"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Marie: Is this your family?\n\nCheryl: Yes.\n\nMarie: Who's this?\n\nCheryl: My brother.\n\nMarie: He's so handsome. How old is he?\n\nCheryl: He's thirty-four.\n\nMarie: Oh!\n\nCheryl: He's a doctor.\n\nMarie: Oh!!\n\nCheryl: That's his wife.\n\nMarie: Oh. She's very pretty. Who's this?\n\nCheryl: That's my mother.\n\nMarie: Your mother? But she's so old.\n\nCheryl: She's not old. She's fifty-eight.\n\nMarie: OK. Who's this? Is he a doctor, too?\n\nCheryl: No, he's an architect. That's my sister's husband.\n\nMarie: Who's this?\n\nCheryl: That's my sister's son. He's a university student.\n\nMarie: He's so cute!\n\nCheryl: He's so young.\n\nMarie: Who's this 'short old woman'? What?\n\nCheryl: That is not a 'short old woman'. That's me.\n\nMarie: Oh! Sorry."
+        }
+      }
+    }
+  ]
+}

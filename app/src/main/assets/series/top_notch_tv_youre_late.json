@@ -1,0 +1,192 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 5,
+        "title": "You're Late!",
+        "videoUrl": "https://youtu.be/jweEIv-nSfg",
+        "country": "USA",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "American",
+        "imageUrl": "top_notch_tv_banner",
+        "source": "Pearson Education",
+        "difficulty": 1,
+        "genres": ["Educational", "Comedy"],
+        "countries": ["USA"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "It is two minutes after six.",
+            "translation": "сейчас два минуты после шести",
+            "example": "It is two minutes after six. [exp] - It is 6:02."
+          },
+          {
+            "word": "It is five to six.",
+            "translation": "сейчас без пяти шесть",
+            "example": "It is five to six. [exp] - It is 5:55."
+          },
+          {
+            "word": "It is half past seven",
+            "translation": "сейчас половина восьмого",
+            "example": "It is half past seven [exp] - It is 7:30."
+          },
+          {
+            "word": "a talk",
+            "translation": "лекция",
+            "example": "a talk [n] - a lecture or speech"
+          },
+          {
+            "word": "the ball game",
+            "translation": "бейсбольный матч",
+            "example": "the ball game [exp] - the baseball game"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "What time does Bob arrive?",
+            "options": ["2 minutes", "5:55", "6:00", "6:02"],
+            "correctAnswer": 3
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "How late is Bob?",
+            "options": ["2 minutes", "5:55", "6:00", "6:02"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "When is Bob's birthday?",
+            "options": ["Today", "Tomorrow", "Saturday"],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "What four things does Cheryl suggest doing on Bob's birthday?",
+            "options": [
+              "Attending a talk at the university",
+              "Going to a baseball game",
+              "Going to a concert",
+              "Going to a French restaurant",
+              "Watching a movie",
+              "Watching a play"
+            ],
+            "correctAnswers": [0, 2, 4, 5]
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "What does Bob want to do on his birthday?",
+            "options": [
+              "Watch a movie",
+              "Go to a French restaurant",
+              "Go to a concert",
+              "Watch a play",
+              "Attend a talk at the university",
+              "Go to a baseball game"
+            ],
+            "correctAnswer": 5
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Which two teams are playing each other in the baseball game?",
+            "options": ["The Giants", "The Tigers", "The Lions", "The Bears"],
+            "correctAnswers": [0, 1]
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "When does the baseball game start on Saturday?",
+            "options": ["7:00", "7:30", "8:00"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "Where do Bob and Cheryl decide to go?",
+            "options": [
+              "To a movie",
+              "To a French restaurant",
+              "To a concert",
+              "To a play",
+              "To a talk at the university",
+              "To a baseball game"
+            ],
+            "correctAnswer": 5
+          },
+          {
+            "id": "q9",
+            "type": "single_choice",
+            "question": "Why do they decide to go there?",
+            "options": [
+              "It starts at 7:00.",
+              "Cheryl loves baseball.",
+              "It is Bob's birthday."
+            ],
+            "correctAnswer": 2
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Connectors and Conjunctions",
+            "explanation": "Choose the word that connects the ideas in the sentence, focusing on time expressions or logical connectors. Use words like: after, to, past, or, and. Some boxes will be empty.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "It’s two minutes ___ six.",
+                "options": ["after", "to", "past", ""],
+                "correctAnswer": "after"
+              },
+              {
+                "id": "g2",
+                "sentence": "It’s five ___ six.",
+                "options": ["to", "after", "past", ""],
+                "correctAnswer": "to"
+              },
+              {
+                "id": "g3",
+                "sentence": "The concert is at half ___ seven.",
+                "options": ["past", "to", "after", ""],
+                "correctAnswer": "past"
+              },
+              {
+                "id": "g4",
+                "sentence": "We can go to a movie ___ a play.",
+                "options": ["or", "and", "to", ""],
+                "correctAnswer": "or"
+              },
+              {
+                "id": "g5",
+                "sentence": "There’s a concert ___ a talk on Saturday.",
+                "options": ["and", "or", "to", ""],
+                "correctAnswer": "and"
+              },
+              {
+                "id": "g6",
+                "sentence": "The ball game starts at 7:00, ___ we can go there.",
+                "options": ["and", "or", "to", ""],
+                "correctAnswer": "and"
+              },
+              {
+                "id": "g7",
+                "sentence": "It’s ___ your birthday, it’s mine.",
+                "options": ["or", "and", "to", ""],
+                "correctAnswer": "or"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Cheryl: You're late.\n\nBob: What time is it?\n\nCheryl: Two minutes after six.\n\nBob: I am not late. Two minutes is not late.\n\nCheryl: Yes, it is. It's two minutes late.\n\nBob: Oh, look! It's five to six. I'm early.\n\nCheryl: So for your birthday on Saturday, there's a great French movie at the Avalon.\n\nBob: There's a baseball game on Saturday night.\n\nCheryl: Or there's a play at the Arts Center at 8:00 p.m. Life Is a Dream.\n\nBob: The Tigers are playing the Giants. You know, baseball?\n\nCheryl: Oh, look! There's a Mozart concert on Saturday. Would you like to go?\n\nBob: What time?\n\nCheryl: Half past seven.\n\nBob: The ball game's at 7:00.\n\nCheryl: Oh, wow! There's a talk by the writer Ellen Lee at the university on...\n\nBob: On Saturday night. Is your birthday on Saturday?\n\nCheryl: No. It's your birthday. Would you like to go to a baseball game for your birthday?\n\nBob: A baseball game! That sounds great!"
+        }
+      }
+    }
+  ]
+}

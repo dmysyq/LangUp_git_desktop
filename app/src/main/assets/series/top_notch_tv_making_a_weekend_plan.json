@@ -1,0 +1,199 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 9,
+        "title": "Making a Weekend Plan",
+        "videoUrl": "https://youtu.be/zEkDC7gSRBE",
+        "country": "USA",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "American",
+        "imageUrl": "top_notch_tv_banner",
+        "source": "Pearson Education",
+        "difficulty": 1,
+        "genres": ["Educational", "Comedy"],
+        "countries": ["USA"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "laundry",
+            "translation": "стирка",
+            "example": "laundry [n] - washing clothes"
+          },
+          {
+            "word": "a museum",
+            "translation": "музей",
+            "example": "a museum [n] - a public building that displays art, history or cultural things"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "What do Marie and Cheryl want to do together?",
+            "options": ["Have breakfast together", "Play basketball", "Go shopping"],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "What is Cheryl doing Saturday morning?",
+            "options": [
+              "Making breakfast for friends",
+              "Exercising with a friend",
+              "Doing laundry",
+              "Taking an art class",
+              "Going to an art museum"
+            ],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "What is Cheryl doing Saturday afternoon?",
+            "options": [
+              "Visiting her parents",
+              "Exercising with a friend",
+              "Going to the movies",
+              "Taking an art class",
+              "Visiting her brother"
+            ],
+            "correctAnswer": 3
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "What is Marie doing Saturday afternoon?",
+            "options": [
+              "Making breakfast for friends",
+              "Exercising with a friend",
+              "Going to the movies with her sister",
+              "Going to an art museum",
+              "Going shopping"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "What is Marie doing Sunday morning?",
+            "options": [
+              "Visiting her parents",
+              "Going to a baseball game",
+              "Going to the movies with her boyfriend",
+              "Going for a walk with her mother",
+              "Meeting a friend at the art museum"
+            ],
+            "correctAnswer": 4
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "What is Cheryl doing Sunday afternoon?",
+            "options": [
+              "Visiting her parents",
+              "Exercising with a friend",
+              "Going to a baseball game",
+              "Taking a Spanish class",
+              "Doing laundry"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "When do Cheryl and Marie agree to meet?",
+            "options": ["Saturday morning", "Saturday afternoon", "Sunday morning", "Sunday afternoon"],
+            "correctAnswer": 3
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "What will Paul and Bob do this weekend?",
+            "options": ["Play basketball", "Go shopping", "Have breakfast together"],
+            "correctAnswer": 0
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Connectors and Conjunctions",
+            "explanation": "Choose the word and place in the sentence that most logically connects the ideas in the sentence. Use words like: doing, go, making, taking, going, visiting, meeting, play, to, with. Some boxes will be empty.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "What are you ___ this weekend?",
+                "options": ["doing", "go", "making", ""],
+                "correctAnswer": "doing"
+              },
+              {
+                "id": "g2",
+                "sentence": "Do you want to ___ shopping with me?",
+                "options": ["go", "doing", "to", ""],
+                "correctAnswer": "go"
+              },
+              {
+                "id": "g3",
+                "sentence": "I'm ___ breakfast for some friends at 9:00.",
+                "options": ["making", "doing", "go", ""],
+                "correctAnswer": "making"
+              },
+              {
+                "id": "g4",
+                "sentence": "Then I'm ___ laundry from 11:00 to noon.",
+                "options": ["doing", "making", "go", ""],
+                "correctAnswer": "doing"
+              },
+              {
+                "id": "g5",
+                "sentence": "I'm ___ an art class from 1:00 to 3:00.",
+                "options": ["taking", "doing", "go", ""],
+                "correctAnswer": "taking"
+              },
+              {
+                "id": "g6",
+                "sentence": "I'm exercising ___ a friend from 3:00 to 4:00.",
+                "options": ["with", "to", "go", ""],
+                "correctAnswer": "with"
+              },
+              {
+                "id": "g7",
+                "sentence": "Then I'm ___ to the movies at 5:00 with my sister.",
+                "options": ["going", "doing", "to", ""],
+                "correctAnswer": "going"
+              },
+              {
+                "id": "g8",
+                "sentence": "I'm ___ my parents until 10:00.",
+                "options": ["visiting", "doing", "go", ""],
+                "correctAnswer": "visiting"
+              },
+              {
+                "id": "g9",
+                "sentence": "Then I'm ___ a friend at the art museum until 1:00.",
+                "options": ["meeting", "doing", "go", ""],
+                "correctAnswer": "meeting"
+              },
+              {
+                "id": "g10",
+                "sentence": "I'm ___ to a baseball game with Bob at 1:00.",
+                "options": ["going", "doing", "to", ""],
+                "correctAnswer": "going"
+              },
+              {
+                "id": "g11",
+                "sentence": "Do you want to ___ basketball tomorrow?",
+                "options": ["play", "doing", "go", ""],
+                "correctAnswer": "play"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Marie: What are you doing this weekend? Do you want to go shopping with me?\n\nCheryl: That sounds great. When do you want to go?\n\nMarie: How about Saturday morning?\n\nCheryl: I'm making breakfast for some friends at 9:00. Then I'm doing laundry from 11:00 to noon.\n\nMarie: Saturday afternoon?\n\nCheryl: I'm taking an art class from 1:00 to 3:00. How about 3:30?\n\nMarie: No, I'm exercising with a friend from 3:00 to 4:00. Then I'm going to the movies at 5:00 with my sister.\n\nCheryl: Sunday morning?\n\nMarie: I'm visiting my parents until 10:00. Then I'm meeting a friend at the art museum until 1:00. Sunday afternoon?\n\nCheryl: I'm going to a baseball game with Bob at 1:00. How about late afternoon?\n\nMarie: Around 5:00?\n\nCheryl: Great.\n\nBob: Hey. Do you want to play basketball tomorrow?\n\nPaul: OK."
+        }
+      }
+    }
+  ]
+}

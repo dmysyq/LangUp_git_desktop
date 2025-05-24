@@ -1,0 +1,152 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 11,
+        "title": "Looking for an ATM",
+        "videoUrl": "https://youtu.be/dbyJNdS_V-s",
+        "country": "United Kingdom",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "American",
+        "imageUrl": "english_file_basics_banner",
+        "source": "Oxford",
+        "difficulty": 1,
+        "genres": ["Educational", "Comedy"],
+        "countries": ["United Kingdom"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "a cash machine",
+            "translation": "банкомат",
+            "example": "a cash machine [n] - an ATM, a bank machine, an automatic teller"
+          },
+          {
+            "word": "isn't working",
+            "translation": "не работает",
+            "example": "isn't working [exp] - is not functioning properly"
+          },
+          {
+            "word": "a bit",
+            "translation": "немного",
+            "example": "a bit [adv] - a little bit, a short distance"
+          },
+          {
+            "word": "Barclays",
+            "translation": "Барклайс",
+            "example": "Barclays [n] - a British bank"
+          },
+          {
+            "word": "HSBC",
+            "translation": "Эйч Эс Би Си",
+            "example": "HSBC [n] - a British bank"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Rob is looking for ______.",
+            "options": ["Jenny", "a bank", "a cash machine"],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "The woman first tells Rob to ______.",
+            "options": ["turn left", "turn right", "go straight on"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "She says that it will be ______.",
+            "options": ["on the corner", "on the left", "on the right"],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "Rob is frustrated because ______.",
+            "options": ["he is lost", "he has no money", "he can't find the bank", "the cash machine is not working"],
+            "correctAnswer": 3
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "The man first tell Rob to ______.",
+            "options": ["turn left", "turn right", "go straight on"],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "He says that it will be ______.",
+            "options": ["on the corner", "on the left", "on the right"],
+            "correctAnswer": 1
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Connectors and Conjunctions",
+            "explanation": "Choose the word that connects the ideas in the sentence. Use words like: is, try, ask, so, there, give, when, discover, not. Some boxes will be empty.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "Rob ___ trying to find a cash machine.",
+                "options": ["is", "are", "was", ""],
+                "correctAnswer": "is"
+              },
+              {
+                "id": "g2",
+                "sentence": "He ___ a woman for directions.",
+                "options": ["ask", "asks", "asking", ""],
+                "correctAnswer": "ask"
+              },
+              {
+                "id": "g3",
+                "sentence": "He asks a woman ___ he can find a cash machine.",
+                "options": ["so", "because", "why", ""],
+                "correctAnswer": "so"
+              },
+              {
+                "id": "g4",
+                "sentence": "She tells him ___ is one at Barclays Bank.",
+                "options": ["there", "here", "where", ""],
+                "correctAnswer": "there"
+              },
+              {
+                "id": "g5",
+                "sentence": "Then she ___ him directions.",
+                "options": ["give", "gives", "giving", ""],
+                "correctAnswer": "give"
+              },
+              {
+                "id": "g6",
+                "sentence": "___ Rob arrives at Barclays Bank, he discovers the cash machine is ___ working.",
+                "options": ["when", "while", "where", ""],
+                "correctAnswer": "when"
+              },
+              {
+                "id": "g7",
+                "sentence": "Rob then ___ a man for help.",
+                "options": ["ask", "asks", "asking", ""],
+                "correctAnswer": "ask"
+              },
+              {
+                "id": "g8",
+                "sentence": "The man ___ Rob directions to HSBC.",
+                "options": ["give", "gives", "giving", ""],
+                "correctAnswer": "give"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Rob: Excuse me. Is there a cash machine near here?\n\nWoman: Yes, there's one at Barclays Bank.\n\nRob: Sorry. Where is that?\n\nWoman: Turn left, and go straight on. Then turn right, and it's on the right.\n\nRob: Thanks very much.\n\nWoman: You're welcome.\n\nRob: I don't believe it. Excuse me. This cash machine 'isn't working'. Is there another one near here?\n\nMan: Yeah, there's one in HSBC. Go straight on, turn right, go straight on for a bit, and it's on the left.\n\nRob: Thanks."
+        }
+      }
+    }
+  ]
+}

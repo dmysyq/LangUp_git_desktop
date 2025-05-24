@@ -1,0 +1,307 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 1,
+        "title": "The Wolf Cub",
+        "videoUrl": "https://youtu.be/_SXL_fI2k8c?list=TLGGzE5ZXh1C62EyNDA1MjAyNQ",
+        "country": "India",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "British",
+        "imageUrl": "jungle_book_banner",
+        "source": "Disney",
+        "difficulty": 4,
+        "genres": ["Adventure", "Family", "Fantasy"],
+        "countries": ["USA"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "a branch",
+            "translation": "ветка",
+            "example": "a branch [n] - a part of a tree"
+          },
+          {
+            "word": "make it",
+            "translation": "добраться",
+            "example": "make it [exp] - be successful, reach a place successfully"
+          },
+          {
+            "word": "upwind",
+            "translation": "против ветра",
+            "example": "upwind [adj] - positioned in the direction from which the wind is coming"
+          },
+          {
+            "word": "break from your numbers",
+            "translation": "отделиться от группы",
+            "example": "break from your numbers [exp] - separate from your group, be alone"
+          },
+          {
+            "word": "a pack",
+            "translation": "стая",
+            "example": "a pack [n] - a group of wolves or dogs"
+          },
+          {
+            "word": "keep up with",
+            "translation": "успевать за",
+            "example": "keep up with [phv] - move at the same speed as others"
+          },
+          {
+            "word": "pick",
+            "translation": "выбирать",
+            "example": "pick [v] - choose"
+          },
+          {
+            "word": "a fig vine",
+            "translation": "фиговый плющ",
+            "example": "a fig vine [n] - a plant that wraps around a tree"
+          },
+          {
+            "word": "girdled",
+            "translation": "опоясанный",
+            "example": "girdled [adj] - wrapped around"
+          },
+          {
+            "word": "a creeper",
+            "translation": "ползучее растение",
+            "example": "a creeper [n] - a plant that wraps around a tree"
+          },
+          {
+            "word": "an infant",
+            "translation": "младенец",
+            "example": "an infant [n] - a baby"
+          },
+          {
+            "word": "abandoned",
+            "translation": "покинутый",
+            "example": "abandoned [adj] - left behind, deserted"
+          },
+          {
+            "word": "the woods",
+            "translation": "лес",
+            "example": "the woods [n] - the forest"
+          },
+          {
+            "word": "entrust",
+            "translation": "доверять",
+            "example": "entrust [v] - give someone responsibility for something valuable"
+          },
+          {
+            "word": "just",
+            "translation": "справедливый",
+            "example": "just [adj] - fair, guided by truth"
+          },
+          {
+            "word": "noble",
+            "translation": "благородный",
+            "example": "noble [adj] - having high moral or ethics"
+          },
+          {
+            "word": "dwell",
+            "translation": "жить",
+            "example": "dwell [v] - live"
+          },
+          {
+            "word": "take your time",
+            "translation": "не торопиться",
+            "example": "take your time [exp] - move slowly"
+          },
+          {
+            "word": "a law",
+            "translation": "закон",
+            "example": "a law [n] - a rule"
+          },
+          {
+            "word": "prosper",
+            "translation": "процветать",
+            "example": "prosper [v] - succeed, grow strong"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Bagheera thinks Mowgli is what kind of wolf?",
+            "options": ["terrible", "great", "average", "brave"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "Mowgli believes he would have succeeded if what?",
+            "options": [
+              "the branch had had a vine wrapped around it",
+              "the branch hadn't broken",
+              "Bagheera had helped him",
+              "he had run faster"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "Does Bagheera want Mowgli to hide in the trees?",
+            "options": ["wants", "doesn't want", "is unsure", "encourages"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "Bagheera explains that a tree with a fig vine is usually what?",
+            "options": [
+              "a good place to hide",
+              "strong and healthy",
+              "close to death",
+              "full of fruit"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "Do the wolf cubs want to play with Mowgli?",
+            "options": ["want", "don't want"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "Who found Mowgli as an infant?",
+            "options": ["Bagheera", "Raksha", "Akela", "a wolf cub"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "Who is the leader of the wolves?",
+            "options": ["Bagheera", "Raksha", "Akela", "Mowgli"],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "Who raised and cared for Mowgli?",
+            "options": ["Bagheera", "Raksha", "Akela"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q9",
+            "type": "single_choice",
+            "question": "Does Mowgli want to play with the other wolves?",
+            "options": ["wants", "doesn't want"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q10",
+            "type": "single_choice",
+            "question": "The wolves chant that the Wolf is only as strong as what?",
+            "options": ["the Leader", "the Jungle", "the Pack", "the Law"],
+            "correctAnswer": 2
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Connectors and Conjunctions",
+            "explanation": "Choose the word that most logically connects the ideas in the sentence. Use words like: the, have, will, with, was, either, least, if, why, among, take, who, only, like, it. Some boxes will be empty.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "You must be ___ very worst wolf I have ever seen.",
+                "options": ["the", "a", "an", ""],
+                "correctAnswer": "the"
+              },
+              {
+                "id": "g2",
+                "sentence": "If that branch didn't break, I would ___ made it.",
+                "options": ["have", "has", "had", ""],
+                "correctAnswer": "have"
+              },
+              {
+                "id": "g3",
+                "sentence": "If you can't learn to run with the pack, you ___ be someone's dinner.",
+                "options": ["will", "would", "shall", ""],
+                "correctAnswer": "will"
+              },
+              {
+                "id": "g4",
+                "sentence": "I can't keep up ___ them, Bagheera.",
+                "options": ["with", "to", "for", ""],
+                "correctAnswer": "with"
+              },
+              {
+                "id": "g5",
+                "sentence": "How was I supposed to know it ___ dead?",
+                "options": ["was", "were", "is", ""],
+                "correctAnswer": "was"
+              },
+              {
+                "id": "g6",
+                "sentence": "Any tree girdled by a creeper is ___ dead or close to it.",
+                "options": ["either", "neither", "both", ""],
+                "correctAnswer": "either"
+              },
+              {
+                "id": "g7",
+                "sentence": "I realize you weren't born a wolf, but couldn't you at ___ act like one?",
+                "options": ["least", "last", "most", ""],
+                "correctAnswer": "least"
+              },
+              {
+                "id": "g8",
+                "sentence": "___ he was going to survive, I knew he needed a people.",
+                "options": ["If", "When", "Because", ""],
+                "correctAnswer": "If"
+              },
+              {
+                "id": "g9",
+                "sentence": "That's ___ I entrusted him to the wolves.",
+                "options": ["why", "when", "where", ""],
+                "correctAnswer": "why"
+              },
+              {
+                "id": "g10",
+                "sentence": "He allowed Mowgli to dwell ___ them all those years.",
+                "options": ["among", "between", "within", ""],
+                "correctAnswer": "among"
+              },
+              {
+                "id": "g11",
+                "sentence": "And Mowgli, let's just say he liked to ___ his time.",
+                "options": ["take", "takes", "took", ""],
+                "correctAnswer": "take"
+              },
+              {
+                "id": "g12",
+                "sentence": "It was Raksha ___ raised him. She was the ___ mother he ever knew.",
+                "options": ["who", "whom", "which", ""],
+                "correctAnswer": "who"
+              },
+              {
+                "id": "g13",
+                "sentence": "I don't feel ___ playing, Gray.",
+                "options": ["like", "as", "for", ""],
+                "correctAnswer": "like"
+              },
+              {
+                "id": "g14",
+                "sentence": "How did ___ go?",
+                "options": ["it", "that", "this", ""],
+                "correctAnswer": "it"
+              },
+              {
+                "id": "g15",
+                "sentence": "If it's meant to be, it ___ be.",
+                "options": ["will", "would", "shall", ""],
+                "correctAnswer": "will"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Bagheera: You must be the very worst wolf I've ever seen.\n\nMowgli: Yeah, but if that branch didn't break, I would've made it.\n\nBagheera: Crossing upwind, breaking from your numbers. If you can't learn to run with the pack, one of these days you'll be someone's dinner.\n\nWolf cub: How'd we do?\n\nWolf cub: Not Mowgli, again.\n\nWolf cub: He's never going to make the Council.\n\nWolf cub: Let's go!\n\nWolf cub: Race you to the top!\n\nMowgli: It was higher ground.\n\nBagheera: Wolves don't hide in trees.\n\nMowgli: I can't keep up with them, Bagheera. I tried. I just picked the wrong tree.\n\nBagheera: It was a dead tree.\n\nMowgli: How was I supposed to know it was dead?\n\nBagheera: It had a fig vine. Any tree girdled by a creeper is either dead or close to it. These are things a wolf must know.\n\nMowgli: Yeah, but if the branch didn't break, I would've made it.\n\nBagheera: I realize you weren't born a wolf, but couldn't you at least act like one?\n\nBagheera: When I found him, many years ago, he was just an infant, abandoned in the woods.\n\nRaksha: Get the deer!\n\nBagheera: If he was going to survive, I knew he needed a people, a people to protect him. That's why I entrusted him to the wolves.\n\nAkela: Look well, wolves.\n\nBagheera: Akela was a just and noble leader. He allowed Mowgli to dwell among them all those years. The trouble was wolves grew so fast, and Mowgli, well, let's just say he liked to take his time.\n\nWolf cub: Mowgli, pick me up high!\n\nWolf cub: My turn!\n\nRaksha: Stop. Not now.\n\nBagheera: It was Raksha who raised him. She was the only mother he ever knew.\n\nWolf cub: Come on, let's play!\n\nMowgli: I don't feel like playing, Gray.\n\nWolf cub: Come on, you're my brother. You have to play with me. Let's go chase some mice.\n\nRaksha: How did it go?\n\nMowgli: Caught me again.\n\nRaksha: If it's meant to be, it will be.\n\nAkela: Let me hear the Law.\n\nWolves: This is the Law of the Jungle, as old and as true as the sky. The Wolf that keeps it will prosper, but the Wolf that breaks it will die. Like the creeper that girdles the tree trunk, the Law runneth over and back. For the strength of the Pack is the Wolf, and the strength of the Wolf is the Pack."
+        }
+      }
+    }
+  ]
+}

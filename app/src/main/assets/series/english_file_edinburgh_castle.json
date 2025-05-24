@@ -1,0 +1,285 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 2,
+        "title": "Edinburgh Castle",
+        "videoUrl": "https://youtu.be/r-jxxBsv71M",
+        "country": "United Kingdom",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "American",
+        "imageUrl": "english_file_edinburgh_castle_banner",
+        "source": "Oxford",
+        "difficulty": 1,
+        "genres": ["Educational", "Documentary"],
+        "countries": ["United Kingdom"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "theater",
+            "translation": "театр",
+            "example": "theater [n] - a show with actors acting on stage in a play"
+          },
+          {
+            "word": "comedy",
+            "translation": "комедия",
+            "example": "comedy [n] - a type of show with the purpose of being funny"
+          },
+          {
+            "word": "a festival",
+            "translation": "фестиваль",
+            "example": "a festival [n] - a large celebration in a town or city"
+          },
+          {
+            "word": "original",
+            "translation": "оригинальный",
+            "example": "original [adj] - the first"
+          },
+          {
+            "word": "royal",
+            "translation": "королевский",
+            "example": "royal [adj] - related to kings and queens"
+          },
+          {
+            "word": "enormous",
+            "translation": "огромный",
+            "example": "enormous [adj] - very big"
+          },
+          {
+            "word": "volcanic rock",
+            "translation": "вулканическая порода",
+            "example": "volcanic rock [n] - rock that comes from cooled lava (from volcanoes)"
+          },
+          {
+            "word": "a chapel",
+            "translation": "часовня",
+            "example": "a chapel [n] - like a church"
+          },
+          {
+            "word": "name after",
+            "translation": "назвать в честь",
+            "example": "name (s/t) after (s/o) [phv] - give something the same name as a person to honor that person"
+          },
+          {
+            "word": "a Great Hall",
+            "translation": "большой зал",
+            "example": "a Great Hall [n] - a large open room in a castle"
+          },
+          {
+            "word": "defenses",
+            "translation": "укрепления",
+            "example": "defenses [n] - buildings and structures built to protect a castle"
+          },
+          {
+            "word": "a battle",
+            "translation": "битва",
+            "example": "a battle [n] - a conflict, part of a war"
+          },
+          {
+            "word": "bonny",
+            "translation": "красивый",
+            "example": "bonny [adj] - pretty, nice (ScE) She is a bonny lass. = (AmE) She is pretty/nice girl."
+          },
+          {
+            "word": "capture",
+            "translation": "захватить",
+            "example": "capture [v] - take control of"
+          },
+          {
+            "word": "a prison",
+            "translation": "тюрьма",
+            "example": "a prison [n] - a jail"
+          },
+          {
+            "word": "a tourist attraction",
+            "translation": "туристическая достопримечательность",
+            "example": "a tourist attraction [n] - a place for tourists"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Edinburgh has a population of six million.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "There is a festival in Edinburgh every August.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "The Royal Mile is about 1.6 km long.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "Edinburgh Castle was first built in 1130.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "The chapel in Edinburgh Castle was named after King David the First.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "The castle became the home of the King of England in the 15th century.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "King James the 4th built the Great Hall.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "Scotland became part of the United Kingdom in the 16th century.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q9",
+            "type": "single_choice",
+            "question": "Prince Charles Edward Stewart tried to capture Edinburgh Castle.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q10",
+            "type": "single_choice",
+            "question": "Edinburgh Castle is used as a prison today.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q11",
+            "type": "single_choice",
+            "question": "About 1 250 000 people visit the castle every year.",
+            "options": ["True", "False"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q12",
+            "type": "single_choice",
+            "question": "The soldiers at Edinburgh Castle fire a gun every day at 11 o'clock.",
+            "options": ["True", "False"],
+            "correctAnswer": 1
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Connectors and Conjunctions",
+            "explanation": "Choose the word that connects the ideas in the sentence. Use words like: is, live, visit, start, finish, build, name, become, was, come, fire. Some boxes will be empty.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "Edinburgh ___ the capital city of Scotland.",
+                "options": ["is", "are", "be", ""],
+                "correctAnswer": "is"
+              },
+              {
+                "id": "g2",
+                "sentence": "About four hundred thousand people ___ in the city.",
+                "options": ["live", "lives", "living", ""],
+                "correctAnswer": "live"
+              },
+              {
+                "id": "g3",
+                "sentence": "Six million people ___ Edinburgh every year.",
+                "options": ["visit", "visits", "visiting", ""],
+                "correctAnswer": "visit"
+              },
+              {
+                "id": "g4",
+                "sentence": "The Royal Mile ___ at Holyrood Palace and finish at Edinburgh Castle.",
+                "options": ["starts", "starting", "started", ""],
+                "correctAnswer": "starts"
+              },
+              {
+                "id": "g5",
+                "sentence": "The castle ___ nearly a thousand years old.",
+                "options": ["is", "are", "be", ""],
+                "correctAnswer": "is"
+              },
+              {
+                "id": "g6",
+                "sentence": "King David the First ___ this chapel and ___ it Queen Mary's Chapel after his mother.",
+                "options": ["built", "builds", "building", ""],
+                "correctAnswer": "built"
+              },
+              {
+                "id": "g7",
+                "sentence": "In the 15th century, the castle ___ the home of the King of Scotland.",
+                "options": ["became", "becomes", "becoming", ""],
+                "correctAnswer": "became"
+              },
+              {
+                "id": "g8",
+                "sentence": "In 1511, James the Fourth ___ the Great Hall.",
+                "options": ["built", "builds", "building", ""],
+                "correctAnswer": "built"
+              },
+              {
+                "id": "g9",
+                "sentence": "In the 18th century, Scotland officially ___ part of the United Kingdom.",
+                "options": ["became", "becomes", "becoming", ""],
+                "correctAnswer": "became"
+              },
+              {
+                "id": "g10",
+                "sentence": "In the early 19th century, the castle ___ a prison, but it ___ now a tourist attraction.",
+                "options": ["was", "were", "be", ""],
+                "correctAnswer": "was"
+              },
+              {
+                "id": "g11",
+                "sentence": "About one and a quarter million people ___ the castle every year.",
+                "options": ["visit", "visits", "visiting", ""],
+                "correctAnswer": "visit"
+              },
+              {
+                "id": "g12",
+                "sentence": "They ___ to see the buildings and to hear the stories.",
+                "options": ["come", "comes", "coming", ""],
+                "correctAnswer": "come"
+              },
+              {
+                "id": "g13",
+                "sentence": "They also ___ to see and hear the one o'clock gun.",
+                "options": ["come", "comes", "coming", ""],
+                "correctAnswer": "come"
+              },
+              {
+                "id": "g14",
+                "sentence": "Soldiers ___ this gun every day at exactly one o'clock.",
+                "options": ["fire", "fires", "firing", ""],
+                "correctAnswer": "fire"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Edinburgh is the capital city of Scotland. It is a very beautiful old city. About four hundred thousand people live in the city, and six million people visit every year.\n\nEvery year in August, there's a festival in the city with a lot of theater, music, dance, and comedy.\n\nThe original city was built on the Royal Mile. This is a street in Edinburgh's Old Town. The Royal Mile is about 1.6 km long. It starts at Holyrood Palace and finishes at Edinburgh Castle. It is called the Royal Mile because it connects two royal homes.\n\nThe castle is nearly a thousand years old. It stands on an enormous piece of volcanic rock, and it looks down on the rest of the city.\n\nKing David the First of Scotland was the first king who built on the rock in about 1130.\n\nHe built this chapel and named it Queen Mary's Chapel after his mother.\n\nFor the next three hundred years, the castle was at the center of wars between England and Scotland.\n\nIn the 15th century, the castle became the home of the King of Scotland. Each new king added to the castle.\n\nIn 1511, James the Fourth built the Great Hall.\n\nIn the 16th century, James the Sixth added extra defenses to the castle entrance.\n\nIn the 18th century, Scotland officially became part of the United Kingdom.\n\nThe last battle at the castle was in 1745 when Prince Charles Edward Stewart, who was nicknamed 'Bonny Prince Charley', tried to capture the castle.\n\nIn the early 19th century, the castle was a prison, but it is now a tourist attraction.\n\nAbout one and a quarter million people visit the castle every year. They come to see the buildings and to hear the stories.\n\nThey also come to see and hear the one o'clock gun. Soldiers fire this every day at exactly one o'clock.\n\nBut they really come for the views of the city of Edinburgh."
+        }
+      }
+    }
+  ]
+}

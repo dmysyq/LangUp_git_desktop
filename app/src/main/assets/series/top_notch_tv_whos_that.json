@@ -1,0 +1,178 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 2,
+        "title": "Who's That?",
+        "videoUrl": "https://youtu.be/25eycnocRKk",
+        "country": "USA",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "American",
+        "imageUrl": "top_notch_tv_banner",
+        "source": "Pearson Education",
+        "difficulty": 1,
+        "genres": ["Educational", "Comedy"],
+        "countries": ["USA"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "a neighbor",
+            "translation": "сосед",
+            "example": "a neighbor [n] - a person (who lives nearby)"
+          },
+          {
+            "word": "a neighborhood",
+            "translation": "район",
+            "example": "a neighborhood [n] - an area (where people live)"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "What is Paul drinking?",
+            "options": ["A glass of wine", "A can of coke", "A cup of coffee", "A glass of water"],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "What is David Ducain's job?",
+            "options": ["He is a lawyer.", "He is a musician.", "He is an artist.", "He is a writer.", "He is a doctor."],
+            "correctAnswer": 3
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "Where is David Ducain from?",
+            "options": ["He is from England.", "He is from Mexico.", "He is from France.", "He is from Turkey."],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "What is Arturo Montoya's job?",
+            "options": ["He is a lawyer.", "He is a musician.", "He is an artist.", "He is a writer.", "He is a doctor."],
+            "correctAnswer": 4
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "Where is Arturo Montoya from?",
+            "options": ["He is from England.", "He is from Mexico.", "He is from France.", "He is from Turkey."],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "What is Jeff Davis's job?",
+            "options": ["He is a lawyer.", "He is a musician.", "He is an artist.", "He is a writer.", "He is a doctor."],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "What is Alan Reese's job?",
+            "options": ["He is a lawyer.", "He is a musician.", "He is an artist.", "He is a writer.", "He is a doctor."],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "What is Clark Thomas's job?",
+            "options": ["He is a lawyer.", "He is a musician.", "He is an artist.", "He is a writer.", "He is a doctor."],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q9",
+            "type": "single_choice",
+            "question": "Where is Clark Thomas from?",
+            "options": ["He is from England.", "He is from Mexico.", "He is from France.", "He is from Turkey."],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q10",
+            "type": "single_choice",
+            "question": "Who is sitting at the table?",
+            "options": ["Mr. Reese", "Mr. Thomas", "Mr. Evans", "Mr. Ducain"],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q11",
+            "type": "single_choice",
+            "question": "What is his job?",
+            "options": ["He is a doctor.", "He is a musician.", "He is an artist.", "He is an athlete.", "He is their boss."],
+            "correctAnswer": 4
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Connectors and Conjunctions",
+            "explanation": "Choose the word that connects the ideas in the sentence. Use words like: Ø, your, a, an, our. Some boxes will be empty.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "This is ___ good coffee.",
+                "options": ["Ø", "a", "an", "the"],
+                "correctAnswer": "Ø"
+              },
+              {
+                "id": "g2",
+                "sentence": "That's ___ friend David Ducain.",
+                "options": ["your", "a", "an", "the"],
+                "correctAnswer": "your"
+              },
+              {
+                "id": "g3",
+                "sentence": "He's ___ writer from France.",
+                "options": ["a", "an", "the", "Ø"],
+                "correctAnswer": "a"
+              },
+              {
+                "id": "g4",
+                "sentence": "He's ___ doctor from Mexico.",
+                "options": ["a", "an", "the", "Ø"],
+                "correctAnswer": "a"
+              },
+              {
+                "id": "g5",
+                "sentence": "He's ___ artist.",
+                "options": ["an", "a", "the", "Ø"],
+                "correctAnswer": "an"
+              },
+              {
+                "id": "g6",
+                "sentence": "He's ___ lawyer.",
+                "options": ["our", "a", "an", "the"],
+                "correctAnswer": "our"
+              },
+              {
+                "id": "g7",
+                "sentence": "It's Clark Thomas from ___ England.",
+                "options": ["Ø", "a", "an", "the"],
+                "correctAnswer": "Ø"
+              },
+              {
+                "id": "g8",
+                "sentence": "He's ___ musician.",
+                "options": ["a", "an", "the", "Ø"],
+                "correctAnswer": "a"
+              },
+              {
+                "id": "g9",
+                "sentence": "That's ... Mr. Evans. He's ... ___ boss.",
+                "options": ["your", "a", "an", "the"],
+                "correctAnswer": "your"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Paul: This is good coffee.\n\nBob: It is good.\n\nPaul: Who's that?\n\nBob: That's your friend David Ducain. He's a writer from France.\n\nCheryl: That's not David Ducain spiking. That's Arturo Montoya. He's Mr. Evans's neighbor. He's a doctor from Mexico.\n\nMarie: No. That's Jeff Davis. He's an artist.\n\nBob: No. That's Alan Reese. He's our lawyer.\n\nCheryl: That's not Alan Reese.\n\nMarie: Oh! It's Clark Thomas from England. He's a musician!\n\nPaul: Excuse me.\n\nWaitress: Yes?\n\nPaul: Who's that?\n\nWaitress: That's ... Mr. Evans. He's ... your boss.\n\nBob: That's not Mr. Evans.\n\nMr. Evans: Hey, guys!\n\nPaul: Musician!?"
+        }
+      }
+    }
+  ]
+}

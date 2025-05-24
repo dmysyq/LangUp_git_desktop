@@ -1,0 +1,141 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 7,
+        "title": "Dad's Birthday",
+        "videoUrl": "https://youtu.be/Su9R885btz0",
+        "country": "United Kingdom",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "British",
+        "imageUrl": "english_file_basics_banner",
+        "source": "Oxford",
+        "difficulty": 1,
+        "genres": ["Educational", "Comedy"],
+        "countries": ["United Kingdom"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "the date",
+            "translation": "дата",
+            "example": "the date [n] - day, month, and year"
+          },
+          {
+            "word": "definitely",
+            "translation": "определённо",
+            "example": "definitely [adv] - 100%"
+          },
+          {
+            "word": "come in",
+            "translation": "войти",
+            "example": "come in [phv] - enter"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Today is ______ of June.",
+            "options": ["the 1st", "the 2nd", "the 3rd"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "Rob thinks that it is ______ of June.",
+            "options": ["the 1st", "the 2nd", "the 3rd"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "Rob is worried because he forgot ______ birthday.",
+            "options": ["his father's", "his mother's", "his grandfather's", "his grandmother's"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "Rob brought ______ for his father.",
+            "options": ["a bottle of wine", "a bottle of cider", "a bottle of whiskey"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "Today ______ Rob's dad's birthday.",
+            "options": ["is", "isn't"],
+            "correctAnswer": 1
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Connectors and Conjunctions",
+            "explanation": "Choose the word that connects the ideas in the sentence. Use words like: want, is, think, but, realize, give, not, point. Some boxes will be empty.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "Rob ___ to know the date.",
+                "options": ["want", "is", "think", ""],
+                "correctAnswer": "want"
+              },
+              {
+                "id": "g2",
+                "sentence": "He ___ it is the 1st of June.",
+                "options": ["think", "but", "is", ""],
+                "correctAnswer": "think"
+              },
+              {
+                "id": "g8",
+                "sentence": "___ it is actually the 2nd.",
+                "options": ["think", "but", "is", ""],
+                "correctAnswer": "but"
+              },
+              {
+                "id": "g3",
+                "sentence": "Rob suddenly ___ it is his dad's birthday.",
+                "options": ["realize", "want", "is", ""],
+                "correctAnswer": "realize"
+              },
+              {
+                "id": "g4",
+                "sentence": "Rob visits his dad to ___ him a present.",
+                "options": ["give", "want", "is", ""],
+                "correctAnswer": "give"
+              },
+              {
+                "id": "g5",
+                "sentence": "He ___ his father a bottle of his favourite wine.",
+                "options": ["give", "want", "is", ""],
+                "correctAnswer": "give"
+              },
+              {
+                "id": "g6",
+                "sentence": "Rob's father ___ out that today",
+                "options": ["point", "points", "pointed", ""],
+                "correctAnswer": "point"
+              },
+              {
+                "id": "g9", 
+                "sentence": "today is ___ his birthday.",
+                "options": ["not", "no", "none", ""],
+                "correctAnswer": "not"
+              },
+              {
+                "id": "g7",
+                "sentence": "His birthday ___ in July, not in June.",
+                "options": ["is", "give", "want", ""],
+                "correctAnswer": "is"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Rob: What's the date today?\n\nFriend: I think it's the '2nd of June'.\n\nRob: Are you sure? Isn't it the '1st'?\n\nFriend: No, definitely the '2nd'.\n\nRob: Oh no. It's my dad's birthday.\n\nRob: Dad.\n\nDad: Rob! Hi!\n\nRob: This is for you.\n\nDad: For me? It's my favourite wine. Thanks Rob, but why?\n\nRob: For your birthday, of course. Happy birthday.\n\nDad: Rob, it isn't my birthday today. My birthday is on the '2nd of July'. Today is the '2nd of June'.\n\nRob: Oh no.\n\nDad: Don't worry. Come in. Have a glass of wine."
+        }
+      }
+    }
+  ]
+}

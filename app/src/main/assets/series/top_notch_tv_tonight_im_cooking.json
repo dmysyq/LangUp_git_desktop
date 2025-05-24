@@ -1,0 +1,154 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 10,
+        "title": "Tonight I'm Cooking",
+        "videoUrl": "https://youtu.be/ATrvrTKGf68",
+        "country": "USA",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "American",
+        "imageUrl": "top_notch_tv_banner",
+        "source": "Pearson Education",
+        "difficulty": 1,
+        "genres": ["Educational", "Comedy"],
+        "countries": ["USA"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "a recipe",
+            "translation": "рецепт",
+            "example": "a recipe [n] - instructions for cooking"
+          },
+          {
+            "word": "ingredients",
+            "translation": "ингредиенты",
+            "example": "ingredients [n] - the food you put together to make a dish or meal"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "Who plans to cook tonight?",
+            "options": ["Bob", "Cheryl", "Marie"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "What is Bob going to make for dinner?",
+            "options": ["Pizza", "Salad", "Soup"],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What vegetables does Bob want to put in his soup?",
+            "options": ["Beans", "Cabbage", "Celery", "Onions", "Peas", "Peppers", "Potatoes", "Tomatoes"],
+            "correctAnswers": [0, 1, 3, 4, 6, 7]
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "What other ingredients does Bob want to put in soup?",
+            "options": ["Bananas", "Coffee", "Lemons", "Milk", "Strawberries", "Sugar"],
+            "correctAnswers": [0, 1, 2, 5]
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "How does Bob actually make his soup?",
+            "options": [
+              "He cooks the soup very slowly.",
+              "He opens some cans of soup.",
+              "He asks Marie for help."
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "What do Cheryl and Marie say about Bob's soup?",
+            "options": ["It is too sweet.", "It is okay.", "It is great."],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Which ingredients does Marie like the most?",
+            "options": ["The coffee", "The onions", "The tomatoes", "The bananas"],
+            "correctAnswers": [0, 3]
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Connectors and Conjunctions",
+            "explanation": "Choose the word that most logically connects the ideas in the sentence. Use words like: any, some, a, for, in, and, Ø. Some boxes will be empty.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "Do you have ___ vegetables?",
+                "options": ["any", "some", "a", ""],
+                "correctAnswer": "any"
+              },
+              {
+                "id": "g2",
+                "sentence": "I have ___ onions, tomatoes...",
+                "options": ["some", "any", "a", ""],
+                "correctAnswer": "some"
+              },
+              {
+                "id": "g3",
+                "sentence": "I have ___ beans, ___ peas, one cabbage, and ___ potato.",
+                "options": ["some", "a", "any", ""],
+                "correctAnswer": "some"
+              },
+              {
+                "id": "g4",
+                "sentence": "It's ___ vegetable soup.",
+                "options": ["Ø", "a", "some"],
+                "correctAnswer": "Ø"
+              },
+              {
+                "id": "g5",
+                "sentence": "___ Bananas are ___ fruit.",
+                "options": ["Ø", "a", "some"],
+                "correctAnswer": "Ø"
+              },
+              {
+                "id": "g6",
+                "sentence": "Now do you have ___ sugar?",
+                "options": ["any", "some", "a", ""],
+                "correctAnswer": "any"
+              },
+              {
+                "id": "g7",
+                "sentence": "And I need ___ lemon.",
+                "options": ["a", "some", "any", ""],
+                "correctAnswer": "a"
+              },
+              {
+                "id": "g8",
+                "sentence": "Oh, ___ do you have ___ coffee?",
+                "options": ["and", "any", "a", ""],
+                "correctAnswer": "and"
+              },
+              {
+                "id": "g9",
+                "sentence": "Do you have ___ recipe ___ this?",
+                "options": ["a", "for", "any", ""],
+                "correctAnswer": "a"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Bob: Tonight, I'm cooking.\n\nCheryl: What are you making?\n\nBob: Bob's Famous Vegetable Soup. Do you have any vegetables?\n\nCheryl: I have some onions, tomatoes...\n\nBob: How many tomatoes?\n\nCheryl: Two. I have some beans, some peas, one cabbage, and a potato.\n\nBob: Great!\n\nCheryl: You want them all?\n\nBob: It's vegetable soup. Pass those bananas, please.\n\nMarie: Bananas are fruit.\n\nBob: Yes.\n\nMarie: You put bananas in your vegetable soup?!\n\nBob: Sounds good, doesn't it? Now do you have any sugar?\n\nCheryl: Yes.\n\nBob: And I need a lemon. Oh, and do you have any coffee?\n\nCheryl: Do you have a recipe for this?\n\nBob: Go watch TV, please.\n\nBob: Come. Have a taste.\n\nCheryl: This is . . . delicious! Bob, you're a great cook!\n\nMarie: The coffee and bananas are great!"
+        }
+      }
+    }
+  ]
+}

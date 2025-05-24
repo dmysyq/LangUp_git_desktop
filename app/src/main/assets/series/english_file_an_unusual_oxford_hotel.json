@@ -1,0 +1,181 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 1,
+        "title": "An Unusual Oxford Hotel",
+        "videoUrl": "https://youtu.be/pl_4pzc8ZOk",
+        "country": "United Kingdom",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "British",
+        "imageUrl": "english_file_old_bank_hotel_banner",
+        "source": "Oxford",
+        "difficulty": 1,
+        "genres": ["Educational", "Documentary"],
+        "countries": ["United Kingdom"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "the High Street",
+            "translation": "главная улица",
+            "example": "the High Street [n] - the main street with shops and businesses in a town"
+          },
+          {
+            "word": "a luxury hotel",
+            "translation": "роскошный отель",
+            "example": "a luxury hotel [n] - a high-end, fancy, expensive hotel"
+          },
+          {
+            "word": "a reception",
+            "translation": "ресепшн",
+            "example": "a reception [n] - the area in a hotel where guests check in"
+          },
+          {
+            "word": "a cupboard",
+            "translation": "шкаф",
+            "example": "a cupboard [n] - a piece of furniture with doors"
+          },
+          {
+            "word": "marble",
+            "translation": "мрамор",
+            "example": "marble [n] - a shiny stone often used for decoration"
+          },
+          {
+            "word": "a vault",
+            "translation": "хранилище",
+            "example": "a vault [n] - a secure room for keeping valuables"
+          },
+          {
+            "word": "a storeroom",
+            "translation": "кладовая",
+            "example": "a storeroom [n] - a room for storing supplies"
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "What is the Old Bank Hotel today?",
+            "options": ["A bank", "A restaurant", "A luxury hotel", "A shopping mall"],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "In which century did the buildings become part of Christ Church College?",
+            "options": ["The 6th century", "The 8th century", "The 16th century", "The 18th century"],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "How long was the building a bank?",
+            "options": ["In the 19th century", "Almost 200 years", "From 92 to 94", "Since 1808"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "How many bedrooms does the Old Bank Hotel have?",
+            "options": ["34", "42", "50", "54"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "What can you see from the hotel rooms?",
+            "options": [
+              "Views of Oxford's famous colleges",
+              "Views of the city skyline",
+              "Views of Oxford Castle",
+              "Views of the river"
+            ],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "What material is used in the bathrooms in the hotel?",
+            "options": ["Marble", "Metal", "Wood", "Tile"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q7",
+            "type": "single_choice",
+            "question": "What was the purpose of the vaults when the building was a bank?",
+            "options": ["Keeping money safe", "Storing furniture", "Storing wine", "Guest rooms"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "What do the old vaults store now?",
+            "options": ["Guest luggage", "Furniture", "Money", "Wine"],
+            "correctAnswer": 3
+          }
+        ],
+        "grammar": [
+          {
+            "topic": "Connectors and Conjunctions",
+            "explanation": "Choose the word that Greg uses in the video to connect the ideas in the sentence. Use words like: and, but, so, if, when, that. Some boxes will be empty.",
+            "exercises": [
+              {
+                "id": "g1",
+                "sentence": "Today, it's a luxury hotel, ___ these buildings have a very interesting history.",
+                "options": ["but", "and", "so", ""],
+                "correctAnswer": "but"
+              },
+              {
+                "id": "g2",
+                "sentence": "There was a bank here for almost 200 years, ___ today, it is a famous Oxford hotel.",
+                "options": ["but", "and", "so", ""],
+                "correctAnswer": "but"
+              },
+              {
+                "id": "g3",
+                "sentence": "There are 42 bedrooms, ___ they're all very comfortable.",
+                "options": ["and", "but", "so", ""],
+                "correctAnswer": "and"
+              },
+              {
+                "id": "g4",
+                "sentence": "There are other rooms ___ visitors to the hotel don't usually see.",
+                "options": ["that", "when", "if", ""],
+                "correctAnswer": "that"
+              },
+              {
+                "id": "g5",
+                "sentence": "___ the hotel was a bank, all the money was here.",
+                "options": ["when", "if", "that", ""],
+                "correctAnswer": "when"
+              },
+              {
+                "id": "g6",
+                "sentence": "The rooms were small, ___ the doors weren't easy to open.",
+                "options": ["and", "but", "so", ""],
+                "correctAnswer": "and"
+              },
+              {
+                "id": "g7",
+                "sentence": "The hotel keeps its wine collection in here, ___ it's very, very safe.",
+                "options": ["so", "and", "but", ""],
+                "correctAnswer": "so"
+              },
+              {
+                "id": "g8",
+                "sentence": "___ you want to visit Oxford, the Old Bank is a fantastic place to see.",
+                "options": ["if", "when", "that", ""],
+                "correctAnswer": "if"
+              }
+            ]
+          }
+        ],
+        "transcript": {
+          "full": "Hi, I'm Greg. Welcome to Oxford! I'm visiting the Old Bank Hotel. It's an unusual hotel in the centre of the city.\n\nThe Old Bank is in the High Street, in the centre of Oxford. Today, it's a luxury hotel, but these buildings from number 92 to number 94 have a very interesting history.\n\nIn the 16th century, they were part of Christ Church College. In the 18th century, they were different shops. And we know that in 1808, the buildings were one business—a bank.\n\nThere was a bank here for almost 200 years, but today, it is a famous Oxford hotel. Would you like to go in and look? Let's go!\n\nThe Old Bank Hotel has a beautiful reception and a fantastic restaurant. There are 42 bedrooms, and they're all very comfortable. They have great views of Oxford's famous colleges. This room has a large bed, two chairs, a table, a television, and a cupboard. It has a beautiful marble bathroom, too.\n\nBut there are other rooms that visitors to the hotel don't usually see. These secret rooms are here in the cellar under the hotel.\n\nThese are the old bank vaults. When the hotel was a bank, all the money was here. The rooms were small, and the doors weren't easy to open. They were very, very strong, and on each one, there was a large lock.\n\nToday, these old vaults are storerooms. The hotel keeps its wine collection in here, so it's very, very safe.\n\n92 to 94 High Street is a part of Oxford's history, and today, if you want to visit Oxford, the Old Bank is a fantastic place to see."
+        }
+      }
+    }
+  ]
+}

@@ -23,14 +23,6 @@
                 android:scaleType="centerCrop"
                 android:contentDescription="@string/series_image"/>
 
-            <ImageView
-                android:id="@+id/premium_icon"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_gravity="top|end"
-                android:layout_margin="8dp"
-                android:src="@drawable/ic_premium"
-                android:visibility="gone"/>
         </FrameLayout>
 
         <LinearLayout
@@ -39,15 +31,31 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <TextView
-                android:id="@+id/series_title"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:maxLines="2"
-                android:ellipsize="end"/>
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/series_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:singleLine="false"/>
+
+                <ImageView
+                    android:id="@+id/premium_icon"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_premium"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -101,5 +109,6 @@
                     android:padding="4dp"/>
             </LinearLayout>
         </LinearLayout>
+
     </LinearLayout>
 </androidx.cardview.widget.CardView> 

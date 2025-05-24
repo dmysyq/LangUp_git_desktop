@@ -1,0 +1,122 @@
+{
+  "series": [
+    {
+      "metadata": {
+        "id": 1,
+        "title": "Nice to Meet You",
+        "videoUrl": "https://youtu.be/rgT3pSBIjEY",
+        "country": "USA",
+        "lang": "en",
+        "isPremium": false,
+        "accent": "American",
+        "imageUrl": "top_notch_tv_banner",
+        "source": "Pearson Education",
+        "difficulty": 1,
+        "genres": ["Educational", "Comedy"],
+        "countries": ["USA"]
+      },
+      "content": {
+        "vocabulary": [
+          {
+            "word": "a receptionist",
+            "translation": "ресепшионист",
+            "example": "a receptionist [n] - a person who meets customers and answers phone calls"
+          },
+          {
+            "word": "a tour guide",
+            "translation": "гид",
+            "example": "a tour guide [n] - a person who leads tours of special locations for tourists"
+          },
+          {
+            "word": "an architect",
+            "translation": "архитектор",
+            "example": "an architect [n] - a person who designs buildings"
+          },
+          {
+            "word": "an athlete",
+            "translation": "спортсмен",
+            "example": "an athlete [n] - a person who plays sports"
+          },
+          {
+            "word": "a mailman",
+            "translation": "почтальон",
+            "example": "a mailman [n] - a person who delivers mail"
+          },
+          {
+            "word": "A pleasure.",
+            "translation": "приятно познакомиться",
+            "example": "A pleasure. [exp] - Nice to meet you."
+          }
+        ],
+        "questions": [
+          {
+            "id": "q1",
+            "type": "single_choice",
+            "question": "What is Mr. Evans' first (given) name?",
+            "options": ["John", "James", "Jack"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q2",
+            "type": "single_choice",
+            "question": "What is the name of the travel agency?",
+            "options": ["Top Notch Travel", "Mr. Evans Travel Agency", "World Tours"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q3",
+            "type": "single_choice",
+            "question": "What is Mr. Evans' job?",
+            "options": ["President", "Receptionist", "Office Manager", "Tour Guide"],
+            "correctAnswer": 0
+          },
+          {
+            "id": "q4",
+            "type": "single_choice",
+            "question": "What is Marie's job?",
+            "options": ["President", "Receptionist", "Office Manager", "Tour Guide"],
+            "correctAnswer": 1
+          },
+          {
+            "id": "q5",
+            "type": "single_choice",
+            "question": "What is Paul's job?",
+            "options": ["President", "Receptionist", "Office Manager", "Tour Guide"],
+            "correctAnswer": 3
+          },
+          {
+            "id": "q6",
+            "type": "single_choice",
+            "question": "What is Cheryl's job?",
+            "options": ["President", "Receptionist", "Office Manager", "Tour Guide"],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "What jobs are written on Bob's photographs (choose 5)?",
+            "options": ["Actor", "Architect", "Athlete", "Chef", "Doctor", "Mailman", "Singer", "Tour Guide"],
+            "correctAnswers": [1, 2, 3, 4, 6]
+          },
+          {
+            "id": "q8",
+            "type": "single_choice",
+            "question": "What does Mr. Rashid call Bob?",
+            "options": ["A mailman", "A singer", "An actor"],
+            "correctAnswer": 2
+          },
+          {
+            "id": "q9",
+            "type": "single_choice",
+            "question": "What does Bob have in his hands?",
+            "options": ["Some food", "Some mail", "Some pictures"],
+            "correctAnswer": 1
+          }
+        ],
+        "transcript": {
+          "full": "Mr. Evans: Hi! Are you Mr. Rashid?\n\nMr. Rashid: Yes, I am.\n\nMr. Evans: It's a pleasure to meet you. I'm James Evans, president of Top Notch Travel.\n\nMarie: Welcome to Top Notch. I'm Marie, the receptionist.\n\nMr. Rashid: Nice to meet you.\n\nPaul: Hi. I'm Paul. I'm a tour guide.\n\nMr. Rashid: Glad to meet you.\n\nCheryl: Hi, I'm Cheryl.\n\nMr. Rashid: The office manager.\n\nCheryl: Yes!\n\nMr. Rashid: A pleasure.\n\nMr. Evans: Bob? Bob is ...\n\nMr. Rashid: A chef.\n\nMr. Evans: No, Bob is not a chef. Bob is a... doctor? No, Bob is not a doctor. Bob is not a singer. He's not an architect. He's not an athlete . . . Bob!\n\nBob: Hi...I'm the mailman.\n\nMr. Evans: This is Bob. Bob is ...\n\nMr. Rashid: An actor!"
+        }
+      }
+    }
+  ]
+}
