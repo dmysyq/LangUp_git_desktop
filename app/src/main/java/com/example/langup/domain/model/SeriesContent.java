@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.ArrayList;
 
-public class SeriesContent implements Serializable {
+public class  SeriesContent implements Serializable {
     private List<VocabularyItem> vocabulary;
     private List<Question> questions;
     private List<Grammar> grammar;

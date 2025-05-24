@@ -307,9 +307,9 @@
               },
               {
                 "id": "g10",
-                "sentence": "Connie was asking after you, since you haven't been over ___ a while.",
-                "options": ["for", "with", "and", ""],
-                "correctAnswer": "for"
+                "sentence": "I ___ to go, ___ I'm not going to.",
+                "options": ["have", "but", "to", ""],
+                "correctAnswers": ["have", "but"]
               },
               {
                 "id": "g11",

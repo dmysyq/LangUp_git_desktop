@@ -70,16 +70,5 @@
         android:textSize="18sp"
         android:layout_marginBottom="16dp" />
 
-    <TextView
-        android:id="@+id/subscribeInfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Отмена в любой момент. Тестовая оплата."
-        android:textSize="12sp"
-        android:textColor="@color/text_tertiary_light"
-        android:fontFamily="@font/inter_regular"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center"
-        android:layout_marginTop="8dp" />
 
 </LinearLayout> 

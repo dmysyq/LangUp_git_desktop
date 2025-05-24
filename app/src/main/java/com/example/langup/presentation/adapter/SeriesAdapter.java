@@ -60,30 +60,14 @@ public class SeriesAdapter extends RecyclerView.Adapter<SeriesAdapter.SeriesView
         Log.d("SeriesAdapter", "Loading image from URL: " + imageUrl);
         
         if (imageUrl != null) {
-            // Extract resource name from path (e.g., "banner/wednesday-banner.png" -> "wednesday_banner")
-            String resourceName = imageUrl.substring(imageUrl.lastIndexOf('/') + 1)
-                    .replace(".png", "")
-                    .replace("-", "_");
-            
-            Log.d("SeriesAdapter", "Loading from drawable: " + resourceName);
-            
-            // Get resource ID
-            int resourceId = holder.itemView.getContext().getResources()
-                    .getIdentifier(resourceName, "drawable", 
-                            holder.itemView.getContext().getPackageName());
-            
-            if (resourceId != 0) {
-                // Load from drawable
-                Glide.with(holder.itemView.getContext())
-                    .load(resourceId)
-                    .placeholder(R.drawable.ic_image_placeholder)
-                    .error(R.drawable.ic_image_placeholder)
-                    .centerCrop()
-                    .into(holder.imageView);
-            } else {
-                Log.e("SeriesAdapter", "Resource not found: " + resourceName);
-                holder.imageView.setImageResource(R.drawable.ic_image_placeholder);
-            }
+            // Always load from assets/banner folder and append .png extension
+            String assetPath = "file:///android_asset/banner/" + imageUrl + ".png";
+            Glide.with(holder.itemView.getContext())
+                .load(assetPath)
+                .placeholder(R.drawable.ic_image_placeholder)
+                .error(R.drawable.ic_image_placeholder)
+                .centerCrop()
+                .into(holder.imageView);
         } else {
             holder.imageView.setImageResource(R.drawable.ic_image_placeholder);
         }

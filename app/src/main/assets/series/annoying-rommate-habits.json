@@ -328,10 +328,16 @@
                 "correctAnswer": "when"
               },
               {
+                "id": "g10",
+                "sentence": "There's a falling-out ___ I like to get both girls' perspectives on what happened.",
+                "options": ["when", "if", "that", ""],
+                "correctAnswer": "when"
+              },
+              {
                 "id": "g11",
                 "sentence": "It was barely perceptible to the average eye ___ I noticed.",
                 "options": ["but", "and", "that", ""],
-                "correctAnswer": "but"
+                "correctAnswers": ["but", "that"]
               },
               {
                 "id": "g12",

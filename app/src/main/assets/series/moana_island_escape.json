@@ -54,7 +54,7 @@
           {
             "word": "Stay out of it!",
             "translation": "Не вмешивайся!",
-            "example": "Stay out of it! [exp] - Don’t get involved!"
+            "example": "Stay out of it! [exp] - Don't get involved!"
           },
           {
             "word": "an armpit",
@@ -203,7 +203,7 @@
           {
             "id": "q8",
             "type": "single_choice",
-            "question": "What is Moana’s first reaction to the Kakamora?",
+            "question": "What is Moana's first reaction to the Kakamora?",
             "options": [
               "She tries to make peace with them.",
               "She thinks they are cute.",
@@ -220,19 +220,19 @@
             "exercises": [
               {
                 "id": "g1",
-                "sentence": "I’m going ___ get my hook.",
+                "sentence": "I'm going ___ get my hook.",
                 "options": ["to", "for", "with", ""],
                 "correctAnswer": "to"
               },
               {
                 "id": "g2",
-                "sentence": "You have yours, and I’m ___ Maui without mine.",
+                "sentence": "You have yours, and I'm ___ Maui without mine.",
                 "options": ["not", "is", "are", ""],
                 "correctAnswer": "not"
               },
               {
                 "id": "g3",
-                "sentence": "It’s a beautiful cave. She ___ going to love it.",
+                "sentence": "It's a beautiful cave. She ___ going to love it.",
                 "options": ["is", "are", "to", ""],
                 "correctAnswer": "is"
               },
@@ -262,7 +262,7 @@
               },
               {
                 "id": "g8",
-                "sentence": "If you don’t put ___ away, bad things ___ going to come for it.",
+                "sentence": "If you don't put ___ away, bad things ___ going to come for it.",
                 "options": ["it", "that", "are", ""],
                 "correctAnswers": ["it", "are"]
               },
@@ -274,7 +274,7 @@
               },
               {
                 "id": "g10",
-                "sentence": "I’m going to get us to Te Fiti ___ you can put it back.",
+                "sentence": "I'm going to get us to Te Fiti ___ you can put it back.",
                 "options": ["so", "that", "for", ""],
                 "correctAnswer": "so"
               },
@@ -294,7 +294,7 @@
           }
         ],
         "transcript": {
-          "full": "Maui: No. I’m not going to Te Fiti with some kid. I’m going to get my hook. You have yours, and I’m not Maui without mine. Okay, talk to the back.\n\nMaui: Boat snack.\n\nMaui: Good riddance, you filthy pile of pebbles.\n\nMaui: Oh, no, no, no. Don’t look at me like that. It’s a beautiful cave. She’s going to love it. And I’m going to love you in my belly. Now, let’s fatten you up, drumstick.\n\nMaui: I could watch that all day. Okay. Enjoy the island. Maui, out.\n\nMoana: No! Stop! Hey! You have to put back the Heart!\n\nMaui: (I) Did not see that coming.\n\nMoana: I am Moana of Motun...\n\nMaui: It was Moana, right?\n\nMoana: Yes. And you will restore the Heart!\n\nMaui: All right. I’m out. Oh, come on!\n\nMoana: What is your problem? Are you afraid of it?\n\nMaui: No! No. I’m not afraid. Stay out of it, or you’re sleeping in my armpit. You, stop it. That is not a heart. It is a curse. The second I took it, I got blasted out of the sky and I lost my hook. Get it away from me.\n\nMoana: Get this away?\n\nMaui: Hey, hey, hey! I’m a demigod, okay? Stop that. I will smite you! You want to get smote? Smotten? Listen, that thing doesn’t give you power to create life. It’s a homing beacon of death. If you don’t put it away, bad things are going to come for it.\n\nMoana: Come for this? The Heart? You mean this heart right here? Come and get it!\n\nMaui: You are going to get us killed!\n\nMoana: No, I’m going to get us to Te Fiti so you can put it back. Thank you. You’re welcome.\n\nMaui: Kakamora.\n\nMoana: Kaka-what?\n\nMaui: Murdering little pirates. I wonder what they're here for.\n\nMoana: They're kind of cute."
+          "full": "Maui: No. I'm not going to Te Fiti with some kid. I'm going to get my hook. You have yours, and I'm not Maui without mine. Okay, talk to the back.\n\nMaui: Boat snack.\n\nMaui: Good riddance, you filthy pile of pebbles.\n\nMaui: Oh, no, no, no. Don't look at me like that. It's a beautiful cave. She's going to love it. And I'm going to love you in my belly. Now, let's fatten you up, drumstick.\n\nMaui: I could watch that all day. Okay. Enjoy the island. Maui, out.\n\nMoana: No! Stop! Hey! You have to put back the Heart!\n\nMaui: (I) Did not see that coming.\n\nMoana: I am Moana of Motun...\n\nMaui: It was Moana, right?\n\nMoana: Yes. And you will restore the Heart!\n\nMaui: All right. I'm out. Oh, come on!\n\nMoana: What is your problem? Are you afraid of it?\n\nMaui: No! No. I'm not afraid. Stay out of it, or you're sleeping in my armpit. You, stop it. That is not a heart. It is a curse. The second I took it, I got blasted out of the sky and I lost my hook. Get it away from me.\n\nMoana: Get this away?\n\nMaui: Hey, hey, hey! I'm a demigod, okay? Stop that. I will smite you! You want to get smote? Smotten? Listen, that thing doesn't give you power to create life. It's a homing beacon of death. If you don't put it away, bad things are going to come for it.\n\nMoana: Come for this? The Heart? You mean this heart right here? Come and get it!\n\nMaui: You are going to get us killed!\n\nMoana: No, I'm going to get us to Te Fiti so you can put it back. Thank you. You're welcome.\n\nMaui: Kakamora.\n\nMoana: Kaka-what?\n\nMaui: Murdering little pirates. I wonder what they're here for.\n\nMoana: They're kind of cute."
         }
       }
     }

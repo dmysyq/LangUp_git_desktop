@@ -214,13 +214,13 @@
               },
               {
                 "id": "g4",
-                "sentence": "I’m just trying to understand ___ your people decided to send you.",
+                "sentence": "I'm just trying to understand ___ your people decided to send you.",
                 "options": ["why", "for", "did", ""],
                 "correctAnswer": "why"
               },
               {
                 "id": "g5",
-                "sentence": "My people didn’t send me. The ocean ___.",
+                "sentence": "My people didn't send me. The ocean ___.",
                 "options": ["did", "for", "why", ""],
                 "correctAnswer": "did"
               },
@@ -238,19 +238,19 @@
               },
               {
                 "id": "g8",
-                "sentence": "Why didn’t ___ just take the Heart back to Te Fiti itself?",
+                "sentence": "Why didn't ___ just take the Heart back to Te Fiti itself?",
                 "options": ["it", "did", "for", ""],
                 "correctAnswer": "it"
               },
               {
                 "id": "g9",
-                "sentence": "If you start singing, I’m going to throw ___.",
+                "sentence": "If you start singing, I'm going to throw ___.",
                 "options": ["up", "for", "did", ""],
                 "correctAnswer": "up"
               },
               {
                 "id": "g10",
-                "sentence": "It’s a ___ farther down ___ it looks.",
+                "sentence": "It's a ___ farther down ___ it looks.",
                 "options": ["lot", "than", "for", ""],
                 "correctAnswers": ["lot", "than"]
               },
@@ -264,7 +264,7 @@
           }
         ],
         "transcript": {
-          "full": "Maui: (Did you) Enjoy your beauty rest? You know, a real wayfinder never sleeps, so they actually get where they need to go. Muscle up, buttercup. We’re here.\n\nMoana: You’re sure this guy is going to have your hook?\n\nMaui: Tamatoa? Oh, he’ll have it. He’s a scavenger. Collects stuff. Thinks it makes him look cool. And for Tamatoa, trust me, my hook is the coolest collectible.\n\nMoana: And he lives up there?\n\nMaui: No, no, no. That’s just the entrance to Lalotai.\n\nMoana: Lalotai? Realm of Monsters? We’re going to the Realm of Monsters?\n\nMaui: We? No. Me. You are going to stay here with the other chicken. That’s what I’m talking about. Gimme some. Come on. That was a good one. How do you not get it? I called her a chicken. There’s a chicken on the boat.\n\nMaui: So, daughter of the chief, I thought you stayed in the village. You know, kissing babies and things. Hey, I’m just trying to understand why your people decided to send, how do I phrase this, you!\n\nMoana: My people didn’t send me. The ocean did.\n\nMaui: The ocean? (That) Makes sense. You’re what, eight? Can’t sail. Obvious choice.\n\nMoana: It chose me for a reason.\n\nMaui: If the ocean is so smart, why didn’t it just take the Heart back to Te Fiti itself? Or bring me my hook? The ocean is straight up kooky-dooks. But I’m sure it’s not wrong about you. You’re the Chosen One!\n\nMoana: The ocean chose you for a reason.\n\nMaui: If you start singing, I’m going to throw up.\n\nMoana: So, (I'm) not seeing an entrance.\n\nMaui: Yes, because it only appears after a human sacrifice. Kidding. So serious.\n\nMaui: (Performs a short haka)\n\nMaui: Don’t worry. It’s a lot farther down than it looks. Cheeeehoooo!\n\nMaui: I am still falling!\n\nMoana: You can do this. Go!"
+          "full": "Maui: (Did you) Enjoy your beauty rest? You know, a real wayfinder never sleeps, so they actually get where they need to go. Muscle up, buttercup. We're here.\n\nMoana: You're sure this guy is going to have your hook?\n\nMaui: Tamatoa? Oh, he'll have it. He's a scavenger. Collects stuff. Thinks it makes him look cool. And for Tamatoa, trust me, my hook is the coolest collectible.\n\nMoana: And he lives up there?\n\nMaui: No, no, no. That's just the entrance to Lalotai.\n\nMoana: Lalotai? Realm of Monsters? We're going to the Realm of Monsters?\n\nMaui: We? No. Me. You are going to stay here with the other chicken. That's what I'm talking about. Gimme some. Come on. That was a good one. How do you not get it? I called her a chicken. There's a chicken on the boat.\n\nMaui: So, daughter of the chief, I thought you stayed in the village. You know, kissing babies and things. Hey, I'm just trying to understand why your people decided to send, how do I phrase this, you!\n\nMoana: My people didn't send me. The ocean did.\n\nMaui: The ocean? (That) Makes sense. You're what, eight? Can't sail. Obvious choice.\n\nMoana: It chose me for a reason.\n\nMaui: If the ocean is so smart, why didn't it just take the Heart back to Te Fiti itself? Or bring me my hook? The ocean is straight up kooky-dooks. But I'm sure it's not wrong about you. You're the Chosen One!\n\nMoana: The ocean chose you for a reason.\n\nMaui: If you start singing, I'm going to throw up.\n\nMoana: So, (I'm) not seeing an entrance.\n\nMaui: Yes, because it only appears after a human sacrifice. Kidding. So serious.\n\nMaui: (Performs a short haka)\n\nMaui: Don't worry. It's a lot farther down than it looks. Cheeeehoooo!\n\nMaui: I am still falling!\n\nMoana: You can do this. Go!"
         }
       }
     }

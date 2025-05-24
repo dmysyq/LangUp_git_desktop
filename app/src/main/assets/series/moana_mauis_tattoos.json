@@ -177,13 +177,13 @@
               },
               {
                 "id": "g2",
-                "sentence": "I’m trying to ___ sincere for once, and it feels like you’re distracted.",
+                "sentence": "I'm trying to ___ sincere for once, and it feels like you're distracted.",
                 "options": ["be", "being", "to be", "been"],
-                "correctAnswers": "be"
+                "correctAnswer": "be"
               },
               {
                 "id": "g3",
-                "sentence": "Because you’re looking at me ___ I have a shark head.",
+                "sentence": "Because you're looking at me ___ I have a shark head.",
                 "options": ["like", "took", "be", ""],
                 "correctAnswer": "like"
               },
@@ -195,7 +195,7 @@
               },
               {
                 "id": "g5",
-                "sentence": "We’re never making ___ to Te Fiti.",
+                "sentence": "We're never making ___ to Te Fiti.",
                 "options": ["it", "like", "took", ""],
                 "correctAnswer": "it"
               },
@@ -249,15 +249,15 @@
               },
               {
                 "id": "g14",
-                "sentence": "But the gods aren’t the ones ___ make you Maui. You are.",
+                "sentence": "But the gods aren't the ones ___ make you Maui. You are.",
                 "options": ["who", "are", "took", ""],
-                "correctAnswers": "who"
+                "correctAnswer": "who"
               }
             ]
           }
         ],
         "transcript": {
-          "full": "Moana: We’re alive! We’re aliv...\n\nMaui: Listen. I appreciate what you did down there.\n\nMoana: Mm-hmm.\n\nMaui: It took guts.\n\nMoana: Mm-hmm. Mm-hmm. Mm-hmm.\n\nMaui: But ah... I’m sorry. I’m trying to be sincere for once, and it feels like you’re distracted.\n\nMoana: No. no. No way!\n\nMaui: Really? Because you’re looking at me like I have a shark head.\n\nMoana: What? Do you have a shark head? Cuz...\n\nMaui: Look, the point is, for a little girl, child, thing, whatever, who had no business being down there, you did me a solid. But you also almost died. And I couldn’t even beat the dumb crab. So, chances of beating Te Kā? Bupkis. We’re never making it to Te Fiti. This mission is cursed.\n\nMoana: It’s not cursed.\n\nMaui: Shark head.\n\nMoana: It is not cursed.\n\nMaui: Cursed.\n\nMaui: ♪ What can I say except we’re dead soon. We’re dead soon. ♪\n\nMoana: Can you at least try?\n\nMaui: Giant hawk. Hey, it’s okay, it’s okay. We’re dead soon.\n\nMoana: All right. Break time’s over. Get up.\n\nMaui: Why? Are you going to give me a speech? Tell me I can beat Te Kā because I’m Maui? Take a hike, tiny.\n\nMoana: How do you get your tattoos?\n\nMaui: They show up when I earn them.\n\nMoana: How did you earn that one? What’s that for?\n\nMaui: I wasn’t born a demigod. I had human parents. They took one look and decided they did not want me. They threw me into the sea like I was nothing. Somehow, I was found by the gods. They gave me the hook. They made me Maui. And back to the humans I went. I gave them islands, fire, coconuts. Anything they could ever want.\n\nMoana: You took the Heart for them. You did everything for them so they’d love you.\n\nMaui: It was never enough.\n\nMoana: But the gods aren’t the ones who make you Maui. You are.\n\nMaui: Okay, okay. I love you, too, buddy."
+          "full": "Moana: We're alive! We're aliv...\n\nMaui: Listen. I appreciate what you did down there.\n\nMoana: Mm-hmm.\n\nMaui: It took guts.\n\nMoana: Mm-hmm. Mm-hmm. Mm-hmm.\n\nMaui: But ah... I'm sorry. I'm trying to be sincere for once, and it feels like you're distracted.\n\nMoana: No. no. No way!\n\nMaui: Really? Because you're looking at me like I have a shark head.\n\nMoana: What? Do you have a shark head? Cuz...\n\nMaui: Look, the point is, for a little girl, child, thing, whatever, who had no business being down there, you did me a solid. But you also almost died. And I couldn't even beat the dumb crab. So, chances of beating Te Kā? Bupkis. We're never making it to Te Fiti. This mission is cursed.\n\nMoana: It's not cursed.\n\nMaui: Shark head.\n\nMoana: It is not cursed.\n\nMaui: Cursed.\n\nMaui: ♪ What can I say except we're dead soon. We're dead soon. ♪\n\nMoana: Can you at least try?\n\nMaui: Giant hawk. Hey, it's okay, it's okay. We're dead soon.\n\nMoana: All right. Break time's over. Get up.\n\nMaui: Why? Are you going to give me a speech? Tell me I can beat Te Kā because I'm Maui? Take a hike, tiny.\n\nMoana: How do you get your tattoos?\n\nMaui: They show up when I earn them.\n\nMoana: How did you earn that one? What's that for?\n\nMaui: I wasn't born a demigod. I had human parents. They took one look and decided they did not want me. They threw me into the sea like I was nothing. Somehow, I was found by the gods. They gave me the hook. They made me Maui. And back to the humans I went. I gave them islands, fire, coconuts. Anything they could ever want.\n\nMoana: You took the Heart for them. You did everything for them so they'd love you.\n\nMaui: It was never enough.\n\nMoana: But the gods aren't the ones who make you Maui. You are.\n\nMaui: Okay, okay. I love you, too, buddy."
         }
       }
     }

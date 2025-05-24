@@ -307,19 +307,19 @@
               },
               {
                 "id": "g12",
-                "sentence": "She is a subterranean sentinel ___ hasn’t seen sunlight in years.",
+                "sentence": "She is a subterranean sentinel ___ hasn't seen sunlight in years.",
                 "options": ["who", "that", "which", ""],
                 "correctAnswer": "who"
               },
               {
                 "id": "g13",
-                "sentence": "From now ___ , I’ll be keeping the ledger in the vault.",
+                "sentence": "From now ___ , I'll be keeping the ledger in the vault.",
                 "options": ["on", "at", "by", ""],
                 "correctAnswer": "on"
               },
               {
                 "id": "g14",
-                "sentence": "They’ve got you right ___ they want you.",
+                "sentence": "They've got you right ___ they want you.",
                 "options": ["where", "that", "which", ""],
                 "correctAnswer": "where"
               }
@@ -327,7 +327,7 @@
           }
         ],
         "transcript": {
-          "full": "Willy: See you downstairs. Geronimo!\n\nAbacus: Ah, Mr. Wonka. Good of you to join us.\n\nWilly: Not late, am I?\n\nAbacus: Well, no. Cutting it a bit fine, but…\n\nWilly: Has Tiddles been pulling his weight?\n\nAbacus: As a matter of fact, Tiddles has been a very good boy, and productivity is up 30%.\n\nLarry: We took the afternoon off.\n\nAbacus: But that’s not the point.\n\nLarry: This is the point.\n\nAbacus: Not now, Larry.\n\nLarry: Sorry.\n\nAbacus: The point is: Where have you been?\n\nPiper: And why do you smell of giraffe?\n\nWilly: (I) Guess I owe you guys an explanation. The truth is I’m a chocolate maker.\n\nNoodle: Not just any chocolate. The best in the world.\n\nWilly: Ah, well, Noodle is flattering me, but she’s right. They’re exquisite.\n\nNoodle: (The) Plan is to sell chocolate and pay off Mrs. Scrubitt. At least, that was the plan, until…\n\nAbacus: Oh, let me guess. You had a little run-in with the chief of police?\n\nWilly: How do you know that?\n\nAbacus: Because I was Slugworth’s accountant for a week, at least. His regular bookkeeper was off sick. And I was called halfway across the country to take his place.\n\nAbacus: Good evening, Mr. Slugworth. I just need your signature on…\n\nAbacus: (It) Seemed a straightforward job. Until I realized there were two sets of books: one for the authorities, and one which told the truth. Slugworth, Fickelgruber, and Prodnose have been in cahoots for years. A sort of chocolate cartel, if you will. They’ve been watering down their chocolate and storing the excess in a secret vault deep beneath the cathedral, guarded round the clock by a corrupt cleric and 500 chocoholic monks. The only way in is down a secret elevator and past the Mistress of the Keys, a subterranean sentinel who hasn’t seen sunlight in years. There's thousands of gallons of chocolate down there, and the cartel use it to bribe, blackmail, and bludgeon the competition.\n\nSlugworth: I do not care that they were school children. They were in our way. Next time, put your foot down.\n\nSlugworth: Miss BonBon?\n\nMiss BonBon: Good morning, Mr. Slugworth.\n\nSlugworth: From now on, I’ll be keeping the ledger in the vault.\n\nMiss BonBon: Very good, sir.\n\nSlugworth: Oh, and Mr. Crunch?\n\nAbacus: Yes?\n\nSlugworth: You’re fired.\n\nAbacus: Very good, sir.\n\nAbacus: I’m sorry, Mr. Wonka, but they’ve got you right where they want you. You can’t get a shop without selling chocolate, and you can’t sell chocolate without a shop."
+          "full": "Willy: See you downstairs. Geronimo!\n\nAbacus: Ah, Mr. Wonka. Good of you to join us.\n\nWilly: Not late, am I?\n\nAbacus: Well, no. Cutting it a bit fine, but...\n\nWilly: Has Tiddles been pulling his weight?\n\nAbacus: As a matter of fact, Tiddles has been a very good boy, and productivity is up 30%.\n\nLarry: We took the afternoon off.\n\nAbacus: But that's not the point.\n\nLarry: This is the point.\n\nAbacus: Not now, Larry.\n\nLarry: Sorry.\n\nAbacus: The point is: Where have you been?\n\nPiper: And why do you smell of giraffe?\n\nWilly: (I) Guess I owe you guys an explanation. The truth is I'm a chocolate maker.\n\nNoodle: Not just any chocolate. The best in the world.\n\nWilly: Ah, well, Noodle is flattering me, but she's right. They're exquisite.\n\nNoodle: (The) Plan is to sell chocolate and pay off Mrs. Scrubitt. At least, that was the plan, until...\n\nAbacus: Oh, let me guess. You had a little run-in with the chief of police?\n\nWilly: How do you know that?\n\nAbacus: Because I was Slugworth's accountant for a week, at least. His regular bookkeeper was off sick. And I was called halfway across the country to take his place.\n\nAbacus: Good evening, Mr. Slugworth. I just need your signature on...\n\nAbacus: (It) Seemed a straightforward job. Until I realized there were two sets of books: one for the authorities, and one which told the truth. Slugworth, Fickelgruber, and Prodnose have been in cahoots for years. A sort of chocolate cartel, if you will. They've been watering down their chocolate and storing the excess in a secret vault deep beneath the cathedral, guarded round the clock by a corrupt cleric and 500 chocoholic monks. The only way in is down a secret elevator and past the Mistress of the Keys, a subterranean sentinel who hasn't seen sunlight in years. There's thousands of gallons of chocolate down there, and the cartel use it to bribe, blackmail, and bludgeon the competition.\n\nSlugworth: I do not care that they were school children. They were in our way. Next time, put your foot down.\n\nSlugworth: Miss BonBon?\n\nMiss BonBon: Good morning, Mr. Slugworth.\n\nSlugworth: From now on, I'll be keeping the ledger in the vault.\n\nMiss BonBon: Very good, sir.\n\nSlugworth: Oh, and Mr. Crunch?\n\nAbacus: Yes?\n\nSlugworth: You're fired.\n\nAbacus: Very good, sir.\n\nAbacus: I'm sorry, Mr. Wonka, but they've got you right where they want you. You can't get a shop without selling chocolate, and you can't sell chocolate without a shop."
         }
       }
     }
